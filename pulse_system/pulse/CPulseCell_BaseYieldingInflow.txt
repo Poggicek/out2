@@ -1,0 +1,13 @@
+CPulseCell_BaseYieldingInflow : CPulseCell_BaseFlow
+    m_nClassType = "baseclass"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

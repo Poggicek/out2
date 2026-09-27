@@ -1,0 +1,20 @@
+CPulseCell_LimitCount : CPulseCell_BaseRequirement
+    m_FriendlyName = "Limit Count"
+    m_Description = "Skip this node after the limit. Check Type does not apply, the limit will always be checked."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["server.dll"]
+    expect_default_outflow = true
+    generic_node_category = 7
+    hidden_in_tool = false
+    requirement_pass = 0
+    requirement_summary_expr = "\"Limit Count: \" + m_nLimitCount"
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCell_LimitCount"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow CheckRequirement "Check Requirement" yields=false terminates=false requirement_check=true requirement_commit=false
+    inflow CommitStep "Commit Step" yields=false terminates=false requirement_check=false requirement_commit=true
+    variable m_nLimitCount: integer "Limit Count" default=1
+        propattr_flatten_into_parent_row = true

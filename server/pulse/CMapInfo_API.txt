@@ -1,0 +1,16 @@
+CMapInfo_API::FireWinCondition
+    m_FriendlyName = "Fire Win Condition"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CMapInfo_API"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_map_parameters "info_map_parameters" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

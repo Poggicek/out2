@@ -1,0 +1,16 @@
+C_CSGO_PreviewModel_API::SetItem
+    m_FriendlyName = "Set Item"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!C_CSGO_PreviewModel_API"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:csgo_previewmodel "csgo_previewmodel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

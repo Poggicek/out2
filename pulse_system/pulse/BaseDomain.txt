@@ -1,0 +1,7 @@
+BaseDomain
+    m_FriendlyName = "Base Pulse Domain"
+    m_nClassType = "baseclass"
+    debugger_can_create_instance = false
+    hidden_in_tool = true
+    is_game_blackboard = false
+    is_pulse_domain = true

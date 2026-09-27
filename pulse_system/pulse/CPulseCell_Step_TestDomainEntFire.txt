@@ -1,0 +1,20 @@
+CPulseCell_Step_TestDomainEntFire : CPulseCell_BaseFlow
+    m_FriendlyName = "Fake Ent-Fire"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_text = "Fire input {m_Input}"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Step_TestDomainEntFire"
+    selector_has_specificity = false
+    supported_domains = TestDomain
+    inflow Run "Run" [default] yields=false terminates=false
+    in pEnt: PVAL_TEST_HANDLE "Ent" inflow=Run
+    in pParam: PVAL_STRING "Param" inflow=Run
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    variable m_Input: string "Input" default=""

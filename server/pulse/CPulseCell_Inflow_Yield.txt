@@ -1,0 +1,7 @@
+CPulseCell_Inflow_Yield::Abort
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"
+
+CPulseCell_Inflow_Yield::Resume
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately"

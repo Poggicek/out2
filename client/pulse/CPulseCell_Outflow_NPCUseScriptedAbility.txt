@@ -1,0 +1,3 @@
+CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"

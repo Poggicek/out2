@@ -1,0 +1,46 @@
+CSmartPropPulse_PickOneSelector : CPulseCell_BaseFlow
+    m_FriendlyName = "Select Single Child"
+    m_Description = "An element which selects a single choice from its set of child choices."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    allowed_requirements =
+        CPulseCell_IsRequirementValid = true
+        CSmartPropPulse_SelectionChoiceWeight = true
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode"
+        create_special_outflows_section = true
+    expect_default_outflow = false
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/requirements.png"
+    hidden_in_tool = false
+    is_selector = true
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_PickOneSelector"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Pick "Pick" [default] yields=false terminates=false
+    in nSelectionMode: PVAL_SCHEMA_ENUM:SmartPropChoiceSelectionMode_t "Selection Mode" default="RANDOM" inflow=Pick
+        description = "Specifies how the initial selection of a choice should be handled."
+    in nSpecificChildIndex: PVAL_INT "Specific Child" metadata={ suppress_expr = "( nSelectionMode != SPECIFIC )" } default=0 inflow=Pick
+        description = "Specifies the index of the child to pick."
+    in bConfigurable: PVAL_BOOL "Configurable" advanced_view=true default=true inflow=Pick
+        description = "Should a control to select the specific choice be shown when this prop is placed in Hammer."
+    in vHandleOffset: PVAL_VEC3 "Handle Offset" metadata={ readonly_expr = "bConfigurable == false", group = "Handle Settings" } default=[0, 0, 0] inflow=Pick
+        description = "Specifies an offset in the local space of the element to apply to the configuration handle."
+    in colHandleColor: PVAL_COLOR_RGB "Col Handle Color" metadata={ readonly_expr = "bConfigurable == false", group = "Handle Settings" } default=[144, 144, 144] inflow=Pick
+        description = "Color to use to display the configuration handle."
+    in nHandleSize: PVAL_INT "Handle Size" metadata={ readonly_expr = "bConfigurable == false", group = "Handle Settings" } default=9 inflow=Pick
+        description = "Size of the configuration handle."
+    attribute m_OutflowList: PulseSelectorOutflowList_t "Outflow List"
+    variable m_HandleShape: choices "Handle Shape" default="SQUARE"
+        description = "Shape of the configuration handle to display."
+        group = "Handle Settings"
+        readonly_expr = "bConfigurable == false"
+        item_set = "choices"
+        item NONE "None"
+        item SQUARE "Square"
+        item CIRCLE "Circle"
+        item DIAMOND "Diamond"

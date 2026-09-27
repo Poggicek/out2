@@ -1,0 +1,19 @@
+(unnamed)
+    group = VPhysics2Startup
+    source = src/rubikon/intersectiondictionary.cpp
+    scripts/collision_detail_layers.vdata
+
+PhysicsDebugMaterials
+    group = PhysicsDebugMaterials
+    source = src/vphysics2/vphys2_debug.cpp
+    materials/dev/debug_physics_noedges.vmat
+    materials/dev/debug_physics_wireframe.vmat
+    materials/dev/debug_physics_translucent.vmat
+    materials/dev/debug_physics_seethrough.vmat
+    materials/dev/debug_physics_translucent_seethrough.vmat
+    materials/dev/debug_cloth.vmat
+
+VPhysics2SurfacePropLoader
+    group = VPhysics2Startup
+    source = src/vphysics2/vphysics2.cpp
+    surfaceproperties/surfaceproperties.vsurf

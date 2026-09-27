@@ -1,0 +1,471 @@
+CTestPulseIOAPI::GetTestIntValue
+    m_FriendlyName = "Get Test Int Value"
+    m_Description = "<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CTestPulseIOAPI::InternalTestBool
+    m_FriendlyName = "Internal Test Bool"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in bInValue: PVAL_BOOL "In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestColor
+    m_FriendlyName = "Internal Test Color"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in colInValue: PVAL_COLOR_RGB "Col In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestEntityHandle
+    m_FriendlyName = "Internal Test Entity Handle"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestEntityHandleInt
+    m_FriendlyName = "Internal Test Entity Handle Int"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in handleA: PVAL_EHANDLE "Handle A" inflow=InDefault
+    in valueB: PVAL_INT "Value B" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestEntityName
+    m_FriendlyName = "Internal Test Entity Name"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in name: PVAL_ENTITY_NAME "name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestEntityNameString
+    m_FriendlyName = "Internal Test Entity Name String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nameA: PVAL_ENTITY_NAME "Name A" inflow=InDefault
+    in strValueB: PVAL_STRING "Value B" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestFloat
+    m_FriendlyName = "Internal Test Float"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flInValue: PVAL_FLOAT "In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestFloatString
+    m_FriendlyName = "Internal Test Float String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flValueA: PVAL_FLOAT "Value A" inflow=InDefault
+    in strValueB: PVAL_STRING "Value B" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestInt
+    m_FriendlyName = "Internal Test Int"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nInValue: PVAL_INT "In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestSchemaEnum
+    m_FriendlyName = "Internal Test Schema Enum"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in value: PVAL_SCHEMA_ENUM:TestInputOutputCombinationsEnum_t "value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestString
+    m_FriendlyName = "Internal Test String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in strInValue: PVAL_STRING "In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestStringStringString
+    m_FriendlyName = "Internal Test String String String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in strValueA: PVAL_STRING "Value A" inflow=InDefault
+    in strValueB: PVAL_STRING "Value B" inflow=InDefault
+    in strValueC: PVAL_STRING "Value C" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestVector
+    m_FriendlyName = "Internal Test Vector"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in vecInValue: PVAL_VEC3 "In Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTestPulseIOAPI::InternalTestVoid
+    m_FriendlyName = "Internal Test Void"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestBool
+    m_FriendlyName = "On Internal Test Bool"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_BOOL "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestColor
+    m_FriendlyName = "On Internal Test Color"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_COLOR_RGB "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestEntityHandle
+    m_FriendlyName = "On Internal Test Entity Handle"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_EHANDLE "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestEntityHandleInt
+    m_FriendlyName = "On Internal Test Entity Handle Int"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out handleA: PVAL_EHANDLE "Handle A" inflow=self
+    out valueB: PVAL_INT "Value B" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestEntityName
+    m_FriendlyName = "On Internal Test Entity Name"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_ENTITY_NAME "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestEntityNameString
+    m_FriendlyName = "On Internal Test Entity Name String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out nameA: PVAL_ENTITY_NAME "Name A" inflow=self
+    out strValueB: PVAL_STRING "Value B" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestFloat
+    m_FriendlyName = "On Internal Test Float"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestFloatString
+    m_FriendlyName = "On Internal Test Float String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out flOutFloat: PVAL_FLOAT "Out Float" inflow=self
+    out strOutString: PVAL_STRING "Out String" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestInt
+    m_FriendlyName = "On Internal Test Int"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_INT "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestSchemaEnum
+    m_FriendlyName = "On Internal Test Schema Enum"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_SCHEMA_ENUM:TestInputOutputCombinationsEnum_t "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestString
+    m_FriendlyName = "On Internal Test String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestStringStringString
+    m_FriendlyName = "On Internal Test String String String"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out strArg1: PVAL_STRING "Arg1" inflow=self
+    out strArg2: PVAL_STRING "Arg2" inflow=self
+    out strArg3: PVAL_STRING "Arg3" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestVector
+    m_FriendlyName = "On Internal Test Vector"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_VEC3 "param" inflow=self
+
+OUTPUT!CTestPulseIOAPI::OnInternalTestVoid
+    m_FriendlyName = "On Internal Test Void"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CTestPulseIOAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:test_io_combinations "test_io_combinations" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."

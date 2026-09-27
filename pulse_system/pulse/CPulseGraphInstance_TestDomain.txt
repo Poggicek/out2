@@ -1,0 +1,53 @@
+CPulseGraphInstance_TestDomain::GenerateInt
+    m_FriendlyName = "GenerateInt"
+    m_Description = "External system requesting an int from the test graph"
+    m_nClassType = "vdata"
+    expected_return_type = "PVAL_INT"
+    generic_node_category = 5
+    is_pulse_hook = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+    out nParam: PVAL_INT "Param" inflow=self
+
+CPulseGraphInstance_TestDomain::GenerateIntWithResult
+    m_FriendlyName = "GenerateIntWithResult"
+    m_Description = "External system requesting an int from the test graph (variant)"
+    m_nClassType = "vdata"
+    expected_return_type = "PVAL_INT"
+    generic_node_category = 5
+    is_pulse_hook = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+
+CPulseGraphInstance_TestDomain::GenerateVector
+    m_FriendlyName = "GenerateVector"
+    m_Description = "External system requesting a vector from the test graph"
+    m_nClassType = "vdata"
+    expected_return_type = "PVAL_VEC3"
+    generic_node_category = 5
+    is_pulse_hook = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+
+CPulseGraphInstance_TestDomain::HandleInt
+    m_FriendlyName = "HandleInt"
+    m_Description = "External system providing an int for the test graph to consume"
+    m_nClassType = "vdata"
+    expected_return_type = "PVAL_VOID"
+    generic_node_category = 5
+    is_pulse_hook = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+    out nValue: PVAL_INT "Value" inflow=self

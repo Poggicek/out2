@@ -1,0 +1,19 @@
+CPulseCell_Value_RandomFloat : CPulseCell_BaseValue
+    m_FriendlyName = "Random Float"
+    m_Description = "Generate a random float between min and max (inclusive)"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 4
+    header_icon = "tools/images/pulse_editor/exit_cycle_random.png"
+    hidden_in_tool = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Value_RandomFloat"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow Eval "Eval" yields=false terminates=false
+    in flMin: PVAL_FLOAT "Min" inflow=Eval
+    in flMax: PVAL_FLOAT "Max" inflow=Eval
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=Eval

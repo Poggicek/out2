@@ -1,0 +1,32 @@
+CBaseEntity_SharedAPI::AddOutput
+    m_FriendlyName = "Add Output"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseEntity_SharedAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pParam: PVAL_STRING "Param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_SharedAPI::SetScale
+    m_FriendlyName = "Set Scale"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseEntity_SharedAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flValue: PVAL_FLOAT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

@@ -1,0 +1,20 @@
+CPulseCell_ExampleCriteria : CPulseCell_BaseRequirement
+    m_FriendlyName = "Example Criteria"
+    m_Description = "An example of requirement data with ports"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 7
+    hidden_in_tool = false
+    requirement_pass = 1
+    requirement_summary_expr = ""
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_ExampleCriteria"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow CheckRequirement "Check Requirement" yields=false terminates=false requirement_check=true requirement_commit=false
+    in m_flFloatValue1: PVAL_FLOAT "Float Value1" inflow=CheckRequirement
+    in m_flFloatValue2: PVAL_FLOAT "Float Value2" inflow=CheckRequirement
+    in m_bMyBool: PVAL_BOOL "My Bool" inflow=CheckRequirement

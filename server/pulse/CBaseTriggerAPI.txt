@@ -1,0 +1,51 @@
+CBaseTriggerAPI::FindEntitiesInTrigger
+    m_FriendlyName = "Find Entities In Trigger"
+    m_Description = "Return the current entities touching the trigger, matching the optional criteria.<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    header_expr = "\"Find \" + entityType + \" Entities In Trigger"
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseTriggerAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:trigger "trigger" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
+    in optionalEntityName: PVAL_ENTITY_NAME "Optional Entity Name" advanced_view=true inflow=self
+    out retval: PVAL_ARRAY:PVAL_EHANDLE "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "entityType:to_subtype" } outflow=OutDefault direct_return_for=self
+
+CBaseTriggerAPI::IsTouching
+    m_FriendlyName = "Is Touching"
+    m_Description = "Is the other entity touching the trigger?<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseTriggerAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:trigger "trigger" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pOtherEntity: PVAL_EHANDLE "Other Entity" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseTriggerAPI::IsTouchingAny
+    m_FriendlyName = "Is Touching Any"
+    m_Description = "Is there any entity touching the trigger?<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseTriggerAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:trigger "trigger" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self

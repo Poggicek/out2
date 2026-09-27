@@ -1,0 +1,7 @@
+CPulseCell_Base
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["server.dll"]
+    expect_default_outflow = true
+    hidden_in_tool = false
+    selector_has_specificity = false

@@ -1,0 +1,37 @@
+CPulseGraphInstance_TestDomain_Derived::GetInstanceValueX
+    m_FriendlyName = "Get Instance Value X"
+    m_Description = "Get the 'ValueX' number off the graph instance."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain_Derived"
+    supported_domains = TestDomain_Derived
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseGraphInstance_TestDomain_Derived::HandleIntDerived
+    m_FriendlyName = "HandleIntDerived"
+    m_Description = "Derived"
+    m_nClassType = "vdata"
+    expected_return_type = "PVAL_VOID"
+    generic_node_category = 5
+    is_pulse_hook = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain_Derived"
+    supported_domains = TestDomain_Derived
+    outflow OutDefault "Default Out" [default]
+    out nValue: PVAL_INT "Value" inflow=self
+
+CPulseGraphInstance_TestDomain_Derived::SetInstanceValueX
+    m_FriendlyName = "Set Instance Value X"
+    m_Description = "Set the 'ValueX' number on the graph instance."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TestDomain_Derived"
+    supported_domains = TestDomain_Derived
+    inflow InDefault "Default In" [default]
+    in nValue: PVAL_INT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

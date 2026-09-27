@@ -1,0 +1,140 @@
+CPulseArraylib::ArrayAppend
+    m_FriendlyName = "Array Append"
+    m_Description = "Copy 'element' to the end of 'a', increasing its count by one."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in element: PVAL_VARIANT "element" metadata={ polymorphic_dependent_arg = "a:typeparam" } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayConcatenate
+    m_FriendlyName = "Array Concatenate"
+    m_Description = "Add the array 'b' to the end of 'a'."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in b: PVAL_ARRAY:PVAL_UNKNOWN "b" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayCount
+    m_FriendlyName = "Array Count"
+    m_Description = "Return the number of elements in the array."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayFindElementMatching
+    m_FriendlyName = "Array Find Element Matching"
+    m_Description = "Find first element 'a' which compare equal to 'element' and return its index."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in element: PVAL_VARIANT "element" metadata={ polymorphic_dependent_arg = "a:typeparam" } inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayFirstNElements
+    m_FriendlyName = "Array First N Elements"
+    m_Description = "Returns up to the maximum requested elements. Never grows the array (unlike SetCount)."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in nMaxElements: PVAL_INT "Max Elements" default=1 inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayInsert
+    m_FriendlyName = "Array Insert"
+    m_Description = "Insert 'element' in the given index in 'a', increasing its count by one and moving the elements after index."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in nIndex: PVAL_INT "Index" inflow=self
+    in element: PVAL_VARIANT "element" metadata={ polymorphic_dependent_arg = "a:typeparam" } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayRemoveElementMatching
+    m_FriendlyName = "Array Remove Element Matching"
+    m_Description = "Remove all elements from 'a' which compare equal to 'element'."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in element: PVAL_VARIANT "element" metadata={ polymorphic_dependent_arg = "a:typeparam" } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayRemoveIndex
+    m_FriendlyName = "Array Remove Index"
+    m_Description = "Remove the element at the given index in 'a', decreasing its count by one and moving the elements after index."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in nIndex: PVAL_INT "Index" inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayRemoveInvalidElements
+    m_FriendlyName = "Array Remove Invalid Elements"
+    m_Description = "Remove all elements from 'a' which are invalid instances."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArraySetCount
+    m_FriendlyName = "Array Set Count"
+    m_Description = "Set the number of elements in the array."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    in nCount: PVAL_INT "Count" inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseArraylib::ArrayShuffle
+    m_FriendlyName = "Array Shuffle"
+    m_Description = "Randomizes the order of items in the array (Knuth/Fisher-Yates Shuffle)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseArraylib"
+    supported_domains = BaseDomain
+    in a: PVAL_ARRAY:PVAL_UNKNOWN "a" metadata={ polymorphic_arg = true } inflow=self
+    out retval: PVAL_ARRAY:PVAL_UNKNOWN "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "a:fulltype" } outflow=OutDefault direct_return_for=self

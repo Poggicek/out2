@@ -1,0 +1,519 @@
+CPulseTestFuncs_LibraryA::AGreaterThan5
+    m_FriendlyName = "AGreaterThan5"
+    m_Description = "Fired when A exceeds 5."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_global_event = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+
+CPulseTestFuncs_LibraryA::AValueChanged
+    m_FriendlyName = "AValueChanged"
+    m_Description = "Fired whenever the global A value changes."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_global_event = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+    out nValue: PVAL_INT "Value" inflow=self
+
+CPulseTestFuncs_LibraryA::AZeroed
+    m_FriendlyName = "AZeroed"
+    m_Description = "Fired when A becomes 0 from any other number."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_global_event = true
+    is_spontaneous = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    outflow OutDefault "Default Out" [default]
+
+CPulseTestFuncs_LibraryA::GetEnumColorValue
+    m_FriendlyName = "Get Enum Color Value"
+    m_Description = "Get the global color enum value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetEnumFlagsValue
+    m_FriendlyName = "Get Enum Flags Value"
+    m_Description = "Get the global flags enum value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_SCHEMA_ENUM:PulseTestEnumFlags_t "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetEnumShapeValue
+    m_FriendlyName = "Get Enum Shape Value"
+    m_Description = "Get the global shape enum value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_SCHEMA_ENUM:PulseTestEnumShape_t "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetFloatValue
+    m_FriendlyName = "Get Float Value"
+    m_Description = "Get the global float value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetIntValue
+    m_FriendlyName = "Get Int Value"
+    m_Description = "Get the global int value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetStringValue
+    m_FriendlyName = "Get String Value"
+    m_Description = "Get the global string value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetStringWithDefault
+    m_FriendlyName = "Get String With Default"
+    m_Description = "Return the input string, use the code default if none was supplied."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    in pString: PVAL_STRING "String" default="Default echo string." inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::GetVectorLengthWithRef
+    m_FriendlyName = "Get Vector Length With Ref"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    in testRef: PVAL_VEC3 "Test Ref" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::LibraryDestroyFakeEntity
+    m_FriendlyName = "Library Destroy Fake Entity"
+    m_Description = "Destroy a fake entity from a static library function."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in nHandle: PVAL_TEST_HANDLE "Handle" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::LibraryFindFakeEntityByName
+    m_FriendlyName = "Library Find Fake Entity By Name"
+    m_Description = "Find a spawned entity by name."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pName: PVAL_STRING "Name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_TEST_HANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::LibrarySpawnFakeEntity
+    m_FriendlyName = "Library Spawn Fake Entity"
+    m_Description = "Spawn a fake entity from a static library function."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pName: PVAL_STRING "Name" inflow=InDefault
+    in pClass: PVAL_STRING "Class" default="" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_TEST_HANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::PrintStringWithEditorSuggestions
+    m_FriendlyName = "Print String With Editor Suggestions"
+    m_Description = "Print string with suggestions from editor code."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pValue: PVAL_STRING "Value" metadata={ suggestion_name = "pulse_test_example_suggestion" } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::PrintStringWithLeafSuggestions
+    m_FriendlyName = "Print String With Leaf Suggestions"
+    m_Description = "Print string with suggestions from leaf code."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pValue: PVAL_STRING "Value" metadata={ suggestion_name = "RegisterChoice_CPulseTestFuncs_LibraryA_PrintStringWithLeafSuggestions" } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetEnumColor
+    m_FriendlyName = "Set Enum Color"
+    m_Description = "Set the global color enum value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in color: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "color" default="BLACK" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetEnumFlags
+    m_FriendlyName = "Set Enum Flags"
+    m_Description = "Set the global color flags value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in flags: PVAL_SCHEMA_ENUM:PulseTestEnumFlags_t "flags" default="" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetEnumShape
+    m_FriendlyName = "Set Enum Shape"
+    m_Description = "Set the global color shape value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in shape: PVAL_SCHEMA_ENUM:PulseTestEnumShape_t "shape" default="CIRCLE" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetFloatValue
+    m_FriendlyName = "Set Float Value"
+    m_Description = "Set the global float value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in flValue: PVAL_FLOAT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetFloatValueOptional
+    m_FriendlyName = "Set Float Value Optional"
+    m_Description = "Set the global float value (with default)."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in flValue: PVAL_FLOAT "Value" default=1 inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetIntValue
+    m_FriendlyName = "Set Int Value"
+    m_Description = "Set the global int value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in nValue: PVAL_INT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetStringValue
+    m_FriendlyName = "Set String Value"
+    m_Description = "Set the global string value."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pValue: PVAL_STRING "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::SetStringValueOptional
+    m_FriendlyName = "Set String Value Optional"
+    m_Description = "Set the global string value (with default)."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pValue: PVAL_STRING "Value" default="A default string (set)" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestArrayArrayAccess
+    m_FriendlyName = "Test Array Array Access"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    in vec: PVAL_ARRAY:PVAL_ARRAY:PVAL_INT "vec" metadata={ polymorphic_arg = true } inflow=self
+    in x: PVAL_INT "x" inflow=self
+    in y: PVAL_INT "y" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestArrayIntShuffle
+    m_FriendlyName = "Test Array Int Shuffle"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in vec: PVAL_ARRAY:PVAL_INT "vec" metadata={ polymorphic_arg = true } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_ARRAY:PVAL_INT "Result" metadata={ polymorphic_arg = true } outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestArrayIntSum
+    m_FriendlyName = "Test Array Int Sum"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in vec: PVAL_ARRAY:PVAL_INT "vec" metadata={ polymorphic_arg = true } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestCompiledParams_AfterTypeChanges
+    m_FriendlyName = "Test Compiled Params  After Type Changes"
+    m_Description = "Function signature which has been replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in arg1: PVAL_INT "arg1" inflow=InDefault
+    in arg2: PVAL_FLOAT "arg2" inflow=InDefault
+    in arg3: PVAL_STRING "arg3" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestCompiledParams_BeforeTypeChanges
+    m_FriendlyName = "Test Compiled Params  Before Type Changes"
+    m_Description = "Function signature which has been replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in arg1: PVAL_FLOAT "arg1" inflow=InDefault
+    in arg2: PVAL_INT "arg2" inflow=InDefault
+    in arg3: PVAL_BOOL "arg3" inflow=InDefault
+    in arg4: PVAL_STRING "arg4" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed_New
+    m_FriendlyName = "Test Function Renamed  New"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    legacy_names = ["CPulseTestFuncs_LibraryA::TestFunctionRenamed_Old_Internal"]
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed_Old
+    m_FriendlyName = "Test Function Renamed  Old"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed_Old_Internal
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseTestFuncs_LibraryA::TestFunctionRenamed_New"
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed_WithArgs_Old
+    m_FriendlyName = "Test Function Renamed  With Args  Old"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in x: PVAL_INT "x" inflow=InDefault
+    in y: PVAL_INT "y" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed_WithArgs_Old_Internal
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseTestFuncs_LibraryA::TestFunctionRenamed__WithArgs_New"
+
+CPulseTestFuncs_LibraryA::TestFunctionRenamed__WithArgs_New
+    m_FriendlyName = "Test Function Renamed   With Args  New"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    legacy_names = ["CPulseTestFuncs_LibraryA::TestFunctionRenamed_WithArgs_Old_Internal"]
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in a: PVAL_INT "a" inflow=InDefault
+    in b: PVAL_INT "b" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestObservableFalse
+    m_FriendlyName = "Test Observable False"
+    m_Description = "<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    expr_alias = "observable_false"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestObservableTrue
+    m_FriendlyName = "Test Observable True"
+    m_Description = "<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    expr_alias = "observable_true"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterDefaultsAdded
+    m_FriendlyName = "Test Optional Parameters  After Defaults Added"
+    m_Description = "Function signature which has been replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in bValue: PVAL_BOOL "Value" default=true inflow=InDefault
+    in nValue: PVAL_INT "Value" default=2 inflow=InDefault
+    in flValue: PVAL_FLOAT "Value" default=3 inflow=InDefault
+    in pString: PVAL_STRING "String" default="Foo" inflow=InDefault
+    in color: PVAL_COLOR_RGB "color" default=[100, 200, 50] inflow=InDefault
+    in nColor: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "Color" default="RED" inflow=InDefault
+    in nShape: PVAL_SCHEMA_ENUM:PulseTestEnumShape_t "Shape" default="TRIANGLE" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterReorderSparseDefaults
+    m_FriendlyName = "Test Optional Parameters  After Reorder Sparse Defaults"
+    m_Description = "Function signature which has been replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in nShape: PVAL_SCHEMA_ENUM:PulseTestEnumShape_t "Shape" inflow=InDefault
+    in nColor: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "Color" inflow=InDefault
+    in color: PVAL_COLOR_RGB "color" inflow=InDefault
+    in pString: PVAL_STRING "String" inflow=InDefault
+    in nValue: PVAL_INT "Value" inflow=InDefault
+    in bValue: PVAL_BOOL "Value" inflow=InDefault
+    in flValue: PVAL_FLOAT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeDefaultsAdded
+    m_FriendlyName = "Test Optional Parameters  Before Defaults Added"
+    m_Description = "Function signature which will be replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeReorderSparseDefaults
+    m_FriendlyName = "Test Optional Parameters  Before Reorder Sparse Defaults"
+    m_Description = "Function signature which has been replaced after compilation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestFuncs_LibraryA"
+    supported_domains = TestDomain
+    inflow InDefault "Default In" [default]
+    in pString: PVAL_STRING "String" default="Foo" inflow=InDefault
+    in color: PVAL_COLOR_RGB "color" default=[100, 200, 50] inflow=InDefault
+    in nColor: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "Color" default="RED" inflow=InDefault
+    in nShape: PVAL_SCHEMA_ENUM:PulseTestEnumShape_t "Shape" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

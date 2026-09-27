@@ -1,0 +1,25 @@
+CPulseCell_CursorQueue : CPulseCell_WaitForCursorsWithTagBase
+    m_FriendlyName = "Cursor Queue"
+    m_Description = "Causes each execution cursor to wait for the completion of all prior cursors that have visited this node. Use this to safely support multiple triggers to areas of the graph that take time to complete."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode"
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_wait_zone.png"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseCell_CursorQueue"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = BaseDomain
+    inflow Wait "Wait" [default] yields=true terminates=false
+    outflow m_WaitComplete "Wait Complete" [default] backed_by_variable=true
+    variable m_nCursorsAllowedToWait: integer "Cursors Allowed To Wait" default=-1
+        description = "Any extra waiting cursors will be terminated. -1 for infinite cursors."
+    variable m_nCursorsAllowedToRunParallel: integer "Cursors Allowed To Run Parallel" default=1
+        description = "Any cursors above this count will wait, up to the limit."

@@ -1,0 +1,26 @@
+CPulseCell_WaitForObservable : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "Wait Until"
+    m_Description = "All values connected to this node must be 'observable'. Variables on this graph will be automatically promoted to observable. Other value nodes must take an explicit context, look for those nodes with a corresponding icon."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/observable_variable_listener.png"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_WaitForObservable"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = BaseDomain
+    inflow Start "Start" [default] yields=true terminates=false
+        description = "Begin testing a condition composed of Observable variable references. Continues checking until true."
+    outflow m_OnTrue "On True" [default] backed_by_variable=true
+    attribute m_Condition: CPulseObservableExpression "Observable" args={ expression_type = "PVAL_BOOL" }
+        description = "Condition to evaluate when any of its dependent values change."
+
+CPulseCell_WaitForObservable::Cancel
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"

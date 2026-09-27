@@ -1,0 +1,32 @@
+CPulseCell_Inflow_Wait : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "Wait"
+    m_Description = "Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["client.dll"]
+    editor_canvas_item_spec =
+        className = "IsWaitNode IsControlFlowNode"
+        item_factory = "InflowWait"
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/inflow_wait.png"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseCell_Inflow_Wait"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = BaseDomain
+    inflow Wait "Wait" [default] yields=true terminates=false
+        description = "Pause the cursor at this point."
+    in flDurationSec: PVAL_FLOAT "Duration Sec" inflow=Wait
+    outflow m_WakeResume "Wake Resume" [default] backed_by_variable=true
+
+CPulseCell_Inflow_Wait::Abort
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"
+
+CPulseCell_Inflow_Wait::ImmediateWake
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately"

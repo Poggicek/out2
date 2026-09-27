@@ -1,0 +1,504 @@
+CBaseModelEntityAPI::Alpha
+    m_FriendlyName = "Alpha"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::BreakJointByName
+    m_FriendlyName = "Break Joint By Name"
+    m_Description = "Destroy this joint by Name"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pJointName: PVAL_STRING "Joint Name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::ClearRenderAttribute
+    m_FriendlyName = "Clear Render Attribute"
+    m_Description = "Clear the specified render attribute"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttributeName: PVAL_STRING "Attribute Name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::Color
+    m_FriendlyName = "Color"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_COLOR_RGB "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::DestructibleHitGroupDestroy
+    m_FriendlyName = "Destructible Hit Group Destroy"
+    m_Description = "Destroy a destructible hit group. Damage level of -1 means all damage levels, otherwise specify the last one you want to blow up."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nHitGroup: PVAL_SCHEMA_ENUM:HitGroup_t "Hit Group" inflow=InDefault
+    in nDamageLevel: PVAL_INT "Damage Level" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::Extinguish
+    m_FriendlyName = "Extinguish"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::GetJointLimitAngles
+    m_FriendlyName = "Get Joint Limit Angles"
+    m_Description = "Returns the joint limit angles."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pJointName: PVAL_STRING "Joint Name" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+    out MinAngle: PVAL_FLOAT "Min Angle" outflow=OutDefault direct_return_for=self
+    out MaxAngle: PVAL_FLOAT "Max Angle" outflow=OutDefault direct_return_for=self
+
+CBaseModelEntityAPI::GetRenderAlpha
+    m_FriendlyName = "Get Render Alpha"
+    m_Description = "Get object render alpha (0-255)"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CBaseModelEntityAPI::GetRenderColor
+    m_FriendlyName = "Get Render Color"
+    m_Description = "Get object render color (Alpha is ignored)"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_COLOR_RGB "Result" outflow=OutDefault direct_return_for=self
+
+CBaseModelEntityAPI::Ignite
+    m_FriendlyName = "Ignite"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::IgniteHitboxFireScale
+    m_FriendlyName = "Ignite Hitbox Fire Scale"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::IgniteLifetime
+    m_FriendlyName = "Ignite Lifetime"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::IgniteNumHitboxFires
+    m_FriendlyName = "Ignite Num Hitbox Fires"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetBodyGroupValue
+    m_FriendlyName = "Set Body Group Value"
+    m_Description = "Change the active choice for the named bodygroup to the specified value"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pBodyGroupName: PVAL_STRING "Body Group Name" inflow=InDefault
+    in iValue: PVAL_INT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetJointLimitAngles
+    m_FriendlyName = "Set Joint Limit Angles"
+    m_Description = "Sets the joint limit angles. Only valid for prismatic and revolute joints."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pJointName: PVAL_STRING "Joint Name" inflow=InDefault
+    in flMinAngle: PVAL_FLOAT "Min Angle" metadata={ attribute_range = "-180 0" } inflow=InDefault
+    in flMaxAngle: PVAL_FLOAT "Max Angle" metadata={ attribute_range = "0 180" } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetJointLimitEnabled
+    m_FriendlyName = "Set Joint Limit Enabled"
+    m_Description = "Enables/disables the joint limit. Only valid for prismatic and revolute joints."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pJointName: PVAL_STRING "Joint Name" inflow=InDefault
+    in bEnabled: PVAL_BOOL "Enabled" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetMaterialGroup
+    m_FriendlyName = "Set Material Group"
+    m_Description = "Change the active materialgroup"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pName: PVAL_STRING "Name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetModel
+    m_FriendlyName = "Set Model"
+    m_Description = "Change the current model"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hModel: PVAL_RESOURCE:vmdl "Model" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderAlpha
+    m_FriendlyName = "Set Render Alpha"
+    m_Description = "Alpha 0-255"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nAlpha: PVAL_INT "Alpha" default=255 inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderAttribute
+    m_FriendlyName = "Set Render Attribute"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pValue: PVAL_STRING "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderAttribute4Floats
+    m_FriendlyName = "Set Render Attribute4 Floats"
+    m_Description = "Set the specified render attribute value"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttributeName: PVAL_STRING "Attribute Name" inflow=InDefault
+    in flX: PVAL_FLOAT "X" inflow=InDefault
+    in flY: PVAL_FLOAT "Y" inflow=InDefault
+    in flZ: PVAL_FLOAT "Z" inflow=InDefault
+    in flW: PVAL_FLOAT "W" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderAttributeFloat
+    m_FriendlyName = "Set Render Attribute Float"
+    m_Description = "Set the specified render attribute value"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttributeName: PVAL_STRING "Attribute Name" inflow=InDefault
+    in flValue: PVAL_FLOAT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderAttributeVector
+    m_FriendlyName = "Set Render Attribute Vector"
+    m_Description = "Set the specified render attribute value"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttributeName: PVAL_STRING "Attribute Name" inflow=InDefault
+    in vValue: PVAL_VEC3 "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::SetRenderColor
+    m_FriendlyName = "Set Render Color"
+    m_Description = "Set object render color (Alpha is ignored)"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in cColor: PVAL_COLOR_RGB "C Color" default=[255, 255, 255] inflow=InDefault
+        description = "Color"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::Skin
+    m_FriendlyName = "Skin"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::fademaxdist
+    m_FriendlyName = "fademaxdist"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseModelEntityAPI::fademindist
+    m_FriendlyName = "fademindist"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBaseModelEntityAPI::OnDestructibleHitGroupDamageLevelChanged
+    m_FriendlyName = "On Destructible Hit Group Damage Level Changed"
+    m_Description = "Called when the damage level of destructible part for a particular hit group has been changed."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out nHitGroup: PVAL_SCHEMA_ENUM:HitGroup_t "Hit Group" inflow=self
+    out nDamageLevel: PVAL_INT "Damage Level" inflow=self
+    out nDamageLevelsRemaining: PVAL_INT "Damage Levels Remaining" inflow=self
+    out nPrevDamageLevel: PVAL_INT "Prev Damage Level" inflow=self
+
+OUTPUT!CBaseModelEntityAPI::OnIgnite
+    m_FriendlyName = "On Ignite"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseModelEntityAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:basemodelentity "basemodelentity" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."

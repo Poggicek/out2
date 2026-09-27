@@ -1,0 +1,43 @@
+CSmartPropPulse_CreateRotator : CPulseCell_BaseFlow
+    m_FriendlyName = "Create Rotator"
+    m_Description = "Create a rotator that will be displayed at the current location, allowing the user to manipulate a rotation around an axis. The rotation value can be applied to the current transform as well as saved to a variable."
+    m_nClassType = "vdata"
+    MVDataClassGroup = "Manipulators"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_CreateRotator"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Run "Run" [default] yields=false terminates=false
+    in vOffset: PVAL_VEC3 "Offset" default=[0, 0, 0] inflow=Run
+        description = "Offset of the rotator relative to the current transform. This allows the rotator to be created at an offset location without applying that offset to the current transform."
+    in vRotationAxis: PVAL_VEC3 "Rotation Axis" default=[0, 0, 1] inflow=Run
+        description = "Axis around which the rotation will occur"
+    in nCoordinateSpace: PVAL_SCHEMA_ENUM:SmartPropSpace_t "Coordinate Space" default="ELEMENT" inflow=Run
+        description = "Coordinate space the axis of rotation is specified in."
+    in flDisplayRadius: PVAL_FLOAT "Display Radius" default=16 inflow=Run
+        description = "Radius at which the rotator handle should be displayed."
+    in displayColor: PVAL_COLOR_RGB "Display Color" default=[170, 170, 110] inflow=Run
+        description = "Color to display the rotator handle with."
+    in bApplyToCurrentTransform: PVAL_BOOL "Apply To Current Transform" default=true inflow=Run
+        description = "Should the rotation be applied to the current transform."
+    in flSnappingIncrement: PVAL_FLOAT "Snapping Increment" default=0 inflow=Run
+        description = "Specifies the number of degrees the rotation should snap to. If set to 0, then the rotation snapping will be controlled by the rotation snapping in Hammer."
+    in flInitialAngle: PVAL_FLOAT "Initial Angle" default=0 inflow=Run
+        description = "Specifies the angle the rotator should be set to initially."
+    in bEnforceLimits: PVAL_BOOL "Enforce Limits" default=false inflow=Run
+        description = "If enabled, the minimum and maximum rotation angles will be used to limit the range of the rotation."
+    in flMinAngle: PVAL_FLOAT "Minimum Angle" metadata={ readonly_expr = "bEnforceLimits == false" } default=0 inflow=Run
+        description = "Specifies the minimum angle limit in degrees"
+    in flMaxAngle: PVAL_FLOAT "Maximum Angle" metadata={ readonly_expr = "bEnforceLimits == false" } default=0 inflow=Run
+        description = "Specifies the minimum angle limit in degrees"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=Run
+    variable m_Name: string "Name" default=""
+        description = "Name used to identify the rotator. Must be unique within the parent element."

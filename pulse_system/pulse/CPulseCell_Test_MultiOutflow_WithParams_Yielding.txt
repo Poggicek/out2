@@ -1,0 +1,26 @@
+CPulseCell_Test_MultiOutflow_WithParams_Yielding : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "Test_MultiOutflow_WithParams_Yielding"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Test_MultiOutflow_WithParams_Yielding"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = TestDomain
+    inflow Start "Start" [default] yields=true terminates=false
+    outflow m_Out1 "Out1" [default] backed_by_variable=true
+    outflow m_AsyncChild1 "Async Child1" backed_by_variable=true
+    outflow m_AsyncChild2 "Async Child2" backed_by_variable=true
+    outflow m_YieldResume1 "Yield Resume1" backed_by_variable=true
+    outflow m_YieldResume2 "Yield Resume2" backed_by_variable=true
+    out nRetValue: PVAL_INT "Ret Value" outflow=m_Out1
+    out nAsyncRet1: PVAL_INT "Async Ret1" outflow=m_AsyncChild1
+    out pAsyncRet2: PVAL_STRING "Async Ret2" outflow=m_AsyncChild2
+    out nYieldArg1: PVAL_INT "Yield Arg1" outflow=m_YieldResume1
+    out pYieldArg2: PVAL_STRING "Yield Arg2" outflow=m_YieldResume2

@@ -1,0 +1,19 @@
+CPulseCell_Value_Gradient : CPulseCell_BaseValue
+    m_FriendlyName = "Gradient"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["client.dll"]
+    expect_default_outflow = true
+    generic_node_category = 4
+    hidden_in_tool = false
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseCell_Value_Gradient"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow Eval "Eval" yields=false terminates=false
+        description = "Evaluate the gradient at a position between 0 and 1"
+    in t: PVAL_FLOAT "t" inflow=Eval
+    out retval: PVAL_COLOR_RGB "Result" outflow=OutDefault direct_return_for=Eval
+    variable m_Gradient: kv3 "Gradient" default={ m_Stops = [] }
+        editor = "Gradient()"

@@ -1,0 +1,97 @@
+CPulsePhysicsConstraintsFuncs::CreatePhysicsBallSocketConstraint
+    m_FriendlyName = "Physics - Create Ball Socket Constraint"
+    m_Description = "Create a constraint that keeps the position of two objects fixed, relative to the constraint's origin. You can optionally specify limits for the relative twist and swing rotation."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    legacy_names = ["CPulseServerFuncs::CreatePhysicsBallSocketConstraint"]
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
+    supported_domains = ServerEntity
+    inflow InDefault "Default In" [default]
+    in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault
+    in pAttachmentName1: PVAL_STRING "Attachment Name1" metadata={ pulse_context_hints_port = "pTarget1", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in pTarget2: PVAL_EHANDLE "Target2" inflow=InDefault
+    in pAttachmentName2: PVAL_STRING "Attachment Name2" metadata={ pulse_context_hints_port = "pTarget2", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in bEnableSwingLimit: PVAL_BOOL "Enable Swing Limit" advanced_view=true default=false inflow=InDefault
+        description = "Limit relative rotation away from the constraint's Z axis"
+    in flSwingLimit: PVAL_FLOAT "Swing Limit" advanced_view=true default=0 inflow=InDefault
+        description = "Maximum swing angle in degrees, if the swing limit is enabled"
+    in bEnableTwistLimit: PVAL_BOOL "Enable Twist Limit" advanced_view=true default=false inflow=InDefault
+        description = "Limit relative rotation about the Z axis"
+    in flMinTwistAngle: PVAL_FLOAT "Min Twist Angle" advanced_view=true default=0 inflow=InDefault
+        description = "Minimum relative twist angle in degrees, if the twist limit is enabled"
+    in flMaxTwistAngle: PVAL_FLOAT "Max Twist Angle" advanced_view=true default=0 inflow=InDefault
+        description = "Maximum relative twist angle in degrees, if the twist limit is enabled"
+    in flFriction: PVAL_FLOAT "Friction" advanced_view=true default=0 inflow=InDefault
+        description = "Resistance/friction in the constraint"
+    in bSnapObjectPositions: PVAL_BOOL "Snap Object Positions" advanced_view=true default=false inflow=InDefault
+        description = "Snap the 2nd target's position to target 1's position"
+    in pOptionalLocationEnt: PVAL_EHANDLE "Optional Location Ent" advanced_view=true default=null inflow=InDefault
+        description = "Optional entity from which to inherit position and rotation"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_EHANDLE:phys_ballsocket "Result" outflow=OutDefault direct_return_for=self
+
+CPulsePhysicsConstraintsFuncs::CreatePhysicsConstraint
+    m_FriendlyName = "Physics - Create Constraint"
+    m_Description = "Constrain an entity to the world or another entity at a fixed relative position"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    legacy_names = ["CPulseServerFuncs::CreatePhysicsConstraint"]
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
+    supported_domains = ServerEntity
+    inflow InDefault "Default In" [default]
+    in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault
+    in pAttachmentName1: PVAL_STRING "Attachment Name1" metadata={ pulse_context_hints_port = "pTarget1", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in pTarget2: PVAL_EHANDLE "Target2" inflow=InDefault
+    in pAttachmentName2: PVAL_STRING "Attachment Name2" metadata={ pulse_context_hints_port = "pTarget2", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in bEnableLinearConstraint: PVAL_BOOL "Enable Linear Constraint" advanced_view=true default=true inflow=InDefault
+    in flLinearFrequency: PVAL_FLOAT "Linear Frequency" advanced_view=true default=0 inflow=InDefault
+        description = "Linear spring frequency (stiffness)"
+    in flLinearDampingRatio: PVAL_FLOAT "Linear Damping Ratio" advanced_view=true default=0 inflow=InDefault
+        description = "Linear spring damping ratio"
+    in bEnableAngularConstraint: PVAL_BOOL "Enable Angular Constraint" advanced_view=true default=true inflow=InDefault
+    in flAngularFrequency: PVAL_FLOAT "Angular Frequency" advanced_view=true default=0 inflow=InDefault
+        description = "Angular spring frequency (stiffness)"
+    in flAngularDampeningRatio: PVAL_FLOAT "Angular Dampening Ratio" advanced_view=true default=0 inflow=InDefault
+        description = "Angular spring damping ratio"
+    in bSnapObjectPositions: PVAL_BOOL "Snap Object Positions" advanced_view=true default=false inflow=InDefault
+        description = "Snap the 2nd target's position to target 1's position"
+    in pOptionalLocationEnt: PVAL_EHANDLE "Optional Location Ent" advanced_view=true default=null inflow=InDefault
+        description = "Optional entity from which to inherit position and rotation"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_EHANDLE:phys_constraint "Result" outflow=OutDefault direct_return_for=self
+
+CPulsePhysicsConstraintsFuncs::CreatePhysicsHingeConstraint
+    m_FriendlyName = "Physics - Create Hinge Constraint"
+    m_Description = "Create a physically simulated hinge between two entities"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    legacy_names = ["CPulseServerFuncs::CreatePhysicsHingeConstraint"]
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
+    supported_domains = ServerEntity
+    inflow InDefault "Default In" [default]
+    in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault
+    in pAttachmentName1: PVAL_STRING "Attachment Name1" metadata={ pulse_context_hints_port = "pTarget1", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in pTarget2: PVAL_EHANDLE "Target2" inflow=InDefault
+    in pAttachmentName2: PVAL_STRING "Attachment Name2" metadata={ pulse_context_hints_port = "pTarget2", suggestion_name = "pulse_model_attachment_name" } inflow=InDefault
+    in vHingeAxis: PVAL_VEC3 "Hinge Axis" inflow=InDefault
+        description = "Defined in local space of the location entity (first tries to use optional location ent, then target 1, then target 2), the axis on which the object will rotate. This should include the length of the hinge as well."
+    in flHingeFriction: PVAL_FLOAT "Hinge Friction" advanced_view=true default=0 inflow=InDefault
+        description = "Resistance/friction in the hinge. A value of 1 will hold the child object still under gravity"
+    in flMinRotationLimit: PVAL_FLOAT "Min Rotation Limit" advanced_view=true metadata={ attribute_range = "-180 0" } default=0 inflow=InDefault
+        description = "Minimum rotation limit around hinge axis"
+    in flMaxRotationLimit: PVAL_FLOAT "Max Rotation Limit" advanced_view=true metadata={ attribute_range = "0 180" } default=0 inflow=InDefault
+        description = "Maximum rotation limit around hinge axis"
+    in flInitialRotation: PVAL_FLOAT "Initial Rotation" advanced_view=true metadata={ attribute_range = "-1 1" } default=0 inflow=InDefault
+        description = "Initial rotation of the hinge (values -1 to 1 where -1 mean open at minimum limit and 1 means open at maximum limit)"
+    in bSnapObjectPositions: PVAL_BOOL "Snap Object Positions" advanced_view=true default=false inflow=InDefault
+        description = "Snap the 2nd target's position to target 1's position"
+    in pOptionalLocationEnt: PVAL_EHANDLE "Optional Location Ent" advanced_view=true default=null inflow=InDefault
+        description = "Optional entity from which to inherit position and rotation"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_EHANDLE:phys_hinge "Result" outflow=OutDefault direct_return_for=self

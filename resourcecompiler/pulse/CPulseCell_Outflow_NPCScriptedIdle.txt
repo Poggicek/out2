@@ -1,0 +1,7 @@
+CPulseCell_Outflow_NPCScriptedIdle::Cancel
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"
+
+CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly"

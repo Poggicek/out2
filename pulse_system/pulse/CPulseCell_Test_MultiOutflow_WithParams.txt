@@ -1,0 +1,25 @@
+CPulseCell_Test_MultiOutflow_WithParams : CPulseCell_BaseFlow
+    m_FriendlyName = "Test_MultiOutflow_WithParams"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Test_MultiOutflow_WithParams"
+    selector_has_specificity = false
+    supported_domains = TestDomain
+    inflow InflowA "Inflow A" [default] yields=false terminates=false
+    inflow InflowB "Inflow B" yields=false terminates=false
+    in nWhichOutflowA: PVAL_INT "Which Outflow A" inflow=InflowA
+    in pTraceA: PVAL_STRING "Trace A" inflow=InflowA
+    in nWhichOutflowB: PVAL_INT "Which Outflow B" inflow=InflowB
+    in pTraceB: PVAL_STRING "Trace B" inflow=InflowB
+    outflow m_Out1 "Out1" [default] backed_by_variable=true
+    outflow m_Out2 "Out2" backed_by_variable=true
+    out nRetValue: PVAL_INT "Ret Value" outflow=m_Out1
+    out nRetValue2: PVAL_FLOAT "Ret Value2" outflow=m_Out1
+    out pRetName: PVAL_STRING "Ret Name" outflow=m_Out2

@@ -1,0 +1,37 @@
+CSmartPropPulse_PlaceInSphere : CPulseCell_BaseFlow
+    m_FriendlyName = "Place In Radius"
+    m_Description = "An element which places multiple instances of its child elements within a radius."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_PlaceInSphere"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Run "Run" [default] yields=false terminates=false
+    in nPlacementMode: PVAL_SCHEMA_ENUM:SmartPropRadiusPlacementMode_t "Placement Mode" default="SPHERE" inflow=Run
+        description = "Specifies how the positions are computed based on the radius."
+    in nDistributionMode: PVAL_SCHEMA_ENUM:SmartPropDistributionMode_t "Distribution Mode" default="RANDOM" inflow=Run
+        description = "Specifies the method to be used to distribute."
+    in flRandomness: PVAL_FLOAT "Randomness" metadata={ suppress_expr = "m_DistributionMode == RANDOM" } default=0 inflow=Run
+        description = "0 to 1 value indicating the amout of random offset that should be applied to the reguluarly spaced positions"
+    in vPlaneUpDirection: PVAL_VEC3 "Plane Up Direction" metadata={ suppress_expr = "m_PlacementMode == SPHERE" } default=[0, 0, 1] inflow=Run
+        description = "Vector up direction of the plane of the circle. This in the local space of the current element."
+    in nCountMin: PVAL_INT "Count Min" default=1 inflow=Run
+        description = "Minimum number of instances of this object and its children to be placed."
+    in nCountMax: PVAL_INT "Count Max" default=1 inflow=Run
+        description = "Maximum number of instances of this object and its children to be placed."
+    in flPositionRadiusInner: PVAL_FLOAT "Position Radius Inner" default=0 inflow=Run
+        description = "Inner radius from the placement position where the model can appear."
+    in flPositionRadiusOuter: PVAL_FLOAT "Position Radius Outer" default=0 inflow=Run
+        description = "Outer radius from the placement position where the model can appear."
+    in bAlignOrientation: PVAL_BOOL "Align Orientation" default=false inflow=Run
+        description = "Align the initial orientation of each placed object based on it position on the sphere or circle."
+    in vAlignDirection: PVAL_VEC3 "Align Direction" metadata={ readonly_expr = "m_bAlignOrientation == false" } default=[0, 0, 1] inflow=Run
+        description = "Vector in the local space of the child element to be aligned with sphere or circle"
+    outflow m_Place "Place" [default] backed_by_variable=true

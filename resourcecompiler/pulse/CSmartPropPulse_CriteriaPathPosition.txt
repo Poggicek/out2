@@ -1,0 +1,26 @@
+CSmartPropPulse_CriteriaPathPosition : CPulseCell_BaseRequirement
+    m_FriendlyName = "Valid Path Positions"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    expect_default_outflow = true
+    generic_node_category = 7
+    hidden_in_tool = false
+    requirement_pass = 1
+    requirement_summary_expr = ""
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_CriteriaPathPosition"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow CheckRequirement "Check Requirement" yields=false terminates=false requirement_check=true requirement_commit=false
+    in m_PlaceAtPositions: PVAL_SCHEMA_ENUM:SmartPropPathPositions_t "Place At Positions" inflow=CheckRequirement
+        description = "Specifies the method to use to determine which positions this element should be placed at along the path."
+    in m_nPlaceEveryNthPosition: PVAL_INT "Place Every Nth Position" metadata={ suppress_expr = "( m_PlaceAtPositions == ALL ) || ( m_PlaceAtPositions == START_AND_END ) || ( m_PlaceAtPositions == CONTROL_POINTS )" } inflow=CheckRequirement
+        description = "Specifies the spacing between positions. For example, a value of 1 will place the element at very position, 2 every other position, 3 every third position"
+    in m_nNthPositionIndexOffset: PVAL_INT "Nth Position Index Offset" metadata={ suppress_expr = "( m_PlaceAtPositions == ALL ) || ( m_PlaceAtPositions == START_AND_END ) || ( m_PlaceAtPositions == CONTROL_POINTS )" } inflow=CheckRequirement
+        description = "Specifies an offset to use when determining the Nth position to place an element at. For example if placing at every third position with an offset of 0, an element will appear at positions 1, 4, 7, and so on. But if an offset of 2 is set instead of 0, then an element will appear at positions 3, 6, and 9 and so on."
+    in m_bAllowAtStart: PVAL_BOOL "Allow At Start" inflow=CheckRequirement
+        description = "Should this element be placed at the first positions on the path"
+    in m_bAllowAtEnd: PVAL_BOOL "Allow At End" inflow=CheckRequirement
+        description = "Should this element be placed at the last positions on the path"

@@ -1,0 +1,29 @@
+CPulseCell_TestEnums : CPulseCell_BaseValue
+    m_FriendlyName = "Test Enums"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 4
+    hidden_in_tool = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_TestEnums"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow CompareValues "Compare Values" yields=false terminates=false
+    in nColor: PVAL_SCHEMA_ENUM:PulseTestEnumColor_t "Color" inflow=CompareValues
+    in nFlags: PVAL_SCHEMA_ENUM:PulseTestEnumFlags_t "Flags" inflow=CompareValues
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=CompareValues
+    variable m_nReferenceColor: choices "Reference Color" default="BLACK"
+        item_set = "choices"
+        item BLACK "Black"
+        item WHITE "White"
+        item RED "Red"
+        item GREEN "Green"
+        item BLUE "Blue"
+    variable m_nReferenceFlags: flagchoices "Reference Flags" default=""
+        item_set = "flagchoices"
+        item FIRST "First"
+        item SECOND "Second"
+        item THIRD "Third"

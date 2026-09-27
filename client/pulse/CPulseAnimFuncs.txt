@@ -1,0 +1,15 @@
+CPulseAnimFuncs::GetLayerCycle
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CBaseAnimGraphAPI::GetLayerCycle"
+
+CPulseAnimFuncs::IsAnimgraph2EventActive
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CBaseAnimGraphAPI::IsAnimEventActive"
+
+CPulseAnimFuncs::IsExternalChoreoGraphActive
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CBaseAnimGraphAPI::IsExternalChoreoGraphActive"
+
+CPulseAnimFuncs::PlaySequence
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CBaseAnimGraphAPI::PlaySequence"

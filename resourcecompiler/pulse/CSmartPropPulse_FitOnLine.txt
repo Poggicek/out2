@@ -1,0 +1,44 @@
+CSmartPropPulse_FitOnLine : CPulseCell_BaseFlow
+    m_FriendlyName = "Fit on Line"
+    m_Description = "An element which fits one or more instances of a set of choices on to a line."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    allowed_requirements =
+        CPulseCell_IsRequirementValid = true
+        CSmartPropPulse_SelectionEndCap = true
+        CSmartPropPulse_SelectionLinearLength = true
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode"
+        create_special_outflows_section = true
+    expect_default_outflow = false
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/requirements.png"
+    hidden_in_tool = false
+    is_selector = true
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_FitOnLine"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Pick "Pick" [default] yields=false terminates=false
+    in vStart: PVAL_VEC3 "Start" default=[0, 0, 0] inflow=Pick
+        description = "Specifies the start point of the line in the specified coordinate space."
+    in vEnd: PVAL_VEC3 "End" default=[0, 0, 0] inflow=Pick
+        description = "Specifies the end point of the line in the specified coordinate space."
+    in nPointSpace: PVAL_SCHEMA_ENUM:SmartPropSpace_t "End point space" default="ELEMENT" inflow=Pick
+        description = "Specifies the coordinate space in which the end point values are specified."
+    in bOrientAlongLine: PVAL_BOOL "Orient Along Line" default=false inflow=Pick
+        description = "Should the child elements be oriented based on the line. If enabled the child elements placed on the line will be oriented such that their +x axis points along the line towards the end point."
+    in vUpDirection: PVAL_VEC3 "Up Direction" default=[0, 0, 1] inflow=Pick
+        description = "Up vector which is used to determine the rotation of each element around the line."
+    in nUpDirectionSpace: PVAL_SCHEMA_ENUM:SmartPropSpace_t "Up Direction Space" default="ELEMENT" inflow=Pick
+        description = "Space in which the up direction is defined."
+    in bPrioritizeUp: PVAL_BOOL "Prioritize Up" default=false inflow=Pick
+        description = "When the up direction is not orthogonal to the line direction normally the up vector will be adjusted to make it orthogonal to the line direction. If prioritize up is true, then the up direction will be maintained and the forward direction will be adjusted."
+    in nScaleMode: PVAL_SCHEMA_ENUM:ScaleMode_t "Scale Mode" default="NONE" inflow=Pick
+        description = "Specifies how scale is applied to each of the selected element in order to fit them to the line."
+    in nPickMode: PVAL_SCHEMA_ENUM:PickMode_t "Child Selection Mode" default="LARGEST_FIRST" inflow=Pick
+        description = "Specifies how scale is applied to each of the selected element in order to fit them to the line."
+    attribute m_OutflowList: PulseSelectorOutflowList_t "Outflow List"

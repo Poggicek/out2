@@ -1,0 +1,19 @@
+CPulseCell_Value_RandomInt : CPulseCell_BaseValue
+    m_FriendlyName = "Random Integer"
+    m_Description = "Generate a random integer between min and max (inclusive)"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["client.dll"]
+    expect_default_outflow = true
+    generic_node_category = 4
+    header_icon = "tools/images/pulse_editor/exit_cycle_random.png"
+    hidden_in_tool = false
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseCell_Value_RandomInt"
+    selector_has_specificity = false
+    supported_domains = BaseDomain
+    inflow Eval "Eval" yields=false terminates=false
+    in nMin: PVAL_INT "Min" inflow=Eval
+    in nMax: PVAL_INT "Max" inflow=Eval
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=Eval

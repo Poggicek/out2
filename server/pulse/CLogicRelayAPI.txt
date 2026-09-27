@@ -1,0 +1,127 @@
+CLogicRelayAPI::CancelPending
+    m_FriendlyName = "Cancel Pending"
+    m_Description = "Cancel any events fired by this relay that are currently pending in the I/O event queue."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicRelayAPI::Disable
+    m_FriendlyName = "Disable"
+    m_Description = "Disable this entity."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicRelayAPI::Enable
+    m_FriendlyName = "Enable"
+    m_Description = "Enable this entity."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicRelayAPI::EnableRefire
+    m_FriendlyName = "Enable Refire"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicRelayAPI::Toggle
+    m_FriendlyName = "Toggle"
+    m_Description = "Toggle the relay between enabled and disabled."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicRelayAPI::Trigger
+    m_FriendlyName = "Trigger"
+    m_Description = "Trigger the relay, causing its OnTrigger output to fire if it is enabled."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CLogicRelayAPI::OnSpawn
+    m_FriendlyName = "On Spawn"
+    m_Description = "Fired when the relay is spawned. If the relay is set to only trigger once, it will delete itself after firing this output."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+
+OUTPUT!CLogicRelayAPI::OnTrigger
+    m_FriendlyName = "On Trigger"
+    m_Description = "Fired when the relay is triggered. If the relay is set to only trigger once, it will delete itself after firing this output."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CLogicRelayAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_relay "logic_relay" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."

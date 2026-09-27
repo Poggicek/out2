@@ -1,0 +1,125 @@
+CPulseCursorFuncs::AnyOtherCursorsHaveTag
+    m_FriendlyName = "Any Other Cursors Have Tag"
+    m_Description = "Check if any yielded cursors on the graph already have the given tag."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseCursorFuncs::CursorHasTag
+    m_FriendlyName = "Cursor Has Tag"
+    m_Description = "Check if the cursor already has the given tag."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseCursorFuncs::KillAllOtherCursors
+    m_FriendlyName = "Kill All Other Cursors"
+    m_Description = "Find all the yielded cursors on this graph and cancel them."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_kill.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in nKillPriority: PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t "Kill Priority" advanced_view=true default="HardCancel" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseCursorFuncs::KillCursorsWithTag
+    m_FriendlyName = "Kill Cursors With Tag"
+    m_Description = "Find all the yielded cursors on this graph with the matching tag and cancel them."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/kill_cursor_with_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    in nKillPriority: PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t "Kill Priority" advanced_view=true default="HardCancel" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseCursorFuncs::RemoveTagFromCursor
+    m_FriendlyName = "Remove Tag From Cursor"
+    m_Description = "Remove the given tag from this cursor. If other cursors are waiting on us, they will resume."
+    m_nClassType = "vdata"
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseCursorFuncs::TagCursor
+    m_FriendlyName = "Tag Cursor"
+    m_Description = "Save a named value of any type on the cursor."
+    m_nClassType = "vdata"
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/cursor_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    in bInherit: PVAL_BOOL "Inherit" advanced_view=true default=false inflow=InDefault
+        description = "If this cursor spawns other work via Fire And Forget, should this Tag be inherited?"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseCursorFuncs::WakeCursorsWithTag
+    m_FriendlyName = "Wake Cursors With Tag"
+    m_Description = "Find all the yielded cursors on this graph with the matching tag and wake them."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/kill_cursor_with_tag.png"
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCursorFuncs"
+    supported_domains = BaseDomain
+    inflow InDefault "Default In" [default]
+    in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
+        description = "A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them."
+    in tagValue: PVAL_VARIANT "Tag Value" advanced_view=true default=["PVAL_STRING", ""] inflow=InDefault
+        description = "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value."
+    in nWakePriority: PVAL_SCHEMA_ENUM:PulseCursorWakePriority_t "Wake Priority" default="WakeElegantly" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

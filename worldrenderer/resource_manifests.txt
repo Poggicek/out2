@@ -1,0 +1,4 @@
+GrassTileInit
+    group = GameStartup
+    source = src/worldrenderer/grasstilesceneobject.cpp
+    materials/grass/grasstile.vmat

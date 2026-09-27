@@ -1,0 +1,27 @@
+CSmartPropOperation_MaterialReplacementAPI::AddMaterialOverride
+    m_FriendlyName = "Add Material Override"
+    m_Description = "Specifies a material replacement to apply to all following models. Mapping goes from the material specified by the model( including material group selection ) to the replacement material. Previous material overrides are not considered when determining the base material."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropOperation_MaterialReplacementAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in originalMaterial: PVAL_RESOURCE_NAME:vmat "Original Material" inflow=InDefault
+        description = "Original material to replace. This is the material specified in the model, including any material group asignment within the model. Does not consider any existing material overrides specified within the smart prop."
+    in replacementMaterial: PVAL_RESOURCE_NAME:vmat "New Material" inflow=InDefault
+        description = "New material to replace the original material with."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSmartPropOperation_MaterialReplacementAPI::ClearMaterialOverrides
+    m_FriendlyName = "Clear Material Overrides"
+    m_Description = "Clear any previous material overrides."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropOperation_MaterialReplacementAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

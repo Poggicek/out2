@@ -1,0 +1,31 @@
+CPulseCell_PickBestOutflowSelector : CPulseCell_BaseFlow
+    m_FriendlyName = "Select Best Exit"
+    m_Description = "Evaluate the requirements of each connected node"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["server.dll"]
+    allowed_requirements =
+        CPulseCell_IsRequirementValid = true
+        CPulseCell_LimitCount = true
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode"
+        create_special_outflows_section = true
+    expect_default_outflow = false
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/requirements.png"
+    hidden_in_tool = false
+    is_selector = true
+    is_state_cell = false
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCell_PickBestOutflowSelector"
+    selector_has_specificity = true
+    supported_domains = BaseDomain
+    inflow ProcessSelector "Process Selector" [default] yields=false terminates=false
+    attribute m_OutflowList: PulseSelectorOutflowList_t "Outflow List"
+    variable m_nCheckType: choices "Check Type" default="SORT_BY_NUMBER_OF_VALID_CRITERIA"
+        item_set = "choices"
+        item SORT_BY_NUMBER_OF_VALID_CRITERIA "Choose Best"
+            description = "Choose the best outflow with all rules passing, as determined by number of passing rules (specificity)."
+        item SORT_BY_OUTFLOW_INDEX "Choose First"
+            description = "Choose the first outflow with all rules passing, from left to right"

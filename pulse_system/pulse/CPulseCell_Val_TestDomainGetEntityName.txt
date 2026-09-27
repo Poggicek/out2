@@ -1,0 +1,16 @@
+CPulseCell_Val_TestDomainGetEntityName : CPulseCell_BaseValue
+    m_FriendlyName = "Get Fake Entity Name"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 4
+    hidden_in_tool = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Val_TestDomainGetEntityName"
+    selector_has_specificity = false
+    supported_domains = TestDomain
+    inflow Eval "Eval" yields=false terminates=false
+    in hEntity: PVAL_TEST_HANDLE "Entity" inflow=Eval
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=Eval

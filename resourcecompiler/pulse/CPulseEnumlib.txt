@@ -1,0 +1,53 @@
+CPulseEnumlib::AddFlags
+    m_FriendlyName = "Add Flags"
+    m_Description = "Add flags to the given value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseEnumlib"
+    supported_domains = BaseDomain
+    in value: PVAL_SCHEMA_ENUM "value" metadata={ polymorphic_arg = true } inflow=self
+    in flags: PVAL_SCHEMA_ENUM "flags" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } inflow=self
+    out retval: PVAL_SCHEMA_ENUM "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } outflow=OutDefault direct_return_for=self
+
+CPulseEnumlib::HasAllFlags
+    m_FriendlyName = "Has All Flags"
+    m_Description = "Whether value has ALL of the specified flags set (it may have other flags.)"
+    m_nClassType = "vdata"
+    expr_alias = "allflags"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseEnumlib"
+    supported_domains = BaseDomain
+    in value: PVAL_SCHEMA_ENUM "value" metadata={ polymorphic_arg = true } inflow=self
+    in flags: PVAL_SCHEMA_ENUM "flags" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseEnumlib::HasAnyFlags
+    m_FriendlyName = "Has Any Flags"
+    m_Description = "Whether value has ANY of the specified flags set (it may have other flags.)"
+    m_nClassType = "vdata"
+    expr_alias = "anyflags"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseEnumlib"
+    supported_domains = BaseDomain
+    in value: PVAL_SCHEMA_ENUM "value" metadata={ polymorphic_arg = true } inflow=self
+    in flags: PVAL_SCHEMA_ENUM "flags" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseEnumlib::RemoveFlags
+    m_FriendlyName = "Remove Flags"
+    m_Description = "Remove flags from the given value."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseEnumlib"
+    supported_domains = BaseDomain
+    in value: PVAL_SCHEMA_ENUM "value" metadata={ polymorphic_arg = true } inflow=self
+    in flags: PVAL_SCHEMA_ENUM "flags" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } inflow=self
+    out retval: PVAL_SCHEMA_ENUM "Result" metadata={ polymorphic_arg = true, polymorphic_dependent_arg = "value:fulltype" } outflow=OutDefault direct_return_for=self

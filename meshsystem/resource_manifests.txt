@@ -1,0 +1,8 @@
+(unnamed)
+    group = GameStartup
+    source = src/meshsystem/meshutils.cpp
+    materials/tools/show_skeleton.vmat
+
+VModelError
+    source = src/meshsystem/meshsystem.cpp
+    models/dev/error.vmdl

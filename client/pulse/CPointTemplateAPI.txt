@@ -1,0 +1,88 @@
+CPointTemplateAPI::DeleteCreatedSpawnGroups
+    m_FriendlyName = "Delete Created Spawn Groups"
+    m_Description = "Deletes all spawn groups created by the template. Only works if you use asynchronous spawn and INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPointTemplateAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_template "point_template" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointTemplateAPI::ForceSpawn
+    m_FriendlyName = "Force Spawn"
+    m_Description = "Spawn an instance of the template at the original position."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPointTemplateAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_template "point_template" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointTemplateAPI::ForceSpawnAtLocation
+    m_FriendlyName = "Force Spawn At Location"
+    m_Description = "Tells the point_template entity to ForceSpawn and return the first entity that matches the name (wildcard)"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPointTemplateAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_template "point_template" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pLocationEntity: PVAL_EHANDLE "Location Entity" advanced_view=true inflow=InDefault
+        description = "If specified, will spawn the entities at this entity's location."
+    in pSpawnedEntityName: PVAL_STRING "Spawned Entity Name" metadata={ suggestion_name = "pulse_point_template_entities_suggestion" } inflow=InDefault
+        description = "Return the first spawned entity that matches this name filter (wild card support). If empty, will return the first entity spawned."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CPointTemplateAPI::ForceSpawnReturnEntities
+    m_FriendlyName = "Force Spawn Return Entities"
+    m_Description = "Tells the point_template entity to ForceSpawn and return the all the entities spawned"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPointTemplateAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_template "point_template" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pLocationEntity: PVAL_EHANDLE "Location Entity" advanced_view=true inflow=InDefault
+        description = "If specified, will spawn the entities at this entity's location."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_ARRAY:PVAL_EHANDLE "Result" metadata={ polymorphic_arg = true } outflow=OutDefault direct_return_for=self
+
+OUTPUT!CPointTemplateAPI::OnEntitySpawned
+    m_FriendlyName = "On Entity Spawned"
+    m_Description = "Fired after spawning an instance of this template."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPointTemplateAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_template "point_template" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out param: PVAL_ARRAY:PVAL_EHANDLE "param" metadata={ polymorphic_arg = true } inflow=self

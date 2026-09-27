@@ -1,0 +1,1064 @@
+CPulseMathlib::AbsFloat
+    m_FriendlyName = "Abs Float"
+    m_Description = "Absolute value (float)"
+    m_nClassType = "vdata"
+    expr_alias = "abs"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::AbsInt
+    m_FriendlyName = "Abs Int"
+    m_Description = "Absolute value (int)"
+    m_nClassType = "vdata"
+    expr_alias = "abs"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_INT "x" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ArcCos
+    m_FriendlyName = "Arc Cos"
+    m_Description = "Arc Cosine of input value. Input must be -1.0, 1.0 range. Output in radians, from 0 to π"
+    m_nClassType = "vdata"
+    expr_alias = "acos"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ArcSin
+    m_FriendlyName = "Arc Sin"
+    m_Description = "Arc Sine of input value. Input must be -1.0, 1.0 range. Output in radians, from -π/2 to π/2"
+    m_nClassType = "vdata"
+    expr_alias = "asin"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ArcTan
+    m_FriendlyName = "Arc Tan"
+    m_Description = "Arc Tangent of input value. Input can be any real number. Output in radians, from -π/2 to π/2"
+    m_nClassType = "vdata"
+    expr_alias = "atan"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::CeilingFloat
+    m_FriendlyName = "Ceiling Float"
+    m_Description = "Ceiling - round float up to nearest integer)"
+    m_nClassType = "vdata"
+    expr_alias = "ceil"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ClampFloat
+    m_FriendlyName = "Clamp Float"
+    m_Description = "Clamp value to range (float)"
+    m_nClassType = "vdata"
+    expr_alias = "clamp"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in flMin: PVAL_FLOAT "Min" inflow=self
+    in flMax: PVAL_FLOAT "Max" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ClampInt
+    m_FriendlyName = "Clamp Int"
+    m_Description = "Clamp value to range (int)"
+    m_nClassType = "vdata"
+    expr_alias = "clamp"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_INT "x" inflow=self
+    in nMin: PVAL_INT "Min" inflow=self
+    in nMax: PVAL_INT "Max" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Cos
+    m_FriendlyName = "Cos"
+    m_Description = "Cosine of angle. Input in radians, output in radians"
+    m_nClassType = "vdata"
+    expr_alias = "cos"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flRadians: PVAL_FLOAT "Radians" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::CrossProductVector
+    m_FriendlyName = "Cross Product Vector"
+    m_Description = "Cross Product of Vector a x Vector b"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3 "a" inflow=self
+    in b: PVAL_VEC3 "b" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Deg2Rad
+    m_FriendlyName = "Deg2 Rad"
+    m_Description = "Convert degrees (0-180) to radians (0-pi)"
+    m_nClassType = "vdata"
+    expr_alias = "deg2rad"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flDegrees: PVAL_FLOAT "Degrees" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::DotProductVector
+    m_FriendlyName = "Dot Product Vector"
+    m_Description = "Dot Product of Vector a • Vector b"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3 "a" inflow=self
+    in b: PVAL_VEC3 "b" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Exp
+    m_FriendlyName = "Exp"
+    m_Description = "Computes e ( 2.71...) raised to a power"
+    m_nClassType = "vdata"
+    expr_alias = "log10"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Exp2
+    m_FriendlyName = "Exp2"
+    m_Description = "Computes 2 ( 2.71...) raised to a power"
+    m_nClassType = "vdata"
+    expr_alias = "log10"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::FloatToGameTime
+    m_FriendlyName = "Float To Game Time"
+    m_Description = "Convert from a raw floating-point time to a Game Time that will be saved/loaded appropriately"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flFloat: PVAL_FLOAT "Float" inflow=self
+    out retval: PVAL_GAMETIME "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::FloorFloat
+    m_FriendlyName = "Floor Float"
+    m_Description = "Floor - round float down to nearest integer"
+    m_nClassType = "vdata"
+    expr_alias = "floor"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Frac
+    m_FriendlyName = "Frac"
+    m_Description = "Fractional component (ie. returns 0.34 for 12.34)"
+    m_nClassType = "vdata"
+    expr_alias = "frac"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::GameTimeToFloat
+    m_FriendlyName = "Game Time To Float"
+    m_Description = "Convert from a Game Time a raw floating-point time that will NOT fixed up - use with caution!"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flTime: PVAL_GAMETIME "Time" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::IntegerDivide
+    m_FriendlyName = "Integer Divide"
+    m_Description = "Integer division - unlike the divide (/) node, this will truncate any remainder (floor) and return an integer."
+    m_nClassType = "vdata"
+    expr_alias = "idiv"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in nNumerator: PVAL_INT "Numerator" inflow=self
+    in nDenominator: PVAL_INT "Denominator" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::IsValidVector
+    m_FriendlyName = "Is Valid Vector"
+    m_Description = "Returns true if the Vector is valid"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3 "a" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::IsValidWorldVector
+    m_FriendlyName = "Is Valid World Vector"
+    m_Description = "Returns true if the World Vector is valid"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3_WORLDSPACE "a" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LengthVector
+    m_FriendlyName = "Length Vector"
+    m_Description = "Length (magnitude) of Vector"
+    m_nClassType = "vdata"
+    expr_alias = "length3d"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3 "a" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LengthVector2D
+    m_FriendlyName = "Length Vector2 D"
+    m_Description = "Length (magnitude) of Vector2D"
+    m_nClassType = "vdata"
+    expr_alias = "length2d"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC2 "a" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LerpFloat
+    m_FriendlyName = "Lerp Float"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (float)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in flValueA: PVAL_FLOAT "Value A" inflow=self
+    in flValueB: PVAL_FLOAT "Value B" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LerpVector
+    m_FriendlyName = "Lerp Vector"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (vector)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in vecValueA: PVAL_VEC3 "Value A" inflow=self
+    in vecValueB: PVAL_VEC3 "Value B" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LerpWorldVector
+    m_FriendlyName = "Lerp World Vector"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (world vector)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in vecValueA: PVAL_VEC3_WORLDSPACE "Value A" inflow=self
+    in vecValueB: PVAL_VEC3_WORLDSPACE "Value B" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Log
+    m_FriendlyName = "Log"
+    m_Description = "Natural logarithm (base e)"
+    m_nClassType = "vdata"
+    expr_alias = "log"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Log10
+    m_FriendlyName = "Log10"
+    m_Description = "Base-10 logarithm"
+    m_nClassType = "vdata"
+    expr_alias = "log10"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Log2
+    m_FriendlyName = "Log2"
+    m_Description = "Base-2 logarithm"
+    m_nClassType = "vdata"
+    expr_alias = "log2"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeAngle
+    m_FriendlyName = "Make Angle"
+    m_Description = "Make an Angle from component parts"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flPitch: PVAL_FLOAT "Pitch" inflow=self
+    in flYaw: PVAL_FLOAT "Yaw" inflow=self
+    in flRoll: PVAL_FLOAT "Roll" inflow=self
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeAngleFromForwardVector
+    m_FriendlyName = "Make Angle From Forward Vector"
+    m_Description = "Make an Angle from a Forward Vector"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vForward: PVAL_VEC3 "Forward" inflow=self
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeColor
+    m_FriendlyName = "Make Color"
+    m_Description = "Make a Color from component parts"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in r: PVAL_INT "r" inflow=self
+    in g: PVAL_INT "g" inflow=self
+    in b: PVAL_INT "b" inflow=self
+    out retval: PVAL_COLOR_RGB "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeTransform
+    m_FriendlyName = "Make Transform"
+    m_Description = "Make a Transform from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in origin: PVAL_VEC3 "origin" inflow=self
+    in angle: PVAL_QANGLE "angle" inflow=self
+    in flScale: PVAL_FLOAT "Scale" advanced_view=true default=1 inflow=self
+    out retval: PVAL_TRANSFORM "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeVector
+    m_FriendlyName = "Make Vector"
+    m_Description = "Make a Vector from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    in z: PVAL_FLOAT "z" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeVector2D
+    m_FriendlyName = "Make Vector2 D"
+    m_Description = "Make a Vector2D from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    out retval: PVAL_VEC2 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeVector4D
+    m_FriendlyName = "Make Vector4 D"
+    m_Description = "Make a Vector from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    in z: PVAL_FLOAT "z" inflow=self
+    in w: PVAL_FLOAT "w" inflow=self
+    out retval: PVAL_VEC4 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeVectorFromAngle
+    m_FriendlyName = "Make Vector From Angle"
+    m_Description = "Make a Vector from an Angle"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in angles: PVAL_QANGLE "angles" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeWorldTransform
+    m_FriendlyName = "Make World Transform"
+    m_Description = "Make a Transform from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in origin: PVAL_VEC3_WORLDSPACE "origin" inflow=self
+    in angle: PVAL_QANGLE "angle" inflow=self
+    in flScale: PVAL_FLOAT "Scale" advanced_view=true default=1 inflow=self
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MakeWorldVector
+    m_FriendlyName = "Make World Vector"
+    m_Description = "Make a World Vector from component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    in z: PVAL_FLOAT "z" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MaxFloat
+    m_FriendlyName = "Max Float"
+    m_Description = "Maximum of two values (float)"
+    m_nClassType = "vdata"
+    expr_alias = "max"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MaxInt
+    m_FriendlyName = "Max Int"
+    m_Description = "Maximum of two values (int)"
+    m_nClassType = "vdata"
+    expr_alias = "max"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_INT "x" inflow=self
+    in y: PVAL_INT "y" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MinFloat
+    m_FriendlyName = "Min Float"
+    m_Description = "Minimum of two values (float)"
+    m_nClassType = "vdata"
+    expr_alias = "min"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_FLOAT "x" inflow=self
+    in y: PVAL_FLOAT "y" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::MinInt
+    m_FriendlyName = "Min Int"
+    m_Description = "Minimum of two values (int)"
+    m_nClassType = "vdata"
+    expr_alias = "min"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in x: PVAL_INT "x" inflow=self
+    in y: PVAL_INT "y" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::NormalizeVector
+    m_FriendlyName = "Normalize Vector"
+    m_Description = "Normalize Vector a"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in a: PVAL_VEC3 "a" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Pi
+    m_FriendlyName = "Pi"
+    m_Description = "Returns the constant pi (3.14...)"
+    m_nClassType = "vdata"
+    expr_alias = "pi"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Pow
+    m_FriendlyName = "Pow"
+    m_Description = "X to the Y power"
+    m_nClassType = "vdata"
+    expr_alias = "pow"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    in flExponent: PVAL_FLOAT "Exponent" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RSqrt
+    m_FriendlyName = "R Sqrt"
+    m_Description = "Reciprocoal square root (1/sqrt)"
+    m_nClassType = "vdata"
+    expr_alias = "rsqrt"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Rad2Deg
+    m_FriendlyName = "Rad2 Deg"
+    m_Description = "Convert radians (0-pi) to degrees (0-180)"
+    m_nClassType = "vdata"
+    expr_alias = "rad2deg"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flRadians: PVAL_FLOAT "Radians" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RandomWorldPosition
+    m_FriendlyName = "Random World Position"
+    m_Description = "Returns a random position centered on vCenter with random min and max radius"
+    m_nClassType = "vdata"
+    expr_alias = "random_position"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vCenter: PVAL_VEC3_WORLDSPACE "Center" inflow=self
+    in flMinRadius: PVAL_FLOAT "Min Radius" inflow=self
+    in flMaxRadius: PVAL_FLOAT "Max Radius" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RemapClampedFloat
+    m_FriendlyName = "Remap Clamped Float"
+    m_Description = "Remap and clamp input value from input range to output range (float)"
+    m_nClassType = "vdata"
+    expr_alias = "remap"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flVal: PVAL_FLOAT "Val" inflow=self
+    in flInputA: PVAL_FLOAT "Input A" inflow=self
+    in flInputB: PVAL_FLOAT "Input B" inflow=self
+    in flOutputA: PVAL_FLOAT "Output A" inflow=self
+    in flOutputB: PVAL_FLOAT "Output B" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RoundFloat
+    m_FriendlyName = "Round Float"
+    m_Description = "Round - round float up or down to integer"
+    m_nClassType = "vdata"
+    expr_alias = "round"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Saturate
+    m_FriendlyName = "Saturate"
+    m_Description = "Saturate (clamps float between 0 and 1)"
+    m_nClassType = "vdata"
+    expr_alias = "saturate"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SignFloat
+    m_FriendlyName = "Sign Float"
+    m_Description = "Returns -1.0 or 0.0 or 1.0 based on the sign of the argument"
+    m_nClassType = "vdata"
+    expr_alias = "sign"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SignInt
+    m_FriendlyName = "Sign Int"
+    m_Description = "Returns -1 or 0 or 1 based on the sign of the argument"
+    m_nClassType = "vdata"
+    expr_alias = "sign"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in nValue: PVAL_INT "Value" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Sin
+    m_FriendlyName = "Sin"
+    m_Description = "Sine of angle. Input in radians, output in radians"
+    m_nClassType = "vdata"
+    expr_alias = "sin"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flRadians: PVAL_FLOAT "Radians" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitAngle
+    m_FriendlyName = "Split Angle"
+    m_Description = "Split an Angle into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in angle: PVAL_QANGLE "angle" inflow=self
+    out Pitch: PVAL_FLOAT "Pitch" outflow=OutDefault direct_return_for=self
+    out Yaw: PVAL_FLOAT "Yaw" outflow=OutDefault direct_return_for=self
+    out Roll: PVAL_FLOAT "Roll" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitColor
+    m_FriendlyName = "Split Color"
+    m_Description = "Split a Color into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in color: PVAL_COLOR_RGB "color" inflow=self
+    out R: PVAL_INT "R" outflow=OutDefault direct_return_for=self
+    out G: PVAL_INT "G" outflow=OutDefault direct_return_for=self
+    out B: PVAL_INT "B" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitTransform
+    m_FriendlyName = "Split Transform"
+    m_Description = "Split a Transform into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in transform: PVAL_TRANSFORM "transform" inflow=self
+    out Origin: PVAL_VEC3 "Origin" outflow=OutDefault direct_return_for=self
+    out Angle: PVAL_QANGLE "Angle" outflow=OutDefault direct_return_for=self
+    out Scale: PVAL_FLOAT "Scale" advanced_view=true outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitVector
+    m_FriendlyName = "Split Vector"
+    m_Description = "Split a Vector into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC3 "Value" inflow=self
+    out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
+    out Y: PVAL_FLOAT "Y" outflow=OutDefault direct_return_for=self
+    out Z: PVAL_FLOAT "Z" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitVector2D
+    m_FriendlyName = "Split Vector2 D"
+    m_Description = "Split a Vector2D into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC2 "Value" inflow=self
+    out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
+    out Y: PVAL_FLOAT "Y" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitVector4D
+    m_FriendlyName = "Split Vector4 D"
+    m_Description = "Split a Vector into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC4 "Value" inflow=self
+    out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
+    out Y: PVAL_FLOAT "Y" outflow=OutDefault direct_return_for=self
+    out Z: PVAL_FLOAT "Z" outflow=OutDefault direct_return_for=self
+    out W: PVAL_FLOAT "W" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitWorldTransform
+    m_FriendlyName = "Split World Transform"
+    m_Description = "Split a Transform into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in transform: PVAL_TRANSFORM_WORLDSPACE "transform" inflow=self
+    out Origin: PVAL_VEC3_WORLDSPACE "Origin" outflow=OutDefault direct_return_for=self
+    out Angle: PVAL_QANGLE "Angle" outflow=OutDefault direct_return_for=self
+    out Scale: PVAL_FLOAT "Scale" advanced_view=true outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SplitWorldVector
+    m_FriendlyName = "Split World Vector"
+    m_Description = "Split a World Vector into component parts."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC3_WORLDSPACE "Value" inflow=self
+    out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
+    out Y: PVAL_FLOAT "Y" outflow=OutDefault direct_return_for=self
+    out Z: PVAL_FLOAT "Z" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SqrFloat
+    m_FriendlyName = "Sqr Float"
+    m_Description = "Square"
+    m_nClassType = "vdata"
+    expr_alias = "sqr"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::SqrInt
+    m_FriendlyName = "Sqr Int"
+    m_Description = "Square"
+    m_nClassType = "vdata"
+    expr_alias = "sqr"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in nValue: PVAL_INT "Value" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::Sqrt
+    m_FriendlyName = "Sqrt"
+    m_Description = "Square root"
+    m_nClassType = "vdata"
+    expr_alias = "sqrt"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flValue: PVAL_FLOAT "Value" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::StringsAreEqualCaseSensitive
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseStringlib::StringsAreEqualCaseSensitive"
+
+CPulseMathlib::Tan
+    m_FriendlyName = "Tan"
+    m_Description = "Tangent of angle. Input in radians, output in radians"
+    m_nClassType = "vdata"
+    expr_alias = "tan"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in flRadians: PVAL_FLOAT "Radians" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::VectorToWorldVector
+    m_FriendlyName = "Vector To World Vector"
+    m_Description = "Convert from a local-space to a world-space vector"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC3 "Value" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::WorldVectorToVector
+    m_FriendlyName = "World Vector To Vector"
+    m_Description = "Convert from a world-space to local-space vector"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in vecValue: PVAL_VEC3_WORLDSPACE "Value" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self

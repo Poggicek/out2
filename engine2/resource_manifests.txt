@@ -1,0 +1,24 @@
+AdditiveFilterManifest
+    group = GameStartup
+    source = src/engine2/renderingworld.cpp
+    materials/dev/generalfilter_additive.vmat
+
+LoopModeConsole
+    source = src/engine2/loopmodeconsole.cpp
+    materials/console_background.vmat
+
+LoopModeInGameUI
+    source = src/engine2/loopmodeingameui.cpp
+    materials/console_background.vmat
+
+LoopModeLevelLoad
+    source = src/engine2/loopmodelevelload.cpp
+    materials/loading_background.vmat
+
+LoopModeMainMenu
+    source = src/engine2/loopmodemainmenu.cpp
+    materials/console_background.vmat
+
+LoopModeRemoteConnect
+    source = src/engine2/loopmoderemoteconnect.cpp
+    materials/loading_background.vmat

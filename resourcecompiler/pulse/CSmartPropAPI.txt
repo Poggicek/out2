@@ -1,0 +1,31 @@
+CSmartPropAPI::AddModel
+    m_FriendlyName = "Add Model"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in pModelResourceName: PVAL_RESOURCE_NAME:vmdl "Model Resource Name" metadata={ rebuild_propertyeditor_on_change = true, MPropertyProvidesEditContextString = "ToolEditContext_ID_VMDL" } inflow=InDefault
+    in vModelScale: PVAL_VEC3 "Model Scale" advanced_view=true default=[1, 1, 1] inflow=InDefault
+    in pMaterialGroupName: PVAL_MODEL_MATERIAL_GROUP "Material Group Name" advanced_view=true default="" inflow=InDefault
+    in bIsDetailObject: PVAL_BOOL "Is Detail Object" advanced_view=true default=false inflow=InDefault
+    in flUniformScale: PVAL_FLOAT "Uniform Scale" advanced_view=true default=1 inflow=InDefault
+    in nLodLevel: PVAL_INT "Lod Level" advanced_view=true default=-1 inflow=InDefault
+    in nDetailObjectFadeLevel: PVAL_SCHEMA_ENUM:SmartPropDetailFadeLevel_t "Detail Object Fade Level" advanced_view=true default="NORMAL" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSmartPropAPI::RandomFloat
+    m_FriendlyName = "Random Float"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in flMin: PVAL_FLOAT "Min" inflow=InDefault
+    in flMax: PVAL_FLOAT "Max" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self

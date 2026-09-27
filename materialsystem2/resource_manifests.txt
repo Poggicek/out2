@@ -1,0 +1,18 @@
+MaterialUtilsInit
+    group = GameStartup
+    source = src/materialsystem2/utils/materialsystem2utils.cpp
+    dev/vgui/materials/renderui.vmat
+    dev/materialsystem2utils/pixel.vtex
+    materials/dev/msaa_resolve.vmat
+    materials/dev/cs_mipgen.vmat
+    materials/dev/cs_compress_dxt5.vmat
+    materials/dev/cs_compress_bc7.vmat
+
+PostProcessingSystemManifest
+    group = GameStartup
+    source = src/materialsystem2/postprocessingsystem.cpp
+    materials/dev/combine_colorcorrection_lut_cs.vmat
+
+VMatError
+    source = src/materialsystem2/material_type_manager.cpp
+    materials/error.vmat

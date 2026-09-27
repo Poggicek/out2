@@ -1,0 +1,114 @@
+CPathSimpleAPI::GetClosestDirToEntity
+    m_FriendlyName = "Get Closest Dir To Entity"
+    m_Description = "Compute the closest direction along the path relative to the entity provided. (world space vector)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::GetClosestPosToEntity
+    m_FriendlyName = "Get Closest Pos To Entity"
+    m_Description = "Compute the closest position on the path relative to the entity provided. (world space vector)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::GetClosestTValueToEntity
+    m_FriendlyName = "Get Closest T Value To Entity"
+    m_Description = "Compute the closest T value on the path relative to the entity provided. (0.0 to 1.0 float value that defines the point along the spline)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::GetDirAtTValue
+    m_FriendlyName = "Get Dir At T Value"
+    m_Description = "Compute the Direction along the spline at the provided T Value of the spline. (world space vector)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flTValue: PVAL_FLOAT "T Value" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::GetDistanceBetweenEntitiesAlongPath
+    m_FriendlyName = "Get Distance Between Entities Along Path"
+    m_Description = "Compute the distance along the path between provided Entity A and Entity B"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntityA: PVAL_EHANDLE "Entity A" inflow=self
+    in hEntityB: PVAL_EHANDLE "Entity B" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::GetPosAtTValue
+    m_FriendlyName = "Get Pos At T Value"
+    m_Description = "Compute the position at the provided T Value of the spline. (world space vector)"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flTValue: PVAL_FLOAT "T Value" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPathSimpleAPI::SetEntityAtTValue
+    m_FriendlyName = "Set Entity At T Value"
+    m_Description = "Set entity to the position of the provided T value of the spline (world space vector)"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPathSimpleAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_simple "path_simple" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
+    in flTValue: PVAL_FLOAT "T Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

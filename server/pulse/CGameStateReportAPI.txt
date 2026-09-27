@@ -1,0 +1,51 @@
+CGameStateReportAPI::ClearCollections
+    m_FriendlyName = "Clear Collections"
+    m_Description = "Must clear all collections each pass."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CGameStateReportAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_gamestate_report "logic_gamestate_report" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGameStateReportAPI::HasActivityEventType
+    m_FriendlyName = "Has Activity Event Type"
+    m_Description = "Test if a collection has an event of <type>. Returns the result."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CGameStateReportAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_gamestate_report "logic_gamestate_report" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nType: PVAL_INT "Type" inflow=InDefault
+    in nCollectionIndex: PVAL_INT "Collection Index" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CGameStateReportAPI::NewActivityEventCollection
+    m_FriendlyName = "New Activity Event Collection"
+    m_Description = "Create a new activity event collection. Returns the resulting index."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CGameStateReportAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_gamestate_report "logic_gamestate_report" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self

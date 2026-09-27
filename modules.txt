@@ -1,0 +1,58 @@
+animationsystem (empty)
+assetbrowser
+    resource_manifests
+assetpreview
+    resource_manifests
+assetsystem
+    resource_manifests
+client
+    pulse_bindings (scope client.dll)
+    pulse_fingerprints
+    resource_manifests
+engine2
+    resource_manifests
+filesystem_stdio (empty)
+host (empty)
+matchmaking (empty)
+materialsystem2
+    resource_manifests
+meshsystem
+    resource_manifests
+modtools
+    resource_manifests
+networksystem (empty)
+panorama (empty)
+particles
+    resource_manifests
+pulse_system
+    pulse_bindings (scope pulse_system.dll)
+    pulse_fingerprints
+rendersystemdx11 (empty)
+resourcecompiler
+    pulse_bindings (scope resourcecompiler.dll)
+    pulse_fingerprints
+    resource_manifests
+resourcesystem (empty)
+scenefilecache (empty)
+scenesystem
+    resource_manifests
+server
+    pulse_bindings (scope server.dll)
+    pulse_fingerprints
+    resource_manifests
+soundsystem
+    resource_manifests
+steamaudio (empty)
+tools_cs2_item_editor (empty)
+tools_hammer
+    resource_manifests
+tools_met
+    resource_manifests
+tools_modeldoc_editor
+    resource_manifests
+tools_pet
+    resource_manifests
+vphysics2
+    resource_manifests
+worldrenderer
+    resource_manifests

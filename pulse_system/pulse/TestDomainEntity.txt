@@ -1,0 +1,11 @@
+TestDomainEntity : BaseDomain
+    m_FriendlyName = "Test Domain Entity"
+    m_Description = "A testing-only domain for target-owned graphs."
+    m_nClassType = "vdata"
+    allowed_api_features = "AF_FAKE_ENTITIES"
+    debugger_can_create_instance = false
+    domain_scope = "pulse_system.dll"
+    domain_subtype_info = ["FakeEntity_t_DomainSubType"]
+    hidden_in_tool = true
+    is_game_blackboard = false
+    is_pulse_domain = true

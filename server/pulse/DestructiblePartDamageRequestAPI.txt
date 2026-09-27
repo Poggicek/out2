@@ -1,0 +1,42 @@
+DestructiblePartDamageRequestAPI::GetDamageLevel
+    m_FriendlyName = "Get Damage Level"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!DestructiblePartDamageRequestAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_OPAQUE_HANDLE:DestructiblePartDamageRequest_t "DestructiblePartDamageRequest_t" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+DestructiblePartDamageRequestAPI::GetDesiredHealth
+    m_FriendlyName = "Get Desired Health"
+    m_Description = "Desired health if this is a request, otherwise the health it's at at this point."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!DestructiblePartDamageRequestAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_OPAQUE_HANDLE:DestructiblePartDamageRequest_t "DestructiblePartDamageRequest_t" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+DestructiblePartDamageRequestAPI::GetHitGroup
+    m_FriendlyName = "Get Hit Group"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!DestructiblePartDamageRequestAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_OPAQUE_HANDLE:DestructiblePartDamageRequest_t "DestructiblePartDamageRequest_t" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_SCHEMA_ENUM:HitGroup_t "Result" outflow=OutDefault direct_return_for=self

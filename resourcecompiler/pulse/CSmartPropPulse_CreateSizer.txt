@@ -1,0 +1,46 @@
+CSmartPropPulse_CreateSizer : CPulseCell_BaseFlow
+    m_FriendlyName = "Create Sizer"
+    m_Description = "Create a sizer that will be displayed at the current location, allowing the user to manipulate the specified set of size values."
+    m_nClassType = "vdata"
+    MVDataClassGroup = "Manipulators"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_CreateSizer"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Run "Run" [default] yields=false terminates=false
+    in bDisplayModel: PVAL_BOOL "Display Model" default=false inflow=Run
+        description = "If enabled a model will be displayed at the position of the sizer that can be used to select the sizer in Hammer."
+    in flInitialMinX: PVAL_FLOAT "Initial Min X" metadata={ group = "X-Axis Size" } default=0 inflow=Run
+    in flInitialMaxX: PVAL_FLOAT "Initial Max X" metadata={ group = "X-Axis Size" } default=0 inflow=Run
+    in flConstraintMinX: PVAL_FLOAT "Constraint Min X" metadata={ group = "X-Axis Size" } default=0 inflow=Run
+    in flConstraintMaxX: PVAL_FLOAT "Constraint Max X" metadata={ group = "X-Axis Size" } default=0 inflow=Run
+    in flInitialMinY: PVAL_FLOAT "Initial Min Y" metadata={ group = "Y-Axis Size" } default=0 inflow=Run
+    in flInitialMaxY: PVAL_FLOAT "Initial Max Y" metadata={ group = "Y-Axis Size" } default=0 inflow=Run
+    in flConstraintMinY: PVAL_FLOAT "Constraint Min Y" metadata={ group = "Y-Axis Size" } default=0 inflow=Run
+    in flConstraintMaxY: PVAL_FLOAT "Constraint Max Y" metadata={ group = "Y-Axis Size" } default=0 inflow=Run
+    in flInitialMinZ: PVAL_FLOAT "Initial Min Z" metadata={ group = "Z-Axis Size" } default=0 inflow=Run
+    in flInitialMaxZ: PVAL_FLOAT "Initial Max Z" metadata={ group = "Z-Axis Size" } default=0 inflow=Run
+    in flConstraintMinZ: PVAL_FLOAT "Constraint Min Z" metadata={ group = "Z-Axis Size" } default=0 inflow=Run
+    in flConstraintMaxZ: PVAL_FLOAT "Constraint Max Z" metadata={ group = "Z-Axis Size" } default=0 inflow=Run
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out ResultMinX: PVAL_FLOAT "Result Min X" metadata={ group = "X-Axis Size" } outflow=OutDefault direct_return_for=Run
+    out ResultMaxX: PVAL_FLOAT "Result Max X" metadata={ group = "X-Axis Size" } outflow=OutDefault direct_return_for=Run
+    out ResultMinY: PVAL_FLOAT "Result Min Y" metadata={ group = "Y-Axis Size" } outflow=OutDefault direct_return_for=Run
+    out ResultMaxY: PVAL_FLOAT "Result Max Y" metadata={ group = "Y-Axis Size" } outflow=OutDefault direct_return_for=Run
+    out ResultMinZ: PVAL_FLOAT "Result Min Z" metadata={ group = "Z-Axis Size" } outflow=OutDefault direct_return_for=Run
+    out ResultMaxZ: PVAL_FLOAT "Result Max Z" metadata={ group = "Z-Axis Size" } outflow=OutDefault direct_return_for=Run
+    variable m_Name: string "Name" default=""
+        description = "Name used to identify the sizer. Must be unique within the paraent element."
+    variable m_bHACK_ProvideResultMinX: boolean "HAC K  Provide Result Min X" default=false
+    variable m_bHACK_ProvideResultMaxX: boolean "HAC K  Provide Result Max X" default=false
+    variable m_bHACK_ProvideResultMinY: boolean "HAC K  Provide Result Min Y" default=false
+    variable m_bHACK_ProvideResultMaxY: boolean "HAC K  Provide Result Max Y" default=false
+    variable m_bHACK_ProvideResultMinZ: boolean "HAC K  Provide Result Min Z" default=false
+    variable m_bHACK_ProvideResultMaxZ: boolean "HAC K  Provide Result Max Z" default=false

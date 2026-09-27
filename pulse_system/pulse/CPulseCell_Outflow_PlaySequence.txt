@@ -1,0 +1,7 @@
+CPulseCell_Outflow_PlaySequence::Cancel
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"
+
+CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly"

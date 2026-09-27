@@ -1,0 +1,11 @@
+TestDomain_Derived : TestDomain
+    m_FriendlyName = "TestDomain_Derived"
+    m_nClassType = "vdata"
+    allowed_api_features = "AF_FAKE_ENTITIES"
+    allowed_variable_keys_types =
+        CPP = true
+    debugger_can_create_instance = false
+    domain_scope = "pulse_system.dll"
+    hidden_in_tool = true
+    is_game_blackboard = false
+    is_pulse_domain = true

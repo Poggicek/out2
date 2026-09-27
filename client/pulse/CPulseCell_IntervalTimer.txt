@@ -1,0 +1,38 @@
+CPulseCell_IntervalTimer : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "Interval Timer"
+    m_Description = "Wait for a duration, firing a child cursor at regular (or randomized) intervals"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["client.dll"]
+    editor_canvas_item_spec =
+        item_factory = "IntervalTimer"
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/node_timer.png"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        client.dll = "@lib:client.dll!CPulseCell_IntervalTimer"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = BaseDomain
+    inflow Start "Start" [default] yields=true terminates=false
+        description = "Start a timer with the specified duration, fire the OnInterval output "
+    in flDuration: PVAL_FLOAT "Duration" advanced_view=true default=-1 inflow=Start
+        description = "This is the overall duration. If -1 timer will continue forever. During this duration, we will fire a new child cursor at each Interval."
+    in flWaitInterval: PVAL_FLOAT "Wait Interval" advanced_view=true default=1 inflow=Start
+    in flWaitIntervalHigh: PVAL_FLOAT "Wait Interval High" advanced_view=true default=-1 inflow=Start
+        description = "If specified, each wait interval will vary randomly between WaitInterval this value"
+    outflow m_Completed "Completed" backed_by_variable=true
+        description = "Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up perfectly."
+    outflow m_OnInterval "On Interval" backed_by_variable=true
+        description = "New child cursor starts here every time the wait interval elapses"
+    out flElapsed: PVAL_FLOAT "Elapsed" advanced_view=true outflow=m_OnInterval
+        description = "Time since the start of the timer"
+    out flPercentage: PVAL_FLOAT "Percentage" advanced_view=true outflow=m_OnInterval
+        description = "Value 0-1 how far along duration (always 0 if duration is -1)"
+
+CPulseCell_IntervalTimer::StopTimer
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately"

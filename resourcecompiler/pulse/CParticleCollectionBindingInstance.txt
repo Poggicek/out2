@@ -1,0 +1,22 @@
+CParticleCollectionBindingInstance : BaseDomain
+    m_FriendlyName = "Particle Binding"
+    m_Description = "Pulse domain which enables particle content to query leaf code to introspect game state."
+    m_nClassType = "vdata"
+    allowed_api_features = "AF_ENTITIES|AF_PARTICLES"
+    debugger_can_create_instance = false
+    domain_scope = "[test]"
+    hidden_in_tool = true
+    is_game_blackboard = false
+    is_pulse_domain = true
+
+CParticleCollectionBindingInstance::HACK_UnusedBinding
+    m_FriendlyName = "HAC K  Unused Binding"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CParticleCollectionBindingInstance"
+    supported_domains = CParticleCollectionBindingInstance
+    inflow InDefault "Default In" [default]
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

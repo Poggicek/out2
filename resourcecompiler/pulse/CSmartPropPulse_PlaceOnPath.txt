@@ -1,0 +1,46 @@
+CSmartPropPulse_PlaceOnPath : CSmartPropPulse_BaseQueryableFlow
+    m_FriendlyName = "Place On Path"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["resourcecompiler.dll"]
+    allowed_requirements =
+        CPulseCell_IsRequirementValid = true
+        CSmartPropPulse_CriteriaPathPosition = true
+    editor_canvas_item_spec =
+        className = "IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode"
+        create_special_outflows_section = true
+    expect_default_outflow = false
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/requirements.png"
+    hidden_in_tool = false
+    is_selector = true
+    is_state_cell = false
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropPulse_PlaceOnPath"
+    selector_has_specificity = false
+    supported_domains = SmartPropEval
+    inflow Place "Place" [default] yields=false terminates=false
+    in flSpacing: PVAL_FLOAT "Spacing" default=1 inflow=Place
+        description = "Spacing between points on the path"
+    in flOffsetAlongPath: PVAL_FLOAT "Offset Along Path" default=0 inflow=Place
+        description = "Offset from the start of the path to place the first point."
+    in vPathOffset: PVAL_VEC2 "Offset from path" default=[0, 0] inflow=Place
+        description = "Offset to apply to the path, specifies a horizontal and vertical offset to apply relative to the up direction."
+    in nPathSpace: PVAL_SCHEMA_ENUM:SmartPropSpace_t "Path Evaluation Space" default="WORLD" inflow=Place
+        description = "Specifies the space in which the provided input path is to be evalauted.<br><br><b>World Space</b>: The input path will be evaluated in world space, such that child elements will be placed directly on the target path regardless of the transform of the smart prop object. <br><b>Object Space</b>: The world space transform of the input path will be ignored and instead the path will be evaluated relative to the transform of the smart prop object. <br><b>Element Space</b>: The world space transform of the input path will be ignored and instead the path will be evaluated relative to the transform of the current element within the smart prop. "
+    in bUseFixedUpDirection: PVAL_BOOL "Use Fixed Up Direction" default=false inflow=Place
+        description = "If true, treat the specified up direction as fixed up direction to apply to all elements placed on the path. If false the up direction is just an initial direction."
+    in bUseProjectedDistance: PVAL_BOOL "Use Projected Distance" default=false inflow=Place
+        description = "Compute the spacing distance in the 2d plane defined by the up direction. Most useful when using a fixed up direction, if maintaining a distance in the 2d plane is more important than maintaing distance along the path."
+    in vUpDirection: PVAL_VEC3 "Up Direction" default=[0, 0, 1] inflow=Place
+        description = "If not using a fixed up direction, provides an initial up direction which will be used to determine the orientation of first element on the path, after that the elements will incrementally update to follow the path and may not match this direction. If Use Fixed Up direction is specified, then all elements will use this direction to deterime their up direction."
+    in nUpDirectionSpace: PVAL_SCHEMA_ENUM:SmartPropSpace_t "Up Direction Space" default="WORLD" inflow=Place
+        description = "Space in which the up direction is defined."
+    in bDefaultPathInWorldSpace: PVAL_BOOL "Default Path In World Space" default=false inflow=Place
+        description = "If enabled, the default path values will be treated as world space values, if disabled they are treated as object space values. Typically it makes sense for literal values to be treated as being in object space, but if the values are being supplied by locators they will typically be in world space."
+    in defaultPath: PVAL_ARRAY:PVAL_VEC3 "Default Path" metadata={ polymorphic_arg = true } default=[] inflow=Place
+        description = "A set of points defining a path to use when an external path isn't specified. This will be used in the preview and thumbnail for the smart prop. It will also be used when the smart prop is placed in Hammer before a path is selected."
+    attribute m_OutflowList: PulseSelectorOutflowList_t "Outflow List"
+    variable m_PathName: string "Path Name" default=""
+        description = "Name of the path to use. This path name will show up in the property editor when selecting a placement of this smart prop in Hammer, allowing selection of a path object in the map to use."

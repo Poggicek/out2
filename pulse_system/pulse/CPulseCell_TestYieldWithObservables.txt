@@ -1,0 +1,21 @@
+CPulseCell_TestYieldWithObservables : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "TestYieldWithObservables"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["pulse_system.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_TestYieldWithObservables"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = TestDomain
+    inflow Run "Run" [default] yields=true terminates=false
+    outflow m_WakeResume "Wake Resume" [default] backed_by_variable=true
+    attribute m_LiveFloatValue: CPulseObservableExpression "Live Float Value" args={ expression_type = "PVAL_FLOAT" }
+    attribute m_LiveStringValue: CPulseObservableExpression "Live String Value" args={ expression_type = "PVAL_STRING" }
+    variable m_flWatchForFloatValue: float "Watch For Float Value" default=0
+    variable m_WatchForStringValue: string "Watch For String Value" default=""

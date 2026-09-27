@@ -1,0 +1,111 @@
+FakeEntity_tAPI::BasicFunction
+    m_FriendlyName = "Basic Function"
+    m_Description = "Record that the function was called"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+FakeEntity_tAPI::GetFloatValue
+    m_FriendlyName = "Get Float Value"
+    m_Description = "Get the test value as a float"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+FakeEntity_tAPI::GetIntValue
+    m_FriendlyName = "Get Int Value"
+    m_Description = "Get the test value as an int"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+FakeEntity_tAPI::GetName
+    m_FriendlyName = "Get Name"
+    m_Description = "Get the name the entity was created with."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+FakeEntity_tAPI::MultipleReturnTest
+    m_FriendlyName = "Multiple Return Test"
+    m_Description = "Multiple pointer returns"
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out A: PVAL_TEST_HANDLE "A" outflow=OutDefault direct_return_for=self
+    out B: PVAL_TEST_HANDLE "B" outflow=OutDefault direct_return_for=self
+
+FakeEntity_tAPI::SetAndGetIntValue
+    m_FriendlyName = "Set And Get Int Value"
+    m_Description = "Test step with return value"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nValue: PVAL_INT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+FakeEntity_tAPI::SetIntValue
+    m_FriendlyName = "Set Int Value"
+    m_Description = "Set the test value as an int"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    scope_to_dependency_name =
+        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nValue: PVAL_INT "Value" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

@@ -1,0 +1,47 @@
+CPulseStringlib::FormatDurationStringFromSeconds
+    m_FriendlyName = "Format Duration String From Seconds"
+    m_Description = "Turn a time in seconds into a display string. NOT localized."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseStringlib"
+    supported_domains = BaseDomain
+    in flSeconds: PVAL_FLOAT "Seconds" inflow=self
+    in nFormat: PVAL_SCHEMA_ENUM:PulseDurationStringFormat_t "Format" default="MM_SS_LEADING_ZERO" inflow=self
+    in nRemainderDigits: PVAL_INT "Remainder Digits" default=0 inflow=self
+    in nRemainderNoiseDigits: PVAL_INT "Remainder Noise Digits" advanced_view=true default=0 inflow=self
+        description = "After the real remainder, how many additional digits should we continue to append to create additional visual movement?"
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::StringLength
+    m_FriendlyName = "String Length"
+    m_Description = "Count the number of codepoints in the string (unicode-aware). If you want rendered glyphs, you probably want to consider using Panorama."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseStringlib"
+    supported_domains = BaseDomain
+    in strValue: PVAL_STRING "Value" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::StringsAreEqualCaseSensitive
+    m_FriendlyName = "Strings Are Equal Case Sensitive"
+    m_Description = "Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive."
+    m_nClassType = "vdata"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    legacy_names = ["CPulseMathlib::StringsAreEqualCaseSensitive"]
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseStringlib"
+    supported_domains = BaseDomain
+    in a: PVAL_STRING "a" inflow=self
+    in b: PVAL_STRING "b" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self

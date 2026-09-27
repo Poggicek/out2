@@ -1,0 +1,14 @@
+ServerEntity : BaseDomain
+    m_FriendlyName = "Server Entity"
+    m_Description = "Root of all entities in the Server domain."
+    m_nClassType = "vdata"
+    allowed_api_features = "AF_ENTITIES"
+    allowed_domain_value_types =
+        ENTITY_NAME = true
+    allowed_write_blackboard = "GameBlackboard"
+    debugger_can_create_instance = false
+    domain_scope = "server.dll"
+    domain_subtype_info = ["ServerEntity_CPointPulse"]
+    hidden_in_tool = true
+    is_game_blackboard = false
+    is_pulse_domain = true

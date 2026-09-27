@@ -1,0 +1,16 @@
+ServerEntity_CPointPulse : ServerEntity
+    m_FriendlyName = "Server Point Entity"
+    m_Description = "A graph associated with the point_pulse server entity."
+    m_nClassType = "vdata"
+    allowed_api_features = "AF_ENTITIES"
+    allowed_domain_value_types =
+        ENTITY_NAME = true
+    allowed_variable_keys_types =
+        VMAP = true
+    allowed_write_blackboard = "GameBlackboard"
+    debugger_can_create_instance = false
+    domain_scope = "server.dll"
+    hidden_in_tool = false
+    is_game_blackboard = false
+    is_pulse_domain_subtype = true
+    self_type = "PVAL_EHANDLE:point_pulse"

@@ -1,0 +1,31 @@
+CPulseCell_Outflow_ListenForEntityOutput : CPulseCell_BaseYieldingInflow
+    m_FriendlyName = "Wait for Entity Output"
+    m_Description = "Waits for the entity to fire a specific output. By default, this listens once, but can be configured to listen until canceled."
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    __populated_from_schema_modules = ["server.dll"]
+    expect_default_outflow = true
+    generic_node_category = 5
+    header_icon = "tools/images/pulse_editor/inflow_wait.png"
+    hidden_in_tool = false
+    is_state_cell = false
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CPulseCell_Outflow_ListenForEntityOutput"
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    sub_header_text = "{ 'Output'='m_strEntityOutput' 'Param'='m_strEntityOutputParam' 'Until Canceled'='m_bListenUntilCanceled' }"
+    supported_domains = ServerEntity
+    inflow Run "Run" [default] yields=true terminates=false
+    in hEntity: PVAL_EHANDLE "Entity" inflow=Run
+    outflow m_OnFired "On Fired" [default] backed_by_variable=true
+    out pActivator: PVAL_EHANDLE "Activator" advanced_view=true outflow=m_OnFired
+    attribute m_strEntityOutput: EntityOutput "Entity Output" args={ entity_key = "hEntity" }
+    variable m_strEntityOutputParam: string "Entity Output Param" default=""
+        description = "Optional output value to match if applicable. Leave empty to match any possible value for the output param."
+    variable m_bListenUntilCanceled: boolean "Listen Until Canceled" default=false
+        description = "Continue listening for the output until canceled."
+
+CPulseCell_Outflow_ListenForEntityOutput::Cancel
+    m_nClassType = "vdata"
+    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"

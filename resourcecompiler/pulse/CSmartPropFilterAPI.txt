@@ -1,0 +1,43 @@
+CSmartPropFilterAPI::Filter
+    m_FriendlyName = "Filter"
+    m_Description = "Filter downstream elements based on a true/false condition"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropFilterAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in bContinue: PVAL_BOOL "Continue" default=true inflow=InDefault
+        description = "Whether to continue executing"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSmartPropFilterAPI::FilterProbability
+    m_FriendlyName = "Filter Probability"
+    m_Description = "Filter downstream elements based on a specified random probability"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropFilterAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in flProbability: PVAL_FLOAT "Probability" default=0.5 inflow=InDefault
+        description = "0.0 to 1.0 value indicating the probability of this element being evaluated. Where a value of 0 means the element will never be evaluated and 1.0 means it will always be evaluated"
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSmartPropFilterAPI::FilterSurfaceAngle
+    m_FriendlyName = "Filter Surface Angle"
+    m_Description = "Filter downstream elements based on the current surface angle. The surface angle is set based on the initial placement of the smart prop object, but can also be updated by the Trace to Surface modifier."
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    scope_to_dependency_name =
+        resourcecompiler.dll = "@lib:resourcecompiler.dll!CSmartPropFilterAPI"
+    supported_domains = SmartPropEval
+    inflow InDefault "Default In" [default]
+    in flSurfaceSlopeMin: PVAL_FLOAT "Surface Slope Min" default=0 inflow=InDefault
+        description = "Minimum slope on which the target will be placed. Slope is a [ 0, 180 ] value of the surface normal rotation from up such that 0 is a horizontal surface (floor), 90 is a vertical surface (wall), 180 is horizontal upside down surface (ceiling)."
+    in flSurfaceSlopeMax: PVAL_FLOAT "Surface Slope Max" default=180 inflow=InDefault
+        description = "Maximum slope on which the target will be placed."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

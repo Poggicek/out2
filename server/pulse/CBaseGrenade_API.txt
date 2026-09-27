@@ -1,0 +1,29 @@
+OUTPUT!CBaseGrenade_API::OnExplode
+    m_FriendlyName = "On Explode"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseGrenade_API"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:grenade "grenade" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+
+OUTPUT!CBaseGrenade_API::OnPlayerPickup
+    m_FriendlyName = "On Player Pickup"
+    m_nClassType = "vdata"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    scope_to_dependency_name =
+        server.dll = "@lib:server.dll!CBaseGrenade_API"
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:grenade "grenade" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
