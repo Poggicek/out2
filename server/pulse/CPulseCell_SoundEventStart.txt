@@ -4,13 +4,11 @@ CPulseCell_SoundEventStart : CPulseCell_BaseFlow
     m_nClassType = "vdata"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["server.dll"]
     expect_default_outflow = true
+    fingerprint = "@lib:server.dll!CPulseCell_SoundEventStart"
     generic_node_category = 5
     hidden_in_tool = false
     is_state_cell = false
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseCell_SoundEventStart"
     selector_has_specificity = false
     supported_domains = ServerEntity
     inflow Run "Run" [default] yields=false terminates=false

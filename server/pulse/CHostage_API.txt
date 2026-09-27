@@ -1,12 +1,11 @@
 CHostage_API::OnRescueZoneTouch
     m_FriendlyName = "On Rescue Zone Touch"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CHostage_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CHostage_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -17,59 +16,51 @@ CHostage_API::OnRescueZoneTouch
 OUTPUT!CHostage_API::OnDroppedNotRescued
     m_FriendlyName = "On Dropped Not Rescued"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CHostage_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CHostage_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:hostage_entity "hostage_entity" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:hostage_entity "Target" inflow=self
 
 OUTPUT!CHostage_API::OnFirstPickedUp
     m_FriendlyName = "On First Picked Up"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CHostage_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CHostage_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:hostage_entity "hostage_entity" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:hostage_entity "Target" inflow=self
 
 OUTPUT!CHostage_API::OnHostageBeginGrab
     m_FriendlyName = "On Hostage Begin Grab"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CHostage_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CHostage_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:hostage_entity "hostage_entity" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:hostage_entity "Target" inflow=self
 
 OUTPUT!CHostage_API::OnRescued
     m_FriendlyName = "On Rescued"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CHostage_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CHostage_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:hostage_entity "hostage_entity" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:hostage_entity "Target" inflow=self

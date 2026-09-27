@@ -1,44 +1,38 @@
 OUTPUT!CPlantedC4_API::OnBombBeginDefuse
     m_FriendlyName = "On Bomb Begin Defuse"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPlantedC4_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPlantedC4_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:planted_c4 "planted_c4" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:planted_c4 "Target" inflow=self
 
 OUTPUT!CPlantedC4_API::OnBombDefuseAborted
     m_FriendlyName = "On Bomb Defuse Aborted"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPlantedC4_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPlantedC4_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:planted_c4 "planted_c4" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:planted_c4 "Target" inflow=self
 
 OUTPUT!CPlantedC4_API::OnBombDefused
     m_FriendlyName = "On Bomb Defused"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPlantedC4_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPlantedC4_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:planted_c4 "planted_c4" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:planted_c4 "Target" inflow=self

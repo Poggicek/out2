@@ -1,0 +1,71 @@
+AssetPreviewToolScene
+    class = CAssetPreviewToolScene
+    source = src/assetpreview/assetpreviewsystem.cpp
+
+Camera
+    class = CBindableCamera
+    help_context = SharedToolCommands
+    source = src/tools/toolutils2/bindablecamera.cpp
+    command CameraLookAtSelection
+    command DecreaseMoveSpeed
+    command HorizontalStrafeCamera
+    command IncreaseMoveSpeed
+    command MouseControlCamera
+    command MouseControlCamera2D
+    command MouseControlCamera3D
+    command MouseControlCamera3D_Toggle
+    command MouseLook3D
+    command MoveCameraBackward3D
+    command MoveCameraDown3D
+    command MoveCameraForward3D
+    command MoveCameraLeft3D
+    command MoveCameraRight3D
+    command MoveCameraUp3D
+    command PanCamera3D
+    command PitchCameraDown
+    command PitchCameraUp
+    command ResetMoveSpeed
+    command RotateAboutTarget3D
+    command SnapCameraToSelection
+    command ToggleLockCameraHeight
+    command VerticalStrafeCamera
+    command YawCameraLeft
+    command YawCameraRight
+    command ZoomAllCamerasIn
+    command ZoomAllCamerasOut
+    command ZoomCameraIn
+    command ZoomCameraOut
+    command ZoomForwardBack2D
+    command ZoomForwardBack3D
+
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow
+
+LightingControl
+    class = CLightingControlRig
+    source = src/tools/toolscene/lightingcontrolrig.cpp
+    command ReloadLightRigDefinitions
+    command RotateLights
+    command ToggleLights
+
+ToolSceneWidget
+    class = CQToolSceneWidget
+    source = src/tools/toolscene/qtoolscenewidget.cpp
+    command DebugToolScene
+    command DefaultPreviewCamera

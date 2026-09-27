@@ -1,0 +1,196 @@
+CFuncMoverRouter_API::ClearFollowMoverEntity
+    m_FriendlyName = "Clear Follow Mover Entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::ClearStartFollowingClosestMover
+    m_FriendlyName = "Clear Start Following Closest Mover"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::FireUser1
+    m_FriendlyName = "Fire User1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::FireUser2
+    m_FriendlyName = "Fire User2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::FireUser3
+    m_FriendlyName = "Fire User3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::FireUser4
+    m_FriendlyName = "Fire User4"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::SetMoverIndex
+    m_FriendlyName = "Set Mover Index"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::SetSpeed
+    m_FriendlyName = "Set Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::Start
+    m_FriendlyName = "Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::StartForward
+    m_FriendlyName = "Start Forward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::StartReverse
+    m_FriendlyName = "Start Reverse"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::Stop
+    m_FriendlyName = "Stop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncMoverRouter_API::StopImmediate
+    m_FriendlyName = "Stop Immediate"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncMoverRouter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_mover_router "func_mover_router" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

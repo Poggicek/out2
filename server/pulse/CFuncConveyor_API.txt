@@ -1,12 +1,11 @@
 CFuncConveyor_API::SetSpeed
     m_FriendlyName = "Set Speed"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncConveyor_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CFuncConveyor_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -18,12 +17,11 @@ CFuncConveyor_API::SetSpeed
 CFuncConveyor_API::SetTransitionDuration
     m_FriendlyName = "Set Transition Duration"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncConveyor_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CFuncConveyor_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -35,12 +33,11 @@ CFuncConveyor_API::SetTransitionDuration
 CFuncConveyor_API::ToggleDirection
     m_FriendlyName = "Toggle Direction"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncConveyor_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CFuncConveyor_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

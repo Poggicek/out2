@@ -1,0 +1,47 @@
+CBasePlayerPawn_API::SetFogController
+    m_FriendlyName = "Set Fog Controller"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBasePlayerPawn_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseplayerpawn "baseplayerpawn" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBasePlayerPawn_API::SetHUDVisibility
+    m_FriendlyName = "Set HUD Visibility"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBasePlayerPawn_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseplayerpawn "baseplayerpawn" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBasePlayerPawn_API::SetHealth
+    m_FriendlyName = "Set Health"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBasePlayerPawn_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseplayerpawn "baseplayerpawn" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

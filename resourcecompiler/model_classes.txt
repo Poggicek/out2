@@ -1,0 +1,30 @@
+CNPCPhysicsHull
+    m_nClassType = "modelgamedata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    node_name_key = "m_sName"
+    variable m_sName: string "Name" default=""
+        suppressed_field = true
+    variable m_eType: choices "Type" default="eInvalid"
+        item_set = "choices"
+        item eInvalid "None"
+        item eGroundCapsule "Capsule - Ground"
+        item eCenteredCapsule "Capsule - Centered"
+        item eGenericCapsule "Capsule - Generic"
+        item eGroundBox "Box - Ground"
+        item eGroundCylinder "Cylinder - Ground (SLOW PERF)"
+        item eCenteredCylinder "Cylinder - Centered (SLOW PERF)"
+    variable m_flCapsuleHeight: float "Height" default=50
+        suppress_expr = "m_eType != eGroundCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder"
+    variable m_flCapsuleRadius: float "Radius" default=11
+        suppress_expr = "m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder"
+    variable m_vCapsuleCenter1: vector "Center 1" default=[0, 0, 11]
+        suppress_expr = "m_eType != eGenericCapsule"
+    variable m_vCapsuleCenter2: vector "Center 2" default=[0, 0, 61]
+        suppress_expr = "m_eType != eGenericCapsule"
+    variable m_flGroundBoxHeight: float "Height" default=50
+        suppress_expr = "m_eType != eGroundBox"
+    variable m_flGroundBoxWidth: float "Width" default=11
+        suppress_expr = "m_eType != eGroundBox"
+    helper game_data_list { key = "CNPCPhysicsHull" }
+    helper npcphysicshull

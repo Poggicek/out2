@@ -1,0 +1,220 @@
+CFuncRotating_API::DisableAccelDecel
+    m_FriendlyName = "Disable Accel Decel"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::EnableAccelDecel
+    m_FriendlyName = "Enable Accel Decel"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::Reverse
+    m_FriendlyName = "Reverse"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::SetSpeed
+    m_FriendlyName = "Set Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::SetStartPos
+    m_FriendlyName = "Set Start Pos"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_VEC3 "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::SnapToStartPos
+    m_FriendlyName = "Snap To Start Pos"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::Start
+    m_FriendlyName = "Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::StartBackward
+    m_FriendlyName = "Start Backward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::StartForward
+    m_FriendlyName = "Start Forward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::Stop
+    m_FriendlyName = "Stop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::StopAtStartPos
+    m_FriendlyName = "Stop At Start Pos"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncRotating_API::Toggle
+    m_FriendlyName = "Toggle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_rotating "func_rotating" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CFuncRotating_API::OnReachedStart
+    m_FriendlyName = "On Reached Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_rotating "Target" inflow=self
+
+OUTPUT!CFuncRotating_API::OnStarted
+    m_FriendlyName = "On Started"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_rotating "Target" inflow=self
+
+OUTPUT!CFuncRotating_API::OnStopped
+    m_FriendlyName = "On Stopped"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncRotating_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_rotating "Target" inflow=self

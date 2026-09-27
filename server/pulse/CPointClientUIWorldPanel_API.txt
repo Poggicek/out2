@@ -1,0 +1,93 @@
+CPointClientUIWorldPanel_API::AcceptUserInput
+    m_FriendlyName = "Accept User Input"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointClientUIWorldPanel_API::AddCSSClass
+    m_FriendlyName = "Add CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointClientUIWorldPanel_API::IgnoreUserInput
+    m_FriendlyName = "Ignore User Input"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointClientUIWorldPanel_API::LocalPlayerAddCSSClass
+    m_FriendlyName = "Local Player Add CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointClientUIWorldPanel_API::LocalPlayerRemoveCSSClass
+    m_FriendlyName = "Local Player Remove CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointClientUIWorldPanel_API::RemoveCSSClass
+    m_FriendlyName = "Remove CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointClientUIWorldPanel_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_clientui_world_panel "point_clientui_world_panel" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

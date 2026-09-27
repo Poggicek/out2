@@ -2,10 +2,9 @@ CCSPointPulseAPI::GetCTScore
     m_FriendlyName = "Get CT Score"
     m_Description = "Get the number of rounds won by CTs."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -13,10 +12,9 @@ CCSPointPulseAPI::GetIsWingman
     m_FriendlyName = "Get Is Wingman"
     m_Description = "Get if the current match is a Wingman match."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
 
@@ -24,10 +22,9 @@ CCSPointPulseAPI::GetRoundsPlayedThisPhase
     m_FriendlyName = "Get Rounds Played This Phase"
     m_Description = "Get the round number of the current half. Starts at 0."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -35,10 +32,9 @@ CCSPointPulseAPI::GetScoreToEndMatch
     m_FriendlyName = "Get Score To End Match"
     m_Description = "Get the number of round wins needed to win the match. This number goes up each time a match enters overtime."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -46,10 +42,9 @@ CCSPointPulseAPI::GetTScore
     m_FriendlyName = "Get T Score"
     m_Description = "Get the number of rounds won by Ts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -57,11 +52,10 @@ CCSPointPulseAPI::OnRoundEnd
     m_FriendlyName = "OnRoundEnd"
     m_Description = "Fired when a round winner is determined."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 5
     is_pulse_global_event = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]
     out nWinner: PVAL_INT "Winner" inflow=self
@@ -71,11 +65,10 @@ CCSPointPulseAPI::OnRoundFreezeEnd
     m_FriendlyName = "OnRoundFreezeEnd"
     m_Description = "Fired when the freeze period of a round ends."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 5
     is_pulse_global_event = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]
 
@@ -83,11 +76,10 @@ CCSPointPulseAPI::OnRoundStart
     m_FriendlyName = "OnRoundStart"
     m_Description = "Fired when a round starts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSPointPulseAPI"
     generic_node_category = 5
     is_pulse_global_event = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSPointPulseAPI"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]
     out nRoundNumber: PVAL_INT "Round Number" inflow=self

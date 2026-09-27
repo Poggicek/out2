@@ -2,11 +2,9 @@ CPulsePhysicsConstraintsFuncs::CreatePhysicsBallSocketConstraint
     m_FriendlyName = "Physics - Create Ball Socket Constraint"
     m_Description = "Create a constraint that keeps the position of two objects fixed, relative to the constraint's origin. You can optionally specify limits for the relative twist and swing rotation."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    legacy_names = ["CPulseServerFuncs::CreatePhysicsBallSocketConstraint"]
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault
@@ -36,11 +34,9 @@ CPulsePhysicsConstraintsFuncs::CreatePhysicsConstraint
     m_FriendlyName = "Physics - Create Constraint"
     m_Description = "Constrain an entity to the world or another entity at a fixed relative position"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    legacy_names = ["CPulseServerFuncs::CreatePhysicsConstraint"]
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault
@@ -68,11 +64,9 @@ CPulsePhysicsConstraintsFuncs::CreatePhysicsHingeConstraint
     m_FriendlyName = "Physics - Create Hinge Constraint"
     m_Description = "Create a physically simulated hinge between two entities"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    legacy_names = ["CPulseServerFuncs::CreatePhysicsHingeConstraint"]
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulsePhysicsConstraintsFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pTarget1: PVAL_EHANDLE "Target1" inflow=InDefault

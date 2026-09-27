@@ -1,13 +1,102 @@
-CPulseStringlib::FormatDurationStringFromSeconds
-    m_FriendlyName = "Format Duration String From Seconds"
-    m_Description = "Turn a time in seconds into a display string. NOT localized."
+CPulseStringlib::Format1
+    m_FriendlyName = "Format1"
+    m_Description = "Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>\"Hello {} my name is {}\"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>\"Hello {0} my name is {1}\"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>"
     m_nClassType = "vdata"
+    expr_alias = "fmt"
+    expr_alias_info = "fmt( String strFormat, String value0 )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseStringlib"
+    supported_domains = BaseDomain
+    in strFormat: PVAL_STRING "Format" inflow=self
+    in value0: PVAL_STRING "value0" inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::Format2
+    m_FriendlyName = "Format2"
+    m_Description = "Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>\"Hello {} my name is {}\"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>\"Hello {0} my name is {1}\"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>"
+    m_nClassType = "vdata"
+    expr_alias = "fmt"
+    expr_alias_info = "fmt( String strFormat, String value0, String value1 )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in strFormat: PVAL_STRING "Format" inflow=self
+    in value0: PVAL_STRING "value0" inflow=self
+    in value1: PVAL_STRING "value1" inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::Format3
+    m_FriendlyName = "Format3"
+    m_Description = "Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>\"Hello {} my name is {}\"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>\"Hello {0} my name is {1}\"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>"
+    m_nClassType = "vdata"
+    expr_alias = "fmt"
+    expr_alias_info = "fmt( String strFormat, String value0, String value1, String value2 )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in strFormat: PVAL_STRING "Format" inflow=self
+    in value0: PVAL_STRING "value0" inflow=self
+    in value1: PVAL_STRING "value1" inflow=self
+    in value2: PVAL_STRING "value2" inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::Format4
+    m_FriendlyName = "Format4"
+    m_Description = "Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>\"Hello {} my name is {}\"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>\"Hello {0} my name is {1}\"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>"
+    m_nClassType = "vdata"
+    expr_alias = "fmt"
+    expr_alias_info = "fmt( String strFormat, String value0, String value1, String value2, String value3 )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in strFormat: PVAL_STRING "Format" inflow=self
+    in value0: PVAL_STRING "value0" inflow=self
+    in value1: PVAL_STRING "value1" inflow=self
+    in value2: PVAL_STRING "value2" inflow=self
+    in value3: PVAL_STRING "value3" inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::Format5
+    m_FriendlyName = "Format5"
+    m_Description = "Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>\"Hello {} my name is {}\"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>\"Hello {0} my name is {1}\"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>"
+    m_nClassType = "vdata"
+    expr_alias = "fmt"
+    expr_alias_info = "fmt( String strFormat, String value0, String value1, String value2, String value3, String value4 )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in strFormat: PVAL_STRING "Format" inflow=self
+    in value0: PVAL_STRING "value0" inflow=self
+    in value1: PVAL_STRING "value1" inflow=self
+    in value2: PVAL_STRING "value2" inflow=self
+    in value3: PVAL_STRING "value3" inflow=self
+    in value4: PVAL_STRING "value4" inflow=self
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CPulseStringlib::FormatDurationStringFromSeconds
+    m_FriendlyName = "Format Duration String From Seconds"
+    m_Description = "Turn a time in seconds into a display string. NOT localized."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
     supported_domains = BaseDomain
     in flSeconds: PVAL_FLOAT "Seconds" inflow=self
     in nFormat: PVAL_SCHEMA_ENUM:PulseDurationStringFormat_t "Format" default="MM_SS_LEADING_ZERO" inflow=self
@@ -20,12 +109,11 @@ CPulseStringlib::StringLength
     m_FriendlyName = "String Length"
     m_Description = "Count the number of codepoints in the string (unicode-aware). If you want rendered glyphs, you probably want to consider using Panorama."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseStringlib"
     supported_domains = BaseDomain
     in strValue: PVAL_STRING "Value" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
@@ -34,13 +122,11 @@ CPulseStringlib::StringsAreEqualCaseSensitive
     m_FriendlyName = "Strings Are Equal Case Sensitive"
     m_Description = "Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseStringlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    legacy_names = ["CPulseMathlib::StringsAreEqualCaseSensitive"]
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseStringlib"
     supported_domains = BaseDomain
     in a: PVAL_STRING "a" inflow=self
     in b: PVAL_STRING "b" inflow=self

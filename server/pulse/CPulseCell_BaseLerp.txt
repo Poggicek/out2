@@ -2,7 +2,6 @@ CPulseCell_BaseLerp : CPulseCell_BaseYieldingInflow
     m_nClassType = "baseclass"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["server.dll"]
     expect_default_outflow = true
     generic_node_category = 5
     hidden_in_tool = false

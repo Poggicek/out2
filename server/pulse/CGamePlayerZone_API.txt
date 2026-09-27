@@ -1,0 +1,68 @@
+CGamePlayerZone_API::CountPlayersInZone
+    m_FriendlyName = "Count Players In Zone"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerZone_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_zone_player "game_zone_player" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CGamePlayerZone_API::OnPlayerInZone
+    m_FriendlyName = "On Player In Zone"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerZone_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:game_zone_player "Target" inflow=self
+
+OUTPUT!CGamePlayerZone_API::OnPlayerOutZone
+    m_FriendlyName = "On Player Out Zone"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerZone_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:game_zone_player "Target" inflow=self
+
+OUTPUT!CGamePlayerZone_API::PlayersInCount
+    m_FriendlyName = "Players In Count"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerZone_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:game_zone_player "Target" inflow=self
+    out param: PVAL_INT "param" inflow=self
+
+OUTPUT!CGamePlayerZone_API::PlayersOutCount
+    m_FriendlyName = "Players Out Count"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerZone_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:game_zone_player "Target" inflow=self
+    out param: PVAL_INT "param" inflow=self

@@ -1,0 +1,72 @@
+CEnvSpark_API::SparkOnce
+    m_FriendlyName = "Spark Once"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvSpark_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_spark "env_spark" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvSpark_API::StartSpark
+    m_FriendlyName = "Start Spark"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvSpark_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_spark "env_spark" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvSpark_API::StopSpark
+    m_FriendlyName = "Stop Spark"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvSpark_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_spark "env_spark" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvSpark_API::ToggleSpark
+    m_FriendlyName = "Toggle Spark"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvSpark_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_spark "env_spark" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CEnvSpark_API::OnSpark
+    m_FriendlyName = "On Spark"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvSpark_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_spark "Target" inflow=self

@@ -1,0 +1,490 @@
+CLogicCase_API::InValue
+    m_FriendlyName = "In Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_case "logic_case" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCase_API::PickRandom
+    m_FriendlyName = "Pick Random"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_case "logic_case" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCase_API::PickRandomShuffle
+    m_FriendlyName = "Pick Random Shuffle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_case "logic_case" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCase_API::ResetShuffle
+    m_FriendlyName = "Reset Shuffle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_case "logic_case" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CLogicCase_API::OnCase01
+    m_FriendlyName = "On Case01"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase02
+    m_FriendlyName = "On Case02"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase03
+    m_FriendlyName = "On Case03"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase04
+    m_FriendlyName = "On Case04"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase05
+    m_FriendlyName = "On Case05"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase06
+    m_FriendlyName = "On Case06"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase07
+    m_FriendlyName = "On Case07"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase08
+    m_FriendlyName = "On Case08"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase09
+    m_FriendlyName = "On Case09"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase10
+    m_FriendlyName = "On Case10"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase11
+    m_FriendlyName = "On Case11"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase12
+    m_FriendlyName = "On Case12"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase13
+    m_FriendlyName = "On Case13"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase14
+    m_FriendlyName = "On Case14"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase15
+    m_FriendlyName = "On Case15"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase16
+    m_FriendlyName = "On Case16"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase17
+    m_FriendlyName = "On Case17"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase18
+    m_FriendlyName = "On Case18"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase19
+    m_FriendlyName = "On Case19"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase20
+    m_FriendlyName = "On Case20"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase21
+    m_FriendlyName = "On Case21"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase22
+    m_FriendlyName = "On Case22"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase23
+    m_FriendlyName = "On Case23"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase24
+    m_FriendlyName = "On Case24"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase25
+    m_FriendlyName = "On Case25"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase26
+    m_FriendlyName = "On Case26"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase27
+    m_FriendlyName = "On Case27"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase28
+    m_FriendlyName = "On Case28"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase29
+    m_FriendlyName = "On Case29"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase30
+    m_FriendlyName = "On Case30"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase31
+    m_FriendlyName = "On Case31"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnCase32
+    m_FriendlyName = "On Case32"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+
+OUTPUT!CLogicCase_API::OnDefault
+    m_FriendlyName = "On Default"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCase_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_case "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self

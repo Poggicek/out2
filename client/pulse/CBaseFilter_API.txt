@@ -1,0 +1,40 @@
+CBaseFilter_API::TestActivator
+    m_FriendlyName = "Test Activator"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CBaseFilter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:filter_base "filter_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBaseFilter_API::OnFail
+    m_FriendlyName = "On Fail"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CBaseFilter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:filter_base "Target" inflow=self
+
+OUTPUT!CBaseFilter_API::OnPass
+    m_FriendlyName = "On Pass"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CBaseFilter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:filter_base "Target" inflow=self

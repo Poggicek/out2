@@ -1,0 +1,108 @@
+CPointAngularVelocitySensor_API::Test
+    m_FriendlyName = "Test"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_angularvelocitysensor "point_angularvelocitysensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointAngularVelocitySensor_API::TestWithInterval
+    m_FriendlyName = "Test With Interval"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_angularvelocitysensor "point_angularvelocitysensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPointAngularVelocitySensor_API::AngularVelocity
+    m_FriendlyName = "Angular Velocity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CPointAngularVelocitySensor_API::OnEqualTo
+    m_FriendlyName = "On Equal To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self
+
+OUTPUT!CPointAngularVelocitySensor_API::OnGreaterThan
+    m_FriendlyName = "On Greater Than"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self
+
+OUTPUT!CPointAngularVelocitySensor_API::OnGreaterThanOrEqualTo
+    m_FriendlyName = "On Greater Than Or Equal To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self
+
+OUTPUT!CPointAngularVelocitySensor_API::OnLessThan
+    m_FriendlyName = "On Less Than"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self
+
+OUTPUT!CPointAngularVelocitySensor_API::OnLessThanOrEqualTo
+    m_FriendlyName = "On Less Than Or Equal To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngularVelocitySensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_angularvelocitysensor "Target" inflow=self

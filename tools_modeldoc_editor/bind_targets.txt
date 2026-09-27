@@ -1,0 +1,319 @@
+Camera
+    class = CBindableCamera
+    help_context = SharedToolCommands
+    source = src/tools/toolutils2/bindablecamera.cpp
+    command CameraLookAtSelection
+    command DecreaseMoveSpeed
+    command HorizontalStrafeCamera
+    command IncreaseMoveSpeed
+    command MouseControlCamera
+    command MouseControlCamera2D
+    command MouseControlCamera3D
+    command MouseControlCamera3D_Toggle
+    command MouseLook3D
+    command MoveCameraBackward3D
+    command MoveCameraDown3D
+    command MoveCameraForward3D
+    command MoveCameraLeft3D
+    command MoveCameraRight3D
+    command MoveCameraUp3D
+    command PanCamera3D
+    command PitchCameraDown
+    command PitchCameraUp
+    command ResetMoveSpeed
+    command RotateAboutTarget3D
+    command SnapCameraToSelection
+    command ToggleLockCameraHeight
+    command VerticalStrafeCamera
+    command YawCameraLeft
+    command YawCameraRight
+    command ZoomAllCamerasIn
+    command ZoomAllCamerasOut
+    command ZoomCameraIn
+    command ZoomCameraOut
+    command ZoomForwardBack2D
+    command ZoomForwardBack3D
+
+GamePreviewTool_Grab
+    class = CModelDocEditorTool_GamePreviewTool_Grab
+    source = src/tools/modeldoc_editor/modeldoc_game_preview_tool_grab.cpp
+    command Grab
+    command GrabModifierRigid
+
+GamePreviewTool_Shoot
+    class = CModelDocEditorTool_GamePreviewTool_Shoot
+    source = src/tools/modeldoc_editor/modeldoc_game_preview_tool_shoot.cpp
+    command Shoot
+
+GamePreviewTool_Spawn
+    class = CModelDocEditorTool_GamePreviewTool_Spawn
+    source = src/tools/modeldoc_editor/modeldoc_game_preview_tool_spawn.cpp
+    command Spawn
+
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow
+
+LightingControl
+    class = CLightingControlRig
+    source = src/tools/toolscene/lightingcontrolrig.cpp
+    command ReloadLightRigDefinitions
+    command RotateLights
+    command ToggleLights
+
+ModelDocBoneMergeTool
+    class = CQModelDocEditorBoneMergeTool
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_bonemergetool.cpp
+    command Delete
+    command Redo
+    command Undo
+
+ModelDocEditorApp
+    class = CModelDocEditorApp
+    source = src/tools/modeldoc_editor/modeldoc_editor_app.cpp
+    command ActivateNextEditorSession
+    command ActivatePreviousEditorSession
+    command ClearRecentFiles
+    command ExportAs
+    command FileClose
+    command FileNew
+    command FileOpen
+    command FileReload
+    command FileSave
+    command FileSaveAs
+    command ImportCollision
+    command ImportConstraints
+    command ImportFromFBX
+    command ImportFromVMDL
+    command ImportFromVMDLWithBoneFlags
+    command NewEditorWindow
+    command NextSession
+    command OpenSelectedPrefabs
+    command PreviousSession
+    command SaveAndCompileIfNeeded
+    command SaveAndForceCompile
+    command VersionControlAdd
+    command VersionControlCheckIn
+    command VersionControlCheckInAll
+    command VersionControlCheckOut
+    command VersionControlStatus
+
+ModelDocEditorDebugger
+    class = CQModelDocEditorCompileDebugger
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_compiledebugger.cpp
+    command EndDebugging
+    command StartDebugging
+    command StepBack
+    command StepForward
+    command ToggleDebugging
+
+ModelDocEditorSession
+    class = CModelDocEditorSession
+    source = src/tools/modeldoc_editor/modeldoc_editor_session.cpp
+    command AddPrefabReference
+    command CollapseSelectedPrefabs
+    command CopySelectedNodes
+    command CreateNewAnimGraph
+    command CreateNewAnimGraph2
+    command CreateNmClips
+    command CreateOneOfEveryNode
+    command CreatePrefabFromSelection
+    command CutSelectedNodes
+    command DefaultLightingMode
+    command DeleteSelectedNodes
+    command DisableToolsVisMode
+    command DuplicateSelectedNodes
+    command EnlargeGizmo
+    command FindAndReplaceStringAttrVals
+    command ListFileReferences
+    command NextLightingMode
+    command NextToolsVisMode
+    command PasteNodes
+    command Playback_Faster
+    command Playback_JumpToEnd
+    command Playback_JumpToStart
+    command Playback_Pause
+    command Playback_Play
+    command Playback_Restart
+    command Playback_Slower
+    command Playback_StepBack
+    command Playback_StepForward
+    command Playback_Toggle
+    command PrevLightingMode
+    command PrevtoolsVisMode
+    command Redo
+    command SanityCheckCompileState
+    command SetCameraDistanceBasedOnLODSwitchThreshold
+    command SetEditorCameraFromViewport
+    command SetEditorCameraPreset_n1n1
+    command SetEditorCameraPreset_n1p1
+    command SetEditorCameraPreset_p1n1
+    command SetEditorCameraPreset_p1p1
+    command SetLODSwitchThresholdFromCameraDistance
+    command SetManipulationMode_Rotate
+    command SetManipulationMode_Scale
+    command SetManipulationMode_Selection
+    command SetManipulationMode_Translate
+    command SetManipulationSpace_Local
+    command SetManipulationSpace_World
+    command SetViewportFromEditorCamera
+    command ShowAddNodeDialog
+    command ShowAnimGraph2Editor
+    command ShowAnimGraphEditor
+    command ShowErrors
+    command ShrinkGizmo
+    command ToggleAbsoluteFrameNumbers
+    command ToggleCloth
+    command ToggleClothDisplay
+    command ToggleDeltaAnimOverBindPose
+    command ToggleDocumentPreview
+    command ToggleForceBindPose
+    command ToggleForceUpdatesDuringManipulation
+    command ToggleGroundAndAxis
+    command ToggleLassoSelectIntersecting
+    command ToggleLimitPlayback
+    command ToggleLoopAnimation
+    command ToggleManipulationSpace
+    command TogglePhysics
+    command TogglePhysicsSelected
+    command TogglePreviewAnimEvents
+    command ToggleRenderBentNormals
+    command ToggleRenderNormals
+    command ToggleRenderTangents
+    command ToggleSelectSubobjects
+    command ToggleShowModifierWarnings
+    command ToggleSkeletonDisplay
+    command ToggleStreamVisualization
+    command ToggleUVMapView
+    command Undo
+    command UnlockEventFromPreviewCycle
+    command ViewMode_Back
+    command ViewMode_Bottom
+    command ViewMode_Front
+    command ViewMode_Left
+    command ViewMode_Perspective
+    command ViewMode_Right
+    command ViewMode_Top
+
+ModelDocEditorTimeline
+    class = CQModelDocEditorTimeline
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_timeline.cpp
+    command ScrubEnd
+    command ScrubHome
+    command ScrubOneFrameLeft
+    command ScrubOneFrameRight
+
+ModelDocEditorWnd
+    class = CQModelDocEditorWnd
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_wnd.cpp
+    command NewNodeEditor
+    command NewNodeOutliner
+    command NewNodeWorksheet
+    command ResetLayout
+    command ToggleDockWidgets
+
+ModelDocOutliner
+    class = CQModelDocEditorOutliner
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_outliner.cpp
+    command DebugRefreshOutliner
+    command RenameSelectedNode
+
+ModelDocPreviewToolSceneWidget
+    class = CQModelDocEditorPreviewToolSceneWidget
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_preview_window.cpp
+    command ShowContextMenu
+    command ViewMode_Back
+    command ViewMode_Bottom
+    command ViewMode_Front
+    command ViewMode_Left
+    command ViewMode_Perspective
+    command ViewMode_Right
+    command ViewMode_Top
+
+ModelDocSceneWidget
+    class = CQModelDocEditorSceneWidget
+    source = src/tools/modeldoc_editor/qmodeldoc_editor_scenewidget.cpp
+    command FocusCameraOnCursor
+    command PropertyManipulation
+    command PropertyManipulation_Fast
+    command PropertyManipulation_Slow
+    command ResetModelrotation
+    command RotateModel
+    command ShowContextMenu
+
+MultiTimeline
+    class = CQMultiTimelineWidget
+    source = src/qcontrols/qmultitimelinewidget.cpp
+    command ActivateItem
+    command Drag
+    command MultiSelectModifier
+    command PanTimeline
+    command ShowContextMenu
+    command ToggleSelectModifier
+    command UnlockCycleFromFrameModifier
+    command ZoomIn
+    command ZoomOut
+
+MultiTimelineHeader
+    class = CQMultiTimelineHeaderWidget
+    source = src/qcontrols/qmultitimeline_headerwidget.cpp
+    command Scrub
+    command UnlockCycleFromFrameModifier
+
+MutliTimelineGroupHeader
+    class = CQMutliTimelineGroupHeaderWidget
+    source = src/qcontrols/qmultitimeline_groupwidget.cpp
+    command ToggleExpanded
+
+SessionCycleWidget
+    class = CQSessionCycleWidget
+    source = src/tools/toolutils2/qbaseeditorwnd.cpp
+    command KeepActive
+    command NextSession
+    command PreviousSession
+
+ToolSceneWidget
+    class = CQToolSceneWidget
+    source = src/tools/toolscene/qtoolscenewidget.cpp
+    command DebugToolScene
+    command DefaultPreviewCamera
+
+Tool_Picker
+    class = CModelDocEditorTool_Picker
+    source = src/tools/modeldoc_editor/modeldoc_editor_tool_picker.cpp
+    command CancelPick
+    command LassoPick
+    command Pick
+
+Tool_Selection
+    class = CModelDocEditorTool_Selection
+    source = src/tools/modeldoc_editor/modeldoc_editor_tool_selection.cpp
+    command BoxSelect
+    command DeselectAll
+    command LassoSelect
+    command MoveManipulator
+    command MoveManipulatorModifier
+    command Select
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+
+Tool_VertexAttachment
+    class = CModelDocEditorTool_VertexAttachment
+    source = src/tools/modeldoc_editor/modeldoc_editor_tool_vertexattachment.cpp
+    command Cancel
+    command CreateAtVertex

@@ -1,0 +1,261 @@
+CLogicNPCCounter_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_npc_counter_radius "logic_npc_counter_radius" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicNPCCounter_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_npc_counter_radius "logic_npc_counter_radius" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicNPCCounter_API::SetSourceEntity
+    m_FriendlyName = "Set Source Entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_npc_counter_radius "logic_npc_counter_radius" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CLogicNPCCounter_API::OnFactor1
+    m_FriendlyName = "On Factor1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnFactor2
+    m_FriendlyName = "On Factor2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnFactor3
+    m_FriendlyName = "On Factor3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnFactorAll
+    m_FriendlyName = "On Factor All"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMaxCount1
+    m_FriendlyName = "On Max Count1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMaxCount2
+    m_FriendlyName = "On Max Count2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMaxCount3
+    m_FriendlyName = "On Max Count3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMaxCountAll
+    m_FriendlyName = "On Max Count All"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinCount1
+    m_FriendlyName = "On Min Count1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinCount2
+    m_FriendlyName = "On Min Count2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinCount3
+    m_FriendlyName = "On Min Count3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinCountAll
+    m_FriendlyName = "On Min Count All"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinPlayerDist1
+    m_FriendlyName = "On Min Player Dist1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinPlayerDist2
+    m_FriendlyName = "On Min Player Dist2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinPlayerDist3
+    m_FriendlyName = "On Min Player Dist3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicNPCCounter_API::OnMinPlayerDistAll
+    m_FriendlyName = "On Min Player Dist All"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicNPCCounter_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_npc_counter_radius "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self

@@ -1,0 +1,334 @@
+CPhysicsProp_API::DisableCollisions
+    m_FriendlyName = "Disable Collisions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::DisableDrag
+    m_FriendlyName = "Disable Drag"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::DisableGravity
+    m_FriendlyName = "Disable Gravity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::DisableMotion
+    m_FriendlyName = "Disable Motion"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::EnableCollisions
+    m_FriendlyName = "Enable Collisions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::EnableMotion
+    m_FriendlyName = "Enable Motion"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetAutoConvertBackFromDebris
+    m_FriendlyName = "Set Auto Convert Back From Debris"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetDragEnabled
+    m_FriendlyName = "Set Drag Enabled"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetGlowOverride
+    m_FriendlyName = "Set Glow Override"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_VEC3 "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetGlowRange
+    m_FriendlyName = "Set Glow Range"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetGravityEnabled
+    m_FriendlyName = "Set Gravity Enabled"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::SetMass
+    m_FriendlyName = "Set Mass"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::Sleep
+    m_FriendlyName = "Sleep"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::StartGlowing
+    m_FriendlyName = "Start Glowing"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::StopGlowing
+    m_FriendlyName = "Stop Glowing"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysicsProp_API::Wake
+    m_FriendlyName = "Wake"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_physics "prop_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPhysicsProp_API::OnAsleep
+    m_FriendlyName = "On Asleep"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnAwake
+    m_FriendlyName = "On Awake"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnAwakened
+    m_FriendlyName = "On Awakened"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnMotionEnabled
+    m_FriendlyName = "On Motion Enabled"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnOutOfWorld
+    m_FriendlyName = "On Out Of World"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnPlayerPickup
+    m_FriendlyName = "On Player Pickup"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self
+
+OUTPUT!CPhysicsProp_API::OnPlayerUse
+    m_FriendlyName = "On Player Use"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysicsProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_physics "Target" inflow=self

@@ -1,0 +1,18 @@
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow

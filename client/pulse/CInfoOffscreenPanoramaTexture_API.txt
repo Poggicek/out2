@@ -1,0 +1,61 @@
+CInfoOffscreenPanoramaTexture_API::AddCSSClass
+    m_FriendlyName = "Add CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CInfoOffscreenPanoramaTexture_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_offscreen_panorama_texture "info_offscreen_panorama_texture" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CInfoOffscreenPanoramaTexture_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CInfoOffscreenPanoramaTexture_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_offscreen_panorama_texture "info_offscreen_panorama_texture" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CInfoOffscreenPanoramaTexture_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CInfoOffscreenPanoramaTexture_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_offscreen_panorama_texture "info_offscreen_panorama_texture" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CInfoOffscreenPanoramaTexture_API::RemoveCSSClass
+    m_FriendlyName = "Remove CSS Class"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CInfoOffscreenPanoramaTexture_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_offscreen_panorama_texture "info_offscreen_panorama_texture" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

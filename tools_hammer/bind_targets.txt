@@ -1,0 +1,1457 @@
+2DCanvasCamera
+    class = C2DCanvasCamera
+    source = src/qcontrols/q2dcanvas.cpp
+    command DebugUnlockZoom
+    command MouseZoom
+    command PanCamera
+    command RecenterView
+    command ZoomIn
+    command ZoomOut
+
+AxisRotatorManipulator
+    class = CAxisRotatorManipulator
+    source = src/tools/hammer/axisrotatorhelper.cpp
+    command Drag
+    command ToggleSnapping
+
+BarnLightManipulator
+    class = CBarnLightManipulator
+    source = src/tools/hammer/barnlightmanipulator.cpp
+    command ConstrainProportions
+    command Drag
+    command ResizeNear
+    command ToggleSnapping
+
+BoxManipulator
+    class = CEditBoxManipulator
+    source = src/tools/hammer/editboxmanipulator.cpp
+    command Drag
+    command ToggleEditEdgeFades
+    command ToggleSnapping
+
+Camera
+    class = CBindableCamera
+    help_context = SharedToolCommands
+    source = src/tools/toolutils2/bindablecamera.cpp
+    command CameraLookAtSelection
+    command DecreaseMoveSpeed
+    command HorizontalStrafeCamera
+    command IncreaseMoveSpeed
+    command MouseControlCamera
+    command MouseControlCamera2D
+    command MouseControlCamera3D
+    command MouseControlCamera3D_Toggle
+    command MouseLook3D
+    command MoveCameraBackward3D
+    command MoveCameraDown3D
+    command MoveCameraForward3D
+    command MoveCameraLeft3D
+    command MoveCameraRight3D
+    command MoveCameraUp3D
+    command PanCamera3D
+    command PitchCameraDown
+    command PitchCameraUp
+    command ResetMoveSpeed
+    command RotateAboutTarget3D
+    command SnapCameraToSelection
+    command ToggleLockCameraHeight
+    command VerticalStrafeCamera
+    command YawCameraLeft
+    command YawCameraRight
+    command ZoomAllCamerasIn
+    command ZoomAllCamerasOut
+    command ZoomCameraIn
+    command ZoomCameraOut
+    command ZoomForwardBack2D
+    command ZoomForwardBack3D
+
+EntityOutputWidget
+    class = CQHammerEntityOutputWidget
+    source = src/tools/hammer/qmapdocentityoutputwidget.cpp
+    command Copy
+    command CreateNew
+    command Delete
+    command MakeRelay
+    command Paste
+    command SelectTargets
+
+EntityReportDialog
+    class = CQEntityReportDlgUI
+    source = src/tools/hammer/entityreportdlgui.cpp
+
+GizmoManipulator
+    class = CGizmoManipulator
+    source = src/tools/hammer/gizmomanipulator.cpp
+    command AbortDrag
+    command AlternateManipulation
+    command Drag
+    command GizmoApplyValue
+    command LockedManipulation
+    command SetBoxManipulateAboutCenter
+    command SetBoxManipulateApplyUniformScaling
+    command StampClone
+    command ToggleSnapping
+
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow
+
+HammerApp
+    class = CHammerApp
+    source = src/tools/hammer/hammerapp.cpp
+    command ActivateNextEditorSession
+    command ActivatePreviousEditorSession
+    command BuildMap
+    command CheckMapForProblems
+    command ClearRecentFiles
+    command ClosePaneDockWidgets
+    command CycleEditUVSet
+    command CycleViewDistance
+    command EditReplace
+    command EntityGallery
+    command ExportFile
+    command ExportSelected
+    command FileClose
+    command FileNew
+    command FileOpen
+    command FileReload
+    command FileSave
+    command FileSaveAs
+    command ImportFile
+    command MapInformation
+    command NewMapFromTemplate
+    command NextSession
+    command PauseGame
+    command PreviousSession
+    command ReloadFGDFiles
+    command ReloadKeyBindings
+    command ResetLayout
+    command SaveActivePrefab
+    command SaveAsText
+    command SetEditUVSet_ALL
+    command SetEditUVSet_UV1
+    command SetEditUVSet_UV2
+    command ShowEntityReport
+    command ShowInputsPopup
+    command ShowMapManifestWidget
+    command ShowMapPropertiesPopup
+    command ShowMapRelaysPopup
+    command ShowMapVariablesPopup
+    command ShowOutputsPopup
+    command ToggleDisableUndoRedo
+    command ToggleDisplacementMapping
+    command ToggleFog
+    command ToggleForceLightsOn
+    command ToggleFullscreenLayout
+    command ToggleGridNav
+    command ToggleInstanceOverlay
+    command ToggleMeshSubdivision
+    command ToggleMeshTiles2D
+    command ToggleMeshTiles3D
+    command ToggleModelAnimation
+    command TogglePropertiesPopup
+    command ToggleSelectBackfacing
+    command ToggleSelectIntersecting
+    command ToggleSelectThrough
+    command ToggleSelectionOverlay
+    command ToggleShowEntityFarZ
+    command ToggleShowGameObjectsOnly
+    command ToggleShowGrass
+    command ToggleShowHelpers
+    command ToggleShowLPVSampleGrid
+    command ToggleShowParticles
+    command ToggleShowVisContributorsOnly
+    command ToggleTextureLock
+    command ToggleTextureLockComponent
+    command ToggleTextureLockScale
+    command ToggleToolsMaterials
+    command ToggleTransformPins
+    command ToggleTransformSpace
+    command UnpauseGame
+    command VersionControlAdd
+    command VersionControlCheckIn
+    command VersionControlCheckInAll
+    command VersionControlCheckOut
+    command VersionControlStatus
+    command ViewDistanceNext
+    command ViewDistancePrev
+
+HammerEditorSession
+    class = CHammerEditorSession
+    source = src/tools/hammer/hammereditorsession.cpp
+    command ActivateViewUnderCursor
+    command AddNewKey
+    command AddPrefabsToVersionControl
+    command AlignCameraToSelection
+    command AlignSelectionToCamera
+    command AttachObjectToView
+    command AttachViewToObject
+    command BakeAllCubemaps
+    command BakeAllLighting
+    command BakeCubemapsOnSelection
+    command BakeFogIndirect
+    command BakeLightingOnSelection
+    command BakeSelectedInstances
+    command BakeSelectedTileGrids
+    command BakeSelectedTileMeshes
+    command Center2DViews
+    command CenterViews
+    command CheckoutPrefabs
+    command CleanupUnusedBakeResources
+    command ClearAllLighting
+    command ClearLightingOnSelection
+    command ClearSelection
+    command CollapseAllPrefabs
+    command CollapseSelectedPrefabs
+    command CollapseTileGrid
+    command ConvertCablesToMesh
+    command ConvertInstanceToPrefab
+    command ConvertObjectsToModel
+    command ConvertObjectsToSmartProp
+    command ConvertToBarnDoorLights
+    command ConvertToStaticCables
+    command ConvertToStaticOverlay
+    command ConvertToWeightedGroup
+    command Copy
+    command CreateBoundingMesh
+    command CreateGroupProxy
+    command CreateInstanceFromSelection
+    command CreateIsoSurface
+    command CreateLatticeDeformer
+    command CreatePathDeformer
+    command CreatePrefabFromSelection
+    command CreatePrefabFromSelectionCentered
+    command CreateSavedCamera
+    command CreateSelectionSet
+    command CreateSimpleDeformer
+    command CreateTestNode
+    command CreateTile
+    command CreateTileMesh
+    command CreateTileProxy
+    command CreateTileSet
+    command CreateTiles
+    command CreateWeightedGroup
+    command CreateWorldLayerFromSelection
+    command Cut
+    command CycleAllSavedCameras
+    command CycleAndFrameViews
+    command CycleSelectionModes
+    command CycleSelectionTopLevelModes
+    command CycleViews
+    command DecreaseRotationSnapping
+    command DeleteSelection
+    command DeleteVisClusters
+    command DetachObjectFromView
+    command EditSelectedPrefab
+    command ExitActiveEditScope
+    command ExportParticleSnapShot
+    command FindEntities
+    command FrameAllViews
+    command GotoCoords
+    command GroupSelection
+    command HideUnselected
+    command ImportPrefab
+    command IncreaseRotationSnapping
+    command InsertNewImagePlane
+    command InvertSelection
+    command JumpToSavedCamera1
+    command JumpToSavedCamera2
+    command JumpToSavedCamera3
+    command JumpToSavedCamera4
+    command JumpToSavedCamera5
+    command JumpToSavedCamera6
+    command JumpToSavedCamera7
+    command JumpToSavedCamera8
+    command JumpToSavedCamera9
+    command LoadMapInEngine
+    command LoadVisClusters
+    command LockWorkPlane
+    command ManipulationModePivot
+    command ManipulationModeRotate
+    command ManipulationModeScale
+    command ManipulationModeSelection
+    command ManipulationModeTranslate
+    command MapGridHigher
+    command MapGridLower
+    command MergePaths
+    command MirrorHorizontal
+    command MirrorVertical
+    command MovePropsToWorld
+    command MoveToWorld
+    command NameTiles
+    command NewCordon
+    command OpenAssetPaneDockWidget
+    command OpenMapViewPaneDockWidget
+    command OpenPrefabs
+    command Paste
+    command PasteKeys
+    command PasteSpecial
+    command QuickHideSelection
+    command QuickHideUnselected
+    command RandomizeChoices
+    command RandomizeSelectedTileMeshes
+    command Redo
+    command ReloadMapInEngine
+    command ReloadPrefabs
+    command RemapBlendData
+    command RemovePaintData
+    command RemovePoseData
+    command ReorientCameraToWorkplane
+    command ReorientCameraToWorld
+    command ReparentSelection
+    command RepeatCommand
+    command ReplaceInstanceWithPrefab
+    command ResetWorkPlane
+    command ResetWorkPlaneAndCamera
+    command RestartParticleEffects
+    command ReversePaths
+    command RevertTileMeshes
+    command SavePrefabs
+    command SelectAll
+    command SelectInvalidTileFaces
+    command SelectParent
+    command SelectSimilar
+    command SelectTilesetObjects
+    command SelectionBoundry
+    command SelectionConnected
+    command SelectionConvert
+    command SelectionModeEdges
+    command SelectionModeFaces
+    command SelectionModeGroups
+    command SelectionModeMeshes
+    command SelectionModeNav
+    command SelectionModeObjects
+    command SelectionModeVertices
+    command SelectionSetFromQuickHide
+    command SendSelectedToModo
+    command SeperatePathNodes
+    command SeperatePathSegments
+    command SetDeformerCreationAxis_Auto
+    command SetDeformerCreationAxis_LocalX
+    command SetDeformerCreationAxis_LocalY
+    command SetDeformerCreationAxis_LocalZ
+    command SetDeformerCreationAxis_WorldX
+    command SetDeformerCreationAxis_WorldY
+    command SetDeformerCreationAxis_WorldZ
+    command SetManipulationModePivot
+    command SetManipulationModeRotate
+    command SetManipulationModeScale
+    command SetManipulationModeSelection
+    command SetManipulationModeTranslate
+    command ShowQuickHide
+    command ShowRemapVertexDataDialog
+    command ShowScreenshotDialog
+    command SnapToGrid
+    command SnapToGridIndividually
+    command SteamAudioBakeData
+    command SteamAudioCreateProbeExclusionVolume
+    command SteamAudioCreateProbeGenerationVolume
+    command SteamAudioExportSceneAsOBJ
+    command SteamAudioGenerateProbes
+    command SteamAudioGenerateSingleProbe
+    command SteamAudioPreviewScene
+    command SteamAudioShowSettings
+    command SteamAudioVisualizeImportedProbes
+    command TieToEntity
+    command ToggleCollisionModels
+    command ToggleCordoning
+    command ToggleCordonsVisible
+    command ToggleEntityNames
+    command ToggleLightingPreviewLock
+    command ToggleNavAlwaysVisible
+    command ToggleNavMarkupVisibility
+    command ToggleOverlayShapes
+    command TogglePrefabVisibility
+    command ToggleShow2DGrid
+    command ToggleShow3DGrid
+    command ToggleShowLightOverlap
+    command ToggleShowWaterPlanes
+    command ToggleSingleView
+    command ToggleSnapRotation
+    command ToggleSnapToGrid
+    command ToggleSnapToVertices
+    command ToggleSnapping
+    command ToolAssetSpray
+    command ToolBakeAmbientOcclusion
+    command ToolBlock
+    command ToolClipper
+    command ToolDisplacement
+    command ToolDotaTileEditor
+    command ToolEntity
+    command ToolLocator
+    command ToolMeshProjection
+    command ToolMirror
+    command ToolPaint
+    command ToolPath
+    command ToolPhysics
+    command ToolPivotPicker
+    command ToolPolygon
+    command ToolStaticOverlay
+    command ToolTerrain
+    command ToolTextureProjection
+    command ToolVertexNormalPaint
+    command ToolWorkPlane
+    command Undo
+    command UngroupSelection
+    command UngroupSelectionRecursive
+    command UnparentSelection
+    command UpdateAllIsoSurfaces
+    command UpdateToCurrentVersion
+
+HammerObjectPropertyPopup
+    class = CQHammerObjectPropertyPopup
+    source = src/tools/hammer/qhammerobjectpropertypopup.cpp
+    command HidePropertyWindow
+
+LightingControl
+    class = CLightingControlRig
+    source = src/tools/toolscene/lightingcontrolrig.cpp
+    command ReloadLightRigDefinitions
+    command RotateLights
+    command ToggleLights
+
+MapChoiceGroupEditor
+    class = CQMapChoiceGroupWidget
+    source = src/tools/hammer/qmapchoicegroupwidget.cpp
+    command AddChoice
+    command AddDrivenVariable
+    command RemoveChoice
+    command RemoveDrivenVariable
+    command RenameChoice
+
+MapManifestWidget
+    class = CQMapManifestWidget
+    source = src/tools/hammer/qmapmanifestwidget.cpp
+    command RefreshView
+
+MapVariablesEditor
+    class = CQHammerEntityRelayWidget
+    source = src/tools/hammer/qhammerentityrelaywidget.cpp
+    command AddChoiceGroup
+    command AddRelayPlug
+    command AddVariable
+    command DeleteRelayPlug
+    command DeleteSelected
+    command MoveDown
+    command MoveUp
+
+MapView
+    class = CMapView
+    source = src/tools/hammer/mapview.cpp
+    command DetachViewFromObject
+    command MaterialTraceLift
+    command ModelTraceLift
+    command RefreshRaytracedScene
+    command ShowContextMenu
+    command SnapCameraToTargetUnderMouse
+    command ToggleFollowHierarchy
+    command WriteRaytracedImage
+
+PaneContainer
+    class = CQHammerPaneContainer
+    source = src/tools/hammer/qhammerpanecontainer.cpp
+    command 2D_Front
+    command 2D_Side
+    command 2D_Top
+    command 3D_AllLighting
+    command 3D_DirectLightingOnly
+    command 3D_DirectPlusAmbientLighting
+    command 3D_FullBrightNoLighting
+    command 3D_HighContrastLighting
+    command 3D_IndirectLightingOnly
+    command 3D_TagVis
+    command 3D_ToolsVis
+    command 3D_Wireframe
+    command AssetView
+    command CaptureRenderDoc
+    command CreateFloatingCopy
+    command EngineView
+    command EntityIO
+    command ObjectProperties
+    command Rtx_Path_Tracing
+    command Rtx_PreviewLighting
+    command Rtx_Visualization
+    command TerrainGraph
+    command Toggle3DSkybox
+    command ToggleCachedFogAtlas
+    command ToggleFOW
+    command ToggleFog
+    command ToggleFogFlow
+    command ToggleGridOfThirds
+    command ToggleHair
+    command ToggleHighlightDeprecated
+    command ToggleLightingOnly
+    command ToggleMeshEdges
+    command ToggleParticles
+    command ToggleReflections
+    command ToggleResolutionGate
+    command ToggleSSAO
+    command ToggleShadowAtlas
+    command ToggleShadows
+    command ToggleSkybox
+    command ToggleWaterFlow
+    command ToggleWireframeOverlay
+    command ToggleWorklight
+
+PathPointManipulator
+    class = CPathPointManipulator
+    source = src/tools/hammer/pathpositionhelper.cpp
+    command Drag
+    command ToggleSnapping
+
+PointManipulator
+    class = CPointManipulator
+    source = src/tools/hammer/pointmanipulator.cpp
+    command SelectPoint
+
+PointOnLineManipulator
+    class = CPointOnLineManipulator
+    source = src/tools/hammer/pointonlinemanipulator.cpp
+    command Drag
+
+RectangleManipulator
+    class = CRectangleManipulator
+    source = src/tools/hammer/rectanglemanipulator.cpp
+    command Drag
+    command ToggleSnapping
+
+SelectionSetEditor
+    class = CQAutoVisGroupEditor
+    source = src/tools/hammer/qautovisgroupeditor.cpp
+    command AddSelectionToSet
+    command DeleteEmptySets
+    command DeleteHidden
+    command DeleteSelectionSet
+    command NewSelectionSet
+    command RemoveSelectionFromAll
+    command RemoveSelectionFromSet
+    command RenameSelectionSet
+    command SelectHidden
+    command SelectObjectsInGroup
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command SetAllHidden
+    command SetAllVisible
+    command ToggleNumericDisplay
+    command ToggleShowAll
+    command ToggleShowEmpty
+
+SessionCycleWidget
+    class = CQSessionCycleWidget
+    source = src/tools/toolutils2/qbaseeditorwnd.cpp
+    command KeepActive
+    command NextSession
+    command PreviousSession
+
+SphereManipulator
+    class = CSphereManipulator
+    source = src/tools/hammer/spheremanipulator.cpp
+    command Drag
+
+StaticPointManipulator
+    class = CStaticPointManipulator
+    source = src/tools/hammer/staticpointmanipulator.cpp
+    command Click
+    command MouseWheelDown
+    command MouseWheelUp
+
+TerrainGraphEditor
+    class = CQTerrainGraphEditorWidget
+    source = src/tools/hammer/qterraingrapheditor.cpp
+    command DeleteSelected
+
+TerrainGraphEditorView
+    class = CQTerrainGraphEditorView
+    source = src/tools/hammer/qterraingrapheditor.cpp
+    command FitAllInView
+    command FitSelectionInView
+    command PanView
+    command ZoomView
+    command ZoomViewInStep
+    command ZoomViewOutStep
+
+TileSetMaterialsWidget
+    class = CQTileSetMaterialsWidget
+    source = src/tools/hammer/qtilesetmaterialswidget.cpp
+    command AddGrassParameters
+    command AddMaterial
+    command AddMaterialSet
+    command CopyGrassParameters
+    command PasteGrassParameters
+    command RemoveGrassParameters
+    command RemoveMaterial
+    command RemoveMaterialSet
+
+TileSetPropertyWidget
+    class = CQTileSetPropertyWidget
+    source = src/tools/hammer/qtilesetpropertywidget.cpp
+    command AddMeshProperty
+    command AddProperty
+    command AddValue
+    command RemoveProperty
+    command RemoveValue
+
+ToolAssetSpray
+    class = CToolAssetSpray
+    source = src/tools/hammer/toolassetspray.cpp
+    command Erase
+    command ReprojectAll
+    command ScaleBrush
+    command Spray
+
+ToolBevel
+    class = CToolBevel
+    source = src/tools/hammer/toolbevel.cpp
+    command AdjustShape
+    command AdjustSteps
+    command AdjustWidth
+    command Apply
+    command Cancel
+    command Finish
+    command ToggleSnapping
+
+ToolBlock
+    class = CToolBlock
+    source = src/tools/hammer/toolblock.cpp
+    command AlignToSurface
+    command Apply
+    command CancelCreate
+    command DragBlock
+    command Finish
+    command ToggleSnapping
+
+ToolBridge
+    class = CToolBridge
+    source = src/tools/hammer/toolbridge.cpp
+    command AdjustParameters
+    command Apply
+    command Cancel
+    command DecreaseNumSteps
+    command Finish
+    command FreeDrag
+    command IncreaseNumSteps
+    command LockPoints
+
+ToolClipper
+    class = CToolClipper
+    source = src/tools/hammer/toolclipper.cpp
+    command CancelClip
+    command CycleClipMode
+    command DoClip
+    command DragClip
+    command FinishClip
+    command RotatePlaneCCW
+    command RotatePlaneCW
+    command ToggleCreateCaps
+    command ToggleSnapping
+
+ToolConvex
+    class = CToolConvex
+    source = src/tools/hammer/toolconvex.cpp
+    command Delete
+    command FlipPointNormal
+    command PlacePoint
+    command PlacePointFlipped
+    command Rotate
+    command Select
+    command ToggleSnapping
+    command Translate
+
+ToolDotaTileEditor
+    class = CToolDotaTileEditor
+    source = src/tools/hammer/tooldotatileeditor.cpp
+    command AddLayer
+    command AddObject
+    command AdjustRadius
+    command ApplyBrush
+    command ApplyPaste
+    command AssignCurrentTileSet
+    command AssignNextTileSet
+    command AssignPreviousTileSet
+    command BeginPaste
+    command BlendAdjustRadius
+    command BlendApplyBrush
+    command BlendBrushAdjustPressure
+    command BlendBrushMaterialSet
+    command BlendBrushSharpness
+    command BlendBrushSmooth
+    command BlendEraseBrush
+    command BlendStampBrush
+    command BoxEnableDisable
+    command BoxSelect
+    command BrushAdjustDensity
+    command BrushAlternateMode
+    command BrushChangeObjectType
+    command BrushChangeTreePitch
+    command BrushCutDummy
+    command BrushDecreaseTreeHeight
+    command BrushHeightOffsetMode
+    command BrushIncreaseTreeHeight
+    command BrushRotateObjects
+    command BrushTilesetMode
+    command CancelPaste
+    command ClearLayerBlending
+    command ClearSelection
+    command CollapseTiles
+    command CopyItems
+    command CycleModeBack
+    command CycleModeForward
+    command DeleteObject
+    command DisableAllTiles
+    command DragClone
+    command DragObject
+    command EnableAllTiles
+    command EnableDisableCutDummy
+    command EnableDisableTile
+    command EnableTileModifier
+    command EraseBrush
+    command FinishPaste
+    command InvertDisabledTiles
+    command LassoEnableDisable
+    command LassoSelect
+    command LowerTiles
+    command LowerVertex
+    command ModeBrushBlends
+    command ModeBrushGridNav
+    command ModeBrushHeight
+    command ModeBrushPath
+    command ModeBrushPlants
+    command ModeBrushTrees
+    command ModeBrushWater
+    command ModeEditObjects
+    command ModeEnableDisableTiles
+    command ModeSelect
+    command ModifiyObject
+    command ModifyObject
+    command NextObjectVariation
+    command NextVariation
+    command PasteItems
+    command PitchObject
+    command PreviousObjectVariation
+    command PreviousVariation
+    command RaiseTiles
+    command RaiseVertex
+    command RandomObjectVariation
+    command RandomVariation
+    command RemoveActiveObject
+    command RemoveLayer
+    command RemoveObject
+    command RotateObject
+    command Select
+    command SelectNextMaterialSet
+    command SelectNextTileSet
+    command SelectPreviousTileSet
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command SetBlendModeColor
+    command SetBlendModeErase
+    command SetBlendModeEraseToBase
+    command SetBlendModeFogFlowMap
+    command SetBlendModeFogOpacity
+    command SetBlendModeGrassOpacity
+    command SetBlendModeHeight
+    command SetBlendModeLayer0
+    command SetBlendModeLayer1
+    command SetBlendModeLayer2
+    command SetBlendModeLayer3
+    command SetBlendModeSharpness
+    command SetBlendModeSmooth
+    command SetBlendModeWaterFlowMap
+    command SetblendModeTransition
+    command ShowGridProperties
+    command ShowTileInSet
+    command StampBrush
+    command StampObject
+    command ToggleObjectSelection
+    command ToggleRemoveObject
+    command ToggleSnapping
+    command ToggleTileSelection
+
+ToolEdgeArc
+    class = CToolEdgeArc
+    source = src/tools/hammer/tooledgearc.cpp
+    command AdjustParameters
+    command Apply
+    command Cancel
+    command DecreaseNumSteps
+    command Finish
+    command IncreaseNumSteps
+    command LockToAxis
+    command ToggleSnapping
+
+ToolEdgeCut
+    class = CToolEdgeCut
+    source = src/tools/hammer/tooledgecut.cpp
+    command AlignedSnap
+    command Apply
+    command Cancel
+    command CutEdge
+    command Finish
+    command PlaceCut
+    command StartNewCut
+    command ToggleLoopCut
+    command ToggleLoopCutEven
+    command ToggleLoopCutFlip
+    command ToggleSelectionCut
+    command ToggleSnapping
+
+ToolEdgeSelection
+    class = CToolPolyEdgeSelection
+    source = src/tools/hammer/toolpolyedgeselection.cpp
+    command AddToSelection
+    command ArcTool
+    command Bevel
+    command BevelTool
+    command Bridge
+    command BridgeTool
+    command CenterPivotInView
+    command ClearPivot
+    command Collapse
+    command Connect
+    command ConnectSmooth
+    command Constrain
+    command CreatePolygonFromEdges
+    command CutTool
+    command Dissolve
+    command DissolveAgressive
+    command EndPivotManipulation
+    command Extend
+    command Extrude
+    command ExtrudeAlongEdges
+    command GizmoApplyValue
+    command GizmoClearValue
+    command GizmoComma
+    command GizmoNumKey0
+    command GizmoNumKey1
+    command GizmoNumKey2
+    command GizmoNumKey3
+    command GizmoNumKey4
+    command GizmoNumKey5
+    command GizmoNumKey6
+    command GizmoNumKey7
+    command GizmoNumKey8
+    command GizmoNumKey9
+    command GizmoNumKeyDecimal
+    command GizmoNumKeyMinus
+    command GrowSelection
+    command LassoSelect
+    command Merge
+    command MoveObjectDownByTrace
+    command MoveObjectDownByTraceLocal
+    command MoveToFurthestEdge
+    command MoveToFurthestEdge_Lcl
+    command NudgeDown
+    command NudgeLeft
+    command NudgeRight
+    command NudgeRotateDown
+    command NudgeRotateLeft
+    command NudgeRotateRight
+    command NudgeRotateUp
+    command NudgeUp
+    command RadialAlign
+    command RemoveFromSelection
+    command RemoveFromSelectionOldest
+    command Select
+    command SelectLoop
+    command SelectRibs
+    command SelectRing
+    command SelectSingleLoop
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command SetNormalsDefault
+    command SetNormalsHard
+    command SetNormalsSoft
+    command SetPivotToWorldOrigin
+    command ShrinkSelection
+    command Smooth
+    command SnapEdgeToEdge
+    command SnapEdgesToCorner
+    command Split
+    command ToggleShowBounds
+    command ToggleSnapping
+    command TransformExtrude
+    command TranslateLasso
+    command WeldUVs
+
+ToolEntity
+    class = CToolEntity
+    source = src/tools/hammer/toolentity.cpp
+    command CancelCreate
+    command Create
+    command DragCreatePoint
+    command ToggleSnapping
+    command TraceAndCreate
+    command TraceAndCreateOriented
+
+ToolFaceBevel
+    class = CToolFaceBevel
+    source = src/tools/hammer/toolfacebevel.cpp
+    command AdjustExtrude
+    command AdjustInset
+    command Apply
+    command Cancel
+    command Finish
+    command ToggleEachFace
+    command ToggleSnapping
+
+ToolFaceSelection
+    class = CToolPolyFaceSelection
+    source = src/tools/hammer/toolpolyfaceselection.cpp
+    command AddToSelection
+    command AlignCylinderU
+    command AlignCylinderV
+    command AlignFace
+    command AlignView
+    command AlignWorld
+    command ApplyMaterialByHotspot
+    command ApplyMaterialByHotspotPerFace
+    command ApplyMaterialToSelection
+    command BakeSubdivision
+    command Bridge
+    command BridgeTool
+    command CenterPivotInView
+    command ClearPivot
+    command Collapse
+    command CollapseTiles
+    command Combine
+    command Constrain
+    command CutTool
+    command DecreaseSubdivisionLevel
+    command Detach
+    command EndPivotManipulation
+    command Extract
+    command Extrude
+    command FaceBevelTool
+    command FastTextureTool
+    command FlipNormals
+    command FlipTextureHorizontal
+    command FlipTextureVertical
+    command FlipUVsHorizontal
+    command FlipUVsVertical
+    command GizmoApplyValue
+    command GizmoClearValue
+    command GizmoComma
+    command GizmoNumKey0
+    command GizmoNumKey1
+    command GizmoNumKey2
+    command GizmoNumKey3
+    command GizmoNumKey4
+    command GizmoNumKey5
+    command GizmoNumKey6
+    command GizmoNumKey7
+    command GizmoNumKey8
+    command GizmoNumKey9
+    command GizmoNumKeyDecimal
+    command GizmoNumKeyMinus
+    command GrowSelection
+    command IncreaseSubdivisionLevel
+    command JustifyBottom
+    command JustifyCenter
+    command JustifyFit
+    command JustifyLeft
+    command JustifyRight
+    command JustifyTop
+    command LassoSelect
+    command LiftMaterialFromSelection
+    command MergeMeshes
+    command Mirror
+    command MoveObjectDownByTrace
+    command MoveObjectDownByTraceLocal
+    command MoveToFurthestFace
+    command MoveToFurthestFace_Lcl
+    command NextTile
+    command NudgeDown
+    command NudgeLeft
+    command NudgeRight
+    command NudgeRotateDown
+    command NudgeRotateLeft
+    command NudgeRotateRight
+    command NudgeRotateUp
+    command NudgeTextureDown
+    command NudgeTextureLeft
+    command NudgeTextureRight
+    command NudgeTextureUp
+    command NudgeUp
+    command PaintMaterial
+    command PreviousTile
+    command QuadSlice
+    command RadialAlign
+    command RandomTile
+    command ReflectPie
+    command ReflectPie_Origin
+    command ReflectPie_Reflect
+    command ReflectPie_Slice
+    command Reflect_CachePosition
+    command RemoveBadFaces
+    command RemoveFromSelection
+    command RemoveFromSelectionOldest
+    command ReplaceTextures
+    command RotateTexture90CCW
+    command RotateTexture90CW
+    command Select
+    command SelectContiguous
+    command SelectContiguousFiltered
+    command SelectFacesMatchingProperties
+    command SelectFacesMatchingTileSet
+    command SelectLoop
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command SetPivotToWorldOrigin
+    command SetPropertiesToDefault
+    command SetPropertiesToUnspecified
+    command SetSubdivisionLevel0
+    command SetSubdivisionLevel1
+    command SetSubdivisionLevel2
+    command SetSubdivisionLevel3
+    command SetSubdivisionLevel4
+    command SetSubdivisionLevel5
+    command ShowTileInSet
+    command ShrinkSelection
+    command Thicken
+    command ThickenTool
+    command ToggleHotspotAllowRandom
+    command ToggleHotspotApplyMaterial
+    command ToggleHotspotMappingMode
+    command ToggleHotspotPerFace
+    command ToggleHotspotTilingMode
+    command ToggleSnapping
+    command TraceAndLiftMaterial
+    command TranslateLasso
+    command UpdateSubdivisionUVs
+    command WrapTexture
+    command WrapTextureToSelection
+
+ToolFastTexture
+    class = CToolFastTexture
+    source = src/tools/hammer/toolfasttexture.cpp
+    command BiggerGrid
+    command Cancel
+    command DecreaseInset
+    command Finish
+    command FitSelectionInView
+    command IncreaseInset
+    command MappingPlanar
+    command MappingUnwrapConforming
+    command MappingUnwrapQuads
+    command MappingUnwrapSquare
+    command MappingUseExisting
+    command SmallerGrid
+    command ToggleFlipHorizontal
+    command ToggleFlipVertical
+    command TogglePrimaryAxis
+
+ToolFastTexture_UVWidget
+    class = CQUVWidget
+    source = src/tools/hammer/qtoolfasttexturepopup.cpp
+    command BeginPickEdge
+    command CancelPickEdge
+    command DisableSnapping
+    command Drag
+    command DrawRectangle
+    command Noop
+    command NudgeDown
+    command NudgeLeft
+    command NudgeRight
+    command NudgeUp
+    command PickEdge
+    command PickRectangle
+    command ResetMappingBounds
+    command ResetView
+
+ToolLocator
+    class = CToolLocator
+    source = src/tools/hammer/toollocator.cpp
+    command Cancel
+    command Finish
+    command PlaceLocator
+    command ToggleSnapping
+
+ToolMeshDisplacement
+    class = CToolMeshDisplacement
+    source = src/tools/hammer/tooldisplacement.cpp
+    command AdjustRadius
+    command DropTool
+    command EraseModifer
+    command ModeClay
+    command ModeErase
+    command ModeFlatten
+    command ModeInflate
+    command ModeMove
+    command ModePinch
+    command ModePushPull
+    command ModeSmooth
+    command Paint
+    command PickNormal
+    command ResetNormal
+    command ReverseModifier
+    command SmoothModifier
+
+ToolMeshProjection
+    class = CToolMeshProjection
+    source = src/tools/hammer/toolmeshprojection.cpp
+    command Cancel
+    command Finish
+    command UpdateProjection
+
+ToolMirror
+    class = CToolMirror
+    source = src/tools/hammer/toolmirror.cpp
+    command Apply
+    command Cancel
+    command DragPlane
+    command Finish
+    command ToggleSnapping
+
+ToolNavMesh
+    class = CToolNavMeshPolyclip
+    source = src/tools/hammer/toolnavmeshpolyclip.cpp
+    command CreateMarkupNode
+    command CreateWalkableSeed
+    command GenerateNavPolyclip
+    command LoadNavPolyclip
+    command ResetGenParams
+
+ToolPainting
+    class = CToolPainting
+    source = src/tools/hammer/toolpainting.cpp
+    command AdjustHardness
+    command BakeAmbientOcclusion
+    command CycleChannelsBackward
+    command CycleChannelsForward
+    command CycleModeBackward
+    command CycleModeForward
+    command DropTool
+    command Erase
+    command FloodDefault
+    command FloodFill
+    command Invert
+    command NoOpDoubleClick
+    command OpenColorPicker
+    command Paint
+    command PaintSecondaryBlend
+    command Remove
+    command SampleVertexColor
+    command ScaleBrush
+    command TraceAndLiftMaterial
+
+ToolPath
+    class = CToolPath
+    source = src/tools/hammer/toolpath.cpp
+    command AdjustRadiusScale
+    command Apply
+    command Cancel
+    command Finish
+    command PlacePathNode
+
+ToolPhysics
+    class = CToolPhysics
+    source = src/tools/hammer/toolphysics.cpp
+    command AbortPinPlacement
+    command AddObjectToSelection
+    command BeginPinPlacement
+    command BoxSelect
+    command ClearSelection
+    command Grab
+    command LassoSelect
+    command PlacePin
+    command RemoveObjectFromSelection
+    command ResetToBindPose
+    command RotateMode
+    command ScaleMode
+    command Select
+    command SnapshotSimulation
+    command ToggleSimulation
+    command ToggleSnapping
+    command TranslateLasso
+    command TranslateMode
+
+ToolPickEntity
+    class = CToolPickEntity
+    source = src/tools/hammer/toolpickentity.cpp
+    command CancelTool
+    command FinishTool
+    command Pick
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+
+ToolPivotPicker
+    class = CToolPivotPicker
+    source = src/tools/hammer/toolpivotpicker.cpp
+    command PlacePivot
+    command ToggleSnapping
+
+ToolPlaceNavWalkable
+    class = CToolNavPlaceWalkable
+    source = src/tools/hammer/toolnavmeshpolyclip.cpp
+    command CancelTool
+    command Place
+
+ToolPolygon
+    class = CToolPolygon
+    source = src/tools/hammer/toolpolygon.cpp
+    command AddPoint
+    command Apply
+    command Cancel
+    command Finish
+
+ToolSceneWidget
+    class = CQToolSceneWidget
+    source = src/tools/toolscene/qtoolscenewidget.cpp
+    command DebugToolScene
+    command DefaultPreviewCamera
+
+ToolSelection
+    class = CToolSelection
+    source = src/tools/hammer/toolselection.cpp
+    command ActivateObject
+    command AddObjectToSelection
+    command AlignObjects
+    command AlignObjectsRotation
+    command AlignObjectsToWorkplane
+    command AlignOriginToObject
+    command AlignWorkplaneToObject
+    command ApplyMaterial
+    command BakeMeshDeformers
+    command BakeSelectedSmartProps
+    command BakeTransform
+    command BoxSelect
+    command CancelSelectOperation
+    command CenterPivotInView
+    command ClearPinOffset
+    command ClearPivot
+    command ClearRotationAndScale
+    command CloneSelection
+    command EndPivotManipulation
+    command EnlargeGizmo
+    command FlipNormals
+    command GizmoApplyValue
+    command GizmoClearValue
+    command GizmoComma
+    command GizmoDebugHook
+    command GizmoNumKey0
+    command GizmoNumKey1
+    command GizmoNumKey2
+    command GizmoNumKey3
+    command GizmoNumKey4
+    command GizmoNumKey5
+    command GizmoNumKey6
+    command GizmoNumKey7
+    command GizmoNumKey8
+    command GizmoNumKey9
+    command GizmoNumKeyDecimal
+    command GizmoNumKeyMinus
+    command GrowSelection
+    command HideElement
+    command LassoSelect
+    command MergeMeshesByEdge
+    command MergeSelectedMeshes
+    command MoveObjectDownByTrace
+    command MoveObjectDownByTraceLocal
+    command MoveSelected
+    command NextPivotCycle
+    command NextPivotTap
+    command NextVariation
+    command NudgeDown
+    command NudgeLeft
+    command NudgeRight
+    command NudgeRotateDown
+    command NudgeRotateLeft
+    command NudgeRotateRight
+    command NudgeRotateUp
+    command NudgeUp
+    command PinSelectedObjects
+    command PinToObject
+    command PrevPivotCycle
+    command PreviousVariation
+    command RandomizeConfiguration
+    command ReevaluateConfiguration
+    command RemoveObjectFromSelection
+    command ReplaceSelectedWithSmartProp
+    command ReplaceSelectionWithInstance
+    command RepositionToMatchLocalOffset
+    command ResetConfiguration
+    command Select
+    command SelectAndMove2D
+    command SelectNext
+    command SelectPrev
+    command SeparateMeshComponents
+    command SetOrientationToWorld
+    command SetOriginToCenter
+    command SetOriginToPivot
+    command SetPivotToSelectionCenter
+    command SetPivotToWorldOrigin
+    command ShowObjectProperties
+    command ShrinkGizmo
+    command ShrinkSelection
+    command SnapToObject
+    command SnapToObjectPosition
+    command StampClone
+    command ToggleAlignToSurface
+    command ToggleDeformation
+    command ToggleSnapping
+    command TranslateLasso
+    command UnpinSelectedObjects
+    command UpdateLocalOffset
+
+ToolStaticOverlay
+    class = CToolStaticOverlay
+    source = src/tools/hammer/toolstaticoverlay.cpp
+    command ApplyAndCloseTool
+    command ApplyTool
+    command BrushAspectDn
+    command BrushAspectUp
+    command BrushDepthDn
+    command BrushDepthUp
+    command BrushRotCCW
+    command BrushRotCW
+    command BrushScaleDn
+    command BrushScaleUp
+    command CreateMode
+    command CycleHotspotDn
+    command CycleHotspotUp
+    command DecrementRenderOrder
+    command DeleteMode
+    command DropTool
+    command IncrementRenderOrder
+    command LMouse
+    command LMouseAdd
+    command LMouseRemove
+    command LocalizeMode
+    command PosOffsetDn
+    command PosOffsetUp
+    command ResetTransforms
+    command ToggleAspect
+
+ToolTerrain
+    class = CToolTerrain
+    source = src/tools/hammer/toolterrain.cpp
+    command AdjustBrush
+    command AdjustBrushPressure
+    command ApplyBrush
+    command ApplyBrushAlternate
+    command ApplyBrushErase
+    command ApplyBrushSmooth
+    command CreateTerrain
+    command DeleteFeatures
+    command DeleteLayers
+    command EditTerrainGraph
+    command NewFeature
+    command NewLayer
+
+ToolTextureProjection
+    class = CToolTextureProjection
+    source = src/tools/hammer/tooltextureprojection.cpp
+    command Apply
+    command Cancel
+    command Finish
+    command Rotate
+    command TakeSelectionSpace
+    command TakeWorkplane
+    command ToggleSnapping
+    command Translate
+
+ToolThicken
+    class = CToolThicken
+    source = src/tools/hammer/toolthicken.cpp
+    command AdjustThickness
+    command Apply
+    command Cancel
+    command Finish
+    command ToggleFromCenter
+    command ToggleSnapping
+
+ToolVertexNormalPaint
+    class = CToolVertexNormalPaint
+    source = src/tools/hammer/toolvertexnormalpaint.cpp
+    command Erase
+    command FreezeNormal
+    command Paint
+    command ScaleBrush
+
+ToolVertexSelection
+    class = CToolPolyVertexSelection
+    source = src/tools/hammer/toolpolyvertexselection.cpp
+    command AddToSelection
+    command Bevel
+    command CenterPivotInView
+    command ClearPivot
+    command Constrain
+    command CreateNewEdge
+    command CutTool
+    command EndPivotManipulation
+    command Extrude
+    command GizmoApplyValue
+    command GizmoClearValue
+    command GizmoComma
+    command GizmoNumKey0
+    command GizmoNumKey1
+    command GizmoNumKey2
+    command GizmoNumKey3
+    command GizmoNumKey4
+    command GizmoNumKey5
+    command GizmoNumKey6
+    command GizmoNumKey7
+    command GizmoNumKey8
+    command GizmoNumKey9
+    command GizmoNumKeyDecimal
+    command GizmoNumKeyMinus
+    command GrowSelection
+    command LassoSelect
+    command Merge
+    command MergeFixed
+    command MergeTarget
+    command MoveObjectDownByTrace
+    command MoveObjectDownByTraceLocal
+    command MoveToFurthestVertex
+    command MoveToFurthestVertex_Lcl
+    command NudgeDown
+    command NudgeLeft
+    command NudgeRight
+    command NudgeRotateDown
+    command NudgeRotateLeft
+    command NudgeRotateRight
+    command NudgeRotateUp
+    command NudgeUp
+    command RemoveFromSelection
+    command RemoveFromSelectionOldest
+    command Select
+    command SelectContiguous
+    command SelectLoop
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command SetPivotToWorldOrigin
+    command ShrinkSelection
+    command SnapToVertex
+    command ToggleShowBounds
+    command ToggleSnapping
+    command TranslateLasso
+    command WeldUVs
+
+ToolWorkPlane
+    class = CToolWorkPlane
+    source = src/tools/hammer/toolworkplane.cpp
+    command CreateWorkplaneMarker
+    command DragWorkPlane
+    command DropTool
+    command PickWorkPlaneFromObject
+    command PickWorkPlaneFromSurface
+    command ResetWorkPlane
+    command ResetWorkPlaneAndDropTool
+    command ToggleSnapping
+    command WorkPlaneModeRotate
+    command WorkPlaneModeTranslate

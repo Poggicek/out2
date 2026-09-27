@@ -1,0 +1,4 @@
+CEntitySubclassVDataBase
+    m_nClassType = "vdata"
+    MVDataNodeType = 1
+    MVDataOverlayType = 1

@@ -2,10 +2,9 @@ CPulseFuncs_GameParticleManager::CreateEffect
     m_FriendlyName = "Create Effect"
     m_Description = "Create an instance of the specified particle system definition - returns a handle that can be used to modify or destroy the effect."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hSystem: PVAL_RESOURCE:vpcf "System" advanced_view=true inflow=InDefault
@@ -19,10 +18,9 @@ CPulseFuncs_GameParticleManager::DestroyEffect
     m_FriendlyName = "Destroy Effect"
     m_Description = "Destroy a particle effect instance"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault
@@ -34,10 +32,9 @@ CPulseFuncs_GameParticleManager::SetEffectControlEnt
     m_FriendlyName = "Set Effect Control Ent"
     m_Description = "Attach an effect control point to an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault
@@ -51,10 +48,9 @@ CPulseFuncs_GameParticleManager::SetEffectControlTransform
     m_FriendlyName = "Set Effect Control Transform"
     m_Description = "Set an effect control point to a worldspace transform"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault
@@ -66,10 +62,9 @@ CPulseFuncs_GameParticleManager::SetEffectControlVector
     m_FriendlyName = "Set Effect Control Vector"
     m_Description = "Set an effect control point to a relative vector"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault
@@ -81,10 +76,9 @@ CPulseFuncs_GameParticleManager::SetEffectControlWorldVector
     m_FriendlyName = "Set Effect Control World Vector"
     m_Description = "Set an effect control point to a worldspace position"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault
@@ -96,10 +90,9 @@ CPulseFuncs_GameParticleManager::SetEffectTextString
     m_FriendlyName = "Set Effect Text String"
     m_Description = "Set an effect text string"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseFuncs_GameParticleManager"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in iEffect: PVAL_TYPESAFE_INT:ParticleIndex_t "Effect" inflow=InDefault

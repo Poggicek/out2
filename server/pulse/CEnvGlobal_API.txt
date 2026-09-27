@@ -1,0 +1,120 @@
+CEnvGlobal_API::AddToCounter
+    m_FriendlyName = "Add To Counter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::GetCounter
+    m_FriendlyName = "Get Counter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::Remove
+    m_FriendlyName = "Remove"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::SetCounter
+    m_FriendlyName = "Set Counter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::Toggle
+    m_FriendlyName = "Toggle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::TurnOff
+    m_FriendlyName = "Turn Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvGlobal_API::TurnOn
+    m_FriendlyName = "Turn On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_global "env_global" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CEnvGlobal_API::Counter
+    m_FriendlyName = "Counter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvGlobal_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_global "Target" inflow=self
+    out param: PVAL_INT "param" inflow=self

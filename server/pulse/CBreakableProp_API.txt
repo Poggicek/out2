@@ -1,0 +1,224 @@
+CBreakableProp_API::AddHealth
+    m_FriendlyName = "Add Health"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::Break
+    m_FriendlyName = "Break"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::DisablePuntSound
+    m_FriendlyName = "Disable Punt Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::EnablePuntSound
+    m_FriendlyName = "Enable Punt Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::ForceDrop
+    m_FriendlyName = "Force Drop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::RemoveHealth
+    m_FriendlyName = "Remove Health"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::SetEnableBreaking
+    m_FriendlyName = "Set Enable Breaking"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::SetEnableCollisions
+    m_FriendlyName = "Set Enable Collisions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::SetHealth
+    m_FriendlyName = "Set Health"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::SetNavIgnore
+    m_FriendlyName = "Set Nav Ignore"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBreakableProp_API::physdamagescale
+    m_FriendlyName = "physdamagescale"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:breakable_prop "breakable_prop" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBreakableProp_API::OnBreak
+    m_FriendlyName = "On Break"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:breakable_prop "Target" inflow=self
+
+OUTPUT!CBreakableProp_API::OnHealthChanged
+    m_FriendlyName = "On Health Changed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:breakable_prop "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CBreakableProp_API::OnStartDeath
+    m_FriendlyName = "On Start Death"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:breakable_prop "Target" inflow=self
+
+OUTPUT!CBreakableProp_API::OnTakeDamage
+    m_FriendlyName = "On Take Damage"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBreakableProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:breakable_prop "Target" inflow=self

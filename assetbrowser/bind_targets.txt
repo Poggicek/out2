@@ -1,0 +1,121 @@
+2DCanvasCamera
+    class = C2DCanvasCamera
+    source = src/qcontrols/q2dcanvas.cpp
+    command DebugUnlockZoom
+    command MouseZoom
+    command PanCamera
+    command RecenterView
+    command ZoomIn
+    command ZoomOut
+
+AssetBrowserMainWnd
+    class = CQAssetBrowserMainWnd
+    source = src/assetbrowser/qassetbrowsermainwnd.cpp
+
+AssetGraphView
+    class = CQAssetGraphView
+    source = src/assetbrowser/qasset_graph_view.cpp
+    command DecreaseMaxDepth
+    command DecreaseMaxLinks
+    command Find
+    command IncreaseMaxDepth
+    command IncreaseMaxLinks
+    command NavigateHistoryBack
+    command NavigateHistoryForward
+    command ResetMaxDepth
+
+Camera
+    class = CBindableCamera
+    help_context = SharedToolCommands
+    source = src/tools/toolutils2/bindablecamera.cpp
+    command CameraLookAtSelection
+    command DecreaseMoveSpeed
+    command HorizontalStrafeCamera
+    command IncreaseMoveSpeed
+    command MouseControlCamera
+    command MouseControlCamera2D
+    command MouseControlCamera3D
+    command MouseControlCamera3D_Toggle
+    command MouseLook3D
+    command MoveCameraBackward3D
+    command MoveCameraDown3D
+    command MoveCameraForward3D
+    command MoveCameraLeft3D
+    command MoveCameraRight3D
+    command MoveCameraUp3D
+    command PanCamera3D
+    command PitchCameraDown
+    command PitchCameraUp
+    command ResetMoveSpeed
+    command RotateAboutTarget3D
+    command SnapCameraToSelection
+    command ToggleLockCameraHeight
+    command VerticalStrafeCamera
+    command YawCameraLeft
+    command YawCameraRight
+    command ZoomAllCamerasIn
+    command ZoomAllCamerasOut
+    command ZoomCameraIn
+    command ZoomCameraOut
+    command ZoomForwardBack2D
+    command ZoomForwardBack3D
+
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow
+
+GraphCanvasDebugger
+    class = CQGraphCanvasDebugger
+    source = src/qcontrols/qgraphcanvas_debugger.cpp
+    command PerfRefresh
+    command PerfShowGatherStyles
+    command PerfShowLayout
+    command PerfShowResolveStyles
+
+GraphCanvasViewMiniMap
+    class = CQGraphCanvasViewMiniMap
+    source = src/qcontrols/qgraphcanvas_minimap.cpp
+    command PanCameraFromMiniMap
+    command ZoomInFromMiniMap
+    command ZoomOutFromMiniMap
+
+GraphSceneView
+    class = CQGraphCanvasView
+    source = src/qcontrols/qgraphcanvas_view.cpp
+    command DebugCanvasItemUnderMouse
+    command DoubleClick
+    command Drag
+    command FitAllInView
+    command ForceRelayoutOfAllScenes
+    command Select
+    command SelectionAddModifier
+    command SelectionRemoveModifier
+    command ShowContextMenu
+
+LightingControl
+    class = CLightingControlRig
+    source = src/tools/toolscene/lightingcontrolrig.cpp
+    command ReloadLightRigDefinitions
+    command RotateLights
+    command ToggleLights
+
+ToolSceneWidget
+    class = CQToolSceneWidget
+    source = src/tools/toolscene/qtoolscenewidget.cpp
+    command DebugToolScene
+    command DefaultPreviewCamera

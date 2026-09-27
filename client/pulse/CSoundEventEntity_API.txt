@@ -1,0 +1,137 @@
+CSoundEventEntity_API::PauseSound
+    m_FriendlyName = "Pause Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::SetSoundEventName
+    m_FriendlyName = "Set Sound Event Name"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::SetSourceEntity
+    m_FriendlyName = "Set Source Entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::StartSound
+    m_FriendlyName = "Start Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::StartSoundOnSingleClient
+    m_FriendlyName = "Start Sound On Single Client"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::StopSound
+    m_FriendlyName = "Stop Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventEntity_API::UnPauseSound
+    m_FriendlyName = "Un Pause Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_soundevent "point_soundevent" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CSoundEventEntity_API::OnSoundFinished
+    m_FriendlyName = "On Sound Finished"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_soundevent "Target" inflow=self
+
+OUTPUT!CSoundEventEntity_API::SoundEventGuid
+    m_FriendlyName = "Sound Event Guid"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CSoundEventEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_soundevent "Target" inflow=self
+    out param: PVAL_SNDEVT_GUID "param" inflow=self

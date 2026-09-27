@@ -1,12 +1,11 @@
 C_CSGO_PreviewModel_API::SetItem
     m_FriendlyName = "Set Item"
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!C_CSGO_PreviewModel_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!C_CSGO_PreviewModel_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

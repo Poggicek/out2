@@ -1,0 +1,172 @@
+CParticleSystem_API::DestroyImmediately
+    m_FriendlyName = "Destroy Immediately"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::Freeze
+    m_FriendlyName = "Freeze"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::SetControlPoint
+    m_FriendlyName = "Set Control Point"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::SetDataControlPointX
+    m_FriendlyName = "Set Data Control Point X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::SetDataControlPointY
+    m_FriendlyName = "Set Data Control Point Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::SetDataControlPointZ
+    m_FriendlyName = "Set Data Control Point Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::SetTextString
+    m_FriendlyName = "Set Text String"
+    m_Description = "Update the text data on this system."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pText: PVAL_STRING "Text" inflow=InDefault
+    in bLocalize: PVAL_BOOL "Localize" advanced_view=true default=true inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::Start
+    m_FriendlyName = "Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::Stop
+    m_FriendlyName = "Stop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::StopPlayEndCap
+    m_FriendlyName = "Stop Play End Cap"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CParticleSystem_API::Thaw
+    m_FriendlyName = "Thaw"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CParticleSystem_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:info_particle_system "info_particle_system" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

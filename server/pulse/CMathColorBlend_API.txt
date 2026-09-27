@@ -1,0 +1,29 @@
+CMathColorBlend_API::InValue
+    m_FriendlyName = "In Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMathColorBlend_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:math_colorblend "math_colorblend" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CMathColorBlend_API::OutColor
+    m_FriendlyName = "Out Color"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMathColorBlend_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:math_colorblend "Target" inflow=self
+    out param: PVAL_COLOR_RGB "param" inflow=self

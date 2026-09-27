@@ -3,12 +3,12 @@ CPulseMathlib::AbsFloat
     m_Description = "Absolute value (float)"
     m_nClassType = "vdata"
     expr_alias = "abs"
+    expr_alias_info = "abs( Float x )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -18,57 +18,57 @@ CPulseMathlib::AbsInt
     m_Description = "Absolute value (int)"
     m_nClassType = "vdata"
     expr_alias = "abs"
+    expr_alias_info = "abs( Integer x )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_INT "x" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::ArcCos
     m_FriendlyName = "Arc Cos"
-    m_Description = "Arc Cosine of input value. Input must be -1.0, 1.0 range. Output in radians, from 0 to π"
+    m_Description = "Arc Cosine of input value. Input must be -1.0, 1.0 range. Output in radians, from 0 to pi"
     m_nClassType = "vdata"
     expr_alias = "acos"
+    expr_alias_info = "acos( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::ArcSin
     m_FriendlyName = "Arc Sin"
-    m_Description = "Arc Sine of input value. Input must be -1.0, 1.0 range. Output in radians, from -π/2 to π/2"
+    m_Description = "Arc Sine of input value. Input must be -1.0, 1.0 range. Output in radians, from -pi/2 to pi/2"
     m_nClassType = "vdata"
     expr_alias = "asin"
+    expr_alias_info = "asin( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::ArcTan
     m_FriendlyName = "Arc Tan"
-    m_Description = "Arc Tangent of input value. Input can be any real number. Output in radians, from -π/2 to π/2"
+    m_Description = "Arc Tangent of input value. Input can be any real number. Output in radians, from -pi/2 to pi/2"
     m_nClassType = "vdata"
     expr_alias = "atan"
+    expr_alias_info = "atan( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -78,12 +78,12 @@ CPulseMathlib::CeilingFloat
     m_Description = "Ceiling - round float up to nearest integer)"
     m_nClassType = "vdata"
     expr_alias = "ceil"
+    expr_alias_info = "ceil( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -93,12 +93,12 @@ CPulseMathlib::ClampFloat
     m_Description = "Clamp value to range (float)"
     m_nClassType = "vdata"
     expr_alias = "clamp"
+    expr_alias_info = "clamp( Float x, Float flMin, Float flMax )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in flMin: PVAL_FLOAT "Min" inflow=self
@@ -110,29 +110,61 @@ CPulseMathlib::ClampInt
     m_Description = "Clamp value to range (int)"
     m_nClassType = "vdata"
     expr_alias = "clamp"
+    expr_alias_info = "clamp( Integer x, Integer nMin, Integer nMax )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_INT "x" inflow=self
     in nMin: PVAL_INT "Min" inflow=self
     in nMax: PVAL_INT "Max" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
+CPulseMathlib::ComposeAngles
+    m_FriendlyName = "Compose Angles"
+    m_Description = "Applies B in A's local space."
+    m_nClassType = "vdata"
+    expr_alias = "composeAngles"
+    expr_alias_info = "composeAngles( Angle AngleA, Angle AngleB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in AngleA: PVAL_QANGLE "Angle A" inflow=self
+    in AngleB: PVAL_QANGLE "Angle B" inflow=self
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::ComposeTransforms
+    m_FriendlyName = "Compose Transforms"
+    m_Description = "Applies 'Local' on top of 'Base'. Inverse of 'Get Relative Transform'"
+    m_nClassType = "vdata"
+    expr_alias = "composeTransforms"
+    expr_alias_info = "composeTransforms( World Transform Base, Transform Local )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Base: PVAL_TRANSFORM_WORLDSPACE "Base" inflow=self
+    in Local: PVAL_TRANSFORM "Local" inflow=self
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
 CPulseMathlib::Cos
     m_FriendlyName = "Cos"
     m_Description = "Cosine of angle. Input in radians, output in radians"
     m_nClassType = "vdata"
     expr_alias = "cos"
+    expr_alias_info = "cos( Float flRadians )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flRadians: PVAL_FLOAT "Radians" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -141,12 +173,13 @@ CPulseMathlib::CrossProductVector
     m_FriendlyName = "Cross Product Vector"
     m_Description = "Cross Product of Vector a x Vector b"
     m_nClassType = "vdata"
+    expr_alias = "cross"
+    expr_alias_info = "cross( Vector a, Vector b )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC3 "a" inflow=self
     in b: PVAL_VEC3 "b" inflow=self
@@ -157,12 +190,12 @@ CPulseMathlib::Deg2Rad
     m_Description = "Convert degrees (0-180) to radians (0-pi)"
     m_nClassType = "vdata"
     expr_alias = "deg2rad"
+    expr_alias_info = "deg2rad( Float flDegrees )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flDegrees: PVAL_FLOAT "Degrees" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -171,12 +204,13 @@ CPulseMathlib::DotProductVector
     m_FriendlyName = "Dot Product Vector"
     m_Description = "Dot Product of Vector a • Vector b"
     m_nClassType = "vdata"
+    expr_alias = "dot"
+    expr_alias_info = "dot( Vector a, Vector b )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC3 "a" inflow=self
     in b: PVAL_VEC3 "b" inflow=self
@@ -186,28 +220,28 @@ CPulseMathlib::Exp
     m_FriendlyName = "Exp"
     m_Description = "Computes e ( 2.71...) raised to a power"
     m_nClassType = "vdata"
-    expr_alias = "log10"
+    expr_alias = "exp"
+    expr_alias_info = "exp( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::Exp2
     m_FriendlyName = "Exp2"
-    m_Description = "Computes 2 ( 2.71...) raised to a power"
+    m_Description = "Computes 2 raised to a power"
     m_nClassType = "vdata"
-    expr_alias = "log10"
+    expr_alias = "exp2"
+    expr_alias_info = "exp2( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -216,12 +250,11 @@ CPulseMathlib::FloatToGameTime
     m_FriendlyName = "Float To Game Time"
     m_Description = "Convert from a raw floating-point time to a Game Time that will be saved/loaded appropriately"
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flFloat: PVAL_FLOAT "Float" inflow=self
     out retval: PVAL_GAMETIME "Result" outflow=OutDefault direct_return_for=self
@@ -231,12 +264,12 @@ CPulseMathlib::FloorFloat
     m_Description = "Floor - round float down to nearest integer"
     m_nClassType = "vdata"
     expr_alias = "floor"
+    expr_alias_info = "floor( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -246,12 +279,12 @@ CPulseMathlib::Frac
     m_Description = "Fractional component (ie. returns 0.34 for 12.34)"
     m_nClassType = "vdata"
     expr_alias = "frac"
+    expr_alias_info = "frac( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -260,42 +293,88 @@ CPulseMathlib::GameTimeToFloat
     m_FriendlyName = "Game Time To Float"
     m_Description = "Convert from a Game Time a raw floating-point time that will NOT fixed up - use with caution!"
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flTime: PVAL_GAMETIME "Time" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::GetRelativeTransform
+    m_FriendlyName = "Get Relative Transform"
+    m_Description = "Returns a local transform that you could put back into 'Compose Transforms' to recover 'Offset'"
+    m_nClassType = "vdata"
+    expr_alias = "getRelativeTransform"
+    expr_alias_info = "getRelativeTransform( World Transform Base, World Transform Offset )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Base: PVAL_TRANSFORM_WORLDSPACE "Base" inflow=self
+    in Offset: PVAL_TRANSFORM_WORLDSPACE "Offset" inflow=self
+    out retval: PVAL_TRANSFORM "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::IntegerDivide
     m_FriendlyName = "Integer Divide"
     m_Description = "Integer division - unlike the divide (/) node, this will truncate any remainder (floor) and return an integer."
     m_nClassType = "vdata"
     expr_alias = "idiv"
+    expr_alias_info = "idiv( Integer nNumerator, Integer nDenominator )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in nNumerator: PVAL_INT "Numerator" inflow=self
     in nDenominator: PVAL_INT "Denominator" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
-CPulseMathlib::IsValidVector
-    m_FriendlyName = "Is Valid Vector"
-    m_Description = "Returns true if the Vector is valid"
+CPulseMathlib::InverseRotateVector
+    m_FriendlyName = "Inverse Rotate Vector"
+    m_Description = "Rotate a vector by the inverse of a local transform, not including position or scale. Inverse of 'Rotate Vector'."
     m_nClassType = "vdata"
+    expr_alias = "inverseRotateVector"
+    expr_alias_info = "inverseRotateVector( Transform Transform, Vector Vector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM "Transform" inflow=self
+    in Vector: PVAL_VEC3 "Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::InverseTransformVector
+    m_FriendlyName = "Inverse Transform Vector"
+    m_Description = "Transform a vector by the inverse of a local transform, including position and scale. Inverse of 'Transform Vector'."
+    m_nClassType = "vdata"
+    expr_alias = "inverseTransformVector"
+    expr_alias_info = "inverseTransformVector( Transform Transform, Vector Vector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM "Transform" inflow=self
+    in Vector: PVAL_VEC3 "Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::IsValidVector
+    m_FriendlyName = "Is Valid Vector"
+    m_Description = "Returns true if the Vector is valid"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
     supported_domains = BaseDomain
     in a: PVAL_VEC3 "a" inflow=self
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
@@ -304,12 +383,11 @@ CPulseMathlib::IsValidWorldVector
     m_FriendlyName = "Is Valid World Vector"
     m_Description = "Returns true if the World Vector is valid"
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC3_WORLDSPACE "a" inflow=self
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
@@ -319,12 +397,12 @@ CPulseMathlib::LengthVector
     m_Description = "Length (magnitude) of Vector"
     m_nClassType = "vdata"
     expr_alias = "length3d"
+    expr_alias_info = "length3d( Vector a )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC3 "a" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -334,61 +412,112 @@ CPulseMathlib::LengthVector2D
     m_Description = "Length (magnitude) of Vector2D"
     m_nClassType = "vdata"
     expr_alias = "length2d"
+    expr_alias_info = "length2d( Vector2D a )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC2 "a" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::LerpAngle
+    m_FriendlyName = "Lerp Angle"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (angle)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, Angle AngleA, Angle AngleB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in AngleA: PVAL_QANGLE "Angle A" inflow=self
+    in AngleB: PVAL_QANGLE "Angle B" inflow=self
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::LerpFloat
     m_FriendlyName = "Lerp Float"
     m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (float)"
     m_nClassType = "vdata"
     expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, Float flValueA, Float flValueB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flFrac: PVAL_FLOAT "Frac" inflow=self
     in flValueA: PVAL_FLOAT "Value A" inflow=self
     in flValueB: PVAL_FLOAT "Value B" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
+CPulseMathlib::LerpTransform
+    m_FriendlyName = "Lerp Transform"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (transform)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, Transform TransformA, Transform TransformB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in TransformA: PVAL_TRANSFORM "Transform A" inflow=self
+    in TransformB: PVAL_TRANSFORM "Transform B" inflow=self
+    out retval: PVAL_TRANSFORM "Result" outflow=OutDefault direct_return_for=self
+
 CPulseMathlib::LerpVector
     m_FriendlyName = "Lerp Vector"
     m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (vector)"
     m_nClassType = "vdata"
     expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, Vector vecValueA, Vector vecValueB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flFrac: PVAL_FLOAT "Frac" inflow=self
     in vecValueA: PVAL_VEC3 "Value A" inflow=self
     in vecValueB: PVAL_VEC3 "Value B" inflow=self
     out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
 
+CPulseMathlib::LerpWorldTransform
+    m_FriendlyName = "Lerp World Transform"
+    m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (world transform)"
+    m_nClassType = "vdata"
+    expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, World Transform TransformA, World Transform TransformB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in flFrac: PVAL_FLOAT "Frac" inflow=self
+    in TransformA: PVAL_TRANSFORM_WORLDSPACE "Transform A" inflow=self
+    in TransformB: PVAL_TRANSFORM_WORLDSPACE "Transform B" inflow=self
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
 CPulseMathlib::LerpWorldVector
     m_FriendlyName = "Lerp World Vector"
     m_Description = "Returns interpolated value between A and B based on frac 0.0 - 1.0 (world vector)"
     m_nClassType = "vdata"
     expr_alias = "lerp"
+    expr_alias_info = "lerp( Float flFrac, World Vector vecValueA, World Vector vecValueB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flFrac: PVAL_FLOAT "Frac" inflow=self
     in vecValueA: PVAL_VEC3_WORLDSPACE "Value A" inflow=self
@@ -400,12 +529,12 @@ CPulseMathlib::Log
     m_Description = "Natural logarithm (base e)"
     m_nClassType = "vdata"
     expr_alias = "log"
+    expr_alias_info = "log( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -415,12 +544,12 @@ CPulseMathlib::Log10
     m_Description = "Base-10 logarithm"
     m_nClassType = "vdata"
     expr_alias = "log10"
+    expr_alias_info = "log10( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -430,12 +559,12 @@ CPulseMathlib::Log2
     m_Description = "Base-2 logarithm"
     m_nClassType = "vdata"
     expr_alias = "log2"
+    expr_alias_info = "log2( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -444,12 +573,13 @@ CPulseMathlib::MakeAngle
     m_FriendlyName = "Make Angle"
     m_Description = "Make an Angle from component parts"
     m_nClassType = "vdata"
+    expr_alias = "ang"
+    expr_alias_info = "ang( Float flPitch, Float flYaw, Float flRoll )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flPitch: PVAL_FLOAT "Pitch" inflow=self
     in flYaw: PVAL_FLOAT "Yaw" inflow=self
@@ -460,12 +590,13 @@ CPulseMathlib::MakeAngleFromForwardVector
     m_FriendlyName = "Make Angle From Forward Vector"
     m_Description = "Make an Angle from a Forward Vector"
     m_nClassType = "vdata"
+    expr_alias = "vec2ang"
+    expr_alias_info = "vec2ang( Vector vForward )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vForward: PVAL_VEC3 "Forward" inflow=self
     out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
@@ -474,12 +605,13 @@ CPulseMathlib::MakeColor
     m_FriendlyName = "Make Color"
     m_Description = "Make a Color from component parts"
     m_nClassType = "vdata"
+    expr_alias = "color"
+    expr_alias_info = "color( Integer r, Integer g, Integer b )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in r: PVAL_INT "r" inflow=self
     in g: PVAL_INT "g" inflow=self
@@ -490,12 +622,13 @@ CPulseMathlib::MakeTransform
     m_FriendlyName = "Make Transform"
     m_Description = "Make a Transform from component parts."
     m_nClassType = "vdata"
+    expr_alias = "xform"
+    expr_alias_info = "xform( Vector origin, Angle angle, Float flScale )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in origin: PVAL_VEC3 "origin" inflow=self
     in angle: PVAL_QANGLE "angle" inflow=self
@@ -506,12 +639,13 @@ CPulseMathlib::MakeVector
     m_FriendlyName = "Make Vector"
     m_Description = "Make a Vector from component parts."
     m_nClassType = "vdata"
+    expr_alias = "vec"
+    expr_alias_info = "vec( Float x, Float y, Float z )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -522,12 +656,13 @@ CPulseMathlib::MakeVector2D
     m_FriendlyName = "Make Vector2 D"
     m_Description = "Make a Vector2D from component parts."
     m_nClassType = "vdata"
+    expr_alias = "vec2"
+    expr_alias_info = "vec2( Float x, Float y )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -537,12 +672,13 @@ CPulseMathlib::MakeVector4D
     m_FriendlyName = "Make Vector4 D"
     m_Description = "Make a Vector from component parts."
     m_nClassType = "vdata"
+    expr_alias = "vec4"
+    expr_alias_info = "vec4( Float x, Float y, Float z, Float w )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -554,12 +690,13 @@ CPulseMathlib::MakeVectorFromAngle
     m_FriendlyName = "Make Vector From Angle"
     m_Description = "Make a Vector from an Angle"
     m_nClassType = "vdata"
+    expr_alias = "ang2vec"
+    expr_alias_info = "ang2vec( Angle angles )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in angles: PVAL_QANGLE "angles" inflow=self
     out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
@@ -568,12 +705,13 @@ CPulseMathlib::MakeWorldTransform
     m_FriendlyName = "Make World Transform"
     m_Description = "Make a Transform from component parts."
     m_nClassType = "vdata"
+    expr_alias = "wxform"
+    expr_alias_info = "wxform( World Vector origin, Angle angle, Float flScale )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in origin: PVAL_VEC3_WORLDSPACE "origin" inflow=self
     in angle: PVAL_QANGLE "angle" inflow=self
@@ -584,12 +722,13 @@ CPulseMathlib::MakeWorldVector
     m_FriendlyName = "Make World Vector"
     m_Description = "Make a World Vector from component parts."
     m_nClassType = "vdata"
+    expr_alias = "wvec"
+    expr_alias_info = "wvec( Float x, Float y, Float z )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -601,12 +740,12 @@ CPulseMathlib::MaxFloat
     m_Description = "Maximum of two values (float)"
     m_nClassType = "vdata"
     expr_alias = "max"
+    expr_alias_info = "max( Float x, Float y )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -617,12 +756,12 @@ CPulseMathlib::MaxInt
     m_Description = "Maximum of two values (int)"
     m_nClassType = "vdata"
     expr_alias = "max"
+    expr_alias_info = "max( Integer x, Integer y )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_INT "x" inflow=self
     in y: PVAL_INT "y" inflow=self
@@ -633,12 +772,12 @@ CPulseMathlib::MinFloat
     m_Description = "Minimum of two values (float)"
     m_nClassType = "vdata"
     expr_alias = "min"
+    expr_alias_info = "min( Float x, Float y )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_FLOAT "x" inflow=self
     in y: PVAL_FLOAT "y" inflow=self
@@ -649,12 +788,12 @@ CPulseMathlib::MinInt
     m_Description = "Minimum of two values (int)"
     m_nClassType = "vdata"
     expr_alias = "min"
+    expr_alias_info = "min( Integer x, Integer y )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in x: PVAL_INT "x" inflow=self
     in y: PVAL_INT "y" inflow=self
@@ -664,12 +803,13 @@ CPulseMathlib::NormalizeVector
     m_FriendlyName = "Normalize Vector"
     m_Description = "Normalize Vector a"
     m_nClassType = "vdata"
+    expr_alias = "normalize"
+    expr_alias_info = "normalize( Vector a )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in a: PVAL_VEC3 "a" inflow=self
     out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
@@ -679,12 +819,12 @@ CPulseMathlib::Pi
     m_Description = "Returns the constant pi (3.14...)"
     m_nClassType = "vdata"
     expr_alias = "pi"
+    expr_alias_info = "pi()"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
@@ -693,12 +833,12 @@ CPulseMathlib::Pow
     m_Description = "X to the Y power"
     m_nClassType = "vdata"
     expr_alias = "pow"
+    expr_alias_info = "pow( Float flValue, Float flExponent )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     in flExponent: PVAL_FLOAT "Exponent" inflow=self
@@ -709,12 +849,12 @@ CPulseMathlib::RSqrt
     m_Description = "Reciprocoal square root (1/sqrt)"
     m_nClassType = "vdata"
     expr_alias = "rsqrt"
+    expr_alias_info = "rsqrt( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -724,12 +864,12 @@ CPulseMathlib::Rad2Deg
     m_Description = "Convert radians (0-pi) to degrees (0-180)"
     m_nClassType = "vdata"
     expr_alias = "rad2deg"
+    expr_alias_info = "rad2deg( Float flRadians )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flRadians: PVAL_FLOAT "Radians" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -739,10 +879,10 @@ CPulseMathlib::RandomWorldPosition
     m_Description = "Returns a random position centered on vCenter with random min and max radius"
     m_nClassType = "vdata"
     expr_alias = "random_position"
+    expr_alias_info = "random_position( World Vector vCenter, Float flMinRadius, Float flMaxRadius )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vCenter: PVAL_VEC3_WORLDSPACE "Center" inflow=self
     in flMinRadius: PVAL_FLOAT "Min Radius" inflow=self
@@ -754,12 +894,12 @@ CPulseMathlib::RemapClampedFloat
     m_Description = "Remap and clamp input value from input range to output range (float)"
     m_nClassType = "vdata"
     expr_alias = "remap"
+    expr_alias_info = "remap( Float flVal, Float flInputA, Float flInputB, Float flOutputA, Float flOutputB )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flVal: PVAL_FLOAT "Val" inflow=self
     in flInputA: PVAL_FLOAT "Input A" inflow=self
@@ -768,17 +908,65 @@ CPulseMathlib::RemapClampedFloat
     in flOutputB: PVAL_FLOAT "Output B" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
+CPulseMathlib::RotateVector
+    m_FriendlyName = "Rotate Vector"
+    m_Description = "Rotate a relative vector by a local transform, not including position or scale."
+    m_nClassType = "vdata"
+    expr_alias = "rotateVector"
+    expr_alias_info = "rotateVector( Transform Transform, Vector LocalVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM "Transform" inflow=self
+    in LocalVector: PVAL_VEC3 "Local Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RotateVectorToWorld
+    m_FriendlyName = "Rotate Vector To World"
+    m_Description = "Rotate a relative vector into a world direction, not including position or scale."
+    m_nClassType = "vdata"
+    expr_alias = "rotateVectorToWorld"
+    expr_alias_info = "rotateVectorToWorld( World Transform Transform, Vector LocalVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=self
+    in LocalVector: PVAL_VEC3 "Local Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::RotateWorldVectorToLocal
+    m_FriendlyName = "Rotate World Vector To Local"
+    m_Description = "Rotate a world direction vector into a local direction, not including position or scale."
+    m_nClassType = "vdata"
+    expr_alias = "rotateVectorToLocal"
+    expr_alias_info = "rotateVectorToLocal( World Transform Transform, Vector WorldVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=self
+    in WorldVector: PVAL_VEC3 "World Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
 CPulseMathlib::RoundFloat
     m_FriendlyName = "Round Float"
     m_Description = "Round - round float up or down to integer"
     m_nClassType = "vdata"
     expr_alias = "round"
+    expr_alias_info = "round( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -788,12 +976,12 @@ CPulseMathlib::Saturate
     m_Description = "Saturate (clamps float between 0 and 1)"
     m_nClassType = "vdata"
     expr_alias = "saturate"
+    expr_alias_info = "saturate( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -803,12 +991,12 @@ CPulseMathlib::SignFloat
     m_Description = "Returns -1.0 or 0.0 or 1.0 based on the sign of the argument"
     m_nClassType = "vdata"
     expr_alias = "sign"
+    expr_alias_info = "sign( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -818,12 +1006,12 @@ CPulseMathlib::SignInt
     m_Description = "Returns -1 or 0 or 1 based on the sign of the argument"
     m_nClassType = "vdata"
     expr_alias = "sign"
+    expr_alias_info = "sign( Integer nValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in nValue: PVAL_INT "Value" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
@@ -833,12 +1021,12 @@ CPulseMathlib::Sin
     m_Description = "Sine of angle. Input in radians, output in radians"
     m_nClassType = "vdata"
     expr_alias = "sin"
+    expr_alias_info = "sin( Float flRadians )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flRadians: PVAL_FLOAT "Radians" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -847,12 +1035,11 @@ CPulseMathlib::SplitAngle
     m_FriendlyName = "Split Angle"
     m_Description = "Split an Angle into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in angle: PVAL_QANGLE "angle" inflow=self
     out Pitch: PVAL_FLOAT "Pitch" outflow=OutDefault direct_return_for=self
@@ -863,12 +1050,11 @@ CPulseMathlib::SplitColor
     m_FriendlyName = "Split Color"
     m_Description = "Split a Color into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in color: PVAL_COLOR_RGB "color" inflow=self
     out R: PVAL_INT "R" outflow=OutDefault direct_return_for=self
@@ -879,12 +1065,11 @@ CPulseMathlib::SplitTransform
     m_FriendlyName = "Split Transform"
     m_Description = "Split a Transform into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in transform: PVAL_TRANSFORM "transform" inflow=self
     out Origin: PVAL_VEC3 "Origin" outflow=OutDefault direct_return_for=self
@@ -895,12 +1080,11 @@ CPulseMathlib::SplitVector
     m_FriendlyName = "Split Vector"
     m_Description = "Split a Vector into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC3 "Value" inflow=self
     out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
@@ -911,12 +1095,11 @@ CPulseMathlib::SplitVector2D
     m_FriendlyName = "Split Vector2 D"
     m_Description = "Split a Vector2D into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC2 "Value" inflow=self
     out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
@@ -926,12 +1109,11 @@ CPulseMathlib::SplitVector4D
     m_FriendlyName = "Split Vector4 D"
     m_Description = "Split a Vector into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC4 "Value" inflow=self
     out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
@@ -943,12 +1125,11 @@ CPulseMathlib::SplitWorldTransform
     m_FriendlyName = "Split World Transform"
     m_Description = "Split a Transform into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in transform: PVAL_TRANSFORM_WORLDSPACE "transform" inflow=self
     out Origin: PVAL_VEC3_WORLDSPACE "Origin" outflow=OutDefault direct_return_for=self
@@ -959,12 +1140,11 @@ CPulseMathlib::SplitWorldVector
     m_FriendlyName = "Split World Vector"
     m_Description = "Split a World Vector into component parts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC3_WORLDSPACE "Value" inflow=self
     out X: PVAL_FLOAT "X" outflow=OutDefault direct_return_for=self
@@ -976,12 +1156,12 @@ CPulseMathlib::SqrFloat
     m_Description = "Square"
     m_nClassType = "vdata"
     expr_alias = "sqr"
+    expr_alias_info = "sqr( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -991,12 +1171,12 @@ CPulseMathlib::SqrInt
     m_Description = "Square"
     m_nClassType = "vdata"
     expr_alias = "sqr"
+    expr_alias_info = "sqr( Integer nValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in nValue: PVAL_INT "Value" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
@@ -1006,59 +1186,135 @@ CPulseMathlib::Sqrt
     m_Description = "Square root"
     m_nClassType = "vdata"
     expr_alias = "sqrt"
+    expr_alias_info = "sqrt( Float flValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flValue: PVAL_FLOAT "Value" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
-
-CPulseMathlib::StringsAreEqualCaseSensitive
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulseStringlib::StringsAreEqualCaseSensitive"
 
 CPulseMathlib::Tan
     m_FriendlyName = "Tan"
     m_Description = "Tangent of angle. Input in radians, output in radians"
     m_nClassType = "vdata"
     expr_alias = "tan"
+    expr_alias_info = "tan( Float flRadians )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in flRadians: PVAL_FLOAT "Radians" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::TransformInverse
+    m_FriendlyName = "Transform Inverse"
+    m_Description = "Returns the inverse of a transform."
+    m_nClassType = "vdata"
+    expr_alias = "transformInverse"
+    expr_alias_info = "transformInverse( Transform Transform )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM "Transform" inflow=self
+    out retval: PVAL_TRANSFORM "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::TransformVector
+    m_FriendlyName = "Transform Vector"
+    m_Description = "Transform a relative vector by a local transform, including position and scale."
+    m_nClassType = "vdata"
+    expr_alias = "transformVector"
+    expr_alias_info = "transformVector( Transform Transform, Vector LocalVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM "Transform" inflow=self
+    in LocalVector: PVAL_VEC3 "Local Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::TransformVectorToWorld
+    m_FriendlyName = "Transform Vector To World"
+    m_Description = "Transform a relative vector into worldspace, including position and scale."
+    m_nClassType = "vdata"
+    expr_alias = "transformVectorToWorld"
+    expr_alias_info = "transformVectorToWorld( World Transform Transform, Vector LocalVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=self
+    in LocalVector: PVAL_VEC3 "Local Vector" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::TransformWorldVectorToLocal
+    m_FriendlyName = "Transform World Vector To Local"
+    m_Description = "Transform a worldspace vector into a relative vector, including position and scale."
+    m_nClassType = "vdata"
+    expr_alias = "transformVectorToLocal"
+    expr_alias_info = "transformVectorToLocal( World Transform Transform, World Vector WorldVector )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=self
+    in WorldVector: PVAL_VEC3_WORLDSPACE "World Vector" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::VectorToWorldVector
     m_FriendlyName = "Vector To World Vector"
     m_Description = "Convert from a local-space to a world-space vector"
     m_nClassType = "vdata"
+    expr_alias = "vec2wvec"
+    expr_alias_info = "vec2wvec( Vector vecValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC3 "Value" inflow=self
     out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPulseMathlib::WorldTransformInverse
+    m_FriendlyName = "World Transform Inverse"
+    m_Description = "Returns the inverse of a world transform."
+    m_nClassType = "vdata"
+    expr_alias = "worldTransformInverse"
+    expr_alias_info = "worldTransformInverse( World Transform Transform )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_library_method = true
+    is_pure_value = true
+    supported_domains = BaseDomain
+    in Transform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=self
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
 
 CPulseMathlib::WorldVectorToVector
     m_FriendlyName = "World Vector To Vector"
     m_Description = "Convert from a world-space to local-space vector"
     m_nClassType = "vdata"
+    expr_alias = "wvec2vec"
+    expr_alias_info = "wvec2vec( World Vector vecValue )"
+    fingerprint = "@lib:resourcecompiler.dll!CPulseMathlib"
     generic_node_category = 4
     has_observable_context = true
     is_pulse_library_method = true
     is_pure_value = true
-    scope_to_dependency_name =
-        resourcecompiler.dll = "@lib:resourcecompiler.dll!CPulseMathlib"
     supported_domains = BaseDomain
     in vecValue: PVAL_VEC3_WORLDSPACE "Value" inflow=self
     out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self

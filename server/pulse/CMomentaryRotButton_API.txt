@@ -1,0 +1,127 @@
+CMomentaryRotButton_API::SetPosition
+    m_FriendlyName = "Set Position"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:momentary_rot_button "momentary_rot_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CMomentaryRotButton_API::SetPositionImmediately
+    m_FriendlyName = "Set Position Immediately"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:momentary_rot_button "momentary_rot_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CMomentaryRotButton_API::_DisableUpdateTarget
+    m_FriendlyName = "Disable Update Target"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:momentary_rot_button "momentary_rot_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CMomentaryRotButton_API::_EnableUpdateTarget
+    m_FriendlyName = "Enable Update Target"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:momentary_rot_button "momentary_rot_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CMomentaryRotButton_API::OnFullyClosed
+    m_FriendlyName = "On Fully Closed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:momentary_rot_button "Target" inflow=self
+
+OUTPUT!CMomentaryRotButton_API::OnFullyOpen
+    m_FriendlyName = "On Fully Open"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:momentary_rot_button "Target" inflow=self
+
+OUTPUT!CMomentaryRotButton_API::OnReachedPosition
+    m_FriendlyName = "On Reached Position"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:momentary_rot_button "Target" inflow=self
+
+OUTPUT!CMomentaryRotButton_API::OnUnpressed
+    m_FriendlyName = "On Unpressed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:momentary_rot_button "Target" inflow=self
+
+OUTPUT!CMomentaryRotButton_API::Position
+    m_FriendlyName = "Position"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMomentaryRotButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:momentary_rot_button "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self

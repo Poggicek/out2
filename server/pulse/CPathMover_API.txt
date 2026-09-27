@@ -1,0 +1,30 @@
+CPathMover_API::GetPathRelativeTransform
+    m_FriendlyName = "Get Path Relative Transform"
+    m_Description = "Given a node gets its transform relative "
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMover_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover "path_mover" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hPathNode: PVAL_EHANDLE:path_node_mover "Path Node" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CPathMover_API::IsPathClosedLoop
+    m_FriendlyName = "Is Path Closed Loop"
+    m_Description = "Whether the path joins back on itself. A path only counts as a closed loop if it is marked as one and has at least three nodes."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMover_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_mover "path_mover" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self

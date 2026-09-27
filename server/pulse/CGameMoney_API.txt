@@ -1,12 +1,11 @@
 CGameMoney_API::AddMoneyPlayer
     m_FriendlyName = "Add Money Player"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -17,12 +16,11 @@ CGameMoney_API::AddMoneyPlayer
 CGameMoney_API::AddTeamMoneyCT
     m_FriendlyName = "Add Team Money CT"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -33,12 +31,11 @@ CGameMoney_API::AddTeamMoneyCT
 CGameMoney_API::AddTeamMoneyTerrorist
     m_FriendlyName = "Add Team Money Terrorist"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -49,12 +46,11 @@ CGameMoney_API::AddTeamMoneyTerrorist
 CGameMoney_API::SetMoneyAmount
     m_FriendlyName = "Set Money Amount"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -66,12 +62,11 @@ CGameMoney_API::SetMoneyAmount
 CGameMoney_API::SpendMoneyFromPlayer
     m_FriendlyName = "Spend Money From Player"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -82,29 +77,25 @@ CGameMoney_API::SpendMoneyFromPlayer
 OUTPUT!CGameMoney_API::OnMoneySpent
     m_FriendlyName = "On Money Spent"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:game_money "game_money" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:game_money "Target" inflow=self
 
 OUTPUT!CGameMoney_API::OnMoneySpentFail
     m_FriendlyName = "On Money Spent Fail"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameMoney_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CGameMoney_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:game_money "game_money" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:game_money "Target" inflow=self

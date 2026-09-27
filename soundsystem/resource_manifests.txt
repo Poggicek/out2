@@ -28,4 +28,4 @@ SoundSystemStartupGroupsManifest
 SoundsystemVMixLoader
     group = VMixStartup
     source = src/soundsystem/vmix.cpp
-    soundstacks/mixgraph.vmix
+    soundstacks/dsp_core.vdsp

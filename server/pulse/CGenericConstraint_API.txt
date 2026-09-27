@@ -1,0 +1,326 @@
+CGenericConstraint_API::SetAngularDampingRatioX
+    m_FriendlyName = "Set Angular Damping Ratio X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularDampingRatioY
+    m_FriendlyName = "Set Angular Damping Ratio Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularDampingRatioZ
+    m_FriendlyName = "Set Angular Damping Ratio Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularFrequencyX
+    m_FriendlyName = "Set Angular Frequency X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularFrequencyY
+    m_FriendlyName = "Set Angular Frequency Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularFrequencyZ
+    m_FriendlyName = "Set Angular Frequency Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularMotionLockedX
+    m_FriendlyName = "Set Angular Motion Locked X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularMotionLockedY
+    m_FriendlyName = "Set Angular Motion Locked Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetAngularMotionLockedZ
+    m_FriendlyName = "Set Angular Motion Locked Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearDampingRatioX
+    m_FriendlyName = "Set Linear Damping Ratio X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearDampingRatioY
+    m_FriendlyName = "Set Linear Damping Ratio Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearDampingRatioZ
+    m_FriendlyName = "Set Linear Damping Ratio Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearFrequencyX
+    m_FriendlyName = "Set Linear Frequency X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearFrequencyY
+    m_FriendlyName = "Set Linear Frequency Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearFrequencyZ
+    m_FriendlyName = "Set Linear Frequency Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearMotionLockedX
+    m_FriendlyName = "Set Linear Motion Locked X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearMotionLockedY
+    m_FriendlyName = "Set Linear Motion Locked Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGenericConstraint_API::SetLinearMotionLockedZ
+    m_FriendlyName = "Set Linear Motion Locked Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_genericconstraint "phys_genericconstraint" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CGenericConstraint_API::NotifyForceReachedX
+    m_FriendlyName = "Notify Force Reached X"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_genericconstraint "Target" inflow=self
+
+OUTPUT!CGenericConstraint_API::NotifyForceReachedY
+    m_FriendlyName = "Notify Force Reached Y"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_genericconstraint "Target" inflow=self
+
+OUTPUT!CGenericConstraint_API::NotifyForceReachedZ
+    m_FriendlyName = "Notify Force Reached Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGenericConstraint_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_genericconstraint "Target" inflow=self

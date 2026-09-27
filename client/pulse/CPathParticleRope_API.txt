@@ -1,0 +1,107 @@
+CPathParticleRope_API::DestroyImmediately
+    m_FriendlyName = "Destroy Immediately"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::DisablePin
+    m_FriendlyName = "Disable Pin"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::SetRadius
+    m_FriendlyName = "Set Radius"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::SetSlack
+    m_FriendlyName = "Set Slack"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::Start
+    m_FriendlyName = "Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::Stop
+    m_FriendlyName = "Stop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathParticleRope_API::StopPlayEndCap
+    m_FriendlyName = "Stop Play End Cap"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPathParticleRope_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_particle_rope "path_particle_rope" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

@@ -1,0 +1,194 @@
+CPhysConstraint_API::Break
+    m_FriendlyName = "Break"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::ConstraintBroken
+    m_FriendlyName = "Constraint Broken"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::DisableAngularConstraint
+    m_FriendlyName = "Disable Angular Constraint"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::DisableLinearConstraint
+    m_FriendlyName = "Disable Linear Constraint"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::EnableAngularConstraint
+    m_FriendlyName = "Enable Angular Constraint"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::EnableLinearConstraint
+    m_FriendlyName = "Enable Linear Constraint"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::SetMotorTargetVelocity
+    m_FriendlyName = "Set Motor Target Velocity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::SetMotorTorqueFactor
+    m_FriendlyName = "Set Motor Torque Factor"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::TurnMotorOff
+    m_FriendlyName = "Turn Motor Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::TurnMotorOn
+    m_FriendlyName = "Turn Motor On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::TurnOff
+    m_FriendlyName = "Turn Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysConstraint_API::TurnOn
+    m_FriendlyName = "Turn On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_constraint_base "phys_constraint_base" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPhysConstraint_API::OnBreak
+    m_FriendlyName = "On Break"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysConstraint_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_constraint_base "Target" inflow=self

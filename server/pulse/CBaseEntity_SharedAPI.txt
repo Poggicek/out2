@@ -1,12 +1,11 @@
 CBaseEntity_SharedAPI::AddOutput
     m_FriendlyName = "Add Output"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_SharedAPI"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CBaseEntity_SharedAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -15,14 +14,27 @@ CBaseEntity_SharedAPI::AddOutput
     in pParam: PVAL_STRING "Param" inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
 
+CBaseEntity_SharedAPI::IsMotionEnabled
+    m_FriendlyName = "Is Motion Enabled"
+    m_Description = "Returns true if the entity is motion-enabled (i.e. its ideal motion type is dynamic). Note that the entity may still end up keyframed in some cases, e.g. if it's hierarchically attached to another keyframed entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_SharedAPI"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
 CBaseEntity_SharedAPI::SetScale
     m_FriendlyName = "Set Scale"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_SharedAPI"
     generic_node_category = 5
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CBaseEntity_SharedAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

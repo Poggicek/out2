@@ -3,10 +3,9 @@ CPulseGraphInstance_TurtleGraphics::Go
     m_Description = "Called to invoke the graph"
     m_nClassType = "vdata"
     expected_return_type = "PVAL_VOID"
+    fingerprint = "@lib:pulse_system.dll!CPulseGraphInstance_TurtleGraphics"
     generic_node_category = 5
     is_pulse_hook = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseGraphInstance_TurtleGraphics"
     supported_domains = TurtleGraphics
     outflow OutDefault "Default Out" [default]

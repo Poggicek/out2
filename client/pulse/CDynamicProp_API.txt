@@ -1,0 +1,408 @@
+CDynamicProp_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::DisableCollision
+    m_FriendlyName = "Disable Collision"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::EnableCollision
+    m_FriendlyName = "Enable Collision"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimation
+    m_FriendlyName = "Set Animation"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimationLooping
+    m_FriendlyName = "Set Animation Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimationNoReset
+    m_FriendlyName = "Set Animation No Reset"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimationNoResetLooping
+    m_FriendlyName = "Set Animation No Reset Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimationNoResetNotLooping
+    m_FriendlyName = "Set Animation No Reset Not Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetAnimationNotLooping
+    m_FriendlyName = "Set Animation Not Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetDefaultAnimation
+    m_FriendlyName = "Set Default Animation"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetDefaultAnimationLooping
+    m_FriendlyName = "Set Default Animation Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetDefaultAnimationNotLooping
+    m_FriendlyName = "Set Default Animation Not Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetGlowOverride
+    m_FriendlyName = "Set Glow Override"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_VEC3 "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetGlowRange
+    m_FriendlyName = "Set Glow Range"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetIdleAnimationLooping
+    m_FriendlyName = "Set Idle Animation Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetIdleAnimationNotLooping
+    m_FriendlyName = "Set Idle Animation Not Looping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::SetPlaybackRate
+    m_FriendlyName = "Set Playback Rate"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::StartGlowing
+    m_FriendlyName = "Start Glowing"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::StopGlowing
+    m_FriendlyName = "Stop Glowing"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::TurnOff
+    m_FriendlyName = "Turn Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CDynamicProp_API::TurnOn
+    m_FriendlyName = "Turn On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:prop_dynamic "prop_dynamic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CDynamicProp_API::OnAnimationBegun
+    m_FriendlyName = "On Animation Begun"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_dynamic "Target" inflow=self
+
+OUTPUT!CDynamicProp_API::OnAnimationDone
+    m_FriendlyName = "On Animation Done"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_dynamic "Target" inflow=self
+
+OUTPUT!CDynamicProp_API::OnAnimationLoopCycleDone
+    m_FriendlyName = "On Animation Loop Cycle Done"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_dynamic "Target" inflow=self
+
+OUTPUT!CDynamicProp_API::OnAnimationReachedEnd
+    m_FriendlyName = "On Animation Reached End"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_dynamic "Target" inflow=self
+
+OUTPUT!CDynamicProp_API::OnAnimationReachedStart
+    m_FriendlyName = "On Animation Reached Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CDynamicProp_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:prop_dynamic "Target" inflow=self

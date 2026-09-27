@@ -1,0 +1,108 @@
+CAmbientGeneric_API::FadeIn
+    m_FriendlyName = "Fade In"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::FadeOut
+    m_FriendlyName = "Fade Out"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::Pitch
+    m_FriendlyName = "Pitch"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::PlaySound
+    m_FriendlyName = "Play Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::StopSound
+    m_FriendlyName = "Stop Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::ToggleSound
+    m_FriendlyName = "Toggle Sound"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CAmbientGeneric_API::Volume
+    m_FriendlyName = "Volume"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CAmbientGeneric_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:ambient_generic "ambient_generic" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

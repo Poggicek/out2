@@ -1,0 +1,45 @@
+CLogicCollisionPair_API::DisableCollisions
+    m_FriendlyName = "Disable Collisions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCollisionPair_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_collision_pair "logic_collision_pair" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCollisionPair_API::DisableCollisionsWith
+    m_FriendlyName = "Disable Collisions With"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCollisionPair_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_collision_pair "logic_collision_pair" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCollisionPair_API::EnableCollisions
+    m_FriendlyName = "Enable Collisions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCollisionPair_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_collision_pair "logic_collision_pair" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

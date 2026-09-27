@@ -1,12 +1,11 @@
 CEnvHudHint_API::HideHudHint
     m_FriendlyName = "Hide Hud Hint"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvHudHint_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CEnvHudHint_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -17,12 +16,11 @@ CEnvHudHint_API::HideHudHint
 CEnvHudHint_API::ShowHudHint
     m_FriendlyName = "Show Hud Hint"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvHudHint_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CEnvHudHint_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

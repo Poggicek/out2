@@ -2,10 +2,9 @@ CPulseServerFuncs_Sounds::SoundEventSetParamFloat
     m_FriendlyName = "Sound Event Set Param Float"
     m_Description = "Set a sound event parameter to a float value."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs_Sounds"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs_Sounds"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in nSoundEventGuid: PVAL_SNDEVT_GUID "Sound Event Guid" inflow=InDefault
@@ -17,10 +16,9 @@ CPulseServerFuncs_Sounds::SoundEventSetParamStringToken
     m_FriendlyName = "Sound Event Set Param String Token"
     m_Description = "Set a sound event parameter to a string_token value."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs_Sounds"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs_Sounds"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in nSoundEventGuid: PVAL_SNDEVT_GUID "Sound Event Guid" inflow=InDefault
@@ -32,10 +30,9 @@ CPulseServerFuncs_Sounds::SoundEventStop
     m_FriendlyName = "Sound Event Stop"
     m_Description = "Stop a sound event."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs_Sounds"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs_Sounds"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in nSoundEventGuid: PVAL_SNDEVT_GUID "Sound Event Guid" inflow=InDefault

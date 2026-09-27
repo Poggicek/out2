@@ -1,0 +1,15 @@
+CRagdollManager_API::SetMaxRagdollCount
+    m_FriendlyName = "Set Max Ragdoll Count"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CRagdollManager_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_ragdoll_manager "game_ragdoll_manager" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

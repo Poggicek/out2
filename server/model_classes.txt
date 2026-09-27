@@ -1,0 +1,158 @@
+CDestructiblePart
+    m_nClassType = "modelgamedata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    variable m_DebugName: string "Debug Name" default=""
+        suppressed_field = true
+    variable m_nHitGroup: choices "Hit Group" default="HITGROUP_GENERIC"
+        description = "The hitgroup this is related to."
+        group = "+Hitgroup"
+        item_set = "choices"
+        item HITGROUP_INVALID "HITGROUP_INVALID"
+        item HITGROUP_GENERIC "HITGROUP_GENERIC"
+        item HITGROUP_HEAD "HITGROUP_HEAD"
+        item HITGROUP_CHEST "HITGROUP_CHEST"
+        item HITGROUP_STOMACH "HITGROUP_STOMACH"
+        item HITGROUP_LEFTARM "HITGROUP_LEFTARM"
+        item HITGROUP_RIGHTARM "HITGROUP_RIGHTARM"
+        item HITGROUP_LEFTLEG "HITGROUP_LEFTLEG"
+        item HITGROUP_RIGHTLEG "HITGROUP_RIGHTLEG"
+        item HITGROUP_NECK "HITGROUP_NECK"
+        item HITGROUP_UNUSED "HITGROUP_UNUSED"
+        item HITGROUP_GEAR "HITGROUP_GEAR"
+        item HITGROUP_SPECIAL "HITGROUP_SPECIAL"
+        item HITGROUP_COUNT "HITGROUP_COUNT"
+    variable m_bDisableHitGroupWhenDestroyed: boolean "Disable Hit Group & Remove Tagged Physics Bodies When Destroyed" default=true
+        description = "Do we disable the hitgroup and physics bodies tagged with said hitgroup when all damage levels are destroyed?"
+        group = "+Hitgroup"
+    variable m_nOtherHitgroupsToDestroyWhenFullyDestructed: array:choices "Other Hitgroups To Destroy When Fully Destructed" default=[]
+        description = "Other hitgroups to destroy when this one is fully destroyed.  Useful for chaining destructibles like blowing up the lower arm when the upper arm dies."
+        group = "+Hitgroup"
+        item_set = "choices"
+        item HITGROUP_INVALID "HITGROUP_INVALID"
+        item HITGROUP_GENERIC "HITGROUP_GENERIC"
+        item HITGROUP_HEAD "HITGROUP_HEAD"
+        item HITGROUP_CHEST "HITGROUP_CHEST"
+        item HITGROUP_STOMACH "HITGROUP_STOMACH"
+        item HITGROUP_LEFTARM "HITGROUP_LEFTARM"
+        item HITGROUP_RIGHTARM "HITGROUP_RIGHTARM"
+        item HITGROUP_LEFTLEG "HITGROUP_LEFTLEG"
+        item HITGROUP_RIGHTLEG "HITGROUP_RIGHTLEG"
+        item HITGROUP_NECK "HITGROUP_NECK"
+        item HITGROUP_UNUSED "HITGROUP_UNUSED"
+        item HITGROUP_GEAR "HITGROUP_GEAR"
+        item HITGROUP_SPECIAL "HITGROUP_SPECIAL"
+        item HITGROUP_COUNT "HITGROUP_COUNT"
+    variable m_bOnlyDestroyWhenGibbing: boolean "Only Destroy When Gibbing" default=false
+        description = "Only allow this part to be destroyed when gibbing.  Useful for special case gibbing breakables like torsos."
+        group = "+Gibbing"
+    variable m_sBodyGroupName: string "Body Group Name" default=""
+        description = "Body group to set when this damage level is broken."
+        editor = "ModelDocPicker( MODELDOC_PICK_TYPE_BODY_GROUP )"
+        group = "+Model Setup/+Body Group"
+    variable m_DamageLevels: array:struct:CDestructiblePart_DamageLevel "Damage Levels" default=[]
+        description = "The various damage levels for this hitgroup."
+        autoexpand_self = true
+        group = ""
+    helper game_data_list { key = "CDestructiblePart" }
+
+CDestructiblePart_DamageLevel
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    variable m_sName: string "Name" default=""
+        description = "Name for this damage level.  Presently only used for debugging/display - one day may be used in code to allow destroying by name."
+    variable m_sBreakablePieceName: string "Breakable Piece Name" default=""
+        description = "Name of the breakable to trigger breaking on when health reaches zero."
+        editor = "ModelDocPicker( MODELDOC_PICK_TYPE_BREAKPIECE )"
+        group = "+Model Setup"
+    variable m_nBodyGroupValue: integer "Body Group Value" default=-1
+        description = "Value to set for the body group when the damage level is broken."
+        group = "+Model Setup"
+    variable m_nHealth: kv3 "Health" default=1
+        description = "Total health of this damage level. When it reaches 0, the damage level is 'broken' using the breakable prop system."
+        ParticleCompileBinaryIdenticalHack_underlying_struct = "CSkillInt"
+        editor = "multi_int( 4 )"
+        group = "+Damage"
+        suppress_expr = "m_nDamagePassthroughType == InvincibleAbsorb || m_nDamagePassthroughType == InvinciblePassthrough"
+    variable m_flCriticalDamagePercent: float "Critical Damage Percent" default=0
+        description = "% chance (0-1) of dealing 'critical' damage, which destroys this damage level, regardless of damage pass through type."
+        group = "+Damage"
+    variable m_nDamagePassthroughType: choices "Damage Passthrough Type" default="Normal"
+        description = "How damage to this damage level is handled."
+        group = "+Damage"
+        item_set = "choices"
+        item Normal "Normal"
+            description = "Damage reduces the part's health pool and the owner entity equally."
+        item Absorb "Absorb"
+            description = "Damage reduces the part's health pool but not the owner entity until destroyed. (i.e., limited armour)"
+        item InvincibleAbsorb "InvincibleAbsorb"
+            description = "Damage is completely ignored - i.e., this part ignores the health value and does not send damage to the owner entity."
+        item InvinciblePassthrough "InvinciblePassthrough"
+            description = "Damage reduces the owner entity but not the part (health is ignored): part can only be destroyed by gibbing or procedurally."
+    variable m_nDestructionDeathBehavior: choices "Destruction Death Behavior" default="eDoNotKill"
+        description = "Should the entity die when this damage level is destroyed?"
+        group = "+Death"
+        item_set = "choices"
+        item eDoNotKill "eDoNotKill"
+            description = "Does not kill the entity when the part is destroyed"
+        item eKill "eKill"
+            description = "Kills the entity, using the normal codepath to determine kill type, when the part is destroyed"
+        item eGib "eGib"
+            description = "Kills and gibs the entity when the part is destroyed"
+        item eRemove "eRemove"
+            description = "Kills and instantly removes the entity when the part is destroyed"
+    variable m_sCustomDeathHandshake: string "Custom Death Handshake" default=""
+        description = "Custom death handshake to set when this damage level is destroyed."
+        group = "+Death"
+        suppress_expr = "m_nDestructionDeathBehavior == eDoNotKill"
+    variable m_bShouldDestroyOnDeath: boolean "Should Destroy On Death" default=false
+        description = "Whether the damage level should be destroyed when the entity dies."
+        group = "+Death"
+    variable m_flDeathDestroyTime: kv3 "Death Destroy Time" default=[0.1, 1]
+        description = "Time after death the damage level should be destroyed"
+        ParticleCompileBinaryIdenticalHack_underlying_struct = "CRangeFloat"
+        editor = "multi_float(2)"
+        group = "+Death"
+        suppress_expr = "m_bShouldDestroyOnDeath == false"
+
+CDestructiblePartsSystemData
+    m_nClassType = "modelgamedata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    variable m_PartsDataByHitGroup: stringmap:struct:CDestructiblePart "Parts Data By Hit Group" default={}
+        description = "Destructible Parts"
+        mapkeys =
+            HITGROUP_CHEST = {}
+            HITGROUP_COUNT = {}
+            HITGROUP_GEAR = {}
+            HITGROUP_GENERIC = {}
+            HITGROUP_HEAD = {}
+            HITGROUP_INVALID = {}
+            HITGROUP_LEFTARM = {}
+            HITGROUP_LEFTLEG = {}
+            HITGROUP_NECK = {}
+            HITGROUP_RIGHTARM = {}
+            HITGROUP_RIGHTLEG = {}
+            HITGROUP_SPECIAL = {}
+            HITGROUP_STOMACH = {}
+            HITGROUP_UNUSED = {}
+    variable m_nMinMaxNumberHitGroupsToDestroyWhenGibbing: kv3 "Min Max Number Hit Groups To Destroy When Gibbing" default=[1, 3]
+        description = "Min/Max number parts to destroy when gibbing"
+        ParticleCompileBinaryIdenticalHack_underlying_struct = "CRangeInt"
+        editor = "multi_int(2)"
+
+CPhysicsBodyGameMarkup
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    variable m_TargetBody: string "Target Body" default=""
+        description = "The name for the body (bone) that we're targeting."
+    variable m_Tag: string "Tag" default=""
+        description = "An identifier for this physics body."
+
+CPhysicsBodyGameMarkupData
+    m_nClassType = "modelgamedata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    variable m_PhysicsBodyMarkupByBoneName: stringmap:struct:CPhysicsBodyGameMarkup "Physics Body Markup By Bone Name" default={}
+        description = "Physics Body Data By Bone Name"
+        mapkeys_is_suggestion = true

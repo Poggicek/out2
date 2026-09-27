@@ -1,0 +1,72 @@
+CSoundOpvarSetPointEntity_API::SetDisabledValue
+    m_FriendlyName = "Set Disabled Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetPointEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_point "snd_opvar_set_point" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundOpvarSetPointEntity_API::SetDistanceMapMax
+    m_FriendlyName = "Set Distance Map Max"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetPointEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_point "snd_opvar_set_point" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundOpvarSetPointEntity_API::SetDistanceMapMin
+    m_FriendlyName = "Set Distance Map Min"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetPointEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_point "snd_opvar_set_point" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CSoundOpvarSetPointEntity_API::OnEnter
+    m_FriendlyName = "On Enter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetPointEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:snd_opvar_set_point "Target" inflow=self
+
+OUTPUT!CSoundOpvarSetPointEntity_API::OnExit
+    m_FriendlyName = "On Exit"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetPointEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:snd_opvar_set_point "Target" inflow=self

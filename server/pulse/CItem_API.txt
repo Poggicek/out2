@@ -1,0 +1,51 @@
+OUTPUT!CItem_API::OnCacheInteraction
+    m_FriendlyName = "On Cache Interaction"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CItem_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:item "Target" inflow=self
+
+OUTPUT!CItem_API::OnGlovePulled
+    m_FriendlyName = "On Glove Pulled"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CItem_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:item "Target" inflow=self
+
+OUTPUT!CItem_API::OnPlayerPickup
+    m_FriendlyName = "On Player Pickup"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CItem_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:item "Target" inflow=self
+
+OUTPUT!CItem_API::OnPlayerTouch
+    m_FriendlyName = "On Player Touch"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CItem_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:item "Target" inflow=self

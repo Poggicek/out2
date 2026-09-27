@@ -1,0 +1,30 @@
+CGamePlayerEquip_API::TriggerForActivatedPlayer
+    m_FriendlyName = "Trigger For Activated Player"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerEquip_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_player_equip "game_player_equip" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGamePlayerEquip_API::TriggerForAllPlayers
+    m_FriendlyName = "Trigger For All Players"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGamePlayerEquip_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_player_equip "game_player_equip" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

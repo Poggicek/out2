@@ -1,0 +1,27 @@
+OUTPUT!CEnvWindSharedAPI::OnGustEnd
+    m_FriendlyName = "On Gust End"
+    m_nClassType = "vdata"
+    component_inclusion_types = ["PVAL_EHANDLE:env_wind"]
+    fingerprint = "@lib:server.dll!CEnvWindSharedAPI"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+
+OUTPUT!CEnvWindSharedAPI::OnGustStart
+    m_FriendlyName = "On Gust Start"
+    m_nClassType = "vdata"
+    component_inclusion_types = ["PVAL_EHANDLE:env_wind"]
+    fingerprint = "@lib:server.dll!CEnvWindSharedAPI"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self

@@ -3,12 +3,11 @@ CPulseGraphInstance_ServerEntity::BeforeGraphStart
     m_Description = "Called when the parent entity is created. WARNING: This happens BEFORE the player is spawned. You cannot access !player from this hook. Use 'GraphStart' if you need !player."
     m_nClassType = "vdata"
     expected_return_type = "PVAL_VOID"
+    fingerprint = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     generic_node_category = 5
     header_icon = "tools/images/propertyeditor/attr_alert.png"
     is_pulse_hook = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]
 
@@ -17,27 +16,20 @@ CPulseGraphInstance_ServerEntity::GraphStart
     m_Description = "Called a short time after the parent entity has been activated. Equivalent to OnMapSpawn in logic_auto, and happens after the player is spawned. You can access !player from this hook."
     m_nClassType = "vdata"
     expected_return_type = "PVAL_VOID"
+    fingerprint = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     generic_node_category = 5
     is_pulse_hook = true
     is_spontaneous = true
-    legacy_names = ["CPulseGraphInstance_ServerEntity::InitialActivate"]
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]
-
-CPulseGraphInstance_ServerEntity::InitialActivate
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulseGraphInstance_ServerEntity::GraphStart"
 
 CPulseGraphInstance_ServerEntity::SetNextThink
     m_FriendlyName = "Set Next Think"
     m_Description = "Schedule the next think for the entity that this graph is running on."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in dt: PVAL_FLOAT "dt" inflow=InDefault
@@ -48,10 +40,9 @@ CPulseGraphInstance_ServerEntity::Think
     m_Description = "Called when the parent entity has been told to think via SetNextThink"
     m_nClassType = "vdata"
     expected_return_type = "PVAL_VOID"
+    fingerprint = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     generic_node_category = 5
     is_pulse_hook = true
     is_spontaneous = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseGraphInstance_ServerEntity"
     supported_domains = ServerEntity
     outflow OutDefault "Default Out" [default]

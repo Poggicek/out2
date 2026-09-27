@@ -1,0 +1,268 @@
+CFogController_API::Set2DSkyboxFogFactor
+    m_FriendlyName = "Set2 D Skybox Fog Factor"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::Set2DSkyboxFogFactorLerpTo
+    m_FriendlyName = "Set2 D Skybox Fog Factor Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetAngles
+    m_FriendlyName = "Set Angles"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetColor
+    m_FriendlyName = "Set Color"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_COLOR_RGB "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetColorLerpTo
+    m_FriendlyName = "Set Color Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_COLOR_RGB "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetColorSecondary
+    m_FriendlyName = "Set Color Secondary"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_COLOR_RGB "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetColorSecondaryLerpTo
+    m_FriendlyName = "Set Color Secondary Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_COLOR_RGB "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetEndDist
+    m_FriendlyName = "Set End Dist"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetEndDistLerpTo
+    m_FriendlyName = "Set End Dist Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetFarZ
+    m_FriendlyName = "Set Far Z"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetMaxDensity
+    m_FriendlyName = "Set Max Density"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetMaxDensityLerpTo
+    m_FriendlyName = "Set Max Density Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetStartDist
+    m_FriendlyName = "Set Start Dist"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::SetStartDistLerpTo
+    m_FriendlyName = "Set Start Dist Lerp To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::StartFogTransition
+    m_FriendlyName = "Start Fog Transition"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::TurnOff
+    m_FriendlyName = "Turn Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFogController_API::TurnOn
+    m_FriendlyName = "Turn On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_fog_controller "env_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

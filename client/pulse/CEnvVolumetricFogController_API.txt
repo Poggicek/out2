@@ -1,0 +1,141 @@
+CEnvVolumetricFogController_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::EnableIndirect
+    m_FriendlyName = "Enable Indirect"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::ForceRefresh
+    m_FriendlyName = "Force Refresh"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::SetAnisotropy
+    m_FriendlyName = "Set Anisotropy"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::SetDrawDistance
+    m_FriendlyName = "Set Draw Distance"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::SetFadeSpeed
+    m_FriendlyName = "Set Fade Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::SetFogStrength
+    m_FriendlyName = "Set Fog Strength"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvVolumetricFogController_API::SetToDefaults
+    m_FriendlyName = "Set To Defaults"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CEnvVolumetricFogController_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_volumetric_fog_controller "env_volumetric_fog_controller" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

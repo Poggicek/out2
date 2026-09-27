@@ -1,0 +1,129 @@
+CPointAngleSensor_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_anglesensor "point_anglesensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointAngleSensor_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_anglesensor "point_anglesensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointAngleSensor_API::SetTargetEntity
+    m_FriendlyName = "Set Target Entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_anglesensor "point_anglesensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointAngleSensor_API::Test
+    m_FriendlyName = "Test"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_anglesensor "point_anglesensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointAngleSensor_API::Toggle
+    m_FriendlyName = "Toggle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_anglesensor "point_anglesensor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPointAngleSensor_API::FacingPercentage
+    m_FriendlyName = "Facing Percentage"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_anglesensor "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CPointAngleSensor_API::OnFacingLookat
+    m_FriendlyName = "On Facing Lookat"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_anglesensor "Target" inflow=self
+
+OUTPUT!CPointAngleSensor_API::OnNotFacingLookat
+    m_FriendlyName = "On Not Facing Lookat"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_anglesensor "Target" inflow=self
+
+OUTPUT!CPointAngleSensor_API::TargetDir
+    m_FriendlyName = "Target Dir"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointAngleSensor_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_anglesensor "Target" inflow=self
+    out param: PVAL_VEC3 "param" inflow=self

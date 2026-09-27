@@ -1,5 +1,11 @@
 (unnamed)
     group = GameStartup
+    source = src/game/shared/cstrike15/broken_glass_trap.cpp
+    weapons/models/grenade/molotov/weapon_molotov_broken_glass.vmdl
+    particles/impact_fx/molotov_broken_glass.vpcf
+
+(unnamed)
+    group = GameStartup
     source = src/game/shared/cstrike15/cash_stack.cpp
     models/gameplay/cash_stack/cash_stack.vmdl
     models/gameplay/cash_stack/cash_stack_pickup.vpcf
@@ -214,6 +220,11 @@ LightStylesManifest_Server
 
 LoopModeGame_server
     source = src/game/shared/loopmodegame.cpp
+
+NoiseStreamsManifest_global_server
+    group = GameStartup
+    source = src/game/shared/noisestreams_vdata.cpp
+    scripts/noise_presets.vdata
 
 PhysFrictionEffectPrecache_server
     group = GameSessionManifest_server

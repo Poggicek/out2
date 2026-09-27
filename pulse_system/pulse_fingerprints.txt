@@ -1,4 +1,4 @@
-@lib:pulse_system.dll!CPulseArraylib = 3172841818
+@lib:pulse_system.dll!CPulseArraylib = 3525226864
 @lib:pulse_system.dll!CPulseCell_BaseLerp = 0
 @lib:pulse_system.dll!CPulseCell_BaseState = 0
 @lib:pulse_system.dll!CPulseCell_BaseYieldingInflow = 3311802875
@@ -24,6 +24,8 @@
 @lib:pulse_system.dll!CPulseCell_Outflow_TestExplicitYesNo = 874680987
 @lib:pulse_system.dll!CPulseCell_Outflow_TestRandomYesNo = 1043254935
 @lib:pulse_system.dll!CPulseCell_PickBestOutflowSelector = 252227061
+@lib:pulse_system.dll!CPulseCell_RaceCursors = 3041539765
+@lib:pulse_system.dll!CPulseCell_ReturnValues = 2637216531
 @lib:pulse_system.dll!CPulseCell_Step_CallExternalMethod = 1549135810
 @lib:pulse_system.dll!CPulseCell_Step_DebugLog = 3575830881
 @lib:pulse_system.dll!CPulseCell_Step_PublicOutput = 861796290
@@ -39,7 +41,7 @@
 @lib:pulse_system.dll!CPulseCell_Test_MultiInflow_NoDefault = 3968509157
 @lib:pulse_system.dll!CPulseCell_Test_MultiInflow_WithDefault = 1187710888
 @lib:pulse_system.dll!CPulseCell_Test_MultiOutflow_WithParams = 1146619215
-@lib:pulse_system.dll!CPulseCell_Test_MultiOutflow_WithParams_Yielding = 3169926234
+@lib:pulse_system.dll!CPulseCell_Test_MultiOutflow_WithParams_Yielding = 282249292
 @lib:pulse_system.dll!CPulseCell_Test_NoInflow = 0
 @lib:pulse_system.dll!CPulseCell_Timeline = 3988269055
 @lib:pulse_system.dll!CPulseCell_Val_TestDomainFindEntityByName = 1963384413
@@ -58,14 +60,14 @@
 @lib:pulse_system.dll!CPulseGraphInstance_TestDomain_FakeEntityOwner = 0
 @lib:pulse_system.dll!CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView = 0
 @lib:pulse_system.dll!CPulseGraphInstance_TurtleGraphics = 3115190533
-@lib:pulse_system.dll!CPulseMathlib = 2237422034
-@lib:pulse_system.dll!CPulseStringlib = 1521109281
+@lib:pulse_system.dll!CPulseMathlib = 1311878972
+@lib:pulse_system.dll!CPulseStringlib = 1343543655
 @lib:pulse_system.dll!CPulseTestFuncs_LibraryA = 2306211623
 @lib:pulse_system.dll!CPulseTestScriptLib = 1396807546
 @lib:pulse_system.dll!CPulseTurtleGraphicsCursor = 1515886733
 @lib:pulse_system.dll!CTestDomainDerived_Cursor = 1726847264
-@lib:pulse_system.dll!FakeEntityDerivedA_tAPI = 4237965054
-@lib:pulse_system.dll!FakeEntityDerivedB_tAPI = 20727738
+@lib:pulse_system.dll!FakeEntityDerivedA_tAPI = 2847959649
+@lib:pulse_system.dll!FakeEntityDerivedB_tAPI_NEW_NAME = 596087073
 @lib:pulse_system.dll!FakeEntity_tAPI = 3690219950
 @lib:pulse_system.dll!TestComponent_tAPI = 4189019600
 @type:pulse_system.dll!PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t = 627611872

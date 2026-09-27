@@ -1,0 +1,261 @@
+CSceneEntity_API::Cancel
+    m_FriendlyName = "Cancel"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::CancelAtNextInterrupt
+    m_FriendlyName = "Cancel At Next Interrupt"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::InterjectResponse
+    m_FriendlyName = "Interject Response"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::Pause
+    m_FriendlyName = "Pause"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::PauseAtNextInterrupt
+    m_FriendlyName = "Pause At Next Interrupt"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::PitchShift
+    m_FriendlyName = "Pitch Shift"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::Resume
+    m_FriendlyName = "Resume"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::ScriptPlayerDeath
+    m_FriendlyName = "Script Player Death"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::SetTarget1
+    m_FriendlyName = "Set Target1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::SetTarget2
+    m_FriendlyName = "Set Target2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::Start
+    m_FriendlyName = "Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSceneEntity_API::StopWaitingForActor
+    m_FriendlyName = "Stop Waiting For Actor"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_scene "scripted_scene" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CSceneEntity_API::OnCanceled
+    m_FriendlyName = "On Canceled"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self
+
+OUTPUT!CSceneEntity_API::OnCompletion
+    m_FriendlyName = "On Completion"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self
+
+OUTPUT!CSceneEntity_API::OnPaused
+    m_FriendlyName = "On Paused"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self
+
+OUTPUT!CSceneEntity_API::OnPulseRequirement
+    m_FriendlyName = "On Pulse Requirement"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self
+
+OUTPUT!CSceneEntity_API::OnResumed
+    m_FriendlyName = "On Resumed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self
+
+OUTPUT!CSceneEntity_API::OnStart
+    m_FriendlyName = "On Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSceneEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_scene "Target" inflow=self

@@ -1,0 +1,118 @@
+CLogicCompare_API::Compare
+    m_FriendlyName = "Compare"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_compare "logic_compare" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCompare_API::SetCompareValue
+    m_FriendlyName = "Set Compare Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_compare "logic_compare" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCompare_API::SetValue
+    m_FriendlyName = "Set Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_compare "logic_compare" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CLogicCompare_API::SetValueCompare
+    m_FriendlyName = "Set Value Compare"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_compare "logic_compare" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CLogicCompare_API::OnEqualTo
+    m_FriendlyName = "On Equal To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_compare "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicCompare_API::OnGreaterThan
+    m_FriendlyName = "On Greater Than"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_compare "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicCompare_API::OnLessThan
+    m_FriendlyName = "On Less Than"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_compare "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CLogicCompare_API::OnNotEqualTo
+    m_FriendlyName = "On Not Equal To"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicCompare_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_compare "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self

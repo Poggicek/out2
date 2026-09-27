@@ -1,0 +1,14 @@
+FakeEntityDerivedB_tAPI_NEW_NAME::DerivedFuncB
+    m_FriendlyName = "Derived Func B"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntityDerivedB_tAPI_NEW_NAME"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 16
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_TEST_HANDLE:fake_derived_b "fake_derived_b" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self

@@ -1,0 +1,123 @@
+CPhysMotor_API::GetActualSpeed
+    m_FriendlyName = "Get Actual Speed"
+    m_Description = "Get the current rotation speed (deg/s) of the attached object about the motor's axis. May differ from the motor's target speed."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CPhysMotor_API::SetFriction
+    m_FriendlyName = "Set Friction"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::SetSpeed
+    m_FriendlyName = "Set Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::SetSpinDownTime
+    m_FriendlyName = "Set Spin Down Time"
+    m_Description = "Sets the time the motor takes to spin down to a lesser target speed when it's on."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in fSpinDownTime: PVAL_FLOAT "Spin Down Time" default=1 inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::SetSpinUpTime
+    m_FriendlyName = "Set Spin Up Time"
+    m_Description = "Sets the time the motor takes to spin up to a greater target speed when it's on."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in fSpinUpTime: PVAL_FLOAT "Spin Up Time" default=1 inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::SetSystemInertiaScale
+    m_FriendlyName = "Set System Inertia Scale"
+    m_Description = "Sets the inertia scale on the motor, which affects the maximum amount of torque it can generate (this will also affect the actual time the motor takes to spin up or spin down)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flInertiaScale: PVAL_FLOAT "Inertia Scale" default=1 inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::TurnOff
+    m_FriendlyName = "Turn Off"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysMotor_API::TurnOn
+    m_FriendlyName = "Turn On"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysMotor_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_motor "phys_motor" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

@@ -1,0 +1,273 @@
+CScriptedSequence_API::BeginSequence
+    m_FriendlyName = "Begin Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CScriptedSequence_API::CancelSequence
+    m_FriendlyName = "Cancel Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CScriptedSequence_API::ForceTarget
+    m_FriendlyName = "Force Target"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CScriptedSequence_API::MoveToPosition
+    m_FriendlyName = "Move To Position"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CScriptedSequence_API::ScriptPlayerDeath
+    m_FriendlyName = "Script Player Death"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CScriptedSequence_API::SetActionSequence
+    m_FriendlyName = "Set Action Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:scripted_sequence "scripted_sequence" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CScriptedSequence_API::OnActionStartOrLoop
+    m_FriendlyName = "On Action Start Or Loop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnBeginSequence
+    m_FriendlyName = "On Begin Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnCancelFailedSequence
+    m_FriendlyName = "On Cancel Failed Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnCancelSequence
+    m_FriendlyName = "On Cancel Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnEndSequence
+    m_FriendlyName = "On End Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnPostIdleEndSequence
+    m_FriendlyName = "On Post Idle End Sequence"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent01
+    m_FriendlyName = "On Script Event01"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent02
+    m_FriendlyName = "On Script Event02"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent03
+    m_FriendlyName = "On Script Event03"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent04
+    m_FriendlyName = "On Script Event04"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent05
+    m_FriendlyName = "On Script Event05"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent06
+    m_FriendlyName = "On Script Event06"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent07
+    m_FriendlyName = "On Script Event07"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self
+
+OUTPUT!CScriptedSequence_API::OnScriptEvent08
+    m_FriendlyName = "On Script Event08"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CScriptedSequence_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:scripted_sequence "Target" inflow=self

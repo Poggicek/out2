@@ -1,79 +1,69 @@
 OUTPUT!CMapVetoPickController_API::OnLevelTransition
     m_FriendlyName = "On Level Transition"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapVetoPickController_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapVetoPickController_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:mapvetopick_controller "mapvetopick_controller" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:mapvetopick_controller "Target" inflow=self
     out param: PVAL_INT "param" inflow=self
 
 OUTPUT!CMapVetoPickController_API::OnMapPicked
     m_FriendlyName = "On Map Picked"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapVetoPickController_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapVetoPickController_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:mapvetopick_controller "mapvetopick_controller" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:mapvetopick_controller "Target" inflow=self
     out param: PVAL_STRING "param" inflow=self
 
 OUTPUT!CMapVetoPickController_API::OnMapVetoed
     m_FriendlyName = "On Map Vetoed"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapVetoPickController_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapVetoPickController_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:mapvetopick_controller "mapvetopick_controller" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:mapvetopick_controller "Target" inflow=self
     out param: PVAL_STRING "param" inflow=self
 
 OUTPUT!CMapVetoPickController_API::OnNewPhaseStarted
     m_FriendlyName = "On New Phase Started"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapVetoPickController_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapVetoPickController_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:mapvetopick_controller "mapvetopick_controller" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:mapvetopick_controller "Target" inflow=self
     out param: PVAL_INT "param" inflow=self
 
 OUTPUT!CMapVetoPickController_API::OnSidesPicked
     m_FriendlyName = "On Sides Picked"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapVetoPickController_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapVetoPickController_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:mapvetopick_controller "mapvetopick_controller" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:mapvetopick_controller "Target" inflow=self
     out param: PVAL_INT "param" inflow=self

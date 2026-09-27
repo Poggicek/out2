@@ -2,10 +2,9 @@ CPulseServerFuncs::AddVelocityToAllEntitiesWithinRadius
     m_FriendlyName = "Add Velocity To All Entities Within Radius"
     m_Description = "Adds velocity to all entities in a sphere"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vCenter: PVAL_VEC3_WORLDSPACE "Center" inflow=InDefault
@@ -17,10 +16,9 @@ CPulseServerFuncs::AddVelocityToEntity
     m_FriendlyName = "Add Velocity To Entity"
     m_Description = "Adds velocity to an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -31,10 +29,9 @@ CPulseServerFuncs::AreEntitiesInHierarchy
     m_FriendlyName = "Are Entities In Hierarchy"
     m_Description = "Checks if entity a and entity b are in hierarchy together"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntityA: PVAL_EHANDLE "Entity A" inflow=self
     in hEntityB: PVAL_EHANDLE "Entity B" inflow=self
@@ -42,25 +39,38 @@ CPulseServerFuncs::AreEntitiesInHierarchy
 
 CPulseServerFuncs::CanCharacterSeeEntity
     m_FriendlyName = "Can Character See Entity"
-    m_Description = "Return true if the character (player or NPC) can see the target entity (i.e. within FOV and has LOS)"
+    m_Description = "Return true if the character (player or NPC) can see the target entity (i.e. within FOV and has LOS)<br><br>This node can appear in Observable contexts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
+    has_observable_context = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntityCharacter: PVAL_EHANDLE "Entity Character" inflow=self
     in hEntityTarget: PVAL_EHANDLE "Entity Target" inflow=self
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
 
+CPulseServerFuncs::ComputeTargetPositionRelativeToEntity
+    m_FriendlyName = "Compute Target Position Relative To Entity"
+    m_Description = "Get position relative to entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    supported_domains = ServerEntity
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
+    in hTargetEntity: PVAL_EHANDLE "Target Entity" inflow=self
+    in vTargetPosition: PVAL_VEC3_WORLDSPACE "Target Position" inflow=self
+    in bHasFacingPosition: PVAL_BOOL "Has Facing Position" default=false inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
 CPulseServerFuncs::ConCommand
     m_FriendlyName = "Con Command"
     m_Description = "Executes a con command"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pCommand: PVAL_STRING "Command" inflow=InDefault
@@ -70,11 +80,10 @@ CPulseServerFuncs::CountEntitiesOfTypeInArray
     m_FriendlyName = "Count Entities Of Type In Array"
     m_Description = "Count the number of entities of a given type in an array."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     header_expr = "\"Count \" + entityType + \" Entities in Array"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     in entityArray: PVAL_ARRAY:PVAL_EHANDLE "Entity Array" metadata={ polymorphic_arg = true } inflow=self
@@ -84,10 +93,9 @@ CPulseServerFuncs::CountEntitiesWithName
     m_FriendlyName = "Count Entities With Name"
     m_Description = "Count the number of entities whose name matches a pattern."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in pNamePatterrn: PVAL_STRING "Name Patterrn" inflow=self
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
@@ -96,41 +104,27 @@ CPulseServerFuncs::CreateExplosion
     m_FriendlyName = "Create Explosion"
     m_Description = "Creates an Explosion at a position"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hAttacker: PVAL_EHANDLE "Attacker" inflow=InDefault
     in vOrigin: PVAL_VEC3_WORLDSPACE "Origin" inflow=InDefault
     in flRadius: PVAL_FLOAT "Radius" inflow=InDefault
     in flDamage: PVAL_FLOAT "Damage" inflow=InDefault
-    in pszExplosionType: PVAL_STRING "Psz Explosion Type" metadata={ editor = "VDataChoice( scripts/explosion_types.vdata )" } default="default" inflow=InDefault
+    in pszExplosionType: PVAL_STRING "Explosion Type" metadata={ editor = "VDataChoice( scripts/explosion_types.vdata )" } default="default" inflow=InDefault
     in sExpSoundName: PVAL_SNDEVT_NAME "Exp Sound Name" default=soundevent:"BaseExplosionEffect.Sound" inflow=InDefault
     in flForce: PVAL_FLOAT "Force" default=0 inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
-
-CPulseServerFuncs::CreatePhysicsBallSocketConstraint
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulsePhysicsConstraintsFuncs::CreatePhysicsBallSocketConstraint"
-
-CPulseServerFuncs::CreatePhysicsConstraint
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulsePhysicsConstraintsFuncs::CreatePhysicsConstraint"
-
-CPulseServerFuncs::CreatePhysicsHingeConstraint
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulsePhysicsConstraintsFuncs::CreatePhysicsHingeConstraint"
 
 CPulseServerFuncs::CreatePhysicsProxy
     m_FriendlyName = "Physics - Create Proxy"
     m_Description = "Creates a physics proxy at the entity's attachment point."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -144,10 +138,9 @@ CPulseServerFuncs::DealDamage
     m_FriendlyName = "Deal Damage"
     m_Description = "Deals damage to an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hTarget: PVAL_EHANDLE "Target" inflow=InDefault
@@ -160,10 +153,9 @@ CPulseServerFuncs::DealRadiusDamage
     m_FriendlyName = "Deal Radius Damage"
     m_Description = "Deals radius damage to a position"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hAttacker: PVAL_EHANDLE "Attacker" inflow=InDefault
@@ -179,10 +171,9 @@ CPulseServerFuncs::DebugScreenText
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pMessage: PVAL_STRING "Message" inflow=InDefault
@@ -201,10 +192,9 @@ CPulseServerFuncs::DebugWorldArrow
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=InDefault
@@ -217,17 +207,17 @@ CPulseServerFuncs::DebugWorldArrow
 
 CPulseServerFuncs::DebugWorldAxis
     m_FriendlyName = "Debug World Axis"
-    m_Description = "Draw an axis with the given position (and eventually rotation) in world space"
+    m_Description = "Draw an axis with the given position in world space"
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vPos: PVAL_VEC3_WORLDSPACE "Pos" inflow=InDefault
+    in Angle: PVAL_QANGLE "Angle" inflow=InDefault
     in flAxisLength: PVAL_FLOAT "Axis Length" advanced_view=true default=10 inflow=InDefault
     in flDuration: PVAL_FLOAT "Duration" advanced_view=true default=-1 inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
@@ -238,10 +228,9 @@ CPulseServerFuncs::DebugWorldCross
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vPos: PVAL_VEC3_WORLDSPACE "Pos" inflow=InDefault
@@ -257,10 +246,9 @@ CPulseServerFuncs::DebugWorldEntityAxis
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -274,10 +262,9 @@ CPulseServerFuncs::DebugWorldLine
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=InDefault
@@ -293,10 +280,9 @@ CPulseServerFuncs::DebugWorldSphere
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in vPos: PVAL_VEC3_WORLDSPACE "Pos" inflow=InDefault
@@ -312,10 +298,9 @@ CPulseServerFuncs::DebugWorldText
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in pMessage: PVAL_STRING "Message" inflow=InDefault
@@ -335,10 +320,9 @@ CPulseServerFuncs::DisableCollisionBetweenEntities
     m_FriendlyName = "Disable Collision Between Entities"
     m_Description = "Disables collision between a pair of entities, regardless of their collision properties. NOTE: This state does not survive save / restore!"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntityA: PVAL_EHANDLE "Entity A" inflow=InDefault
@@ -349,10 +333,9 @@ CPulseServerFuncs::DoesEntityHaveLOS
     m_FriendlyName = "Does Entity Have LOS"
     m_Description = "Return true if the entity has LOS to the target entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntity: PVAL_EHANDLE "Entity" inflow=self
     in hEntityTarget: PVAL_EHANDLE "Entity Target" inflow=self
@@ -362,10 +345,9 @@ CPulseServerFuncs::EnableCollisionBetweenEntities
     m_FriendlyName = "Enable Collision Between Entities"
     m_Description = "Re-enable collision between a pair of entities for which it was previously disabled. They will still only collide if their collision properties allow it."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntityA: PVAL_EHANDLE "Entity A" inflow=InDefault
@@ -376,11 +358,10 @@ CPulseServerFuncs::FindAllEntities
     m_FriendlyName = "Find All Entities"
     m_Description = "Search for a chosen type of entity either by classname or name. Returns all found entities. Keywords: get"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     header_expr = "\"Find All \" + entityType + \" Entities"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     in entityName: PVAL_ENTITY_NAME "Entity Name" inflow=self
@@ -390,11 +371,10 @@ CPulseServerFuncs::FindAllEntitiesWithinRadius
     m_FriendlyName = "Find All Entities Within Radius"
     m_Description = "Search for a chosen type of entity either by classname or name within a radius of a given entity. Returns all found entities. Keywords: get"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     header_expr = "\"Find \" + entityType + \" Entities Within Radius"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     in entityName: PVAL_ENTITY_NAME "Entity Name" inflow=self
@@ -409,11 +389,10 @@ CPulseServerFuncs::FindEntity
     m_FriendlyName = "Find Entity"
     m_Description = "Search for a chosen type of entity by name. If multiple entities have the same name, only one will be returned. Keywords: get"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     header_expr = "\"Find \" + entityType + \" Entity"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     in entityName: PVAL_ENTITY_NAME "Entity Name" inflow=self
@@ -423,11 +402,10 @@ CPulseServerFuncs::FindEntityByClassnameWithinRadius
     m_FriendlyName = "Find Entity By Classname Within Radius"
     m_Description = "Search for a chosen type of entity by classname within a radius of a given entity. Keywords: get"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     header_expr = "\"Find \" + entityType + \" Entity Within Radius"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     in pSearchFromEntity: PVAL_EHANDLE "Search From Entity" inflow=self
@@ -440,10 +418,9 @@ CPulseServerFuncs::GetAngleBetweenVectors
     m_FriendlyName = "Get Angle Between Vectors"
     m_Description = "Get angle between vectors. Optional argument for signed or unsigned calculation"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in a: PVAL_VEC3 "a" inflow=self
     in b: PVAL_VEC3 "b" inflow=self
@@ -454,10 +431,9 @@ CPulseServerFuncs::GetDistanceBetweenPoints
     m_FriendlyName = "Get Distance Between Points"
     m_Description = "Get the distance between two points."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in vPoint1: PVAL_VEC3_WORLDSPACE "Point1" inflow=self
     in vPoint2: PVAL_VEC3_WORLDSPACE "Point2" inflow=self
@@ -465,12 +441,12 @@ CPulseServerFuncs::GetDistanceBetweenPoints
 
 CPulseServerFuncs::GetDynamicAttributeEHandle
     m_FriendlyName = "Get Dynamic Attribute E Handle"
-    m_Description = "Return the value of an Entity Handle attribute on the entity"
+    m_Description = "Return the value of an Entity Handle attribute on the entity<br><br>This node can appear in Observable contexts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
+    has_observable_context = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntity: PVAL_EHANDLE "Entity" inflow=self
     in pAttributeKey: PVAL_STRING "Attribute Key" inflow=self
@@ -478,12 +454,12 @@ CPulseServerFuncs::GetDynamicAttributeEHandle
 
 CPulseServerFuncs::GetDynamicAttributeInt
     m_FriendlyName = "Get Dynamic Attribute Int"
-    m_Description = "Return the value of an Int attribute on the entity"
+    m_Description = "Return the value of an Int attribute on the entity<br><br>This node can appear in Observable contexts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
+    has_observable_context = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntity: PVAL_EHANDLE "Entity" inflow=self
     in pAttributeKey: PVAL_STRING "Attribute Key" inflow=self
@@ -491,12 +467,12 @@ CPulseServerFuncs::GetDynamicAttributeInt
 
 CPulseServerFuncs::GetDynamicAttributeString
     m_FriendlyName = "Get Dynamic Attribute String"
-    m_Description = "Return the value of a String attribute on the entity"
+    m_Description = "Return the value of a String attribute on the entity<br><br>This node can appear in Observable contexts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
+    has_observable_context = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntity: PVAL_EHANDLE "Entity" inflow=self
     in pAttributeKey: PVAL_STRING "Attribute Key" inflow=self
@@ -506,73 +482,32 @@ CPulseServerFuncs::GetEntityBelowEntity
     m_FriendlyName = "Get Entity Below Entity"
     m_Description = "Get the entity below the provided entity. null if no entity found"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEnt: PVAL_EHANDLE "Ent" inflow=self
     out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
-
-CPulseServerFuncs::GetEntityDebugString
-    m_FriendlyName = "Get Entity Debug String"
-    m_Description = "Get a debug string identifying the entity. Safe for null entities. This string cannot be used for looking up the entity. Should not be used for anything except logging."
-    m_nClassType = "vdata"
-    editor_canvas_item_spec =
-        className = "PulseServerDebugNode"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
-
-CPulseServerFuncs::GetEntityEyePosition
-    m_FriendlyName = "Get Entity Eye Position"
-    m_Description = "Get the eye position of an entity."
-    m_nClassType = "vdata"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
 
 CPulseServerFuncs::GetEntityFacingYawAngleDelta
     m_FriendlyName = "Get Entity Facing Yaw Angle Delta"
     m_Description = "Get angle delta between the first entity's facing vector and direction vector to the second entity."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEnt1: PVAL_EHANDLE "Ent1" inflow=self
     in hEnt2: PVAL_EHANDLE "Ent2" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
-CPulseServerFuncs::GetEntityForward
-    m_FriendlyName = "Get Entity Forward"
-    m_Description = "Get the forward vector of an entity."
-    m_nClassType = "vdata"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
-
 CPulseServerFuncs::GetEntityHeightAboveNavMesh
     m_FriendlyName = "Get Entity Height Above Nav Mesh"
     m_Description = "Get the height of the entity off the navmesh."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEnt: PVAL_EHANDLE "Ent" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
@@ -581,70 +516,31 @@ CPulseServerFuncs::GetEntityHeightAboveWorldCollision
     m_FriendlyName = "Get Entity Height Above World Collision"
     m_Description = "Get the height of the entity off the world geo."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEnt: PVAL_EHANDLE "Ent" inflow=self
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
-
-CPulseServerFuncs::GetEntityName
-    m_FriendlyName = "Get Entity Name"
-    m_Description = "Get the name of the entity."
-    m_nClassType = "vdata"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_ENTITY_NAME "Result" outflow=OutDefault direct_return_for=self
 
 CPulseServerFuncs::GetEntityNavMeshPosition
     m_FriendlyName = "Get Entity Nav Mesh Position"
     m_Description = "Get the nearest navmesh position for the entity."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEnt: PVAL_EHANDLE "Ent" inflow=self
     out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
-
-CPulseServerFuncs::GetEntityOrigin
-    m_FriendlyName = "Get Entity Origin"
-    m_Description = "Get the position of an entity."
-    m_nClassType = "vdata"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
-
-CPulseServerFuncs::GetEntityVelocity
-    m_FriendlyName = "Get Entity Velocity"
-    m_Description = "Get the velocity of an entity."
-    m_nClassType = "vdata"
-    generic_node_category = 4
-    is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
-    supported_domains = ServerEntity
-    in hEnt: PVAL_EHANDLE "Ent" inflow=self
-    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
 
 CPulseServerFuncs::GetGameFrameTime
     m_FriendlyName = "Get Game Frame Time"
     m_Description = "Get the current game frame time (i.e. dt) of the entity that this graph is running on."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
 
@@ -652,10 +548,9 @@ CPulseServerFuncs::GetGameTime
     m_FriendlyName = "Get Game Time"
     m_Description = "Get the current Game Time of the entity that this graph is running on."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     out retval: PVAL_GAMETIME "Result" outflow=OutDefault direct_return_for=self
 
@@ -663,10 +558,9 @@ CPulseServerFuncs::GetGraphEntity
     m_FriendlyName = "Get Graph Entity"
     m_Description = "Get the entity that this graph is running on. Prefer !self, unless you need to cast."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
 
@@ -674,10 +568,9 @@ CPulseServerFuncs::GetParent
     m_FriendlyName = "Get Parent"
     m_Description = "Returns the hierarchical parent of an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in pEntity: PVAL_EHANDLE "Entity" inflow=self
     out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
@@ -686,10 +579,9 @@ CPulseServerFuncs::GetRelativePositionBetweenEntities
     m_FriendlyName = "Get Relative Position Between Entities"
     m_Description = "Get relative position between entities."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntSource: PVAL_EHANDLE "Ent Source" inflow=self
     in hEntTarget: PVAL_EHANDLE "Ent Target" inflow=self
@@ -699,10 +591,9 @@ CPulseServerFuncs::GetRelativePositionBetweenEntityAndPosition
     m_FriendlyName = "Get Relative Position Between Entity And Position"
     m_Description = "Get relative position between positions."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntSource: PVAL_EHANDLE "Ent Source" inflow=self
     in vTarget: PVAL_VEC3 "Target" inflow=self
@@ -712,10 +603,9 @@ CPulseServerFuncs::GetTraceDistance
     m_FriendlyName = "Get Trace Distance"
     m_Description = "Get distance if trace from position in direction at given length hits an entity or static world"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=self
     in vDirection: PVAL_VEC3 "Direction" inflow=self
@@ -729,10 +619,9 @@ CPulseServerFuncs::GetTraceEntity
     m_FriendlyName = "Get Trace Entity"
     m_Description = "Get entity if trace from position in direction at given length hits an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=self
     in vDirection: PVAL_VEC3 "Direction" inflow=self
@@ -744,10 +633,9 @@ CPulseServerFuncs::GetTraceHit
     m_FriendlyName = "Get Trace Hit"
     m_Description = "Get trace results from a position in direction at given length."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=self
     in vDirection: PVAL_VEC3 "Direction" inflow=self
@@ -757,6 +645,7 @@ CPulseServerFuncs::GetTraceHit
     in nGroup: PVAL_SCHEMA_ENUM:PulseCollisionGroup_t "Group" advanced_view=true default="DEFAULT" inflow=self
     in bSphereTrace: PVAL_BOOL "Sphere Trace" advanced_view=true default=false inflow=self
     in flSphereRadius: PVAL_FLOAT "Sphere Radius" advanced_view=true metadata={ suppress_expr = "!bSphereTrace" } default=10 inflow=self
+    in filterToEntityClass: PVAL_STRING "Filter To Entity Class" advanced_view=true metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
     out DidHit: PVAL_BOOL "Did Hit" outflow=OutDefault direct_return_for=self
     out HitDistance: PVAL_FLOAT "Hit Distance" advanced_view=true outflow=OutDefault direct_return_for=self
     out HitLocation: PVAL_VEC3_WORLDSPACE "Hit Location" advanced_view=true outflow=OutDefault direct_return_for=self
@@ -768,10 +657,9 @@ CPulseServerFuncs::GetTraceWorldDistance
     m_FriendlyName = "Get Trace World Distance"
     m_Description = "Get distance if trace from position in direction at given length hits static world, excludes entities"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in vStartPos: PVAL_VEC3_WORLDSPACE "Start Pos" inflow=self
     in vDirection: PVAL_VEC3 "Direction" inflow=self
@@ -782,38 +670,60 @@ CPulseServerFuncs::GetTraceWorldDistance
 
 CPulseServerFuncs::HasDynamicAttribute
     m_FriendlyName = "Has Dynamic Attribute"
-    m_Description = "Check for the presence of an attribute on the entity"
+    m_Description = "Check for the presence of an attribute on the entity<br><br>This node can appear in Observable contexts."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
+    has_observable_context = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in hEntity: PVAL_EHANDLE "Entity" inflow=self
     in pAttributeKey: PVAL_STRING "Attribute Key" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CPulseServerFuncs::IsEntityValid
+    m_FriendlyName = "Is Entity Valid"
+    m_Description = "Return if the entity is valid. This is the same check as wiring the Entity Handle directly to a boolean port."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
+    generic_node_category = 4
+    is_pulse_library_method = true
+    supported_domains = ServerEntity
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
 
 CPulseServerFuncs::RemoveAllAmmo
     m_FriendlyName = "Remove All Ammo"
     m_Description = "Removes all ammo from an entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hTarget: PVAL_EHANDLE "Target" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseServerFuncs::RemoveDynamicAttribute
+    m_FriendlyName = "Remove Dynamic Attribute"
+    m_Description = "Remove an attribute on the entity if it is present."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    supported_domains = ServerEntity
+    inflow InDefault "Default In" [default]
+    in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
+    in pAttributeKey: PVAL_STRING "Attribute Key" inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
 
 CPulseServerFuncs::RemoveEntity
     m_FriendlyName = "Remove Entity"
     m_Description = "Permanently removes the entity from the world.<br>Very similar to the 'Kill' input.<br>Keywords: remove kill erase delete eliminate"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -824,10 +734,9 @@ CPulseServerFuncs::SetDynamicAttributeEHandle
     m_FriendlyName = "Set Dynamic Attribute E Handle"
     m_Description = "Set an Entity Handle attribute value on the entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -839,10 +748,9 @@ CPulseServerFuncs::SetDynamicAttributeInt
     m_FriendlyName = "Set Dynamic Attribute Int"
     m_Description = "Set an Int attribute value on the entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -854,10 +762,9 @@ CPulseServerFuncs::SetDynamicAttributeString
     m_FriendlyName = "Set Dynamic Attribute String"
     m_Description = "Set a String attribute value on the entity"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
@@ -865,28 +772,40 @@ CPulseServerFuncs::SetDynamicAttributeString
     in pAttributeValue: PVAL_STRING "Attribute Value" inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
 
-CPulseServerFuncs::SetEntityOrigin
-    m_FriendlyName = "Set Entity Origin"
-    m_Description = "Set the position of an entity"
+CPulseServerFuncs::SetExternalGraphControlState
+    m_FriendlyName = "Set External Graph Control State"
+    m_Description = "Given a graph in the target slot, set the e_choreo_state param to the desired state"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault
-    in vPos: PVAL_VEC3_WORLDSPACE "Pos" inflow=InDefault
+    in eState: PVAL_SCHEMA_ENUM:ChoreoExternalAnimgraphControlState_t "State" inflow=InDefault
+    in pszExternalSlotName: PVAL_STRING "External Slot Name" default="external_graph_choreo_a" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPulseServerFuncs::SetGroundEntity
+    m_FriendlyName = "Set Ground Entity"
+    m_Description = "Sets an entity's ground entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
+    generic_node_category = 5
+    is_pulse_library_method = true
+    supported_domains = ServerEntity
+    inflow InDefault "Default In" [default]
+    in pEntity: PVAL_EHANDLE "Entity" inflow=InDefault
+    in pNewGround: PVAL_EHANDLE "New Ground" inflow=InDefault
     outflow OutDefault "Default Out" [default] allow_direct_return=true
 
 CPulseServerFuncs::SortEntityArrayByDistance
     m_FriendlyName = "Sort Entity Array By Distance"
     m_Description = "Returns the input array sorted by distance to a reference entity."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in a: PVAL_ARRAY:PVAL_EHANDLE "a" metadata={ polymorphic_arg = true } inflow=self
     in referenceEntity: PVAL_EHANDLE "Reference Entity" inflow=self
@@ -898,10 +817,9 @@ CPulseServerFuncs::StringToEntityName
     m_FriendlyName = "String To Entity Name"
     m_Description = "Convert a string to an entity name."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     in pStr: PVAL_STRING "Str" inflow=self
     in bApplyNameFixup: PVAL_BOOL "Apply Name Fixup" advanced_view=true default=true inflow=self
@@ -911,10 +829,9 @@ CPulseServerFuncs::TeleportEntity
     m_FriendlyName = "Teleport Entity"
     m_Description = "Teleport the given entity to the target entity's position and orientation"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPulseServerFuncs"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseServerFuncs"
     supported_domains = ServerEntity
     inflow InDefault "Default In" [default]
     in hEntity: PVAL_EHANDLE "Entity" inflow=InDefault

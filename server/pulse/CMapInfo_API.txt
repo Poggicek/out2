@@ -1,12 +1,11 @@
 CMapInfo_API::FireWinCondition
     m_FriendlyName = "Fire Win Condition"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMapInfo_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CMapInfo_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

@@ -1,7 +1,6 @@
 CPulseCell_BaseFlow : CPulseCell_Base
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["resourcecompiler.dll"]
     expect_default_outflow = true
     generic_node_category = 5
     hidden_in_tool = false

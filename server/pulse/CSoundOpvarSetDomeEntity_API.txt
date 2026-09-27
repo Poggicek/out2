@@ -1,0 +1,47 @@
+CSoundOpvarSetDomeEntity_API::SetSize
+    m_FriendlyName = "Set Size"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetDomeEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_dome "snd_opvar_set_dome" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundOpvarSetDomeEntity_API::SetTotalDirections
+    m_FriendlyName = "Set Total Directions"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetDomeEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_dome "snd_opvar_set_dome" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundOpvarSetDomeEntity_API::SetTracesPerFrame
+    m_FriendlyName = "Set Traces Per Frame"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundOpvarSetDomeEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_opvar_set_dome "snd_opvar_set_dome" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

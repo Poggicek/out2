@@ -1,11 +1,10 @@
 CTakeDamageResultAPI::GetDamageDealt
     m_FriendlyName = "Get Damage Dealt"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -16,11 +15,10 @@ CTakeDamageResultAPI::GetDamageDirection
     m_FriendlyName = "Get Damage Direction"
     m_Description = "Get the direction vector of the incoming damage came"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -30,11 +28,10 @@ CTakeDamageResultAPI::GetDamageDirection
 CTakeDamageResultAPI::GetDestructibleHitGroupRequests
     m_FriendlyName = "Get Destructible Hit Group Requests"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -44,11 +41,10 @@ CTakeDamageResultAPI::GetDestructibleHitGroupRequests
 CTakeDamageResultAPI::GetHitGroupID
     m_FriendlyName = "Get Hit Group ID"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -59,11 +55,10 @@ CTakeDamageResultAPI::GetInflictor
     m_FriendlyName = "Get Inflictor"
     m_Description = "Inflictor is the entity that is dealing the damage.\nIt can be the attacker itself or a summoned unit, a projectile entity of some sort.\nIt is *MOST DEFINITELY NOT* the weapon or ability. Use Set/GetAbility for that."
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -73,11 +68,10 @@ CTakeDamageResultAPI::GetInflictor
 CTakeDamageResultAPI::GetPreModifiedDamage
     m_FriendlyName = "Get Pre Modified Damage"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -88,11 +82,10 @@ CTakeDamageResultAPI::HasDamageTypeBlast
     m_FriendlyName = "Has Damage Type Blast"
     m_Description = "Returns True if damage type is from a Blast"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self
@@ -102,11 +95,10 @@ CTakeDamageResultAPI::HasDamageTypeBlast
 CTakeDamageResultAPI::HasDamageTypeBurn
     m_FriendlyName = "Has Damage Type Burn"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTakeDamageResultAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CTakeDamageResultAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_OPAQUE_HANDLE:CTakeDamageResult "CTakeDamageResult" inflow=self

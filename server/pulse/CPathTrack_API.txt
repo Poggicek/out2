@@ -1,0 +1,117 @@
+CPathTrack_API::DisableAlternatePath
+    m_FriendlyName = "Disable Alternate Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::DisablePath
+    m_FriendlyName = "Disable Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::EnableAlternatePath
+    m_FriendlyName = "Enable Alternate Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::EnablePath
+    m_FriendlyName = "Enable Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::InPass
+    m_FriendlyName = "In Pass"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::ToggleAlternatePath
+    m_FriendlyName = "Toggle Alternate Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathTrack_API::TogglePath
+    m_FriendlyName = "Toggle Path"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_track "path_track" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPathTrack_API::OnPass
+    m_FriendlyName = "On Pass"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathTrack_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_track "Target" inflow=self

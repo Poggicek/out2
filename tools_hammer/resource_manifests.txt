@@ -101,11 +101,6 @@
     materials/editor/smart_prop_locked_version.vmat
 
 (unnamed)
-    group = ToolsStartup
-    source = src/tools/hammer/waterplanehelper.cpp
-    scripts/water_types.vdata
-
-(unnamed)
     group = GameStartup
     source = src/tools/toolscene/toolscene_hitboxes.cpp
     materials/tools/show_hitboxes.vmat

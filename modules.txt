@@ -1,15 +1,24 @@
-animationsystem (empty)
+animationsystem
+    model_classes
 assetbrowser
+    bind_targets
     resource_manifests
 assetpreview
+    bind_targets
+    model_classes
     resource_manifests
 assetsystem
     resource_manifests
 client
+    entity_api
+    entity_api_designname_to_base
+    model_classes
     pulse_bindings (scope client.dll)
     pulse_fingerprints
     resource_manifests
+    vdata_classes
 engine2
+    entity_api
     resource_manifests
 filesystem_stdio (empty)
 host (empty)
@@ -17,8 +26,10 @@ matchmaking (empty)
 materialsystem2
     resource_manifests
 meshsystem
+    model_classes
     resource_manifests
 modtools
+    model_classes
     resource_manifests
 networksystem (empty)
 panorama (empty)
@@ -29,6 +40,8 @@ pulse_system
     pulse_fingerprints
 rendersystemdx11 (empty)
 resourcecompiler
+    entity_api
+    model_classes
     pulse_bindings (scope resourcecompiler.dll)
     pulse_fingerprints
     resource_manifests
@@ -37,22 +50,37 @@ scenefilecache (empty)
 scenesystem
     resource_manifests
 server
+    entity_api
+    entity_api_designname_to_base
+    model_classes
     pulse_bindings (scope server.dll)
     pulse_fingerprints
     resource_manifests
+    vdata_classes
 soundsystem
     resource_manifests
 steamaudio (empty)
-tools_cs2_item_editor (empty)
+tools_cs2_item_editor
+    bind_targets
 tools_hammer
+    bind_targets
+    entity_api
+    model_classes
     resource_manifests
 tools_met
+    bind_targets
     resource_manifests
 tools_modeldoc_editor
+    bind_targets
+    model_classes
     resource_manifests
 tools_pet
+    bind_targets
+    model_classes
     resource_manifests
 vphysics2
+    model_classes
     resource_manifests
 worldrenderer
+    entity_api
     resource_manifests

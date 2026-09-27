@@ -12,11 +12,10 @@ CParticleCollectionBindingInstance : BaseDomain
 CParticleCollectionBindingInstance::HACK_UnusedBinding
     m_FriendlyName = "HAC K  Unused Binding"
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CParticleCollectionBindingInstance"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CParticleCollectionBindingInstance"
     supported_domains = CParticleCollectionBindingInstance
     inflow InDefault "Default In" [default]
     outflow OutDefault "Default Out" [default] allow_direct_return=true

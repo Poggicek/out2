@@ -1,0 +1,145 @@
+Camera
+    class = CBindableCamera
+    help_context = SharedToolCommands
+    source = src/tools/toolutils2/bindablecamera.cpp
+    command CameraLookAtSelection
+    command DecreaseMoveSpeed
+    command HorizontalStrafeCamera
+    command IncreaseMoveSpeed
+    command MouseControlCamera
+    command MouseControlCamera2D
+    command MouseControlCamera3D
+    command MouseControlCamera3D_Toggle
+    command MouseLook3D
+    command MoveCameraBackward3D
+    command MoveCameraDown3D
+    command MoveCameraForward3D
+    command MoveCameraLeft3D
+    command MoveCameraRight3D
+    command MoveCameraUp3D
+    command PanCamera3D
+    command PitchCameraDown
+    command PitchCameraUp
+    command ResetMoveSpeed
+    command RotateAboutTarget3D
+    command SnapCameraToSelection
+    command ToggleLockCameraHeight
+    command VerticalStrafeCamera
+    command YawCameraLeft
+    command YawCameraRight
+    command ZoomAllCamerasIn
+    command ZoomAllCamerasOut
+    command ZoomCameraIn
+    command ZoomCameraOut
+    command ZoomForwardBack2D
+    command ZoomForwardBack3D
+
+CurveEditor
+    class = CQCurveEditorWidget
+    source = src/qcontrols/qcurveeditor.cpp
+    command DeleteSelection
+    command EditPoint
+    command FrameCurve
+    command ModifierAxisLock
+    command ModifierInsertPoint
+    command ModifierSelectToggle
+    command MovePoint
+    command Noop
+    command PanView
+    command SelectPoint
+    command ShowMenu
+    command ZoomIn
+    command ZoomOut
+
+GlobalHotkeys
+    class = CGlobalHotkeyCommands
+    source = src/qcontrols/inputglobalhotkeys.cpp
+    command DebugWidgetActiveWindow
+    command DebugWidgetUnderMouse
+    command DebugWidgetWithFocus
+    command DummyNoOp
+    command FocusChainDebug_Back
+    command FocusChainDebug_Forward
+    command FocusChainDebug_Less
+    command FocusChainDebug_More
+    command FocusChainDebug_Toggle
+    command ShowAllCommandsPopup
+    command ShowConsole
+    command ShowFullHelpForBindableCommandUnderMouse
+    command ShowInputDebugger
+    command ShowWidgetDebugger
+    command SwitchToEngineWindow
+
+LightingControl
+    class = CLightingControlRig
+    source = src/tools/toolscene/lightingcontrolrig.cpp
+    command ReloadLightRigDefinitions
+    command RotateLights
+    command ToggleLights
+
+ParticlePreview
+    class = CQParticlePreview
+    source = src/tools/pet/qparticlepreview.cpp
+    command GizmoRotate
+    command GizmoTranslate
+    command HideGizmo
+
+PetApp
+    class = CPetApp
+    source = src/tools/pet/petapp.cpp
+    command ActivateNextEditorSession
+    command ActivatePreviousEditorSession
+    command ClearRecentFiles
+    command FileClose
+    command FileCloseAll
+    command FileNew
+    command FileOpen
+    command FileOpenDir
+    command FileReload
+    command FileSave
+    command FileSaveAll
+    command FileSaveAs
+    command NextSession
+    command PreviousSession
+    command ResetLayout
+    command RestartGlobal
+    command RestartPreview
+    command StopSim
+    command StopSimWithEndcap
+    command VersionControlAdd
+    command VersionControlCheckIn
+    command VersionControlCheckInAll
+    command VersionControlCheckOut
+    command VersionControlStatus
+
+PetSession
+    class = CPetSession
+    source = src/tools/pet/petsession.cpp
+    command AddChild
+    command AddFunction
+    command AddNewChild
+    command Copy
+    command Cut
+    command Delete
+    command Paste
+    command Redo
+    command Toggle
+    command Undo
+
+SessionCycleWidget
+    class = CQSessionCycleWidget
+    source = src/tools/toolutils2/qbaseeditorwnd.cpp
+    command KeepActive
+    command NextSession
+    command PreviousSession
+
+ToolSceneGizmo
+    class = CToolSceneGizmoLibGizmo
+    source = src/tools/toolscene/toolscene_gizmolib_gizmo.cpp
+    command Drag
+
+ToolSceneWidget
+    class = CQToolSceneWidget
+    source = src/tools/toolscene/qtoolscenewidget.cpp
+    command DebugToolScene
+    command DefaultPreviewCamera

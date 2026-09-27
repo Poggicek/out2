@@ -2,11 +2,10 @@ FakeEntity_tAPI::BasicFunction
     m_FriendlyName = "Basic Function"
     m_Description = "Record that the function was called"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 5
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -18,11 +17,10 @@ FakeEntity_tAPI::GetFloatValue
     m_FriendlyName = "Get Float Value"
     m_Description = "Get the test value as a float"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
@@ -33,11 +31,10 @@ FakeEntity_tAPI::GetIntValue
     m_FriendlyName = "Get Int Value"
     m_Description = "Get the test value as an int"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
@@ -48,11 +45,10 @@ FakeEntity_tAPI::GetName
     m_FriendlyName = "Get Name"
     m_Description = "Get the name the entity was created with."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
@@ -63,11 +59,10 @@ FakeEntity_tAPI::MultipleReturnTest
     m_FriendlyName = "Multiple Return Test"
     m_Description = "Multiple pointer returns"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 4
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     in _Target: PVAL_TEST_HANDLE "Test Handle" inflow=self
@@ -79,11 +74,10 @@ FakeEntity_tAPI::SetAndGetIntValue
     m_FriendlyName = "Set And Get Int Value"
     m_Description = "Test step with return value"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 5
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -97,11 +91,10 @@ FakeEntity_tAPI::SetIntValue
     m_FriendlyName = "Set Int Value"
     m_Description = "Set the test value as an int"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntity_tAPI"
     generic_node_category = 5
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntity_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

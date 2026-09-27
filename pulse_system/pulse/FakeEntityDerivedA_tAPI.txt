@@ -1,11 +1,10 @@
 FakeEntityDerivedA_tAPI::DerivedFuncA
     m_FriendlyName = "Derived Func A"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!FakeEntityDerivedA_tAPI"
     generic_node_category = 5
     is_pulse_target_method = true
     pulse_feature_tag = 16
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!FakeEntityDerivedA_tAPI"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

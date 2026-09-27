@@ -1,0 +1,121 @@
+CBaseAnimGraph_API::GetLayerCycle
+    m_FriendlyName = "Get Layer Cycle"
+    m_Description = "Returns the cycle of an animation playing on this layer<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in iLayer: PVAL_INT "Layer" inflow=self
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CBaseAnimGraph_API::IsAnimEventActive
+    m_FriendlyName = "Is Anim Event Active"
+    m_Description = "Is the specified AG2 event active?<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nAnimEvent: PVAL_SCHEMA_ENUM:GameAnimEventIndex_t "Anim Event" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseAnimGraph_API::IsExternalChoreoGraphActive
+    m_FriendlyName = "Is External Choreo Graph Active"
+    m_Description = "Is there an external choreo animgraph applied to this entity<br><br>This node can appear in Observable contexts."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 4
+    has_observable_context = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseAnimGraph_API::PlaySequence
+    m_FriendlyName = "Play Sequence"
+    m_Description = "Play the specified animation sequence on a NON-ANIMGRAPH entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pSequenceName: PVAL_STRING "Sequence Name" metadata={ suggestion_name = "pulse_model_sequence_name" } inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseAnimGraph_API::SetBodygroup
+    m_FriendlyName = "Set Bodygroup"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseAnimGraph_API::SetPlaybackRate
+    m_FriendlyName = "Set Playback Rate"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:baseanimgraph "baseanimgraph" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBaseAnimGraph_API::OnLayerCycleUpdated
+    m_FriendlyName = "On Layer Cycle Updated"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:baseanimgraph "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CBaseAnimGraph_API::m_OnExternalChoreoGraphChanged
+    m_FriendlyName = "On External Choreo Graph Changed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseAnimGraph_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:baseanimgraph "Target" inflow=self

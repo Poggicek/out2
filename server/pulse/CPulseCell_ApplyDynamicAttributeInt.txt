@@ -1,0 +1,19 @@
+CPulseCell_ApplyDynamicAttributeInt : CPulseCell_ApplyDynamicAttributeBase
+    m_FriendlyName = "Apply an int attribute value on the entity"
+    m_Description = "Applies an int attribute value, as long as the cursor is active on this node. Removes the attribute automatically when finished"
+    m_nClassType = "vdata"
+    MVDataNodeType = 0
+    MVDataOverlayType = 0
+    expect_default_outflow = true
+    fingerprint = "@lib:server.dll!CPulseCell_ApplyDynamicAttributeInt"
+    generic_node_category = 5
+    hidden_in_tool = false
+    is_state_cell = false
+    selector_has_specificity = false
+    standard_yielding_flow = true
+    supported_domains = ServerEntity
+    inflow Run "Run" [default] yields=true terminates=false
+    in hEntity: PVAL_EHANDLE "Entity" inflow=Run
+    in pAttributeKey: PVAL_STRING "Attribute Key" inflow=Run
+    in nAttributeValue: PVAL_INT "Attribute Value" inflow=Run
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

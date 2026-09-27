@@ -1,0 +1,202 @@
+CPointValueRemapper_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::SetDisengageistance
+    m_FriendlyName = "Set Disengageistance"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::SetEngageDistance
+    m_FriendlyName = "Set Engage Distance"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::SetMomentumModifier
+    m_FriendlyName = "Set Momentum Modifier"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::SetMomentumType
+    m_FriendlyName = "Set Momentum Type"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointValueRemapper_API::SetSnapValue
+    m_FriendlyName = "Set Snap Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_value_remapper "point_value_remapper" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPointValueRemapper_API::OnDisengage
+    m_FriendlyName = "On Disengage"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+
+OUTPUT!CPointValueRemapper_API::OnEngage
+    m_FriendlyName = "On Engage"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+
+OUTPUT!CPointValueRemapper_API::OnReachedValueCustom
+    m_FriendlyName = "On Reached Value Custom"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+
+OUTPUT!CPointValueRemapper_API::OnReachedValueOne
+    m_FriendlyName = "On Reached Value One"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+
+OUTPUT!CPointValueRemapper_API::OnReachedValueZero
+    m_FriendlyName = "On Reached Value Zero"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+
+OUTPUT!CPointValueRemapper_API::Position
+    m_FriendlyName = "Position"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self
+
+OUTPUT!CPointValueRemapper_API::PositionDelta
+    m_FriendlyName = "Position Delta"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointValueRemapper_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:point_value_remapper "Target" inflow=self
+    out param: PVAL_FLOAT "param" inflow=self

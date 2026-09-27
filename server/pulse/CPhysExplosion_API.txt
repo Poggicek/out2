@@ -1,0 +1,27 @@
+CPhysExplosion_API::Explode
+    m_FriendlyName = "Explode"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysExplosion_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_physexplosion "env_physexplosion" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPhysExplosion_API::OnPushedPlayer
+    m_FriendlyName = "On Pushed Player"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysExplosion_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_physexplosion "Target" inflow=self

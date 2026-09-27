@@ -1,0 +1,73 @@
+CCredits_API::RollCredits
+    m_FriendlyName = "Roll Credits"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCredits_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_credits "env_credits" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CCredits_API::RollOutroCredits
+    m_FriendlyName = "Roll Outro Credits"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCredits_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_credits "env_credits" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CCredits_API::SetLogoLength
+    m_FriendlyName = "Set Logo Length"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCredits_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_credits "env_credits" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CCredits_API::ShowLogo
+    m_FriendlyName = "Show Logo"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCredits_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_credits "env_credits" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CCredits_API::OnCreditsDone
+    m_FriendlyName = "On Credits Done"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCredits_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_credits "Target" inflow=self

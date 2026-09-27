@@ -1,12 +1,11 @@
 CCSWeaponBase_API::SetAmmoAmount
     m_FriendlyName = "Set Ammo Amount"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSWeaponBase_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSWeaponBase_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -18,12 +17,11 @@ CCSWeaponBase_API::SetAmmoAmount
 CCSWeaponBase_API::SetReserveAmmoAmount
     m_FriendlyName = "Set Reserve Ammo Amount"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSWeaponBase_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSWeaponBase_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -35,12 +33,11 @@ CCSWeaponBase_API::SetReserveAmmoAmount
 CCSWeaponBase_API::ToggleCanBePickedUp
     m_FriendlyName = "Toggle Can Be Picked Up"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSWeaponBase_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSWeaponBase_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -51,14 +48,12 @@ CCSWeaponBase_API::ToggleCanBePickedUp
 OUTPUT!CCSWeaponBase_API::OnPlayerPickup
     m_FriendlyName = "On Player Pickup"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CCSWeaponBase_API"
     generic_node_category = 5
     is_pulse_target_output = true
     is_spontaneous = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CCSWeaponBase_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     outflow OutDefault "Default Out" [default]
-    out _Target: PVAL_EHANDLE:weapon_cs_base "weapon_cs_base" inflow=self
-        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out _Target: PVAL_EHANDLE:weapon_cs_base "Target" inflow=self

@@ -1,0 +1,169 @@
+CBaseButton_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::Lock
+    m_FriendlyName = "Lock"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::Press
+    m_FriendlyName = "Press"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::PressIn
+    m_FriendlyName = "Press In"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::PressOut
+    m_FriendlyName = "Press Out"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseButton_API::Unlock
+    m_FriendlyName = "Unlock"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_button "func_button" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBaseButton_API::OnDamaged
+    m_FriendlyName = "On Damaged"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_button "Target" inflow=self
+
+OUTPUT!CBaseButton_API::OnIn
+    m_FriendlyName = "On In"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_button "Target" inflow=self
+
+OUTPUT!CBaseButton_API::OnOut
+    m_FriendlyName = "On Out"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_button "Target" inflow=self
+
+OUTPUT!CBaseButton_API::OnPressed
+    m_FriendlyName = "On Pressed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_button "Target" inflow=self
+
+OUTPUT!CBaseButton_API::OnUseLocked
+    m_FriendlyName = "On Use Locked"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseButton_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_button "Target" inflow=self

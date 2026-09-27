@@ -1,0 +1,147 @@
+CPathMoverEntitySpawner_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::ForceSpawn
+    m_FriendlyName = "Force Spawn"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::GetSpawnNumber
+    m_FriendlyName = "Get Spawn Number"
+    m_Description = "Get which spawn the provided entity came from, zero based. Accepts either the mover or any entity spawned alongside it. Returns -1 if this spawner did not spawn the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in hEntity: PVAL_EHANDLE "Entity" inflow=self
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CPathMoverEntitySpawner_API::RemoveFromTemplate
+    m_FriendlyName = "Remove From Template"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::SetPathNodeStart
+    m_FriendlyName = "Set Path Node Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::Spawn
+    m_FriendlyName = "Spawn"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPathMoverEntitySpawner_API::Toggle
+    m_FriendlyName = "Toggle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:path_mover_entity_spawner "path_mover_entity_spawner" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPathMoverEntitySpawner_API::OnTemplateGroupSpawned
+    m_FriendlyName = "On Template Group Spawned"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_mover_entity_spawner "Target" inflow=self
+
+OUTPUT!CPathMoverEntitySpawner_API::OnTemplateSpawned
+    m_FriendlyName = "On Template Spawned"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPathMoverEntitySpawner_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_mover_entity_spawner "Target" inflow=self

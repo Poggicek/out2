@@ -1,0 +1,131 @@
+CPhysHinge_API::SetAngularVelocity
+    m_FriendlyName = "Set Angular Velocity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_hinge "phys_hinge" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysHinge_API::SetHingeFriction
+    m_FriendlyName = "Set Hinge Friction"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_hinge "phys_hinge" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysHinge_API::SetMaxLimit
+    m_FriendlyName = "Set Max Limit"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_hinge "phys_hinge" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysHinge_API::SetMinLimit
+    m_FriendlyName = "Set Min Limit"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_hinge "phys_hinge" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPhysHinge_API::SetMotorTargetAngle
+    m_FriendlyName = "Set Motor Target Angle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:phys_hinge "phys_hinge" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CPhysHinge_API::NotifyMaxLimitReached
+    m_FriendlyName = "Notify Max Limit Reached"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_hinge "Target" inflow=self
+
+OUTPUT!CPhysHinge_API::NotifyMinLimitReached
+    m_FriendlyName = "Notify Min Limit Reached"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_hinge "Target" inflow=self
+
+OUTPUT!CPhysHinge_API::OnStartMoving
+    m_FriendlyName = "On Start Moving"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_hinge "Target" inflow=self
+
+OUTPUT!CPhysHinge_API::OnStopMoving
+    m_FriendlyName = "On Stop Moving"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPhysHinge_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:phys_hinge "Target" inflow=self

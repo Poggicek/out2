@@ -1,0 +1,61 @@
+CPointTeleport_API::Teleport
+    m_FriendlyName = "Teleport"
+    m_Description = "Teleport the target entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointTeleport_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_teleport "point_teleport" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointTeleport_API::TeleportEntity
+    m_FriendlyName = "Teleport Entity"
+    m_Description = "Teleport the entity specified by the parameter override. Use this to teleport an entity other than the one specified in the Entity To Teleport field."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointTeleport_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_teleport "point_teleport" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointTeleport_API::TeleportEntityToCurrentPos
+    m_FriendlyName = "Teleport Entity To Current Pos"
+    m_Description = "Teleport the entity specified by the parameter override to wherever the point_teleport entity is currently. The Teleport input teleports to the current position of the point_teleport"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointTeleport_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_teleport "point_teleport" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CPointTeleport_API::TeleportToCurrentPos
+    m_FriendlyName = "Teleport To Current Pos"
+    m_Description = "Teleport the target entity to wherever the point_teleport entity is currently. The Teleport input teleports to the initial position of the point_teleport, so this input was added to avoid breaking old content."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CPointTeleport_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:point_teleport "point_teleport" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

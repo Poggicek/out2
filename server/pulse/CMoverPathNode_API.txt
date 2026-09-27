@@ -1,0 +1,69 @@
+OUTPUT!CMoverPathNode_API::OnPassThrough
+    m_FriendlyName = "On Pass Through"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMoverPathNode_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_node_mover "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CMoverPathNode_API::OnPassThroughForward
+    m_FriendlyName = "On Pass Through Forward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMoverPathNode_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_node_mover "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CMoverPathNode_API::OnPassThroughReverse
+    m_FriendlyName = "On Pass Through Reverse"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMoverPathNode_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_node_mover "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CMoverPathNode_API::OnStartFromOrInSegment
+    m_FriendlyName = "On Start From Or In Segment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMoverPathNode_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_node_mover "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CMoverPathNode_API::OnStoppedOnOrInSegment
+    m_FriendlyName = "On Stopped On Or In Segment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CMoverPathNode_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:path_node_mover "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self

@@ -18,7 +18,6 @@
     materials/dev/compositematerials_prewarm/composite_inputs_prewarm.vmat
     materials/dev/compositematerials_prewarm/composite_generic_prewarm.vmat
     materials/dev/compositematerials_prewarm/composite_height_to_normal_prewarm.vmat
-    compmatcache/composite_inputs.vrman
 
 (unnamed)
     group = GameStartup
@@ -27,9 +26,25 @@
 
 (unnamed)
     group = GameStartup
+    source = src/game/client/cstrike15/effects/c_chicken.cpp
+    models/chicken_feed/chicken_feed.vmdl
+
+(unnamed)
+    group = GameStartup
+    source = src/game/client/cstrike15/panorama/csgo_crosshair.cpp
+    materials/dev/csgo_crosshair.vmat
+
+(unnamed)
+    group = GameStartup
     source = src/game/client/panorama/ui_canvas.cpp
     materials/vgui/white_no_stencil.vmat
     materials/dev/msaa_resolve.vmat
+
+(unnamed)
+    group = GameStartup
+    source = src/game/shared/cstrike15/broken_glass_trap.cpp
+    weapons/models/grenade/molotov/weapon_molotov_broken_glass.vmdl
+    particles/impact_fx/molotov_broken_glass.vpcf
 
 (unnamed)
     group = GameStartup
@@ -489,6 +504,11 @@ NametagModule
     source = src/game/shared/cstrike15/weapon_csbase.cpp
     weapons/models/shared/nametag/nametag_module.vmdl
 
+NoiseStreamsManifest_global_client
+    group = GameStartup
+    source = src/game/shared/noisestreams_vdata.cpp
+    scripts/noise_presets.vdata
+
 ParticleEffectStop_global_client
     group = LoopModeGameStartup
     source = src/game/shared/particle_system.cpp
@@ -548,6 +568,7 @@ PrecacheEffectCSBloodSpray_client
     particles/blood_impact/blood_impact_localKillShot.vpcf
     particles/blood_impact/blood_impact_localrearhit.vpcf
     particles/blood_impact/blood_impact_localfrontenemy.vpcf
+    particles/blood_impact/blood_impact_localfrontsimple.vpcf
     particles/blood_impact/blood_impact_basic.vpcf
     particles/blood_impact/blood_impact_light.vpcf
     particles/blood_impact/blood_impact_medium.vpcf
@@ -681,6 +702,8 @@ RenderingPipelineCsgoManifest
     materials/dev/gpu_debug_draw3d.vmat
     materials/effects/fade_to_black.vmat
     materials/effects/bomb_blast.vmat
+    materials/effects/skybox_blur.vmat
+    materials/dev/csgo_crosshair.vmat
 
 RenderingPipelineCsgoManifestDeveloperModeOnly
     group = RenderingPipelineCsgoDeveloperMode

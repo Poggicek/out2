@@ -1,0 +1,56 @@
+CEnvEntityMaker_API::ForceSpawn
+    m_FriendlyName = "Force Spawn"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvEntityMaker_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_entity_maker "env_entity_maker" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CEnvEntityMaker_API::ForceSpawnAtEntityOrigin
+    m_FriendlyName = "Force Spawn At Entity Origin"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvEntityMaker_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:env_entity_maker "env_entity_maker" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CEnvEntityMaker_API::OnEntityFailedSpawn
+    m_FriendlyName = "On Entity Failed Spawn"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvEntityMaker_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_entity_maker "Target" inflow=self
+
+OUTPUT!CEnvEntityMaker_API::OnEntitySpawned
+    m_FriendlyName = "On Entity Spawned"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CEnvEntityMaker_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:env_entity_maker "Target" inflow=self

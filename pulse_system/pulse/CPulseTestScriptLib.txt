@@ -2,10 +2,9 @@ CPulseTestScriptLib::AssertTrue
     m_FriendlyName = "Assert True"
     m_Description = "Indicates a test failure if Value is false."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTestScriptLib"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestScriptLib"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in bValue: PVAL_BOOL "Value" inflow=InDefault
@@ -16,10 +15,9 @@ CPulseTestScriptLib::IndicateTestFailure
     m_FriendlyName = "Indicate Test Failure"
     m_Description = "Used to flag a test as having failed."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTestScriptLib"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestScriptLib"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pDescription: PVAL_STRING "Description" inflow=InDefault
@@ -29,10 +27,9 @@ CPulseTestScriptLib::IsInTestMode
     m_FriendlyName = "Is In Test Mode"
     m_Description = "Are we currently running unit tests?"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTestScriptLib"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestScriptLib"
     supported_domains = BaseDomain
     out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
 
@@ -40,10 +37,9 @@ CPulseTestScriptLib::RegisterTestCheckpoint
     m_FriendlyName = "Register Test Checkpoint"
     m_Description = "Indicate that a checkpoint has been reached."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTestScriptLib"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestScriptLib"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pCheckpointName: PVAL_STRING "Checkpoint Name" inflow=InDefault
@@ -53,10 +49,9 @@ CPulseTestScriptLib::TestModeAssertTrue
     m_FriendlyName = "Test Mode Assert True"
     m_Description = "Indicates a test failure if value is false; only tested when running unit tests"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTestScriptLib"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTestScriptLib"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in bValue: PVAL_BOOL "Value" inflow=InDefault

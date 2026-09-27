@@ -1,0 +1,53 @@
+CLogicDistanceCheck_API::CheckDistance
+    m_FriendlyName = "Check Distance"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicDistanceCheck_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:logic_distance_check "logic_distance_check" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CLogicDistanceCheck_API::InZone1
+    m_FriendlyName = "In Zone1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicDistanceCheck_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_distance_check "Target" inflow=self
+
+OUTPUT!CLogicDistanceCheck_API::InZone2
+    m_FriendlyName = "In Zone2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicDistanceCheck_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_distance_check "Target" inflow=self
+
+OUTPUT!CLogicDistanceCheck_API::InZone3
+    m_FriendlyName = "In Zone3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CLogicDistanceCheck_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:logic_distance_check "Target" inflow=self

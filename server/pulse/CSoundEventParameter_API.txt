@@ -1,0 +1,46 @@
+CSoundEventParameter_API::SetFloatValue
+    m_FriendlyName = "Set Float Value"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundEventParameter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_event_param "snd_event_param" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventParameter_API::SetParamName
+    m_FriendlyName = "Set Param Name"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundEventParameter_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_event_param "snd_event_param" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CSoundEventParameter_API::SetSoundEventGUID
+    m_FriendlyName = "Set Sound Event GUID"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CSoundEventParameter_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:snd_event_param "snd_event_param" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in nGuid: PVAL_SNDEVT_GUID "Guid" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

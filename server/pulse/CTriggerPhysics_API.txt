@@ -1,0 +1,175 @@
+CTriggerPhysics_API::CollapseToForcePoint
+    m_FriendlyName = "Collapse To Force Point"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_BOOL "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::LinearForcePointAt
+    m_FriendlyName = "Linear Force Point At"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_VEC3 "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetAngVelocityDamping
+    m_FriendlyName = "Set Ang Velocity Damping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetAngVelocityLimit
+    m_FriendlyName = "Set Ang Velocity Limit"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetDampingRatio
+    m_FriendlyName = "Set Damping Ratio"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetFrequency
+    m_FriendlyName = "Set Frequency"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetGravityScale
+    m_FriendlyName = "Set Gravity Scale"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetLinearForce
+    m_FriendlyName = "Set Linear Force"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetLinearForcePointAt
+    m_FriendlyName = "Set Linear Force Point At"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetVelocityDamping
+    m_FriendlyName = "Set Velocity Damping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CTriggerPhysics_API::SetVelocityLimit
+    m_FriendlyName = "Set Velocity Limit"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerPhysics_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:trigger_physics "trigger_physics" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true

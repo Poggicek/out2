@@ -4,14 +4,12 @@ CPulseCell_LimitCount : CPulseCell_BaseRequirement
     m_nClassType = "vdata"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["client.dll"]
     expect_default_outflow = true
+    fingerprint = "@lib:client.dll!CPulseCell_LimitCount"
     generic_node_category = 7
     hidden_in_tool = false
     requirement_pass = 0
     requirement_summary_expr = "\"Limit Count: \" + m_nLimitCount"
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCell_LimitCount"
     selector_has_specificity = false
     supported_domains = BaseDomain
     inflow CheckRequirement "Check Requirement" yields=false terminates=false requirement_check=true requirement_commit=false

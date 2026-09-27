@@ -2,10 +2,9 @@ CPulseTurtleGraphicsCursor::Move
     m_FriendlyName = "Move"
     m_Description = "Move forward in the facing direction"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     supported_domains = TurtleGraphics
     inflow InDefault "Default In" [default]
     in flDistance: PVAL_FLOAT "Distance" inflow=InDefault
@@ -15,10 +14,9 @@ CPulseTurtleGraphicsCursor::PenDown
     m_FriendlyName = "Pen Down"
     m_Description = "Lower pen."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     supported_domains = TurtleGraphics
     inflow InDefault "Default In" [default]
     outflow OutDefault "Default Out" [default] allow_direct_return=true
@@ -27,10 +25,9 @@ CPulseTurtleGraphicsCursor::PenUp
     m_FriendlyName = "Pen Up"
     m_Description = "Raise pen."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     supported_domains = TurtleGraphics
     inflow InDefault "Default In" [default]
     outflow OutDefault "Default Out" [default] allow_direct_return=true
@@ -39,10 +36,9 @@ CPulseTurtleGraphicsCursor::SetColor
     m_FriendlyName = "Set Color"
     m_Description = "Set the current color"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     supported_domains = TurtleGraphics
     inflow InDefault "Default In" [default]
     in color: PVAL_COLOR_RGB "color" inflow=InDefault
@@ -52,10 +48,9 @@ CPulseTurtleGraphicsCursor::Turn
     m_FriendlyName = "Turn"
     m_Description = "Adjust heading (positive = right, negative = left)"
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseTurtleGraphicsCursor"
     supported_domains = TurtleGraphics
     inflow InDefault "Default In" [default]
     in flDegrees: PVAL_FLOAT "Degrees" inflow=InDefault

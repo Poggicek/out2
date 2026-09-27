@@ -2,7 +2,6 @@ CPulseCell_BaseState : CPulseCell_BaseYieldingInflow
     m_nClassType = "baseclass"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["resourcecompiler.dll"]
     expect_default_outflow = false
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/inflow_statecell.png"

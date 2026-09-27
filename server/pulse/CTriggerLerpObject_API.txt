@@ -1,0 +1,38 @@
+OUTPUT!CTriggerLerpObject_API::OnDetached
+    m_FriendlyName = "On Detached"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerLerpObject_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:trigger_lerp_object "Target" inflow=self
+
+OUTPUT!CTriggerLerpObject_API::OnLerpFinished
+    m_FriendlyName = "On Lerp Finished"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerLerpObject_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:trigger_lerp_object "Target" inflow=self
+
+OUTPUT!CTriggerLerpObject_API::OnLerpStarted
+    m_FriendlyName = "On Lerp Started"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CTriggerLerpObject_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:trigger_lerp_object "Target" inflow=self

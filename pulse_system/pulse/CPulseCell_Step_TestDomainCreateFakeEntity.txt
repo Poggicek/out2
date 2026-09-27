@@ -3,13 +3,11 @@ CPulseCell_Step_TestDomainCreateFakeEntity : CPulseCell_BaseFlow
     m_nClassType = "vdata"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["pulse_system.dll"]
     expect_default_outflow = true
+    fingerprint = "@lib:pulse_system.dll!CPulseCell_Step_TestDomainCreateFakeEntity"
     generic_node_category = 5
     hidden_in_tool = false
     is_state_cell = false
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CPulseCell_Step_TestDomainCreateFakeEntity"
     selector_has_specificity = false
     supported_domains = TestDomain
     inflow Run "Run" [default] yields=false terminates=false

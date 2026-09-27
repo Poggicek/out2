@@ -1,0 +1,1242 @@
+CBaseEntity_API::AddAttribute
+    m_FriendlyName = "Add Attribute"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::AddContext
+    m_FriendlyName = "Add Context"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::ChangeSubclass
+    m_FriendlyName = "Change Subclass"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::ChangeTeam
+    m_FriendlyName = "Change Team"
+    m_Description = "Set the entity team number"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in iTeamNum: PVAL_INT "Team Num" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::ClassMatches
+    m_FriendlyName = "Class Matches"
+    m_Description = "Check the type of an entity. Includes base classes."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    header_expr = "\"Class Matches \" + entityType + \""
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in entityType: PVAL_STRING "Entity Type" metadata={ choice_name = "entityclass_choices", port_restrict_to_literal = true, polymorphic_arg = true } inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::ClassNameMatches
+    m_FriendlyName = "Class Name Matches"
+    m_Description = "Returns true if the entity's class matches the one given (no wildcard support)"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pClassName: PVAL_STRING "Class Name" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::ClearContext
+    m_FriendlyName = "Clear Context"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::ClearParent
+    m_FriendlyName = "Clear Parent"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::DisableAutoSleeping
+    m_FriendlyName = "Disable Auto Sleeping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::DisableDamageForces
+    m_FriendlyName = "Disable Damage Forces"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::DisablePlatform
+    m_FriendlyName = "Disable Platform"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::DisableShadow
+    m_FriendlyName = "Disable Shadow"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::DispatchResponse
+    m_FriendlyName = "Dispatch Response"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::EnableAutoSleeping
+    m_FriendlyName = "Enable Auto Sleeping"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::EnableDamageForces
+    m_FriendlyName = "Enable Damage Forces"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::EnablePlatform
+    m_FriendlyName = "Enable Platform"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::EnableShadow
+    m_FriendlyName = "Enable Shadow"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::FindModelConfigEntity
+    m_FriendlyName = "Find Model Config Entity"
+    m_Description = "Returns the model config entity attached to this entity by the specified name"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pConfigEntityName: PVAL_STRING "Config Entity Name" inflow=self
+    out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::FireUser1
+    m_FriendlyName = "Fire User1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::FireUser2
+    m_FriendlyName = "Fire User2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::FireUser3
+    m_FriendlyName = "Fire User3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::FireUser4
+    m_FriendlyName = "Fire User4"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::FollowEntity
+    m_FriendlyName = "Follow Entity"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::GetAbsAngles
+    m_FriendlyName = "Get Abs Angles"
+    m_Description = "Get the world orientation of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAbsOrigin
+    m_FriendlyName = "Get Abs Origin"
+    m_Description = "The entity origin (absolute)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAbsScale
+    m_FriendlyName = "Get Abs Scale"
+    m_Description = "Get the world scale of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAbsTransform
+    m_FriendlyName = "Get Abs Transform"
+    m_Description = "The entity origin transform (absolute)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_TRANSFORM_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAllChildren
+    m_FriendlyName = "Get All Children"
+    m_Description = "Returns the children in hierarchy."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_ARRAY:PVAL_EHANDLE "Result" metadata={ polymorphic_arg = true } outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAttachmentAngle
+    m_FriendlyName = "Get Attachment Angle"
+    m_Description = "Return the Angle of the entity's attachment."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttachment: PVAL_STRING "Attachment" inflow=self
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAttachmentForward
+    m_FriendlyName = "Get Attachment Forward"
+    m_Description = "Return the forward vector for the attachment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttachment: PVAL_STRING "Attachment" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAttachmentLeft
+    m_FriendlyName = "Get Attachment Left"
+    m_Description = "Return the left vector for the attachment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttachment: PVAL_STRING "Attachment" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAttachmentOrigin
+    m_FriendlyName = "Get Attachment Origin"
+    m_Description = "Return the absolute position of the entity's attachment."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttachment: PVAL_STRING "Attachment" inflow=self
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetAttachmentUp
+    m_FriendlyName = "Get Attachment Up"
+    m_Description = "Return the up vector for the attachment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pAttachment: PVAL_STRING "Attachment" inflow=self
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetClassName
+    m_FriendlyName = "Get Class Name"
+    m_Description = "The entity class name"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetDebugString
+    m_FriendlyName = "Get Debug String"
+    m_Description = "Get a debug string identifying the entity. Safe for null entities. This string cannot be used for looking up the entity. Should not be used for anything except logging."
+    m_nClassType = "vdata"
+    editor_canvas_item_spec =
+        className = "PulseServerDebugNode"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_STRING "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetEyePosition
+    m_FriendlyName = "Get Eye Position"
+    m_Description = "The entity eye position."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetForward
+    m_FriendlyName = "Get Forward"
+    m_Description = "The forward vector of the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetGravityDirection
+    m_FriendlyName = "Get Gravity Direction"
+    m_Description = "The current gravity direction for the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetLeft
+    m_FriendlyName = "Get Left"
+    m_Description = "The left vector of the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetLocalAngles
+    m_FriendlyName = "Get Local Angles"
+    m_Description = "Get the local orientation of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_QANGLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetLocalOrigin
+    m_FriendlyName = "Get Local Origin"
+    m_Description = "The entity origin (local). Use when you have a parent."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetLocalScale
+    m_FriendlyName = "Get Local Scale"
+    m_Description = "Get the local scale of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_FLOAT "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetLocalTransform
+    m_FriendlyName = "Get Local Transform"
+    m_Description = "The entity origin transform (local). Use when you have a parent."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_TRANSFORM "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetMoveParent
+    m_FriendlyName = "Get Move Parent"
+    m_Description = "Get the entity's move parent (may not be the top level movement entity)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetName
+    m_FriendlyName = "Get Name"
+    m_Description = "Get the name of the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_ENTITY_NAME "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetRootMoveParent
+    m_FriendlyName = "Get Root Move Parent"
+    m_Description = "Get the root move parent for the entity (traverses the hierarchy until it reaches the ancestor that controls the final transform)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_EHANDLE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetTeamNumber
+    m_FriendlyName = "Get Team Number"
+    m_Description = "The entity team number"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetUp
+    m_FriendlyName = "Get Up"
+    m_Description = "The up vector of the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetVelocity
+    m_FriendlyName = "Get Velocity"
+    m_Description = "The linear velocity for the entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3 "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::GetWorldSpaceCenter
+    m_FriendlyName = "Get World Space Center"
+    m_Description = "The entity worldspace center."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_VEC3_WORLDSPACE "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::IsModel
+    m_FriendlyName = "Is Model"
+    m_Description = "Returns true if the entity is using the given model, false otherwise"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in strModel: PVAL_STRING "Model" metadata={ editor = "AssetBrowse( vmdl, *requiredoubleclick )" } inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::Kill
+    m_FriendlyName = "Kill"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::KillConstrained
+    m_FriendlyName = "Kill Constrained"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::KillHierarchy
+    m_FriendlyName = "Kill Hierarchy"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::NameMatches
+    m_FriendlyName = "Name Matches"
+    m_Description = "Returns true if the entity name matches the given string. Wildcards are accepted."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pNameOrWildcard: PVAL_STRING "Name Or Wildcard" inflow=self
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+CBaseEntity_API::PlatformFollowYaw
+    m_FriendlyName = "Platform Follow Yaw"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::PlatformIgnoreYaw
+    m_FriendlyName = "Platform Ignore Yaw"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::RemoveAttribute
+    m_FriendlyName = "Remove Attribute"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::RemoveContext
+    m_FriendlyName = "Remove Context"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetAbsAngles
+    m_FriendlyName = "Set Abs Angles"
+    m_Description = "Set the world orientation of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in angles: PVAL_QANGLE "angles" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetAbsOrigin
+    m_FriendlyName = "Set Abs Origin"
+    m_Description = "Set the world origin of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in vPos: PVAL_VEC3_WORLDSPACE "Pos" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetAbsScale
+    m_FriendlyName = "Set Abs Scale"
+    m_Description = "Set the world scale of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flScale: PVAL_FLOAT "Scale" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetDamageFilter
+    m_FriendlyName = "Set Damage Filter"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetKinematic
+    m_FriendlyName = "Set Kinematic"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in bKinematic: PVAL_BOOL "Kinematic" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetLocalAngles
+    m_FriendlyName = "Set Local Angles"
+    m_Description = "Set the local orientation of this entity. Use when you have a parent."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in angles: PVAL_QANGLE "angles" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetLocalOrigin
+    m_FriendlyName = "Set Local Origin"
+    m_Description = "Set the local origin of this entity. Use when you have a parent."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in vPos: PVAL_VEC3 "Pos" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetLocalScale
+    m_FriendlyName = "Set Local Scale"
+    m_Description = "Set the local scale of this entity. Use when you have a parent."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in flScale: PVAL_FLOAT "Scale" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetParent
+    m_FriendlyName = "Set Parent"
+    m_Description = "Set the parent of this entity."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pNewParent: PVAL_EHANDLE "New Parent" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetParentAttachment
+    m_FriendlyName = "Set Parent Attachment"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetParentAttachmentMaintainOffset
+    m_FriendlyName = "Set Parent Attachment Maintain Offset"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetParentMaintainOffset
+    m_FriendlyName = "Set Parent Maintain Offset"
+    m_Description = "Set the parent of this entity and maintain offsets."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pNewParent: PVAL_EHANDLE "New Parent" inflow=InDefault
+    in sAttachBoneName: PVAL_STRING "Attach Bone Name" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetParentWithOffset
+    m_FriendlyName = "Set Parent With Offset"
+    m_Description = "Set the parent of this entity (with offset)."
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pNewParent: PVAL_EHANDLE "New Parent" inflow=InDefault
+    in sAttachBoneName: PVAL_STRING "Attach Bone Name" inflow=InDefault
+    in xAttachOffset: PVAL_TRANSFORM "Attach Offset" default=[0, 0, 0, 1, 0, 0, 0, 1] inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::SetTeam
+    m_FriendlyName = "Set Team"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::TeamNum
+    m_FriendlyName = "Team Num"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::TeleportToPoint
+    m_FriendlyName = "Teleport To Point"
+    m_Description = "Teleport the given entity to the specified position and orientation"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in vPosition: PVAL_VEC3_WORLDSPACE "Position" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::TeleportToTransform
+    m_FriendlyName = "Teleport To Transform"
+    m_Description = "Teleport the given entity to the specified transform"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in xTransform: PVAL_TRANSFORM_WORLDSPACE "Transform" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::Use
+    m_FriendlyName = "Use"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseEntity_API::WasThrownByPlayer
+    m_FriendlyName = "Was Thrown By Player"
+    m_Description = "Returns true if the entity was recently thrown by the player"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 4
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=self
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    out retval: PVAL_BOOL "Result" outflow=OutDefault direct_return_for=self
+
+OUTPUT!CBaseEntity_API::OnKilled
+    m_FriendlyName = "On Killed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+
+OUTPUT!CBaseEntity_API::OnUser1
+    m_FriendlyName = "On User1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+
+OUTPUT!CBaseEntity_API::OnUser2
+    m_FriendlyName = "On User2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+
+OUTPUT!CBaseEntity_API::OnUser3
+    m_FriendlyName = "On User3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+
+OUTPUT!CBaseEntity_API::OnUser4
+    m_FriendlyName = "On User4"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self

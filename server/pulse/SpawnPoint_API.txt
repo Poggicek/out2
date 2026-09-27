@@ -1,12 +1,11 @@
 SpawnPoint_API::SetDisabled
     m_FriendlyName = "Set Disabled"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!SpawnPoint_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!SpawnPoint_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -17,12 +16,11 @@ SpawnPoint_API::SetDisabled
 SpawnPoint_API::SetEnabled
     m_FriendlyName = "Set Enabled"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!SpawnPoint_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!SpawnPoint_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]
@@ -33,12 +31,11 @@ SpawnPoint_API::SetEnabled
 SpawnPoint_API::ToggleEnabled
     m_FriendlyName = "Toggle Enabled"
     m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!SpawnPoint_API"
     generic_node_category = 5
     hidden_in_tool = true
     is_pulse_target_method = true
     pulse_feature_tag = 1
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!SpawnPoint_API"
     supported_domains = BaseDomain
     target_arg_name = "_Target"
     inflow InDefault "Default In" [default]

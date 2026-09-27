@@ -1,3 +1,0 @@
-CPulseCell_Timeline::Stop
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"

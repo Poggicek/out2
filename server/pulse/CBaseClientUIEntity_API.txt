@@ -1,0 +1,169 @@
+CBaseClientUIEntity_API::Disable
+    m_FriendlyName = "Disable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:base_clientui_entity "base_clientui_entity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CBaseClientUIEntity_API::Enable
+    m_FriendlyName = "Enable"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:base_clientui_entity "base_clientui_entity" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput0
+    m_FriendlyName = "Custom Output0"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput1
+    m_FriendlyName = "Custom Output1"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput2
+    m_FriendlyName = "Custom Output2"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput3
+    m_FriendlyName = "Custom Output3"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput4
+    m_FriendlyName = "Custom Output4"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput5
+    m_FriendlyName = "Custom Output5"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput6
+    m_FriendlyName = "Custom Output6"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput7
+    m_FriendlyName = "Custom Output7"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput8
+    m_FriendlyName = "Custom Output8"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self
+
+OUTPUT!CBaseClientUIEntity_API::CustomOutput9
+    m_FriendlyName = "Custom Output9"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CBaseClientUIEntity_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:base_clientui_entity "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self

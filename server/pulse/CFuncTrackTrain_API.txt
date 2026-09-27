@@ -1,0 +1,270 @@
+CFuncTrackTrain_API::LockOrientation
+    m_FriendlyName = "Lock Orientation"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::MoveToPathNode
+    m_FriendlyName = "Move To Path Node"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::Resume
+    m_FriendlyName = "Resume"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::Reverse
+    m_FriendlyName = "Reverse"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::SetMaxSpeed
+    m_FriendlyName = "Set Max Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::SetSpeed
+    m_FriendlyName = "Set Speed"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::SetSpeedDir
+    m_FriendlyName = "Set Speed Dir"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::SetSpeedDirAccel
+    m_FriendlyName = "Set Speed Dir Accel"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::SetSpeedReal
+    m_FriendlyName = "Set Speed Real"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_FLOAT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::StartBackward
+    m_FriendlyName = "Start Backward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::StartForward
+    m_FriendlyName = "Start Forward"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::Stop
+    m_FriendlyName = "Stop"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::TeleportToPathNode
+    m_FriendlyName = "Teleport To Path Node"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_STRING "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::Toggle
+    m_FriendlyName = "Toggle"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CFuncTrackTrain_API::UnlockOrientation
+    m_FriendlyName = "Unlock Orientation"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:func_tracktrain "func_tracktrain" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CFuncTrackTrain_API::OnArrivedAtDestinationNode
+    m_FriendlyName = "On Arrived At Destination Node"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_tracktrain "Target" inflow=self
+
+OUTPUT!CFuncTrackTrain_API::OnNextPoint
+    m_FriendlyName = "On Next Point"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_tracktrain "Target" inflow=self
+
+OUTPUT!CFuncTrackTrain_API::OnStart
+    m_FriendlyName = "On Start"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CFuncTrackTrain_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE:func_tracktrain "Target" inflow=self

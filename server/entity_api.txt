@@ -1,0 +1,2645 @@
+CAI_ChangeHintGroup : CBaseEntity
+    SearchType: FIELD_INT32 m_iSearchType [FTYPEDESC_KEY]
+    SearchName: FIELD_STRING m_strSearchName [FTYPEDESC_KEY]
+    NewHintGroup: FIELD_STRING m_strNewHintGroup [FTYPEDESC_KEY]
+    Radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+
+CAmbientGeneric : CPointEntity
+    message: FIELD_SOUNDNAME m_iszSound [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_radius [FTYPEDESC_KEY]
+    SourceEntityName: FIELD_STRING m_sSourceEntName [FTYPEDESC_KEY]
+    "m_dpv:FIELD_EMBEDDED": FIELD_EMBEDDED m_dpv <dynpitchvol_base_t> [FTYPEDESC_NONE]
+    fadein: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    fadeout: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    fadeinsecs: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    fadeoutsecs: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBarnLight : CBaseModelEntity
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    colormode: FIELD_INT32 m_nColorMode [FTYPEDESC_KEY]
+    color: FIELD_COLOR32 m_Color [FTYPEDESC_KEY]
+    colortemperature: FIELD_FLOAT32 m_flColorTemperature [FTYPEDESC_KEY]
+    brightness: FIELD_FLOAT32 m_flBrightness [FTYPEDESC_KEY]
+    brightnessscale: FIELD_FLOAT32 m_flBrightnessScale [FTYPEDESC_KEY]
+    directlight: FIELD_INT32 m_nDirectLight [FTYPEDESC_KEY]
+    bakedshadowindex: FIELD_INT32 m_nBakedShadowIndex [FTYPEDESC_KEY]
+    light_path_uniqueid: FIELD_INT32 m_nLightPathUniqueId [FTYPEDESC_KEY]
+    light_map_uniqueid: FIELD_INT32 m_nLightMapUniqueId [FTYPEDESC_KEY]
+    luminaire_shape: FIELD_INT32 m_nLuminaireShape [FTYPEDESC_KEY]
+    luminaire_size: FIELD_FLOAT32 m_flLuminaireSize [FTYPEDESC_KEY]
+    luminaire_anisotropy: FIELD_FLOAT32 m_flLuminaireAnisotropy [FTYPEDESC_KEY]
+    light_style: FIELD_UTLSTRING m_LightStyleString [FTYPEDESC_KEY]
+    lightcookie: FIELD_HRENDERTEXTURE m_hLightCookie [FTYPEDESC_KEY]
+    shape: FIELD_FLOAT32 m_flShape [FTYPEDESC_KEY]
+    soft_x: FIELD_FLOAT32 m_flSoftX [FTYPEDESC_KEY]
+    soft_y: FIELD_FLOAT32 m_flSoftY [FTYPEDESC_KEY]
+    skirt: FIELD_FLOAT32 m_flSkirt [FTYPEDESC_KEY]
+    skirt_near: FIELD_FLOAT32 m_flSkirtNear [FTYPEDESC_KEY]
+    size_params: FIELD_VECTOR m_vSizeParams [FTYPEDESC_KEY]
+    range: FIELD_FLOAT32 m_flRange [FTYPEDESC_KEY]
+    shear: FIELD_VECTOR m_vShear [FTYPEDESC_KEY]
+    bakespeculartocubemaps: FIELD_INT32 m_nBakeSpecularToCubemaps [FTYPEDESC_KEY]
+    bakespeculartocubemaps_size: FIELD_VECTOR m_vBakeSpecularToCubemapsSize [FTYPEDESC_KEY]
+    bakespeculartocubemaps_scale: FIELD_FLOAT32 m_flBakeSpecularToCubemapsScale [FTYPEDESC_KEY]
+    castshadows: FIELD_INT32 m_nCastShadows [FTYPEDESC_KEY]
+    shadowmapsize: FIELD_INT32 m_nShadowMapSize [FTYPEDESC_KEY]
+    shadowpriority: FIELD_INT32 m_nShadowPriority [FTYPEDESC_KEY]
+    contactshadow: FIELD_BOOLEAN m_bContactShadow [FTYPEDESC_KEY]
+    forceshadowsenabled: FIELD_BOOLEAN m_bForceShadowsEnabled [FTYPEDESC_KEY]
+    bouncelight: FIELD_INT32 m_nBounceLight [FTYPEDESC_KEY]
+    bouncescale: FIELD_FLOAT32 m_flBounceScale [FTYPEDESC_KEY]
+    minroughness: FIELD_FLOAT32 m_flMinRoughness [FTYPEDESC_KEY]
+    altcolor: FIELD_VECTOR m_vAlternateColor [FTYPEDESC_KEY]
+    altcolorbrightness: FIELD_FLOAT32 m_fAlternateColorBrightness [FTYPEDESC_KEY]
+    fog: FIELD_INT32 m_nFog [FTYPEDESC_KEY]
+    fogstrength: FIELD_FLOAT32 m_flFogStrength [FTYPEDESC_KEY]
+    fogscale: FIELD_FLOAT32 m_flFogScale [FTYPEDESC_KEY]
+    fogshadows: FIELD_INT32 m_nFogShadows [FTYPEDESC_KEY]
+    fade_size_start: FIELD_FLOAT32 m_flFadeSizeStart [FTYPEDESC_KEY]
+    fade_size_end: FIELD_FLOAT32 m_flFadeSizeEnd [FTYPEDESC_KEY]
+    shadowfade_size_start: FIELD_FLOAT32 m_flShadowFadeSizeStart [FTYPEDESC_KEY]
+    shadowfade_size_end: FIELD_FLOAT32 m_flShadowFadeSizeEnd [FTYPEDESC_KEY]
+    precomputedfieldsvalid: FIELD_BOOLEAN m_bPrecomputedFieldsValid [FTYPEDESC_KEY]
+    precomputedboundsmins: FIELD_POSITION_VECTOR m_vPrecomputedBoundsMins [FTYPEDESC_KEY]
+    precomputedboundsmaxs: FIELD_POSITION_VECTOR m_vPrecomputedBoundsMaxs [FTYPEDESC_KEY]
+    precomputedobborigin: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin [FTYPEDESC_KEY]
+    precomputedobbangles: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles [FTYPEDESC_KEY]
+    precomputedobbextent: FIELD_VECTOR m_vPrecomputedOBBExtent [FTYPEDESC_KEY]
+    precomputedsubfrusta: FIELD_INT32 m_nPrecomputedSubFrusta [FTYPEDESC_KEY]
+    precomputedobborigin0: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin0 [FTYPEDESC_KEY]
+    precomputedobbangles0: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles0 [FTYPEDESC_KEY]
+    precomputedobbextent0: FIELD_VECTOR m_vPrecomputedOBBExtent0 [FTYPEDESC_KEY]
+    precomputedobborigin1: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin1 [FTYPEDESC_KEY]
+    precomputedobbangles1: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles1 [FTYPEDESC_KEY]
+    precomputedobbextent1: FIELD_VECTOR m_vPrecomputedOBBExtent1 [FTYPEDESC_KEY]
+    precomputedobborigin2: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin2 [FTYPEDESC_KEY]
+    precomputedobbangles2: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles2 [FTYPEDESC_KEY]
+    precomputedobbextent2: FIELD_VECTOR m_vPrecomputedOBBExtent2 [FTYPEDESC_KEY]
+    precomputedobborigin3: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin3 [FTYPEDESC_KEY]
+    precomputedobbangles3: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles3 [FTYPEDESC_KEY]
+    precomputedobbextent3: FIELD_VECTOR m_vPrecomputedOBBExtent3 [FTYPEDESC_KEY]
+    precomputedobborigin4: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin4 [FTYPEDESC_KEY]
+    precomputedobbangles4: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles4 [FTYPEDESC_KEY]
+    precomputedobbextent4: FIELD_VECTOR m_vPrecomputedOBBExtent4 [FTYPEDESC_KEY]
+    precomputedobborigin5: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin5 [FTYPEDESC_KEY]
+    precomputedobbangles5: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles5 [FTYPEDESC_KEY]
+    precomputedobbextent5: FIELD_VECTOR m_vPrecomputedOBBExtent5 [FTYPEDESC_KEY]
+    pvs_modify_entity: FIELD_BOOLEAN m_bPvsModifyEntity [FTYPEDESC_KEY]
+    transmit_always: FIELD_BOOLEAN m_bTransmitAlways [FTYPEDESC_KEY]
+
+CBaseAnimGraph : CBaseModelEntity
+    initially_populate_interp_history: FIELD_BOOLEAN m_bInitiallyPopulateInterpHistory [FTYPEDESC_KEY]
+
+CBaseAnimGraphController : CSkeletonAnimationController
+    playbackrate: FIELD_NETWORK_QUANTIZED_FLOAT m_flPlaybackRate [FTYPEDESC_KEY]
+    animgraph2_identifier: FIELD_GLOBALSYMBOL m_sAnimGraph2Identifier [FTYPEDESC_KEY]
+
+CBaseButton : CBaseToggle
+    movedir: FIELD_QANGLE m_angMoveEntitySpace [FTYPEDESC_KEY]
+    use_sound: FIELD_SOUNDNAME m_sUseSound [FTYPEDESC_KEY]
+    locked_sound: FIELD_SOUNDNAME m_sLockedSound [FTYPEDESC_KEY]
+    unlocked_sound: FIELD_SOUNDNAME m_sUnlockedSound [FTYPEDESC_KEY]
+    override_anticipation_name: FIELD_STRING m_sOverrideAnticipationName [FTYPEDESC_KEY]
+    forcenpcexclude: FIELD_BOOLEAN m_bForceNpcExclude [FTYPEDESC_KEY]
+    glow: FIELD_STRING m_sGlowEntity [FTYPEDESC_KEY]
+    displaytext: FIELD_STRING m_szDisplayText [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CBaseClientUIEntity : CBaseModelEntity
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    dialog_layout_name: FIELD_STRING m_DialogXMLName [FTYPEDESC_KEY]
+    panel_class_name: FIELD_STRING m_PanelClassName [FTYPEDESC_KEY]
+    panel_id: FIELD_STRING m_PanelID [FTYPEDESC_KEY]
+
+CBaseCombatCharacter : CBaseAnimGraph
+    Relationship: FIELD_STRING m_strRelationships [FTYPEDESC_KEY]
+    physdamagescale: FIELD_FLOAT32 m_impactEnergyScale [FTYPEDESC_KEY]
+
+CBaseDMStart : CPointEntity
+    master: FIELD_STRING m_Master [FTYPEDESC_KEY]
+
+CBaseDoor : CBaseToggle
+    movedir: FIELD_QANGLE m_angMoveEntitySpace [FTYPEDESC_KEY]
+    noise1: FIELD_SOUNDNAME m_NoiseMoving [FTYPEDESC_KEY]
+    noise2: FIELD_SOUNDNAME m_NoiseArrived [FTYPEDESC_KEY]
+    startclosesound: FIELD_SOUNDNAME m_NoiseMovingClosed [FTYPEDESC_KEY]
+    closesound: FIELD_SOUNDNAME m_NoiseArrivedClosed [FTYPEDESC_KEY]
+    chainstodoor: FIELD_STRING m_ChainTarget [FTYPEDESC_KEY]
+    "m_ls:FIELD_EMBEDDED": FIELD_EMBEDDED m_ls <locksound_t> [FTYPEDESC_NONE]
+    dmg: FIELD_FLOAT32 m_flBlockDamage [FTYPEDESC_KEY]
+    spawnpos: FIELD_INT32 m_eSpawnPosition <FuncDoorSpawnPos_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    forceclosed: FIELD_BOOLEAN m_bForceClosed [FTYPEDESC_KEY]
+    loopmovesound: FIELD_BOOLEAN m_bLoopMoveSound [FTYPEDESC_KEY]
+    ignoredebris: FIELD_BOOLEAN m_bIgnoreDebris [FTYPEDESC_KEY]
+    CreateNavObstacle: FIELD_BOOLEAN m_bCreateNavObstacle [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CBaseEntity
+    globalname: FIELD_STRING m_iGlobalname [FTYPEDESC_KEY]
+    vscripts: FIELD_STRING m_iszPrivateVScripts [FTYPEDESC_ADDED_KEYFIELD | FTYPEDESC_KEY]
+    nextthink: FIELD_TICK m_nNextThinkTick [FTYPEDESC_KEY]
+    effects: FIELD_UINT32 m_fEffects [FTYPEDESC_KEY]
+    ResponseContext: FIELD_STRING m_iszResponseContext [FTYPEDESC_KEY]
+    subclass_id: FIELD_UTLSTRINGTOKEN m_nSubclassID [FTYPEDESC_KEY]
+    subclass_name: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    max_health: FIELD_INT32 m_iMaxHealth [FTYPEDESC_KEY]
+    target: FIELD_STRING m_target [FTYPEDESC_KEY]
+    platform_type: FIELD_UINT8 m_nPlatformType <EntityPlatformTypes_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    damagefilter: FIELD_STRING m_iszDamageFilterName [FTYPEDESC_KEY]
+    MoveType: FIELD_UINT8 m_MoveType <MoveType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    owner: FIELD_EHANDLE m_hOwnerEntity [FTYPEDESC_KEY]
+    caster: FIELD_EHANDLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    TeamNum: FIELD_INT32 m_iInitialTeamNum [FTYPEDESC_KEY]
+    teamnumber: FIELD_UINT8 m_iTeamNum [FTYPEDESC_KEY]
+    basevelocity: FIELD_VECTOR m_vecBaseVelocity [FTYPEDESC_KEY]
+    avelocity: FIELD_QANGLE m_vecAngVelocity [FTYPEDESC_KEY]
+    gravity: FIELD_FLOAT32 m_flGravityScale [FTYPEDESC_KEY]
+    friction: FIELD_FLOAT32 m_flFriction [FTYPEDESC_KEY]
+    ltime: FIELD_FLOAT32 m_flLocalTime [FTYPEDESC_KEY]
+    velocity: FIELD_NETWORK_QUANTIZED_VECTOR m_vecVelocity [FTYPEDESC_KEY]
+    spawnflags: FIELD_UINT32 m_spawnflags [FTYPEDESC_KEY]
+    disablelowviolence: FIELD_BOOLEAN m_bDisableLowViolence [FTYPEDESC_KEY]
+    LagCompensate: FIELD_BOOLEAN m_bLagCompensate [FTYPEDESC_KEY]
+    health: FIELD_INT32 m_iHealth [FTYPEDESC_KEY]
+    angles: FIELD_QANGLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    origin: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    model: FIELD_HMODEL __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    ownername: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    disableshadows: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    disablereceiveshadows: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    nodamageforces: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    angle: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBaseFilter : CBaseEntity
+    Negated: FIELD_BOOLEAN m_bNegated [FTYPEDESC_KEY]
+
+CBaseGrenade : CBaseAnimGraph
+
+CBaseModelEntity : CBaseEntity
+    rendercolor: FIELD_COLOR32 m_clrRender [FTYPEDESC_KEY]
+    renderfx: FIELD_UINT8 m_nRenderFX <RenderFx_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    rendermode: FIELD_UINT8 m_nRenderMode <RenderMode_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    rendertocubemaps: FIELD_BOOLEAN m_bRenderToCubemaps [FTYPEDESC_KEY]
+    expand_render_bounds_to_include_cloth: FIELD_BOOLEAN m_bExpandRenderBoundsToIncludeCloth [FTYPEDESC_KEY]
+    NoInterpolate: FIELD_BOOLEAN m_bNoInterpolate [FTYPEDESC_KEY]
+    "m_Collision:FIELD_EMBEDDED": FIELD_EMBEDDED m_Collision <CCollisionProperty> [FTYPEDESC_NONE]
+    glowbackfacemult: FIELD_FLOAT32 m_flGlowBackfaceMult [FTYPEDESC_KEY]
+    fademindist: FIELD_FLOAT32 m_fadeMinDist [FTYPEDESC_KEY]
+    fademaxdist: FIELD_FLOAT32 m_fadeMaxDist [FTYPEDESC_KEY]
+    fadescale: FIELD_FLOAT32 m_flFadeScale [FTYPEDESC_KEY]
+    object_culling: FIELD_UINT8 m_nObjectCulling [FTYPEDESC_KEY]
+    add_attribute: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    view_ofs: FIELD_NETWORK_QUANTIZED_VECTOR m_vecViewOffset [FTYPEDESC_KEY]
+    rendercolor32: FIELD_COLOR32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    renderamt: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    mins: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    maxs: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    skin: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    bodygroups: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    destructible_part_initial_state_destructed_1: FIELD_INT32 m_nDestructiblePartInitialStateDestructed0 <HitGroup_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_2: FIELD_INT32 m_nDestructiblePartInitialStateDestructed1 <HitGroup_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_3: FIELD_INT32 m_nDestructiblePartInitialStateDestructed2 <HitGroup_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_4: FIELD_INT32 m_nDestructiblePartInitialStateDestructed3 <HitGroup_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_5: FIELD_INT32 m_nDestructiblePartInitialStateDestructed4 <HitGroup_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_1_part_index: FIELD_INT32 m_nDestructiblePartInitialStateDestructed0_PartIndex [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_2_part_index: FIELD_INT32 m_nDestructiblePartInitialStateDestructed1_PartIndex [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_3_part_index: FIELD_INT32 m_nDestructiblePartInitialStateDestructed2_PartIndex [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_4_part_index: FIELD_INT32 m_nDestructiblePartInitialStateDestructed3_PartIndex [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_5_part_index: FIELD_INT32 m_nDestructiblePartInitialStateDestructed4_PartIndex [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_1_generate_breakpieces: FIELD_BOOLEAN m_bDestructiblePartInitialStateDestructed0_GenerateBreakpieces [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_2_generate_breakpieces: FIELD_BOOLEAN m_bDestructiblePartInitialStateDestructed1_GenerateBreakpieces [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_3_generate_breakpieces: FIELD_BOOLEAN m_bDestructiblePartInitialStateDestructed2_GenerateBreakpieces [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_4_generate_breakpieces: FIELD_BOOLEAN m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces [FTYPEDESC_KEY]
+    destructible_part_initial_state_destructed_5_generate_breakpieces: FIELD_BOOLEAN m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces [FTYPEDESC_KEY]
+
+CBasePlatTrain : CBaseToggle
+    noise1: FIELD_SOUNDNAME m_NoiseMoving [FTYPEDESC_KEY]
+    noise2: FIELD_SOUNDNAME m_NoiseArrived [FTYPEDESC_KEY]
+    volume: FIELD_FLOAT32 m_volume [FTYPEDESC_KEY]
+    rotation: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBasePlayerController : CBaseEntity
+    fakeclient: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    is_hltv: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    playername: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    reserving: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    steamid: FIELD_UINT64 m_steamID [FTYPEDESC_KEY]
+
+CBasePlayerPawn : CBaseCombatCharacter
+    "m_skybox3d:FIELD_EMBEDDED": FIELD_EMBEDDED m_skybox3d <sky3dparams_t> [FTYPEDESC_NONE]
+    controller: FIELD_EHANDLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBasePlayerWeapon : CBaseAnimGraph
+
+CBaseProp : CBaseAnimGraph
+    "health:FIELD_VOID": FIELD_VOID health [FTYPEDESC_REMOVED_KEYFIELD]
+    propdata_override: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBasePropDoor : CDynamicProp
+    hardware: FIELD_INT32 m_nHardwareType [FTYPEDESC_KEY]
+    returndelay: FIELD_FLOAT32 m_flAutoReturnDelay [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    soundmoveoverride: FIELD_SOUNDNAME m_SoundMoving [FTYPEDESC_KEY]
+    soundopenoverride: FIELD_SOUNDNAME m_SoundOpen [FTYPEDESC_KEY]
+    soundcloseoverride: FIELD_SOUNDNAME m_SoundClose [FTYPEDESC_KEY]
+    soundjiggleoverride: FIELD_SOUNDNAME m_SoundJiggle [FTYPEDESC_KEY]
+    soundsetlockedoverride: FIELD_SOUNDNAME m_SoundLock [FTYPEDESC_KEY]
+    soundsetunlockedoverride: FIELD_SOUNDNAME m_SoundUnlock [FTYPEDESC_KEY]
+    soundlatchoverride: FIELD_SOUNDNAME m_SoundLatch [FTYPEDESC_KEY]
+    slavename: FIELD_STRING m_SlaveName [FTYPEDESC_KEY]
+    forceclosed: FIELD_BOOLEAN m_bForceClosed [FTYPEDESC_KEY]
+    "m_ls:FIELD_EMBEDDED": FIELD_EMBEDDED m_ls <locksound_t> [FTYPEDESC_NONE]
+
+CBaseToggle : CBaseModelEntity
+    distance: FIELD_FLOAT32 m_flMoveDistance [FTYPEDESC_KEY]
+    wait: FIELD_FLOAT32 m_flWait [FTYPEDESC_KEY]
+    lip: FIELD_FLOAT32 m_flLip [FTYPEDESC_KEY]
+    height: FIELD_FLOAT32 m_flHeight [FTYPEDESC_KEY]
+    master: FIELD_STRING m_sMaster [FTYPEDESC_KEY]
+
+CBaseTrigger : CBaseToggle
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    filtername: FIELD_STRING m_iFilterName [FTYPEDESC_KEY]
+    useasyncqueries: FIELD_BOOLEAN m_bUseAsyncQueries [FTYPEDESC_KEY]
+    okifnomodel: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    radius: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBeam : CBaseModelEntity
+    HDRColorScale: FIELD_FLOAT32 m_flHDRColorScale [FTYPEDESC_KEY]
+    damage: FIELD_FLOAT32 m_flDamage [FTYPEDESC_KEY]
+    dissolvetype: FIELD_INT32 m_nDissolveType [FTYPEDESC_KEY]
+    ScrollSpeed: FIELD_FLOAT32 m_fSpeed [FTYPEDESC_KEY]
+
+CBlood : CPointEntity
+    spraydir: FIELD_QANGLE_WORLDSPACE m_vecSprayAngles [FTYPEDESC_KEY]
+    amount: FIELD_FLOAT32 m_flAmount [FTYPEDESC_KEY]
+    color: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBodyComponent : CEntityComponent
+    "m_pSceneNode:FIELD_EMBEDDED": FIELD_EMBEDDED m_pSceneNode <CGameSceneNode> [FTYPEDESC_PTR]
+
+CBodyComponentBaseAnimGraph : CBodyComponentSkeletonInstance
+    "m_animationController:FIELD_EMBEDDED": FIELD_EMBEDDED m_animationController <CBaseAnimGraphController> [FTYPEDESC_NONE]
+
+CBodyComponentPoint : CBodyComponent
+    "m_sceneNode:FIELD_EMBEDDED": FIELD_EMBEDDED m_sceneNode <CGameSceneNode> [FTYPEDESC_NONE]
+
+CBodyComponentSkeletonInstance : CBodyComponent
+    "m_skeletonInstance:FIELD_EMBEDDED": FIELD_EMBEDDED m_skeletonInstance <CSkeletonInstance> [FTYPEDESC_NONE]
+
+CBombTarget : CBaseTrigger
+    heistbomb: FIELD_BOOLEAN m_bIsHeistBombTarget [FTYPEDESC_KEY]
+    bomb_mount_target: FIELD_STRING m_szMountTarget [FTYPEDESC_KEY]
+    bomb_site_designation: FIELD_INT32 m_nBombSiteDesignation [FTYPEDESC_KEY]
+
+CBreakable : CBaseModelEntity
+    explosion: FIELD_INT32 m_Explosion <Explosions> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    PressureDelay: FIELD_FLOAT32 m_flPressureDelay [FTYPEDESC_KEY]
+    minhealthdmg: FIELD_INT32 m_iMinHealthDmg [FTYPEDESC_KEY]
+    physdamagescale: FIELD_FLOAT32 m_impactEnergyScale [FTYPEDESC_KEY]
+    PerformanceMode: FIELD_INT32 m_PerformanceMode <PerformanceMode_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    overrideBlockLOS: FIELD_INT32 m_nOverrideBlockLOS <EOverrideBlockLOS_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    material: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    spawnobject: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    propdata: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    gamemass: FIELD_INT64 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    masscenteroffset: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    massScale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    buoyancyscale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    fluiddragscale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CBreakableProp : CBaseProp
+    ExplodeDamage: FIELD_FLOAT32 m_explodeDamage [FTYPEDESC_KEY]
+    ExplodeRadius: FIELD_FLOAT32 m_explodeRadius [FTYPEDESC_KEY]
+    minhealthdmg: FIELD_INT32 m_iMinHealthDmg [FTYPEDESC_KEY]
+    PerformanceMode: FIELD_INT32 m_PerformanceMode <PerformanceMode_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    puntsound: FIELD_STRING m_iszPuntSound [FTYPEDESC_KEY]
+    PressureDelay: FIELD_FLOAT32 m_flPressureDelay [FTYPEDESC_KEY]
+    BurstScale: FIELD_FLOAT32 m_flDefBurstScale [FTYPEDESC_KEY]
+    BurstLocation: FIELD_VECTOR m_vDefBurstOffset [FTYPEDESC_KEY]
+    BreakableContentsType: FIELD_INT32 m_BreakableContentsType <BreakableContentsType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    BreakableContentsPropGroupOverride: FIELD_UTLSTRING m_strBreakableContentsPropGroupOverride [FTYPEDESC_KEY]
+    BreakableContentsParticleOverride: FIELD_UTLSTRING m_strBreakableContentsParticleOverride [FTYPEDESC_KEY]
+    physdamagescale: FIELD_FLOAT32 m_impactEnergyScale [FTYPEDESC_KEY]
+
+CBuyZone : CBaseTrigger
+    team: FIELD_INT32 m_LegacyTeamNum [FTYPEDESC_KEY]
+
+CCSCustomHudLayout : CBaseEntity
+    layout: FIELD_STRING m_strLayout [FTYPEDESC_KEY]
+    observable: FIELD_BOOLEAN m_bObservable [FTYPEDESC_KEY]
+
+CCSGO_TeamPreviewCharacterPosition : CBaseEntity
+    variant: FIELD_INT32 m_nVariant [FTYPEDESC_KEY]
+    ordinal: FIELD_INT32 m_nOrdinal [FTYPEDESC_KEY]
+    weapon: FIELD_UTLSTRING m_sWeaponName [FTYPEDESC_KEY]
+
+CCSMinimapVolume : CBaseTrigger
+    minimap_name: FIELD_UTLSTRING m_strMinimapName [FTYPEDESC_KEY]
+
+CCSObservableElement : CBaseEntity
+    observable_entname: FIELD_STRING m_iszObservableModelEntity [FTYPEDESC_KEY]
+    observable_entmodel: FIELD_EHANDLE m_hObservableModelEntity [FTYPEDESC_KEY]
+    observable_entmodel2: FIELD_EHANDLE m_hObservableModelEntity2 [FTYPEDESC_KEY]
+    team_filter: FIELD_UINT32 m_nTeamFilter [FTYPEDESC_KEY]
+
+CCSObserverPawn : CCSPlayerPawnBase
+    "m_pCameraServices:FIELD_EMBEDDED": FIELD_EMBEDDED m_pCameraServices <CPlayer_CameraServices> [FTYPEDESC_PTR]
+
+CCSPlace : CBaseModelEntity
+    place_name: FIELD_STRING m_name [FTYPEDESC_KEY]
+
+CCSPlayerController : CBasePlayerController
+    pendingteamnumber: FIELD_UINT8 m_iPendingTeamNum [FTYPEDESC_KEY]
+
+CCSPlayerPawn : CCSPlayerPawnBase
+    "m_pCameraServices:FIELD_EMBEDDED": FIELD_EMBEDDED m_pCameraServices <CPlayer_CameraServices> [FTYPEDESC_PTR]
+    bot: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CCSPlayerPawnBase : CBasePlayerPawn
+    original_controller: FIELD_EHANDLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CCSPointScriptEntity : CBaseEntity
+    cs_script: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CCSRadarElement : CBaseEntity
+    element_type: FIELD_UINT32 m_nElementType [FTYPEDESC_KEY]
+    element_color: FIELD_UINT32 m_nElementColor [FTYPEDESC_KEY]
+    team_filter: FIELD_UINT32 m_nTeamFilter [FTYPEDESC_KEY]
+
+CCSWeaponBase : CBasePlayerWeapon
+    CanBePickedUp: FIELD_BOOLEAN m_bCanBePickedUp [FTYPEDESC_KEY]
+
+CChangeLevel : CBaseTrigger
+    map: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    landmark: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CChicken : CDynamicProp
+    chicken_model: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CCitadelSoundOpvarSetOBB : CBaseEntity
+    stackName: FIELD_STRING m_iszStackName [FTYPEDESC_KEY]
+    operatorName: FIELD_STRING m_iszOperatorName [FTYPEDESC_KEY]
+    opvarName: FIELD_STRING m_iszOpvarName [FTYPEDESC_KEY]
+    box_inner_mins: FIELD_POSITION_VECTOR m_vDistanceInnerMins [FTYPEDESC_KEY]
+    box_inner_maxs: FIELD_POSITION_VECTOR m_vDistanceInnerMaxs [FTYPEDESC_KEY]
+    box_outer_mins: FIELD_POSITION_VECTOR m_vDistanceOuterMins [FTYPEDESC_KEY]
+    box_outer_maxs: FIELD_POSITION_VECTOR m_vDistanceOuterMaxs [FTYPEDESC_KEY]
+    AABBDirection: FIELD_INT32 m_nAABBDirection [FTYPEDESC_KEY]
+
+CCollisionProperty
+    solid: FIELD_UINT8 m_nSolidType <SolidType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CColorCorrection : CBaseEntity
+    minfalloff: FIELD_FLOAT32 m_MinFalloff [FTYPEDESC_KEY]
+    maxfalloff: FIELD_FLOAT32 m_MaxFalloff [FTYPEDESC_KEY]
+    maxweight: FIELD_FLOAT32 m_flMaxWeight [FTYPEDESC_KEY]
+    fadeInDuration: FIELD_FLOAT32 m_flFadeInDuration [FTYPEDESC_KEY]
+    fadeOutDuration: FIELD_FLOAT32 m_flFadeOutDuration [FTYPEDESC_KEY]
+    filename: FIELD_STRING m_lookupFilename [FTYPEDESC_KEY]
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    exclusive: FIELD_BOOLEAN m_bExclusive [FTYPEDESC_KEY]
+
+CColorCorrectionVolume : CBaseTrigger
+    fadeDuration: FIELD_FLOAT32 m_FadeDuration [FTYPEDESC_KEY]
+    maxweight: FIELD_FLOAT32 m_MaxWeight [FTYPEDESC_KEY]
+    filename: FIELD_CHARACTER m_lookupFilename [FTYPEDESC_KEY]
+
+CCommentaryAuto : CBaseEntity
+
+CConstraintAnchor : CBaseAnimGraph
+    massScale: FIELD_FLOAT32 m_massScale [FTYPEDESC_KEY]
+
+CCredits : CPointEntity
+
+CDynamicLight : CBaseModelEntity
+    distance: FIELD_FLOAT32 m_Radius [FTYPEDESC_KEY]
+    brightness: FIELD_INT32 m_Exponent [FTYPEDESC_KEY]
+    _inner_cone: FIELD_FLOAT32 m_InnerAngle [FTYPEDESC_KEY]
+    _cone: FIELD_FLOAT32 m_OuterAngle [FTYPEDESC_KEY]
+    spotlight_radius: FIELD_FLOAT32 m_SpotRadius [FTYPEDESC_KEY]
+    style: FIELD_UINT8 m_LightStyle [FTYPEDESC_KEY]
+    _light: FIELD_COLOR32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    pitch: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    spawnflags: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CDynamicNavConnectionsVolume : CTriggerMultiple
+    dynamic_nav_connection_target: FIELD_STRING m_iszConnectionTarget [FTYPEDESC_KEY]
+    transition_anim: FIELD_GLOBALSYMBOL m_sTransitionType [FTYPEDESC_KEY]
+    target_area_search_radius: FIELD_FLOAT32 m_flTargetAreaSearchRadius [FTYPEDESC_KEY]
+    min_detach_distance: FIELD_FLOAT32 m_flUpdateDistance [FTYPEDESC_KEY]
+    max_connection_distance: FIELD_FLOAT32 m_flMaxConnectionDistance [FTYPEDESC_KEY]
+
+CDynamicProp : CBreakableProp
+    IdleAnim: FIELD_STRING m_iszIdleAnim [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    use_animgraph: FIELD_BOOLEAN m_bUseAnimGraph [FTYPEDESC_KEY]
+    randomizecycle: FIELD_BOOLEAN m_bRandomizeCycle [FTYPEDESC_KEY]
+    IdleAnimationLoopMode: FIELD_INT32 m_nIdleAnimLoopMode <AnimLoopMode_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    glowstate: FIELD_INT32 m_iInitialGlowState [FTYPEDESC_KEY]
+    glowrange: FIELD_INT32 m_nGlowRange [FTYPEDESC_KEY]
+    glowrangemin: FIELD_INT32 m_nGlowRangeMin [FTYPEDESC_KEY]
+    glowcolor: FIELD_COLOR32 m_glowColor [FTYPEDESC_KEY]
+    glowteam: FIELD_INT32 m_nGlowTeam [FTYPEDESC_KEY]
+    forcenpcexclude: FIELD_BOOLEAN m_bForceNpcExclude [FTYPEDESC_KEY]
+    create_surface_graph: FIELD_BOOLEAN m_bCreateMovableSurfaceGraph [FTYPEDESC_KEY]
+    StartingAnim: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    StartingAnimationLoopMode: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    CreateNavObstacle: FIELD_BOOLEAN m_bCreateNavObstacle [FTYPEDESC_KEY]
+    health: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    HoldAnimation: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CEmptyEntityInstance
+
+CEntityComponent
+
+CEntityDissolve : CBaseModelEntity
+    starttime: FIELD_TIME m_flStartTime [FTYPEDESC_KEY]
+    dissolvetype: FIELD_INT32 m_nDissolveType <EntityDissolveType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    magnitude: FIELD_UINT32 m_nMagnitude [FTYPEDESC_KEY]
+
+CEnvBeam : CBeam
+    LightningStart: FIELD_STRING m_iszStartEntity [FTYPEDESC_KEY]
+    LightningEnd: FIELD_STRING m_iszEndEntity [FTYPEDESC_KEY]
+    targetpoint: FIELD_POSITION_VECTOR m_vEndPointWorld [FTYPEDESC_KEY]
+    life: FIELD_FLOAT32 m_life [FTYPEDESC_KEY]
+    BoltWidth: FIELD_FLOAT32 m_boltWidth [FTYPEDESC_KEY]
+    NoiseAmplitude: FIELD_FLOAT32 m_noiseAmplitude [FTYPEDESC_KEY]
+    TextureScroll: FIELD_INT32 m_speed [FTYPEDESC_KEY]
+    StrikeTime: FIELD_FLOAT32 m_restrike [FTYPEDESC_KEY]
+    texture: FIELD_STRING m_iszSpriteName [FTYPEDESC_KEY]
+    framestart: FIELD_INT32 m_frameStart [FTYPEDESC_KEY]
+    Radius: FIELD_FLOAT32 m_radius [FTYPEDESC_KEY]
+    TouchType: FIELD_INT32 m_TouchType <Touch_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    filtername: FIELD_STRING m_iFilterName [FTYPEDESC_KEY]
+    decalname: FIELD_STRING m_iszDecal [FTYPEDESC_KEY]
+
+CEnvBeverage : CBaseEntity
+    beveragetype: FIELD_INT32 m_nBeverageType [FTYPEDESC_KEY]
+
+CEnvCombinedLightProbeVolume : CBaseEntity
+    cubemaptexture: FIELD_HRENDERTEXTURE m_Entity_hCubemapTexture [FTYPEDESC_KEY]
+    customcubemaptexture: FIELD_BOOLEAN m_Entity_bCustomCubemapTexture [FTYPEDESC_KEY]
+    lightprobetexture: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_AmbientCube [FTYPEDESC_KEY]
+    lightprobetexture_sdf: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SDF [FTYPEDESC_KEY]
+    lightprobetexture_sh2_dc: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SH2_DC [FTYPEDESC_KEY]
+    lightprobetexture_sh2_l1: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SH2_L1 [FTYPEDESC_KEY]
+    lightprobetexture_dli: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightIndicesTexture [FTYPEDESC_KEY]
+    lightprobetexture_dls: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightScalarsTexture [FTYPEDESC_KEY]
+    lightprobetexture_dlshd: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightShadowsTexture [FTYPEDESC_KEY]
+    box_mins: FIELD_VECTOR m_Entity_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_Entity_vBoxMaxs [FTYPEDESC_KEY]
+    moveable: FIELD_BOOLEAN m_Entity_bMoveable [FTYPEDESC_KEY]
+    handshake: FIELD_INT32 m_Entity_nHandshake [FTYPEDESC_KEY]
+    array_index: FIELD_INT32 m_Entity_nEnvCubeMapArrayIndex [FTYPEDESC_KEY]
+    edge_fade_dists: FIELD_VECTOR m_Entity_vEdgeFadeDists [FTYPEDESC_KEY]
+    edge_fade_dist: FIELD_FLOAT32 m_Entity_flEdgeFadeDist [FTYPEDESC_KEY]
+    indoor_outdoor_level: FIELD_INT32 m_Entity_nPriority [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_Entity_bStartDisabled [FTYPEDESC_KEY]
+    light_probe_size_x: FIELD_INT32 m_Entity_nLightProbeSizeX [FTYPEDESC_KEY]
+    light_probe_size_y: FIELD_INT32 m_Entity_nLightProbeSizeY [FTYPEDESC_KEY]
+    light_probe_size_z: FIELD_INT32 m_Entity_nLightProbeSizeZ [FTYPEDESC_KEY]
+    light_probe_atlas_x: FIELD_INT32 m_Entity_nLightProbeAtlasX [FTYPEDESC_KEY]
+    light_probe_atlas_y: FIELD_INT32 m_Entity_nLightProbeAtlasY [FTYPEDESC_KEY]
+    light_probe_atlas_z: FIELD_INT32 m_Entity_nLightProbeAtlasZ [FTYPEDESC_KEY]
+
+CEnvCubemap : CBaseEntity
+    cubemaptexture: FIELD_HRENDERTEXTURE m_Entity_hCubemapTexture [FTYPEDESC_KEY]
+    customcubemaptexture: FIELD_BOOLEAN m_Entity_bCustomCubemapTexture [FTYPEDESC_KEY]
+    influenceradius: FIELD_FLOAT32 m_Entity_flInfluenceRadius [FTYPEDESC_KEY]
+    box_mins: FIELD_VECTOR m_Entity_vBoxProjectMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_Entity_vBoxProjectMaxs [FTYPEDESC_KEY]
+    moveable: FIELD_BOOLEAN m_Entity_bMoveable [FTYPEDESC_KEY]
+    handshake: FIELD_INT32 m_Entity_nHandshake [FTYPEDESC_KEY]
+    array_index: FIELD_INT32 m_Entity_nEnvCubeMapArrayIndex [FTYPEDESC_KEY]
+    indoor_outdoor_level: FIELD_INT32 m_Entity_nPriority [FTYPEDESC_KEY]
+    edge_fade_dist: FIELD_FLOAT32 m_Entity_flEdgeFadeDist [FTYPEDESC_KEY]
+    edge_fade_dists: FIELD_VECTOR m_Entity_vEdgeFadeDists [FTYPEDESC_KEY]
+    diffuse_scale: FIELD_FLOAT32 m_Entity_flDiffuseScale [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_Entity_bStartDisabled [FTYPEDESC_KEY]
+    default_env_map: FIELD_BOOLEAN m_Entity_bDefaultEnvMap [FTYPEDESC_KEY]
+    default_spec_env_map: FIELD_BOOLEAN m_Entity_bDefaultSpecEnvMap [FTYPEDESC_KEY]
+    render_depth_map: FIELD_BOOLEAN m_Entity_bIndoorCubeMap [FTYPEDESC_KEY]
+    copy_diffuse_from_default_cubemap: FIELD_BOOLEAN m_Entity_bCopyDiffuseFromDefaultCubemap [FTYPEDESC_KEY]
+
+CEnvCubemapFog : CBaseEntity
+    cubemapfogstartdistance: FIELD_FLOAT32 m_flStartDistance [FTYPEDESC_KEY]
+    cubemapfogenddistance: FIELD_FLOAT32 m_flEndDistance [FTYPEDESC_KEY]
+    cubemapfoglodbiase: FIELD_FLOAT32 m_flLODBias [FTYPEDESC_KEY]
+    cubemapfogfalloffexponent: FIELD_FLOAT32 m_flFogFalloffExponent [FTYPEDESC_KEY]
+    cubemapheightfog: FIELD_BOOLEAN m_bHeightFogEnabled [FTYPEDESC_KEY]
+    cubemapfogheightwidth: FIELD_FLOAT32 m_flFogHeightWidth [FTYPEDESC_KEY]
+    cubemapfogheightstart: FIELD_FLOAT32 m_flFogHeightStart [FTYPEDESC_KEY]
+    cubemapfogheightend: FIELD_FLOAT32 m_flFogHeightEnd [FTYPEDESC_KEY]
+    cubemapfogheightexponent: FIELD_FLOAT32 m_flFogHeightExponent [FTYPEDESC_KEY]
+    cubemapfogmaxopacity: FIELD_FLOAT32 m_flFogMaxOpacity [FTYPEDESC_KEY]
+    cubemapfogsource: FIELD_INT32 m_nCubemapSourceType [FTYPEDESC_KEY]
+    cubemapfogskymaterial: FIELD_HMATERIAL m_hSkyMaterial [FTYPEDESC_KEY]
+    cubemapfogskyentity: FIELD_STRING m_iszSkyEntity [FTYPEDESC_KEY]
+    cubemapfogdistancetype: FIELD_INT32 m_nDistanceFogType [FTYPEDESC_KEY]
+    cubemapfogdistancecurve: FIELD_STRING m_DistanceFogCurveString [FTYPEDESC_KEY]
+    cubemapfogheighttype: FIELD_INT32 m_nHeightFogType [FTYPEDESC_KEY]
+    cubemapfogheightcurve: FIELD_STRING m_HeightFogCurveString [FTYPEDESC_KEY]
+    cubemapfogheightblendmode: FIELD_INT32 m_nFogHeightBlendMode [FTYPEDESC_KEY]
+    cubemapfogheightcoordinatespace: FIELD_INT32 m_nFogHeightCoordinateSpace [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    cubemapfogtexture: FIELD_HRENDERTEXTURE m_hFogCubemapTexture [FTYPEDESC_KEY]
+
+CEnvDecal : CBaseModelEntity
+    material: FIELD_HMATERIAL m_hDecalMaterial [FTYPEDESC_KEY]
+    width: FIELD_FLOAT32 m_flWidth [FTYPEDESC_KEY]
+    height: FIELD_FLOAT32 m_flHeight [FTYPEDESC_KEY]
+    depth: FIELD_FLOAT32 m_flDepth [FTYPEDESC_KEY]
+    depthsortbias: FIELD_FLOAT32 m_flDepthSortBias [FTYPEDESC_KEY]
+    RenderOrder: FIELD_UINT32 m_nRenderOrder [FTYPEDESC_KEY]
+    projectonworld: FIELD_BOOLEAN m_bProjectOnWorld [FTYPEDESC_KEY]
+    projectoncharacters: FIELD_BOOLEAN m_bProjectOnCharacters [FTYPEDESC_KEY]
+    projectonwater: FIELD_BOOLEAN m_bProjectOnWater [FTYPEDESC_KEY]
+
+CEnvDetailController : CBaseEntity
+    fademindist: FIELD_FLOAT32 m_flFadeStartDist [FTYPEDESC_KEY]
+    fademaxdist: FIELD_FLOAT32 m_flFadeEndDist [FTYPEDESC_KEY]
+
+CEnvEntityIgniter : CBaseEntity
+    lifetime: FIELD_FLOAT32 m_flLifetime [FTYPEDESC_KEY]
+
+CEnvEntityMaker : CPointEntity
+    EntityTemplate: FIELD_STRING m_iszTemplate [FTYPEDESC_KEY]
+    PostSpawnDirection: FIELD_QANGLE m_angPostSpawnDirection [FTYPEDESC_KEY]
+    PostSpawnDirectionVariance: FIELD_FLOAT32 m_flPostSpawnDirectionVariance [FTYPEDESC_KEY]
+    PostSpawnSpeed: FIELD_FLOAT32 m_flPostSpawnSpeed [FTYPEDESC_KEY]
+    PostSpawnInheritAngles: FIELD_BOOLEAN m_bPostSpawnUseAngles [FTYPEDESC_KEY]
+
+CEnvExplosion : CBaseModelEntity
+    iMagnitude: FIELD_INT32 m_iMagnitude [FTYPEDESC_KEY]
+    iRadiusOverride: FIELD_INT32 m_iRadiusOverride [FTYPEDESC_KEY]
+    DamageForce: FIELD_FLOAT32 m_flDamageForce [FTYPEDESC_KEY]
+    create_debris: FIELD_BOOLEAN m_bCreateDebris [FTYPEDESC_KEY]
+    ignoredClass: FIELD_INT32 m_iClassIgnore <Class_T> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    ignoredEntity: FIELD_STRING m_iszEntityIgnoreName [FTYPEDESC_KEY]
+    explosion_type: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    explosion_custom_effect: FIELD_STRING m_iszCustomEffectName [FTYPEDESC_KEY]
+    explosion_custom_sound: FIELD_STRING m_iszCustomSoundName [FTYPEDESC_KEY]
+
+CEnvFade : CBaseEntity
+    rendercolor: FIELD_COLOR32 m_fadeColor [FTYPEDESC_KEY]
+    duration: FIELD_FLOAT32 m_Duration [FTYPEDESC_KEY]
+    holdtime: FIELD_FLOAT32 m_HoldDuration [FTYPEDESC_KEY]
+
+CEnvGlobal : CBaseEntity
+    globalstate: FIELD_STRING m_globalstate [FTYPEDESC_KEY]
+    initialstate: FIELD_INT32 m_initialstate [FTYPEDESC_KEY]
+    counter: FIELD_INT32 m_counter [FTYPEDESC_KEY]
+
+CEnvHudHint : CPointEntity
+    message: FIELD_STRING m_iszMessage [FTYPEDESC_KEY]
+
+CEnvInstructorHint : CPointEntity
+    hint_replace_key: FIELD_STRING m_iszReplace_Key [FTYPEDESC_KEY]
+    hint_target: FIELD_STRING m_iszHintTargetEntity [FTYPEDESC_KEY]
+    hint_timeout: FIELD_INT32 m_iTimeout [FTYPEDESC_KEY]
+    hint_display_limit: FIELD_INT32 m_iDisplayLimit [FTYPEDESC_KEY]
+    hint_icon_onscreen: FIELD_STRING m_iszIcon_Onscreen [FTYPEDESC_KEY]
+    hint_icon_offscreen: FIELD_STRING m_iszIcon_Offscreen [FTYPEDESC_KEY]
+    hint_caption: FIELD_STRING m_iszCaption [FTYPEDESC_KEY]
+    hint_activator_caption: FIELD_STRING m_iszActivatorCaption [FTYPEDESC_KEY]
+    hint_color: FIELD_COLOR32 m_Color [FTYPEDESC_KEY]
+    hint_icon_offset: FIELD_FLOAT32 m_fIconOffset [FTYPEDESC_KEY]
+    hint_range: FIELD_FLOAT32 m_fRange [FTYPEDESC_KEY]
+    hint_pulseoption: FIELD_UINT8 m_iPulseOption [FTYPEDESC_KEY]
+    hint_alphaoption: FIELD_UINT8 m_iAlphaOption [FTYPEDESC_KEY]
+    hint_shakeoption: FIELD_UINT8 m_iShakeOption [FTYPEDESC_KEY]
+    hint_static: FIELD_BOOLEAN m_bStatic [FTYPEDESC_KEY]
+    hint_nooffscreen: FIELD_BOOLEAN m_bNoOffscreen [FTYPEDESC_KEY]
+    hint_forcecaption: FIELD_BOOLEAN m_bForceCaption [FTYPEDESC_KEY]
+    hint_instance_type: FIELD_INT32 m_iInstanceType [FTYPEDESC_KEY]
+    hint_suppress_rest: FIELD_BOOLEAN m_bSuppressRest [FTYPEDESC_KEY]
+    hint_binding: FIELD_STRING m_iszBinding [FTYPEDESC_KEY]
+    hint_allow_nodraw_target: FIELD_BOOLEAN m_bAllowNoDrawTarget [FTYPEDESC_KEY]
+    hint_auto_start: FIELD_BOOLEAN m_bAutoStart [FTYPEDESC_KEY]
+    hint_name: FIELD_STRING m_iszName [FTYPEDESC_KEY]
+    hint_local_player_only: FIELD_BOOLEAN m_bLocalPlayerOnly [FTYPEDESC_KEY]
+
+CEnvInstructorVRHint : CPointEntity
+    hint_name: FIELD_STRING m_iszName [FTYPEDESC_KEY]
+    hint_target: FIELD_STRING m_iszHintTargetEntity [FTYPEDESC_KEY]
+    hint_timeout: FIELD_INT32 m_iTimeout [FTYPEDESC_KEY]
+    hint_caption: FIELD_STRING m_iszCaption [FTYPEDESC_KEY]
+    hint_start_sound: FIELD_STRING m_iszStartSound [FTYPEDESC_KEY]
+    hint_layoutfiletype: FIELD_INT32 m_iLayoutFileType [FTYPEDESC_KEY]
+    hint_custom_layoutfile: FIELD_STRING m_iszCustomLayoutFile [FTYPEDESC_KEY]
+    hint_vr_panel_type: FIELD_INT32 m_iAttachType [FTYPEDESC_KEY]
+    hint_vr_height_offset: FIELD_FLOAT32 m_flHeightOffset [FTYPEDESC_KEY]
+
+CEnvLaser : CBeam
+    LaserTarget: FIELD_STRING m_iszLaserTarget [FTYPEDESC_KEY]
+    EndSprite: FIELD_STRING m_iszSpriteName [FTYPEDESC_KEY]
+    framestart: FIELD_FLOAT32 m_flStartFrame [FTYPEDESC_KEY]
+    width: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    NoiseAmplitude: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    TextureScroll: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    texture: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CEnvLightProbeVolume : CBaseEntity
+    lightprobetexture: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_AmbientCube [FTYPEDESC_KEY]
+    lightprobetexture_sdf: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SDF [FTYPEDESC_KEY]
+    lightprobetexture_sh2_dc: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SH2_DC [FTYPEDESC_KEY]
+    lightprobetexture_sh2_l1: FIELD_HRENDERTEXTURE m_Entity_hLightProbeTexture_SH2_L1 [FTYPEDESC_KEY]
+    lightprobetexture_dli: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightIndicesTexture [FTYPEDESC_KEY]
+    lightprobetexture_dls: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightScalarsTexture [FTYPEDESC_KEY]
+    lightprobetexture_dlshd: FIELD_HRENDERTEXTURE m_Entity_hLightProbeDirectLightShadowsTexture [FTYPEDESC_KEY]
+    box_mins: FIELD_VECTOR m_Entity_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_Entity_vBoxMaxs [FTYPEDESC_KEY]
+    moveable: FIELD_BOOLEAN m_Entity_bMoveable [FTYPEDESC_KEY]
+    handshake: FIELD_INT32 m_Entity_nHandshake [FTYPEDESC_KEY]
+    indoor_outdoor_level: FIELD_INT32 m_Entity_nPriority [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_Entity_bStartDisabled [FTYPEDESC_KEY]
+    light_probe_size_x: FIELD_INT32 m_Entity_nLightProbeSizeX [FTYPEDESC_KEY]
+    light_probe_size_y: FIELD_INT32 m_Entity_nLightProbeSizeY [FTYPEDESC_KEY]
+    light_probe_size_z: FIELD_INT32 m_Entity_nLightProbeSizeZ [FTYPEDESC_KEY]
+    light_probe_atlas_x: FIELD_INT32 m_Entity_nLightProbeAtlasX [FTYPEDESC_KEY]
+    light_probe_atlas_y: FIELD_INT32 m_Entity_nLightProbeAtlasY [FTYPEDESC_KEY]
+    light_probe_atlas_z: FIELD_INT32 m_Entity_nLightProbeAtlasZ [FTYPEDESC_KEY]
+
+CEnvMuzzleFlash : CPointEntity
+    scale: FIELD_FLOAT32 m_flScale [FTYPEDESC_KEY]
+    parentattachment: FIELD_STRING m_iszParentAttachment [FTYPEDESC_KEY]
+
+CEnvParticleGlow : CParticleSystem
+    alphascale: FIELD_FLOAT32 m_flAlphaScale [FTYPEDESC_KEY]
+    scale: FIELD_FLOAT32 m_flRadiusScale [FTYPEDESC_KEY]
+    selfillumscale: FIELD_FLOAT32 m_flSelfIllumScale [FTYPEDESC_KEY]
+    colortint: FIELD_COLOR32 m_ColorTint [FTYPEDESC_KEY]
+    effect_textureOverride: FIELD_HRENDERTEXTURE m_hTextureOverride [FTYPEDESC_KEY]
+
+CEnvShake : CPointEntity
+    limittoentity: FIELD_STRING m_limitToEntity [FTYPEDESC_KEY]
+    amplitude: FIELD_FLOAT32 m_Amplitude [FTYPEDESC_KEY]
+    frequency: FIELD_FLOAT32 m_Frequency [FTYPEDESC_KEY]
+    duration: FIELD_FLOAT32 m_Duration [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_Radius [FTYPEDESC_KEY]
+
+CEnvSky : CBaseModelEntity
+    skyname: FIELD_HMATERIAL m_hSkyMaterial [FTYPEDESC_KEY]
+    sky_lightingonly_name: FIELD_HMATERIAL m_hSkyMaterialLightingOnly [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    tint_color: FIELD_COLOR32 m_vTintColor [FTYPEDESC_KEY]
+    lighting_only_tint_color: FIELD_COLOR32 m_vTintColorLightingOnly [FTYPEDESC_KEY]
+    brightnessscale: FIELD_FLOAT32 m_flBrightnessScale [FTYPEDESC_KEY]
+    fog_type: FIELD_INT32 m_nFogType [FTYPEDESC_KEY]
+    angular_fog_min_start: FIELD_FLOAT32 m_flFogMinStart [FTYPEDESC_KEY]
+    angular_fog_min_end: FIELD_FLOAT32 m_flFogMinEnd [FTYPEDESC_KEY]
+    angular_fog_max_start: FIELD_FLOAT32 m_flFogMaxStart [FTYPEDESC_KEY]
+    angular_fog_max_end: FIELD_FLOAT32 m_flFogMaxEnd [FTYPEDESC_KEY]
+
+CEnvSoundscape : CBaseEntity
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    soundscape: FIELD_STRING m_soundscapeName [FTYPEDESC_KEY]
+    enablesoundevent: FIELD_BOOLEAN m_bOverrideWithEvent [FTYPEDESC_KEY]
+    soundevent: FIELD_SOUNDNAME m_soundEventName [FTYPEDESC_KEY]
+    "position%d": FIELD_STRING m_positionNames [FTYPEDESC_GEN_ARRAY_KEYNAMES_0 | FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CEnvSoundscapeProxy : CEnvSoundscape
+    MainSoundscapeName: FIELD_STRING m_MainSoundscapeName [FTYPEDESC_KEY]
+
+CEnvSpark : CPointEntity
+    MaxDelay: FIELD_FLOAT32 m_flDelay [FTYPEDESC_KEY]
+    Magnitude: FIELD_INT32 m_nMagnitude [FTYPEDESC_KEY]
+    SparkType: FIELD_INT32 m_nType [FTYPEDESC_KEY]
+    TrailLength: FIELD_INT32 m_nTrailLength [FTYPEDESC_KEY]
+
+CEnvSplash : CPointEntity
+    scale: FIELD_FLOAT32 m_flScale [FTYPEDESC_KEY]
+
+CEnvTilt : CPointEntity
+    duration: FIELD_FLOAT32 m_Duration [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_Radius [FTYPEDESC_KEY]
+    tilttime: FIELD_FLOAT32 m_TiltTime [FTYPEDESC_KEY]
+
+CEnvViewPunch : CPointEntity
+    punchangle: FIELD_QANGLE m_angViewPunch [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+
+CEnvVolumetricFogController : CBaseEntity
+    IsMaster: FIELD_BOOLEAN m_bIsMaster [FTYPEDESC_KEY]
+    FadeSpeed: FIELD_FLOAT32 m_flFadeSpeed [FTYPEDESC_KEY]
+    volume_depth_override: FIELD_INT32 m_nVolumeDepth [FTYPEDESC_KEY]
+    volume_first_slice_thickness: FIELD_FLOAT32 m_fFirstVolumeSliceThickness [FTYPEDESC_KEY]
+    Anisotropy: FIELD_FLOAT32 m_flAnisotropy [FTYPEDESC_KEY]
+    FogStrength: FIELD_FLOAT32 m_flScattering [FTYPEDESC_KEY]
+    DrawDistance: FIELD_FLOAT32 m_flDrawDistance [FTYPEDESC_KEY]
+    FadeInStart: FIELD_FLOAT32 m_flFadeInStart [FTYPEDESC_KEY]
+    FadeInEnd: FIELD_FLOAT32 m_flFadeInEnd [FTYPEDESC_KEY]
+    IndirectVoxelDimX: FIELD_INT32 m_nIndirectTextureDimX [FTYPEDESC_KEY]
+    IndirectVoxelDimY: FIELD_INT32 m_nIndirectTextureDimY [FTYPEDESC_KEY]
+    IndirectVoxelDimZ: FIELD_INT32 m_nIndirectTextureDimZ [FTYPEDESC_KEY]
+    IndirectStrength: FIELD_FLOAT32 m_flIndirectStrength [FTYPEDESC_KEY]
+    IndirectEnabled: FIELD_BOOLEAN m_bEnableIndirect [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    box_mins: FIELD_VECTOR m_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vBoxMaxs [FTYPEDESC_KEY]
+    fogirradiancevolume: FIELD_HRENDERTEXTURE m_hFogIndirectTexture [FTYPEDESC_KEY]
+    NoiseSpeed: FIELD_FLOAT32 m_fNoiseSpeed [FTYPEDESC_KEY]
+    NoiseStrength: FIELD_FLOAT32 m_fNoiseStrength [FTYPEDESC_KEY]
+    NoiseScale: FIELD_VECTOR m_vNoiseScale [FTYPEDESC_KEY]
+    WindSpeed: FIELD_FLOAT32 m_fWindSpeed [FTYPEDESC_KEY]
+    WindDirection: FIELD_VECTOR m_vWindDirection [FTYPEDESC_KEY]
+    TintColor: FIELD_COLOR32 m_TintColor [FTYPEDESC_KEY]
+
+CEnvVolumetricFogVolume : CBaseEntity
+    box_mins: FIELD_VECTOR m_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vBoxMaxs [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    IndirectUseLPVs: FIELD_BOOLEAN m_bIndirectUseLPVs [FTYPEDESC_KEY]
+    FogStrength: FIELD_FLOAT32 m_flStrength [FTYPEDESC_KEY]
+    FalloffExponent: FIELD_FLOAT32 m_flFalloffExponent [FTYPEDESC_KEY]
+    HeightFogDepth: FIELD_FLOAT32 m_flHeightFogDepth [FTYPEDESC_KEY]
+    HeightFogEdgeWidth: FIELD_FLOAT32 m_fHeightFogEdgeWidth [FTYPEDESC_KEY]
+    FogIndirectStrength: FIELD_FLOAT32 m_fIndirectLightStrength [FTYPEDESC_KEY]
+    FogSunLightStrength: FIELD_FLOAT32 m_fSunLightStrength [FTYPEDESC_KEY]
+    FogNoiseStrength: FIELD_FLOAT32 m_fNoiseStrength [FTYPEDESC_KEY]
+    Shape: FIELD_INT32 m_nFalloffShape [FTYPEDESC_KEY]
+    TintColor: FIELD_COLOR32 m_TintColor [FTYPEDESC_KEY]
+    OverrideFogIndirectStrength: FIELD_BOOLEAN m_bOverrideIndirectLightStrength [FTYPEDESC_KEY]
+    OverrideFogSunLightStrength: FIELD_BOOLEAN m_bOverrideSunLightStrength [FTYPEDESC_KEY]
+    OverrideFogNoiseStrength: FIELD_BOOLEAN m_bOverrideNoiseStrength [FTYPEDESC_KEY]
+    OverrideTintColor: FIELD_BOOLEAN m_bOverrideTintColor [FTYPEDESC_KEY]
+
+CEnvWind : CBaseEntity
+    "m_EnvWindShared:FIELD_EMBEDDED": FIELD_EMBEDDED m_EnvWindShared <CEnvWindShared> [FTYPEDESC_NONE]
+
+CEnvWindShared
+    minwind: FIELD_UINT16 m_iMinWind [FTYPEDESC_KEY]
+    maxwind: FIELD_UINT16 m_iMaxWind [FTYPEDESC_KEY]
+    windradius: FIELD_INT32 m_windRadius [FTYPEDESC_KEY]
+    mingust: FIELD_UINT16 m_iMinGust [FTYPEDESC_KEY]
+    maxgust: FIELD_UINT16 m_iMaxGust [FTYPEDESC_KEY]
+    mingustdelay: FIELD_FLOAT32 m_flMinGustDelay [FTYPEDESC_KEY]
+    maxgustdelay: FIELD_FLOAT32 m_flMaxGustDelay [FTYPEDESC_KEY]
+    gustduration: FIELD_FLOAT32 m_flGustDuration [FTYPEDESC_KEY]
+    gustdirchange: FIELD_UINT16 m_iGustDirChange [FTYPEDESC_KEY]
+
+CFilterAttributeInt : CBaseFilter
+    filterattribute: FIELD_STRING m_sAttributeName [FTYPEDESC_KEY]
+
+CFilterClass : CBaseFilter
+    filterclass: FIELD_STRING m_iFilterClass [FTYPEDESC_KEY]
+
+CFilterContext : CBaseFilter
+    ResponseContext: FIELD_STRING m_iFilterContext [FTYPEDESC_KEY]
+
+CFilterEnemy : CBaseFilter
+    filtername: FIELD_STRING m_iszEnemyName [FTYPEDESC_KEY]
+    filter_radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    filter_outer_radius: FIELD_FLOAT32 m_flOuterRadius [FTYPEDESC_KEY]
+    filter_max_per_enemy: FIELD_INT32 m_nMaxSquadmatesPerEnemy [FTYPEDESC_KEY]
+
+CFilterMassGreater : CBaseFilter
+    filtermass: FIELD_FLOAT32 m_fFilterMass [FTYPEDESC_KEY]
+
+CFilterModel : CBaseFilter
+    model: FIELD_STRING m_iFilterModel [FTYPEDESC_KEY]
+
+CFilterMultiple : CBaseFilter
+    FilterType: FIELD_INT32 m_nFilterType <filter_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    "Filter%02d": FIELD_STRING m_iFilterName [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+
+CFilterName : CBaseFilter
+    filtername: FIELD_STRING m_iFilterName [FTYPEDESC_KEY]
+
+CFilterProximity : CBaseFilter
+    filter_radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+
+CFilterTeam : CBaseFilter
+    filterteam: FIELD_INT32 m_iFilterTeam [FTYPEDESC_KEY]
+
+CFishPool : CBaseEntity
+    fish_count: FIELD_INT32 m_fishCount [FTYPEDESC_KEY]
+    max_range: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CFlashbangProjectile : CBaseGrenade
+
+CFogController : CBaseEntity
+    "m_fog:FIELD_EMBEDDED": FIELD_EMBEDDED m_fog <fogparams_t> [FTYPEDESC_NONE]
+    use_angles: FIELD_BOOLEAN m_bUseAngles [FTYPEDESC_KEY]
+
+CFogTrigger : CBaseTrigger
+    "m_fog:FIELD_EMBEDDED": FIELD_EMBEDDED m_fog <fogparams_t> [FTYPEDESC_NONE]
+
+CFogVolume : CBaseModelEntity
+    FogName: FIELD_STRING m_fogName [FTYPEDESC_KEY]
+    PostProcessName: FIELD_STRING m_postProcessName [FTYPEDESC_KEY]
+    ColorCorrectionName: FIELD_STRING m_colorCorrectionName [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CFootstepControl : CBaseTrigger
+    Source: FIELD_STRING m_source [FTYPEDESC_KEY]
+    Destination: FIELD_STRING m_destination [FTYPEDESC_KEY]
+
+CFuncBrush : CBaseModelEntity
+    StartDisabled: FIELD_INT32 m_iDisabled [FTYPEDESC_KEY]
+    Solidity: FIELD_INT32 m_iSolidity <BrushSolidities_e> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    solidbsp: FIELD_BOOLEAN m_bSolidBsp [FTYPEDESC_KEY]
+    excludednpc: FIELD_STRING m_iszExcludedClass [FTYPEDESC_KEY]
+    invert_exclusion: FIELD_BOOLEAN m_bInvertExclusion [FTYPEDESC_KEY]
+    ScriptedMovement: FIELD_BOOLEAN m_bScriptedMovement [FTYPEDESC_KEY]
+
+CFuncConveyor : CBaseModelEntity
+    conveyor_models: FIELD_STRING m_szConveyorModels [FTYPEDESC_KEY]
+    transition_duration: FIELD_FLOAT32 m_flTransitionDurationSeconds [FTYPEDESC_KEY]
+    movedir: FIELD_QANGLE m_angMoveEntitySpace [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    friction_scale: FIELD_FLOAT32 m_flFrictionScale [FTYPEDESC_KEY]
+
+CFuncElectrifiedVolume : CFuncBrush
+    effect_name: FIELD_STRING m_EffectName [FTYPEDESC_KEY]
+    effect_interpenetrate_name: FIELD_STRING m_EffectInterpenetrateName [FTYPEDESC_KEY]
+    effect_zap_name: FIELD_STRING m_EffectZapName [FTYPEDESC_KEY]
+    effect_zap_source: FIELD_STRING m_iszEffectSource [FTYPEDESC_KEY]
+
+CFuncInteractionLayerClip : CBaseModelEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    InteractsAs: FIELD_STRING m_iszInteractsAs [FTYPEDESC_KEY]
+    InteractsWith: FIELD_STRING m_iszInteractsWith [FTYPEDESC_KEY]
+
+CFuncLadder : CBaseModelEntity
+    point1: FIELD_VECTOR m_vecLocalTop [FTYPEDESC_KEY]
+    AutoRideSpeed: FIELD_FLOAT32 m_flAutoRideSpeed [FTYPEDESC_KEY]
+    HasSlack: FIELD_BOOLEAN m_bHasSlack [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    ladderSurfaceProperties: FIELD_STRING m_surfacePropName [FTYPEDESC_KEY]
+
+CFuncMonitor : CFuncBrush
+    target: FIELD_UTLSTRING m_targetCamera [FTYPEDESC_KEY]
+    resolution: FIELD_INT32 m_nResolutionEnum [FTYPEDESC_KEY]
+    render_shadows: FIELD_BOOLEAN m_bRenderShadows [FTYPEDESC_KEY]
+    unique_target: FIELD_BOOLEAN m_bUseUniqueColorTarget [FTYPEDESC_KEY]
+    draw_3dskybox: FIELD_BOOLEAN m_bDraw3DSkybox [FTYPEDESC_KEY]
+    start_enabled: FIELD_BOOLEAN m_bStartEnabled [FTYPEDESC_KEY]
+
+CFuncMoveLinear : CBaseToggle
+    movedir: FIELD_QANGLE m_angMoveEntitySpace [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    StartSound: FIELD_SOUNDNAME m_soundStart [FTYPEDESC_KEY]
+    StopSound: FIELD_SOUNDNAME m_soundStop [FTYPEDESC_KEY]
+    BlockDamage: FIELD_FLOAT32 m_flBlockDamage [FTYPEDESC_KEY]
+    StartPosition: FIELD_FLOAT32 m_flStartPosition [FTYPEDESC_KEY]
+    CreateNavObstacle: FIELD_BOOLEAN m_bCreateNavObstacle [FTYPEDESC_KEY]
+    CreateMovableNavMesh: FIELD_BOOLEAN m_bCreateMovableNavMesh [FTYPEDESC_KEY]
+    AllowMovableNavMeshDockingOnEntireEntity: FIELD_BOOLEAN m_bAllowMovableNavMeshDockingOnEntireEntity [FTYPEDESC_KEY]
+    authoredposition: FIELD_INT32 m_authoredPosition <MoveLinearAuthoredPos_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    movewithoutpushingblockers: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CFuncMover : CBaseModelEntity
+    path_name: FIELD_STRING m_iszPathName [FTYPEDESC_KEY]
+    path_node_start: FIELD_STRING m_iszPathNodeStart [FTYPEDESC_KEY]
+    path_node_end: FIELD_STRING m_iszPathNodeEnd [FTYPEDESC_KEY]
+    ignore_end_node: FIELD_BOOLEAN m_bIgnoreEndNode [FTYPEDESC_KEY]
+    starts_moving: FIELD_BOOLEAN m_bIsMoving [FTYPEDESC_KEY]
+    starts_in_reverse: FIELD_BOOLEAN m_bIsReversing [FTYPEDESC_KEY]
+    starts_at_closest_point: FIELD_BOOLEAN m_bStartAtClosestPoint [FTYPEDESC_KEY]
+    starts_at_end: FIELD_BOOLEAN m_bStartAtEnd [FTYPEDESC_KEY]
+    starts_following_closest_mover: FIELD_BOOLEAN m_bStartFollowingClosestMover [FTYPEDESC_KEY]
+    starts_following_closest_mover_when_within_distance: FIELD_FLOAT32 m_flStartFollowingClosestMoverWhenWithinDistance [FTYPEDESC_KEY]
+    starts_following_closest_mover_when_outside_distance: FIELD_FLOAT32 m_flStartFollowingClosestMoverWhenOutsideDistance [FTYPEDESC_KEY]
+    starts_following_closest_mover_strategy: FIELD_INT32 m_eFindFollowMoverStrategy <CFuncMover::FindFollowMoverStrategy_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    time_to_reach_max_speed: FIELD_FLOAT32 m_flTimeToReachMaxSpeed [FTYPEDESC_KEY]
+    distance_to_reach_max_speed: FIELD_FLOAT32 m_flDistanceToReachMaxSpeed [FTYPEDESC_KEY]
+    time_to_reach_zero_speed: FIELD_FLOAT32 m_flTimeToReachZeroSpeed [FTYPEDESC_KEY]
+    distance_to_reach_zero_speed: FIELD_FLOAT32 m_flDistanceToReachZeroSpeed [FTYPEDESC_KEY]
+    disable_deceleration_to_stop: FIELD_BOOLEAN m_bDisableDecelerationToStop [FTYPEDESC_KEY]
+    time_to_blend_to_new_orientation: FIELD_FLOAT32 m_flTimeToBlendToNewOrientation [FTYPEDESC_KEY]
+    start_forward_sound: FIELD_SOUNDNAME m_iszStartForwardSound [FTYPEDESC_KEY]
+    loop_forward_sound: FIELD_SOUNDNAME m_iszLoopForwardSound [FTYPEDESC_KEY]
+    stop_forward_sound: FIELD_SOUNDNAME m_iszStopForwardSound [FTYPEDESC_KEY]
+    start_reverse_sound: FIELD_SOUNDNAME m_iszStartReverseSound [FTYPEDESC_KEY]
+    loop_reverse_sound: FIELD_SOUNDNAME m_iszLoopReverseSound [FTYPEDESC_KEY]
+    stop_reverse_sound: FIELD_SOUNDNAME m_iszStopReverseSound [FTYPEDESC_KEY]
+    arrive_at_destination_sound: FIELD_SOUNDNAME m_iszArriveAtDestinationSound [FTYPEDESC_KEY]
+    CreateMovableNavMesh: FIELD_BOOLEAN m_bCreateMovableNavMesh [FTYPEDESC_KEY]
+    create_surface_graph: FIELD_BOOLEAN m_bCreateMovableSurfaceGraph [FTYPEDESC_KEY]
+    AllowMovableNavMeshDockingOnEntireEntity: FIELD_BOOLEAN m_bAllowMovableNavMeshDockingOnEntireEntity [FTYPEDESC_KEY]
+    orientation_match_entity: FIELD_STRING m_iszOrientationMatchEntityName [FTYPEDESC_KEY]
+    follow_entity: FIELD_STRING m_iszFollowEntityName [FTYPEDESC_KEY]
+    follow_other_mover_entity: FIELD_STRING m_iszFollowMoverEntityName [FTYPEDESC_KEY]
+    follow_other_mover_distance: FIELD_FLOAT32 m_flFollowMoverDistance [FTYPEDESC_KEY]
+    follow_other_mover_ratio: FIELD_FLOAT32 m_flFollowMoverRatio [FTYPEDESC_KEY]
+    follow_other_mover_spring_strength: FIELD_FLOAT32 m_flFollowMoverSpringStrength [FTYPEDESC_KEY]
+    follow_other_mover_coupler_range: FIELD_VECTOR2D m_vecFollowMoverCouplerRange [FTYPEDESC_KEY]
+    follow_other_mover_constraint_priority: FIELD_INT32 m_nFollowMoverConstraintPriority [FTYPEDESC_KEY]
+    follow_other_mover_constraint: FIELD_INT32 m_eFollowConstraint <CFuncMover::FollowConstraint_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    path_rebuild_strategy: FIELD_INT32 m_ePathRebuildStrategy <CFuncMover::PathRebuildStrategy_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    solid: FIELD_UINT8 m_eSolidType <SolidType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    move_type: FIELD_INT32 m_eMoveType <CFuncMover::Move_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    orientation_update: FIELD_INT32 m_eOrientationUpdate <CFuncMover::OrientationUpdate_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    orientation_face_entity: FIELD_STRING m_strOrientationFaceEntityName [FTYPEDESC_KEY]
+    offset_from_path: FIELD_VECTOR m_vOffsetFromPath [FTYPEDESC_KEY]
+
+CFuncMoverRouter : CBaseEntity
+    mover_index: FIELD_INT32 m_nMoverIndex [FTYPEDESC_KEY]
+    route_to_all_movers: FIELD_BOOLEAN m_bRouteToAllMovers [FTYPEDESC_KEY]
+    path_mover_name: FIELD_STRING m_iszPathMoverName [FTYPEDESC_KEY]
+
+CFuncNavBlocker : CBaseModelEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    teamToBlock: FIELD_INT32 m_nBlockedTeamNumber [FTYPEDESC_KEY]
+
+CFuncNavObstruction : CBaseModelEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    AsyncObstacleUpdate: FIELD_BOOLEAN m_bUseAsyncObstacleUpdate [FTYPEDESC_KEY]
+
+CFuncPlat : CBasePlatTrain
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CFuncRotating : CBaseModelEntity
+    maxspeed: FIELD_FLOAT32 m_flMaxSpeed [FTYPEDESC_KEY]
+    dmg: FIELD_FLOAT32 m_flBlockDamage [FTYPEDESC_KEY]
+    message: FIELD_SOUNDNAME m_NoiseRunning [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    movewithoutpushingblockers: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    fanfriction: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Volume: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CFuncRotator : CBaseModelEntity
+    rotate_type: FIELD_INT32 m_eRotateType <CFuncRotator::Rotate_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    starts_rotating: FIELD_BOOLEAN m_bIsRotating [FTYPEDESC_KEY]
+    rotator_target_entity: FIELD_STRING m_strRotatorTarget [FTYPEDESC_KEY]
+    rotation_distance: FIELD_FLOAT32 m_flRotationDistanceDegrees [FTYPEDESC_KEY]
+    time_to_reach_max_speed: FIELD_FLOAT32 m_flTimeToReachMaxSpeed [FTYPEDESC_KEY]
+    time_to_reach_zero_speed: FIELD_FLOAT32 m_flTimeToReachZeroSpeed [FTYPEDESC_KEY]
+    min_yaw_rotation: FIELD_FLOAT32 m_flMinYawRotation [FTYPEDESC_KEY]
+    max_yaw_rotation: FIELD_FLOAT32 m_flMaxYawRotation [FTYPEDESC_KEY]
+    start_sound: FIELD_SOUNDNAME m_iszStartSound [FTYPEDESC_KEY]
+    loop_sound: FIELD_SOUNDNAME m_iszLoopSound [FTYPEDESC_KEY]
+    stop_sound: FIELD_SOUNDNAME m_iszStopSound [FTYPEDESC_KEY]
+    solid: FIELD_UINT8 m_eSolidType <SolidType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    time_to_complete_rotation: FIELD_FLOAT32 m_flTimeToCompleteRotation [FTYPEDESC_KEY]
+
+CFuncShatterglass : CBaseModelEntity
+    GlassNavIgnore: FIELD_BOOLEAN m_bGlassNavIgnore [FTYPEDESC_KEY]
+    GlassThickness: FIELD_FLOAT32 m_flGlassThickness [FTYPEDESC_KEY]
+    GlassInFrame: FIELD_BOOLEAN m_bGlassInFrame [FTYPEDESC_KEY]
+    SpawnInvulnerability: FIELD_FLOAT32 m_flSpawnInvulnerability [FTYPEDESC_KEY]
+    StartBroken: FIELD_BOOLEAN m_bStartBroken [FTYPEDESC_KEY]
+    DamageType: FIELD_UINT8 m_iInitialDamageType [FTYPEDESC_KEY]
+    DamagePositioningEntity: FIELD_STRING m_szDamagePositioningEntityName01 [FTYPEDESC_KEY]
+    DamagePositioningEntity02: FIELD_STRING m_szDamagePositioningEntityName02 [FTYPEDESC_KEY]
+    DamagePositioningEntity03: FIELD_STRING m_szDamagePositioningEntityName03 [FTYPEDESC_KEY]
+    DamagePositioningEntity04: FIELD_STRING m_szDamagePositioningEntityName04 [FTYPEDESC_KEY]
+    BreakShardless: FIELD_BOOLEAN m_bBreakShardless [FTYPEDESC_KEY]
+    surface_type: FIELD_UINT8 m_iSurfaceType [FTYPEDESC_KEY]
+    DamagedMaterial: FIELD_HMATERIAL m_hMaterialDamageBase [FTYPEDESC_KEY]
+
+CFuncTankTrain : CFuncTrackTrain
+
+CFuncTimescale : CBaseEntity
+    desiredTimescale: FIELD_FLOAT32 m_flDesiredTimescale [FTYPEDESC_KEY]
+    acceleration: FIELD_FLOAT32 m_flAcceleration [FTYPEDESC_KEY]
+    minBlendRate: FIELD_FLOAT32 m_flMinBlendRate [FTYPEDESC_KEY]
+    blendDeltaMultiplier: FIELD_FLOAT32 m_flBlendDeltaMultiplier [FTYPEDESC_KEY]
+
+CFuncTrackAuto : CFuncTrackChange
+
+CFuncTrackChange : CFuncPlat
+    toptrack: FIELD_STRING m_trackTopName [FTYPEDESC_KEY]
+    bottomtrack: FIELD_STRING m_trackBottomName [FTYPEDESC_KEY]
+    train: FIELD_STRING m_trainName [FTYPEDESC_KEY]
+
+CFuncTrackTrain : CBaseModelEntity
+    wheels: FIELD_FLOAT32 m_length [FTYPEDESC_KEY]
+    height: FIELD_FLOAT32 m_height [FTYPEDESC_KEY]
+    startspeed: FIELD_FLOAT32 m_maxSpeed [FTYPEDESC_KEY]
+    bank: FIELD_FLOAT32 m_flBank [FTYPEDESC_KEY]
+    dmg: FIELD_FLOAT32 m_flBlockDamage [FTYPEDESC_KEY]
+    MoveSound: FIELD_SOUNDNAME m_iszSoundMove [FTYPEDESC_KEY]
+    MovePingSound: FIELD_SOUNDNAME m_iszSoundMovePing [FTYPEDESC_KEY]
+    StartSound: FIELD_SOUNDNAME m_iszSoundStart [FTYPEDESC_KEY]
+    StopSound: FIELD_SOUNDNAME m_iszSoundStop [FTYPEDESC_KEY]
+    MoveSoundMinPitch: FIELD_FLOAT32 m_flMoveSoundMinPitch [FTYPEDESC_KEY]
+    MoveSoundMaxPitch: FIELD_FLOAT32 m_flMoveSoundMaxPitch [FTYPEDESC_KEY]
+    MoveSoundMinTime: FIELD_FLOAT32 m_flMoveSoundMinDuration [FTYPEDESC_KEY]
+    MoveSoundMaxTime: FIELD_FLOAT32 m_flMoveSoundMaxDuration [FTYPEDESC_KEY]
+    velocitytype: FIELD_INT32 m_eVelocityType <TrainVelocityType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    orientationtype: FIELD_INT32 m_eOrientationType <TrainOrientationType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    ManualSpeedChanges: FIELD_BOOLEAN m_bManualSpeedChanges [FTYPEDESC_KEY]
+    ManualAccelSpeed: FIELD_FLOAT32 m_flAccelSpeed [FTYPEDESC_KEY]
+    ManualDecelSpeed: FIELD_FLOAT32 m_flDecelSpeed [FTYPEDESC_KEY]
+    volume: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CFuncTrain : CBasePlatTrain
+    dmg: FIELD_FLOAT32 m_flBlockDamage [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CFuncVPhysicsClip : CBaseModelEntity
+
+CFuncVehicleClip : CBaseModelEntity
+
+CFuncWallToggle : CBaseModelEntity
+
+CGameEnd : CRulePointEntity
+
+CGameGibManager : CBaseEntity
+    maxpieces: FIELD_INT32 m_iMaxPieces [FTYPEDESC_KEY]
+    allownewgibs: FIELD_BOOLEAN m_bAllowNewGibs [FTYPEDESC_KEY]
+
+CGameMoney : CRulePointEntity
+    Money: FIELD_INT32 m_nMoney [FTYPEDESC_KEY]
+    AwardText: FIELD_UTLSTRING m_strAwardText [FTYPEDESC_KEY]
+
+CGamePlayerEquip : CRulePointEntity
+    "weapon%d": FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CGamePlayerZone : CRuleEntity
+
+CGameSceneNode
+    local.origin: FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR m_vecOrigin [FTYPEDESC_KEY]
+    local.angles: FIELD_QANGLE m_angRotation [FTYPEDESC_KEY]
+    origin: FIELD_POSITION_VECTOR m_vecAbsOrigin [FTYPEDESC_KEY]
+    angles: FIELD_QANGLE_WORLDSPACE m_angAbsRotation [FTYPEDESC_KEY]
+    parentAttachmentName: FIELD_UTLSTRINGTOKEN m_hierarchyAttachName [FTYPEDESC_KEY]
+    parentname: FIELD_EHANDLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    useLocalOffset: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    useParentRenderBounds: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    positionInLocalSpace: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    scales: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    local.scales: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    scale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    ModelScale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CGameText : CRulePointEntity
+    message: FIELD_STRING m_iszMessage [FTYPEDESC_KEY]
+    "m_textParms:FIELD_EMBEDDED": FIELD_EMBEDDED m_textParms <hudtextparms_t> [FTYPEDESC_NONE]
+    color: FIELD_COLOR32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    color2: FIELD_COLOR32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CGenericConstraint : CPhysConstraint
+    place_anchors_at_constraint_transform: FIELD_BOOLEAN m_bPlaceAnchorsAtConstraintTransform [FTYPEDESC_KEY]
+    linear_motion_x: FIELD_INT32 m_nLinearMotionX <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    linear_motion_y: FIELD_INT32 m_nLinearMotionY <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    linear_motion_z: FIELD_INT32 m_nLinearMotionZ <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    linear_frequency_x: FIELD_FLOAT32 m_flLinearFrequencyX [FTYPEDESC_KEY]
+    linear_frequency_y: FIELD_FLOAT32 m_flLinearFrequencyY [FTYPEDESC_KEY]
+    linear_frequency_z: FIELD_FLOAT32 m_flLinearFrequencyZ [FTYPEDESC_KEY]
+    linear_damping_ratio_x: FIELD_FLOAT32 m_flLinearDampingRatioX [FTYPEDESC_KEY]
+    linear_damping_ratio_y: FIELD_FLOAT32 m_flLinearDampingRatioY [FTYPEDESC_KEY]
+    linear_damping_ratio_z: FIELD_FLOAT32 m_flLinearDampingRatioZ [FTYPEDESC_KEY]
+    forcelimit_x: FIELD_FLOAT32 m_flMaxLinearImpulseX [FTYPEDESC_KEY]
+    forcelimit_y: FIELD_FLOAT32 m_flMaxLinearImpulseY [FTYPEDESC_KEY]
+    forcelimit_z: FIELD_FLOAT32 m_flMaxLinearImpulseZ [FTYPEDESC_KEY]
+    notifyforce_x: FIELD_FLOAT32 m_flNotifyForceX [FTYPEDESC_KEY]
+    notifyforce_y: FIELD_FLOAT32 m_flNotifyForceY [FTYPEDESC_KEY]
+    notifyforce_z: FIELD_FLOAT32 m_flNotifyForceZ [FTYPEDESC_KEY]
+    breakaftertime_x: FIELD_FLOAT32 m_flBreakAfterTimeX [FTYPEDESC_KEY]
+    breakaftertime_y: FIELD_FLOAT32 m_flBreakAfterTimeY [FTYPEDESC_KEY]
+    breakaftertime_z: FIELD_FLOAT32 m_flBreakAfterTimeZ [FTYPEDESC_KEY]
+    breakaftertimethreshold_x: FIELD_FLOAT32 m_flBreakAfterTimeThresholdX [FTYPEDESC_KEY]
+    breakaftertimethreshold_y: FIELD_FLOAT32 m_flBreakAfterTimeThresholdY [FTYPEDESC_KEY]
+    breakaftertimethreshold_z: FIELD_FLOAT32 m_flBreakAfterTimeThresholdZ [FTYPEDESC_KEY]
+    notifyforcemintime_x: FIELD_FLOAT32 m_flNotifyForceMinTimeX [FTYPEDESC_KEY]
+    notifyforcemintime_y: FIELD_FLOAT32 m_flNotifyForceMinTimeY [FTYPEDESC_KEY]
+    notifyforcemintime_z: FIELD_FLOAT32 m_flNotifyForceMinTimeZ [FTYPEDESC_KEY]
+    angular_motion_x: FIELD_INT32 m_nAngularMotionX <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    angular_motion_y: FIELD_INT32 m_nAngularMotionY <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    angular_motion_z: FIELD_INT32 m_nAngularMotionZ <JointMotion_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    angular_frequency_x: FIELD_FLOAT32 m_flAngularFrequencyX [FTYPEDESC_KEY]
+    angular_frequency_y: FIELD_FLOAT32 m_flAngularFrequencyY [FTYPEDESC_KEY]
+    angular_frequency_z: FIELD_FLOAT32 m_flAngularFrequencyZ [FTYPEDESC_KEY]
+    angular_damping_ratio_x: FIELD_FLOAT32 m_flAngularDampingRatioX [FTYPEDESC_KEY]
+    angular_damping_ratio_y: FIELD_FLOAT32 m_flAngularDampingRatioY [FTYPEDESC_KEY]
+    angular_damping_ratio_z: FIELD_FLOAT32 m_flAngularDampingRatioZ [FTYPEDESC_KEY]
+    torquelimit_x: FIELD_FLOAT32 m_flMaxAngularImpulseX [FTYPEDESC_KEY]
+    torquelimit_y: FIELD_FLOAT32 m_flMaxAngularImpulseY [FTYPEDESC_KEY]
+    torquelimit_z: FIELD_FLOAT32 m_flMaxAngularImpulseZ [FTYPEDESC_KEY]
+
+CGradientFog : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    gradientfogtexture: FIELD_HRENDERTEXTURE m_hGradientFogTexture [FTYPEDESC_KEY]
+    fogstart: FIELD_FLOAT32 m_flFogStartDistance [FTYPEDESC_KEY]
+    fogend: FIELD_FLOAT32 m_flFogEndDistance [FTYPEDESC_KEY]
+    heightfog: FIELD_BOOLEAN m_bHeightFogEnabled [FTYPEDESC_KEY]
+    fogstartheight: FIELD_FLOAT32 m_flFogStartHeight [FTYPEDESC_KEY]
+    fogendheight: FIELD_FLOAT32 m_flFogEndHeight [FTYPEDESC_KEY]
+    farz: FIELD_FLOAT32 m_flFarZ [FTYPEDESC_KEY]
+    fogmaxopacity: FIELD_FLOAT32 m_flFogMaxOpacity [FTYPEDESC_KEY]
+    fogfalloffexponent: FIELD_FLOAT32 m_flFogFalloffExponent [FTYPEDESC_KEY]
+    fogverticalexponent: FIELD_FLOAT32 m_flFogVerticalExponent [FTYPEDESC_KEY]
+    fogcolor: FIELD_COLOR32 m_fogColor [FTYPEDESC_KEY]
+    fogstrength: FIELD_FLOAT32 m_flFogStrength [FTYPEDESC_KEY]
+    fadetime: FIELD_FLOAT32 m_flFadeTime [FTYPEDESC_KEY]
+
+CGunTarget : CBaseToggle
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CHostage : CBaseCombatCharacter
+
+CInfoDynamicShadowHint : CPointEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    range: FIELD_FLOAT32 m_flRange [FTYPEDESC_KEY]
+    importance: FIELD_INT32 m_nImportance [FTYPEDESC_KEY]
+    lightchoice: FIELD_INT32 m_nLightChoice [FTYPEDESC_KEY]
+
+CInfoDynamicShadowHintBox : CInfoDynamicShadowHint
+    box_mins: FIELD_VECTOR m_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vBoxMaxs [FTYPEDESC_KEY]
+
+CInfoFan : CPointEntity
+    fan_force_curve: FIELD_STRING m_FanForceCurveString [FTYPEDESC_KEY]
+    fan_force_max_radius: FIELD_FLOAT32 m_fFanForceMaxRadius [FTYPEDESC_KEY]
+    fan_force_min_radius: FIELD_FLOAT32 m_fFanForceMinRadius [FTYPEDESC_KEY]
+
+CInfoGameEventProxy : CPointEntity
+    event_name: FIELD_STRING m_iszEventName [FTYPEDESC_KEY]
+    range: FIELD_FLOAT32 m_flRange [FTYPEDESC_KEY]
+
+CInfoOffscreenPanoramaTexture : CPointEntity
+    start_disabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    resolution_x: FIELD_INT32 m_nResolutionX [FTYPEDESC_KEY]
+    resolution_y: FIELD_INT32 m_nResolutionY [FTYPEDESC_KEY]
+    panel_type: FIELD_STRING m_szPanelType [FTYPEDESC_KEY]
+    layout_file: FIELD_STRING m_szLayoutFileName [FTYPEDESC_KEY]
+    render_attr_name: FIELD_STRING m_RenderAttrName [FTYPEDESC_KEY]
+    enable_mip_gen: FIELD_BOOLEAN m_bEnableMipGen [FTYPEDESC_KEY]
+    targets: FIELD_STRING m_szTargetsName [FTYPEDESC_KEY]
+
+CInfoPlayerStart : CPointEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    IsMaster: FIELD_BOOLEAN m_bIsMaster [FTYPEDESC_KEY]
+    PawnSubclass: FIELD_GLOBALSYMBOL m_pPawnSubclass [FTYPEDESC_KEY]
+
+CInfoSpawnGroupLoadUnload : CBaseEntity
+    mapname: FIELD_STRING m_iszSpawnGroupName [FTYPEDESC_KEY]
+    entityfiltername: FIELD_STRING m_iszSpawnGroupFilterName [FTYPEDESC_KEY]
+    landmark: FIELD_STRING m_iszLandmarkName [FTYPEDESC_KEY]
+    timeoutInterval: FIELD_FLOAT32 m_flTimeoutInterval [FTYPEDESC_KEY]
+    autoactivate: FIELD_BOOLEAN m_bAutoActivate [FTYPEDESC_KEY]
+
+CInfoVisibilityBox : CBaseEntity
+    cull_mode: FIELD_INT32 m_nMode [FTYPEDESC_KEY]
+    box_size: FIELD_VECTOR m_vBoxSize [FTYPEDESC_KEY]
+
+CInfoWorldLayer : CBaseEntity
+    worldName: FIELD_STRING m_worldName [FTYPEDESC_KEY]
+    layerName: FIELD_STRING m_layerName [FTYPEDESC_KEY]
+    childSpawnGroup: FIELD_BOOLEAN m_bCreateAsChildSpawnGroup [FTYPEDESC_KEY]
+
+CInstancedSceneEntity : CSceneEntity
+    scene_owner: FIELD_EHANDLE m_hOwner [FTYPEDESC_KEY]
+    remove_on_completion: FIELD_BOOLEAN m_bRemoveOnCompletion [FTYPEDESC_KEY]
+    target: FIELD_EHANDLE m_hTarget [FTYPEDESC_KEY]
+
+CInstructorEventEntity : CPointEntity
+    hint_name: FIELD_STRING m_iszName [FTYPEDESC_KEY]
+    hint_target: FIELD_STRING m_iszHintTargetEntity [FTYPEDESC_KEY]
+
+CItem : CBaseAnimGraph
+    phys_start_asleep: FIELD_BOOLEAN m_bPhysStartAsleep [FTYPEDESC_KEY]
+
+CItemGeneric : CItem
+    spawn_particles: FIELD_HPARTICLESYSTEMDEFINITION m_hSpawnParticleEffect [FTYPEDESC_KEY]
+    spawn_sound: FIELD_STRING m_pAmbientSoundEffect [FTYPEDESC_KEY]
+    auto_start_ambient_sound: FIELD_BOOLEAN m_bAutoStartAmbientSound [FTYPEDESC_KEY]
+    spawn_script_func: FIELD_STRING m_pSpawnScriptFunction [FTYPEDESC_KEY]
+    pickup_particles: FIELD_HPARTICLESYSTEMDEFINITION m_hPickupParticleEffect [FTYPEDESC_KEY]
+    pickup_sound: FIELD_STRING m_pPickupSoundEffect [FTYPEDESC_KEY]
+    pickup_script_func: FIELD_STRING m_pPickupScriptFunction [FTYPEDESC_KEY]
+    timeout_particles: FIELD_HPARTICLESYSTEMDEFINITION m_hTimeoutParticleEffect [FTYPEDESC_KEY]
+    timeout_sound: FIELD_STRING m_pTimeoutSoundEffect [FTYPEDESC_KEY]
+    timeout_script_func: FIELD_STRING m_pTimeoutScriptFunction [FTYPEDESC_KEY]
+    pickup_filter_name: FIELD_STRING m_pPickupFilterName [FTYPEDESC_KEY]
+    allow_pickup_script_func: FIELD_STRING m_pAllowPickupScriptFunction [FTYPEDESC_KEY]
+    pickup_radius_override: FIELD_FLOAT32 m_flPickupRadius [FTYPEDESC_KEY]
+    trigger_radius: FIELD_FLOAT32 m_flTriggerRadius [FTYPEDESC_KEY]
+    trigger_sound: FIELD_STRING m_pTriggerSoundEffect [FTYPEDESC_KEY]
+    glow_in_trigger_radius: FIELD_BOOLEAN m_bGlowWhenInTrigger [FTYPEDESC_KEY]
+    glowcolor: FIELD_COLOR32 m_glowColor [FTYPEDESC_KEY]
+    useable: FIELD_BOOLEAN m_bUseable [FTYPEDESC_KEY]
+    auto_remove_timeout: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    drag_override: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    damping_override: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CKeepUpright : CPointEntity
+    attach1: FIELD_STRING m_nameAttach [FTYPEDESC_KEY]
+    attachedObject: FIELD_EHANDLE m_attachedObject [FTYPEDESC_KEY]
+    angularLimit: FIELD_FLOAT32 m_angularLimit [FTYPEDESC_KEY]
+    dampAllRotation: FIELD_BOOLEAN m_bDampAllRotation [FTYPEDESC_KEY]
+
+CLightComponent : CEntityComponent
+    color: FIELD_COLOR32 m_Color [FTYPEDESC_KEY]
+    secondary_color: FIELD_COLOR32 m_SecondaryColor [FTYPEDESC_KEY]
+    brightness: FIELD_FLOAT32 m_flBrightness [FTYPEDESC_KEY]
+    brightnessscale: FIELD_FLOAT32 m_flBrightnessScale [FTYPEDESC_KEY]
+    range: FIELD_FLOAT32 m_flRange [FTYPEDESC_KEY]
+    falloff: FIELD_FLOAT32 m_flFalloff [FTYPEDESC_KEY]
+    attenuation0: FIELD_FLOAT32 m_flAttenuation0 [FTYPEDESC_KEY]
+    attenuation1: FIELD_FLOAT32 m_flAttenuation1 [FTYPEDESC_KEY]
+    attenuation2: FIELD_FLOAT32 m_flAttenuation2 [FTYPEDESC_KEY]
+    innerconeangle: FIELD_FLOAT32 m_flTheta [FTYPEDESC_KEY]
+    outerconeangle: FIELD_FLOAT32 m_flPhi [FTYPEDESC_KEY]
+    lightcookie: FIELD_HRENDERTEXTURE m_hLightCookie [FTYPEDESC_KEY]
+    numcascades: FIELD_INT32 m_nCascades [FTYPEDESC_KEY]
+    cascaderenderstaticobj: FIELD_INT32 m_nCascadeRenderStaticObjects [FTYPEDESC_KEY]
+    cascadecrossfade: FIELD_FLOAT32 m_flShadowCascadeCrossFade [FTYPEDESC_KEY]
+    cascadedistancefade: FIELD_FLOAT32 m_flShadowCascadeDistanceFade [FTYPEDESC_KEY]
+    shadowcascadedistance0: FIELD_FLOAT32 m_flShadowCascadeDistance0 [FTYPEDESC_KEY]
+    shadowcascadedistance1: FIELD_FLOAT32 m_flShadowCascadeDistance1 [FTYPEDESC_KEY]
+    shadowcascadedistance2: FIELD_FLOAT32 m_flShadowCascadeDistance2 [FTYPEDESC_KEY]
+    shadowcascadedistance3: FIELD_FLOAT32 m_flShadowCascadeDistance3 [FTYPEDESC_KEY]
+    shadowcascaderesolution0: FIELD_INT32 m_nShadowCascadeResolution0 [FTYPEDESC_KEY]
+    shadowcascaderesolution1: FIELD_INT32 m_nShadowCascadeResolution1 [FTYPEDESC_KEY]
+    shadowcascaderesolution2: FIELD_INT32 m_nShadowCascadeResolution2 [FTYPEDESC_KEY]
+    shadowcascaderesolution3: FIELD_INT32 m_nShadowCascadeResolution3 [FTYPEDESC_KEY]
+    castshadows: FIELD_INT32 m_nCastShadows [FTYPEDESC_KEY]
+    shadowtexturewidth: FIELD_INT32 m_nShadowWidth [FTYPEDESC_KEY]
+    shadowtextureheight: FIELD_INT32 m_nShadowHeight [FTYPEDESC_KEY]
+    baked_light_indexing: FIELD_BOOLEAN m_bUsesBakedShadowing [FTYPEDESC_KEY]
+    shadowpriority: FIELD_INT32 m_nShadowPriority [FTYPEDESC_KEY]
+    bakedshadowindex: FIELD_INT32 m_nBakedShadowIndex [FTYPEDESC_KEY]
+    light_path_uniqueid: FIELD_INT32 m_nLightPathUniqueId [FTYPEDESC_KEY]
+    light_map_uniqueid: FIELD_INT32 m_nLightMapUniqueId [FTYPEDESC_KEY]
+    renderdiffuse: FIELD_BOOLEAN m_bRenderDiffuse [FTYPEDESC_KEY]
+    renderspecular: FIELD_INT32 m_nRenderSpecular [FTYPEDESC_KEY]
+    rendertransmissive: FIELD_BOOLEAN m_bRenderTransmissive [FTYPEDESC_KEY]
+    ortholightwidth: FIELD_FLOAT32 m_flOrthoLightWidth [FTYPEDESC_KEY]
+    ortholightheight: FIELD_FLOAT32 m_flOrthoLightHeight [FTYPEDESC_KEY]
+    style: FIELD_INT32 m_nStyle [FTYPEDESC_KEY]
+    pattern: FIELD_UTLSTRING m_Pattern [FTYPEDESC_KEY]
+    directlight: FIELD_INT32 m_nDirectLight [FTYPEDESC_KEY]
+    bouncelight: FIELD_INT32 m_nBounceLight [FTYPEDESC_KEY]
+    bouncescale: FIELD_FLOAT32 m_flBounceScale [FTYPEDESC_KEY]
+    fademindist: FIELD_FLOAT32 m_flFadeMinDist [FTYPEDESC_KEY]
+    fademaxdist: FIELD_FLOAT32 m_flFadeMaxDist [FTYPEDESC_KEY]
+    shadowfademindist: FIELD_FLOAT32 m_flShadowFadeMinDist [FTYPEDESC_KEY]
+    shadowfademaxdist: FIELD_FLOAT32 m_flShadowFadeMaxDist [FTYPEDESC_KEY]
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    rendertocubemaps: FIELD_BOOLEAN m_bRenderToCubemaps [FTYPEDESC_KEY]
+    flicker: FIELD_BOOLEAN m_bFlicker [FTYPEDESC_KEY]
+    precomputedfieldsvalid: FIELD_BOOLEAN m_bPrecomputedFieldsValid [FTYPEDESC_KEY]
+    precomputedboundsmins: FIELD_POSITION_VECTOR m_vPrecomputedBoundsMins [FTYPEDESC_KEY]
+    precomputedboundsmaxs: FIELD_POSITION_VECTOR m_vPrecomputedBoundsMaxs [FTYPEDESC_KEY]
+    precomputedmaxrange: FIELD_FLOAT32 m_flPrecomputedMaxRange [FTYPEDESC_KEY]
+    precomputedobborigin: FIELD_POSITION_VECTOR m_vPrecomputedOBBOrigin [FTYPEDESC_KEY]
+    precomputedobbangles: FIELD_QANGLE_WORLDSPACE m_vPrecomputedOBBAngles [FTYPEDESC_KEY]
+    precomputedobbextent: FIELD_VECTOR m_vPrecomputedOBBExtent [FTYPEDESC_KEY]
+    fog_lighting: FIELD_INT32 m_nFogLightingMode [FTYPEDESC_KEY]
+    fogcontributionstrength: FIELD_FLOAT32 m_flFogContributionStength [FTYPEDESC_KEY]
+    nearclipplane: FIELD_FLOAT32 m_flNearClipPlane [FTYPEDESC_KEY]
+    skycolor: FIELD_COLOR32 m_SkyColor [FTYPEDESC_KEY]
+    skyintensity: FIELD_FLOAT32 m_flSkyIntensity [FTYPEDESC_KEY]
+    skyambientbounce: FIELD_COLOR32 m_SkyAmbientBounce [FTYPEDESC_KEY]
+    use_secondary_color: FIELD_BOOLEAN m_bUseSecondaryColor [FTYPEDESC_KEY]
+    capsule_length: FIELD_FLOAT32 m_flCapsuleLength [FTYPEDESC_KEY]
+    mixedshadows: FIELD_BOOLEAN m_bMixedShadows [FTYPEDESC_KEY]
+    minroughness: FIELD_FLOAT32 m_flMinRoughness [FTYPEDESC_KEY]
+    allow_sst_generation: FIELD_BOOLEAN m_bAllowSSTGeneration [FTYPEDESC_KEY]
+    pvs_modify_entity: FIELD_BOOLEAN m_bPvsModifyEntity [FTYPEDESC_KEY]
+
+CLightEntity : CBaseModelEntity
+
+CLogicAchievement : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    AchievementEvent: FIELD_STRING m_iszAchievementEventID [FTYPEDESC_KEY]
+
+CLogicActiveAutosave : CLogicAutosave
+    TriggerHitPoints: FIELD_INT32 m_TriggerHitPoints [FTYPEDESC_KEY]
+    TimeToTrigger: FIELD_FLOAT32 m_flTimeToTrigger [FTYPEDESC_KEY]
+    DangerousTime: FIELD_FLOAT32 m_flDangerousTime [FTYPEDESC_KEY]
+
+CLogicActivityEvent : CBaseEntity
+    ActivityEventType: FIELD_INT32 m_nEventType [FTYPEDESC_KEY]
+    DurationValue: FIELD_FLOAT32 m_flDuration [FTYPEDESC_KEY]
+    sourceEntityName: FIELD_STRING m_iszSourceEntityName [FTYPEDESC_KEY]
+
+CLogicAuto : CBaseEntity
+    globalstate: FIELD_STRING m_globalstate [FTYPEDESC_KEY]
+
+CLogicAutosave : CBaseEntity
+    NewLevelUnit: FIELD_BOOLEAN m_bForceNewLevelUnit [FTYPEDESC_KEY]
+    MinimumHitPoints: FIELD_INT32 m_minHitPoints [FTYPEDESC_KEY]
+    MinHitPointsToCommit: FIELD_INT32 m_minHitPointsToCommit [FTYPEDESC_KEY]
+
+CLogicBranch : CBaseEntity
+    InitialValue: FIELD_BOOLEAN m_bInValue [FTYPEDESC_KEY]
+
+CLogicBranchList : CBaseEntity
+    "Branch%02d": FIELD_STRING m_nLogicBranchNames [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+
+CLogicCase : CBaseEntity
+    "Case%02d": FIELD_STRING m_nCase [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+
+CLogicCollisionPair : CBaseEntity
+    attach1: FIELD_STRING m_nameAttach1 [FTYPEDESC_KEY]
+    attach2: FIELD_STRING m_nameAttach2 [FTYPEDESC_KEY]
+    support_multiple_entities_with_same_name: FIELD_BOOLEAN m_supportMultipleEntitiesWithSameName [FTYPEDESC_KEY]
+    include_hierarchy: FIELD_BOOLEAN m_includeHierarchy [FTYPEDESC_KEY]
+    startdisabled: FIELD_BOOLEAN m_disabled [FTYPEDESC_KEY]
+
+CLogicCompare : CBaseEntity
+    CompareValue: FIELD_FLOAT32 m_flCompareValue [FTYPEDESC_KEY]
+    InitialValue: FIELD_FLOAT32 m_flInValue [FTYPEDESC_KEY]
+
+CLogicDistanceAutosave : CBaseEntity
+    TargetEntityName: FIELD_STRING m_iszTargetEntity [FTYPEDESC_KEY]
+    DistanceToPlayer: FIELD_FLOAT32 m_flDistanceToPlayer [FTYPEDESC_KEY]
+    NewLevelUnit: FIELD_BOOLEAN m_bForceNewLevelUnit [FTYPEDESC_KEY]
+    CheckCough: FIELD_BOOLEAN m_bCheckCough [FTYPEDESC_KEY]
+
+CLogicDistanceCheck : CBaseEntity
+    EntityAName: FIELD_STRING m_iszEntityA [FTYPEDESC_KEY]
+    EntityBName: FIELD_STRING m_iszEntityB [FTYPEDESC_KEY]
+    Zone1Distance: FIELD_FLOAT32 m_flZone1Distance [FTYPEDESC_KEY]
+    Zone2Distance: FIELD_FLOAT32 m_flZone2Distance [FTYPEDESC_KEY]
+
+CLogicEventListener : CBaseEntity
+    EventName: FIELD_UTLSTRING m_strEventName [FTYPEDESC_KEY]
+    IsEnabled: FIELD_BOOLEAN m_bIsEnabled [FTYPEDESC_KEY]
+    TeamNum: FIELD_INT32 m_nTeam [FTYPEDESC_KEY]
+
+CLogicGameEvent : CBaseEntity
+    eventName: FIELD_STRING m_iszEventName [FTYPEDESC_KEY]
+
+CLogicGameEventListener : CBaseEntity
+    gameeventname: FIELD_STRING m_iszGameEventName [FTYPEDESC_KEY]
+    gameeventitem: FIELD_STRING m_iszGameEventItem [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+
+CLogicGameStateReport : CBaseEntity
+    startDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CLogicLineToEntity : CBaseEntity
+    source: FIELD_STRING m_SourceName [FTYPEDESC_KEY]
+
+CLogicMeasureMovement : CBaseEntity
+    MeasureTarget: FIELD_STRING m_strMeasureTarget [FTYPEDESC_KEY]
+    MeasureReference: FIELD_STRING m_strMeasureReference [FTYPEDESC_KEY]
+    TargetReference: FIELD_STRING m_strTargetReference [FTYPEDESC_KEY]
+    TargetScale: FIELD_FLOAT32 m_flScale [FTYPEDESC_KEY]
+    MeasureType: FIELD_INT32 m_nMeasureType [FTYPEDESC_KEY]
+
+CLogicNPCCounter : CBaseEntity
+    minCountAll: FIELD_INT32 m_nMinCountAll [FTYPEDESC_KEY]
+    maxCountAll: FIELD_INT32 m_nMaxCountAll [FTYPEDESC_KEY]
+    minFactorAll: FIELD_INT32 m_nMinFactorAll [FTYPEDESC_KEY]
+    maxFactorAll: FIELD_INT32 m_nMaxFactorAll [FTYPEDESC_KEY]
+    NPCType1: FIELD_STRING m_iszNPCClassname_1 [FTYPEDESC_KEY]
+    NPCState1: FIELD_INT32 m_nNPCState_1 [FTYPEDESC_KEY]
+    invertState1: FIELD_BOOLEAN m_bInvertState_1 [FTYPEDESC_KEY]
+    minCount1: FIELD_INT32 m_nMinCount_1 [FTYPEDESC_KEY]
+    maxCount1: FIELD_INT32 m_nMaxCount_1 [FTYPEDESC_KEY]
+    minFactor1: FIELD_INT32 m_nMinFactor_1 [FTYPEDESC_KEY]
+    maxFactor1: FIELD_INT32 m_nMaxFactor_1 [FTYPEDESC_KEY]
+    defaultDist1: FIELD_FLOAT32 m_flDefaultDist_1 [FTYPEDESC_KEY]
+    NPCType2: FIELD_STRING m_iszNPCClassname_2 [FTYPEDESC_KEY]
+    NPCState2: FIELD_INT32 m_nNPCState_2 [FTYPEDESC_KEY]
+    invertState2: FIELD_BOOLEAN m_bInvertState_2 [FTYPEDESC_KEY]
+    minCount2: FIELD_INT32 m_nMinCount_2 [FTYPEDESC_KEY]
+    maxCount2: FIELD_INT32 m_nMaxCount_2 [FTYPEDESC_KEY]
+    minFactor2: FIELD_INT32 m_nMinFactor_2 [FTYPEDESC_KEY]
+    maxFactor2: FIELD_INT32 m_nMaxFactor_2 [FTYPEDESC_KEY]
+    defaultDist2: FIELD_FLOAT32 m_flDefaultDist_2 [FTYPEDESC_KEY]
+    NPCType3: FIELD_STRING m_iszNPCClassname_3 [FTYPEDESC_KEY]
+    NPCState3: FIELD_INT32 m_nNPCState_3 [FTYPEDESC_KEY]
+    invertState3: FIELD_BOOLEAN m_bInvertState_3 [FTYPEDESC_KEY]
+    minCount3: FIELD_INT32 m_nMinCount_3 [FTYPEDESC_KEY]
+    maxCount3: FIELD_INT32 m_nMaxCount_3 [FTYPEDESC_KEY]
+    minFactor3: FIELD_INT32 m_nMinFactor_3 [FTYPEDESC_KEY]
+    maxFactor3: FIELD_INT32 m_nMaxFactor_3 [FTYPEDESC_KEY]
+    defaultDist3: FIELD_FLOAT32 m_flDefaultDist_3 [FTYPEDESC_KEY]
+    sourceEntityName: FIELD_STRING m_iszSourceEntityName [FTYPEDESC_KEY]
+    startDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    distanceMax: FIELD_FLOAT32 m_flDistanceMax [FTYPEDESC_KEY]
+
+CLogicNPCCounterAABB : CLogicNPCCounter
+    box_outer_mins: FIELD_VECTOR m_vDistanceOuterMins [FTYPEDESC_KEY]
+    box_outer_maxs: FIELD_VECTOR m_vDistanceOuterMaxs [FTYPEDESC_KEY]
+
+CLogicNavigation : CBaseEntity
+    navprop: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CLogicPlayerProxyBase : CBaseEntity
+
+CLogicRelay : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    TriggerOnce: FIELD_BOOLEAN m_bTriggerOnce [FTYPEDESC_KEY]
+    FastRetrigger: FIELD_BOOLEAN m_bFastRetrigger [FTYPEDESC_KEY]
+    PassthroughCaller: FIELD_BOOLEAN m_bPassthoughCaller [FTYPEDESC_KEY]
+
+CLogicScript : CPointEntity
+    Group00: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group01: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group02: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group03: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group04: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group05: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group06: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group07: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group08: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group09: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group10: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group11: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group12: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group13: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group14: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group15: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Group16: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CMapInfo : CPointEntity
+    petpopulation: FIELD_INT32 m_iPetPopulation [FTYPEDESC_KEY]
+    usenormalspawnsfordm: FIELD_BOOLEAN m_bUseNormalSpawnsForDM [FTYPEDESC_KEY]
+    disableautogenerateddmspawns: FIELD_BOOLEAN m_bDisableAutoGeneratedDMSpawns [FTYPEDESC_KEY]
+    botmaxvisiondistance: FIELD_FLOAT32 m_flBotMaxVisionDistance [FTYPEDESC_KEY]
+    hostagecount: FIELD_INT32 m_iHostageCount [FTYPEDESC_KEY]
+    fadeplayervisibilityfarz: FIELD_BOOLEAN m_bFadePlayerVisibilityFarZ [FTYPEDESC_KEY]
+    gpucullskybox: FIELD_BOOLEAN m_bGPUCullSkybox [FTYPEDESC_KEY]
+    raintracetoskyenabled: FIELD_BOOLEAN m_bRainTraceToSkyEnabled [FTYPEDESC_KEY]
+    envrainstrength: FIELD_FLOAT32 m_flEnvRainStrength [FTYPEDESC_KEY]
+    envpuddleripplestrength: FIELD_FLOAT32 m_flEnvPuddleRippleStrength [FTYPEDESC_KEY]
+    envpuddlerippledirection: FIELD_FLOAT32 m_flEnvPuddleRippleDirection [FTYPEDESC_KEY]
+    envwetnesscoverage: FIELD_FLOAT32 m_flEnvWetnessCoverage [FTYPEDESC_KEY]
+    envwetnessdryingamount: FIELD_FLOAT32 m_flEnvWetnessDryingAmount [FTYPEDESC_KEY]
+
+CMapSharedEnvironment : CBaseEntity
+    targetMapName: FIELD_STRING m_targetMapName [FTYPEDESC_KEY]
+
+CMapVetoPickController : CBaseEntity
+
+CMarkupVolume : CBaseModelEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CMarkupVolumeTagged : CMarkupVolume
+    groupbyprefab: FIELD_BOOLEAN m_bGroupByPrefab [FTYPEDESC_KEY]
+    groupbyvolume: FIELD_BOOLEAN m_bGroupByVolume [FTYPEDESC_KEY]
+    groupothergroups: FIELD_BOOLEAN m_bGroupOtherGroups [FTYPEDESC_KEY]
+
+CMarkupVolumeTagged_Nav : CMarkupVolumeTagged
+    navProperty_NavAttributes: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    flags: FIELD_UINT8 m_nScopes <NavScopeFlags_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CMarkupVolumeTagged_NavGame : CMarkupVolumeWithRef
+    navProperty_NavAttributes: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    navProperty_NavAttributesGame: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    split_nav_space: FIELD_BOOLEAN m_bSplitNavSpace [FTYPEDESC_KEY]
+    flood_fill_attribute: FIELD_BOOLEAN m_bFloodFillAttribute [FTYPEDESC_KEY]
+    flags: FIELD_UINT8 m_nScopes <NavScopeFlags_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CMarkupVolumeWithRef : CMarkupVolumeTagged
+    use_ref_position: FIELD_BOOLEAN m_bUseRef [FTYPEDESC_KEY]
+    ref_position: FIELD_VECTOR m_vRefPosEntitySpace [FTYPEDESC_KEY]
+
+CMathColorBlend : CBaseEntity
+    inmin: FIELD_FLOAT32 m_flInMin [FTYPEDESC_KEY]
+    inmax: FIELD_FLOAT32 m_flInMax [FTYPEDESC_KEY]
+    colormin: FIELD_COLOR32 m_OutColor1 [FTYPEDESC_KEY]
+    colormax: FIELD_COLOR32 m_OutColor2 [FTYPEDESC_KEY]
+
+CMathCounter : CBaseEntity
+    min: FIELD_FLOAT32 m_flMin [FTYPEDESC_KEY]
+    max: FIELD_FLOAT32 m_flMax [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    startvalue: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CMathRemap : CBaseEntity
+    in1: FIELD_FLOAT32 m_flInMin [FTYPEDESC_KEY]
+    in2: FIELD_FLOAT32 m_flInMax [FTYPEDESC_KEY]
+    out1: FIELD_FLOAT32 m_flOut1 [FTYPEDESC_KEY]
+    out2: FIELD_FLOAT32 m_flOut2 [FTYPEDESC_KEY]
+
+CMessage : CPointEntity
+    message: FIELD_STRING m_iszMessage [FTYPEDESC_KEY]
+    messagesound: FIELD_SOUNDNAME m_sNoise [FTYPEDESC_KEY]
+    messageattenuation: FIELD_INT32 m_MessageAttenuation [FTYPEDESC_KEY]
+    messagevolume: FIELD_FLOAT32 m_MessageVolume [FTYPEDESC_KEY]
+
+CMessageEntity : CPointEntity
+    radius: FIELD_INT32 m_radius [FTYPEDESC_KEY]
+    message: FIELD_STRING m_messageText [FTYPEDESC_KEY]
+    developeronly: FIELD_BOOLEAN m_bDeveloperOnly [FTYPEDESC_KEY]
+
+CMomentaryRotButton : CBaseButton
+    StartDirection: FIELD_INT32 m_direction [FTYPEDESC_KEY]
+    returnspeed: FIELD_FLOAT32 m_returnSpeed [FTYPEDESC_KEY]
+    StartPosition: FIELD_FLOAT32 m_flStartPosition [FTYPEDESC_KEY]
+    solidbsp: FIELD_BOOLEAN m_bSolidBsp [FTYPEDESC_ADDED_KEYFIELD | FTYPEDESC_KEY]
+
+CMotorController
+    axis: FIELD_POSITION_VECTOR m_axis [FTYPEDESC_KEY]
+    inertiafactor: FIELD_FLOAT32 m_inertiaFactor [FTYPEDESC_KEY]
+
+CMoverPathNode : CPathNode
+
+CMultiLightProxy : CBaseEntity
+    light_name: FIELD_STRING m_iszLightNameFilter [FTYPEDESC_KEY]
+    light_class: FIELD_STRING m_iszLightClassFilter [FTYPEDESC_KEY]
+    light_radius: FIELD_FLOAT32 m_flLightRadiusFilter [FTYPEDESC_KEY]
+    brightness_delta: FIELD_FLOAT32 m_flBrightnessDelta [FTYPEDESC_KEY]
+    screen_fade: FIELD_BOOLEAN m_bPerformScreenFade [FTYPEDESC_KEY]
+
+CMultiSource : CBaseEntity
+    globalstate: FIELD_STRING m_globalstate [FTYPEDESC_KEY]
+
+CNetworkedSequenceOperation
+    cycle: FIELD_FLOAT32 m_flCycle [FTYPEDESC_KEY]
+    sequenceName: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    sequence: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+COmniLight : CBarnLight
+    inner_angle: FIELD_FLOAT32 m_flInnerAngle [FTYPEDESC_KEY]
+    outer_angle: FIELD_FLOAT32 m_flOuterAngle [FTYPEDESC_KEY]
+    showlight: FIELD_BOOLEAN m_bShowLight [FTYPEDESC_KEY]
+
+COrnamentProp : CDynamicProp
+    InitialOwner: FIELD_STRING m_initialOwner [FTYPEDESC_KEY]
+
+CParticleSystem : CBaseModelEntity
+    start_active: FIELD_BOOLEAN m_bStartActive [FTYPEDESC_KEY]
+    pre_sim_time: FIELD_FLOAT32 m_flPreSimTime [FTYPEDESC_KEY]
+    effect_name: FIELD_STRING m_iszEffectName [FTYPEDESC_KEY]
+    no_save: FIELD_BOOLEAN m_bNoSave [FTYPEDESC_KEY]
+    no_freeze: FIELD_BOOLEAN m_bNoFreeze [FTYPEDESC_KEY]
+    no_ramp: FIELD_BOOLEAN m_bNoRamp [FTYPEDESC_KEY]
+    snapshot_file: FIELD_CHARACTER m_szSnapshotFileName [FTYPEDESC_KEY]
+    "cpoint%d": FIELD_STRING m_iszControlPointNames [FTYPEDESC_GEN_ARRAY_KEYNAMES_0 | FTYPEDESC_KEY]
+    "cpoint%d_value": FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    AnimateDuringGameplayPause: FIELD_BOOLEAN m_bAnimateDuringGameplayPause [FTYPEDESC_KEY]
+    data_cp: FIELD_INT32 m_nDataCP [FTYPEDESC_KEY]
+    data_cp_value: FIELD_VECTOR m_vecDataCPValue [FTYPEDESC_KEY]
+    tint_cp: FIELD_INT32 m_nTintCP [FTYPEDESC_KEY]
+    tint_cp_color: FIELD_COLOR32 m_clrTint [FTYPEDESC_KEY]
+
+CPathCorner : CPointEntity
+    wait: FIELD_FLOAT32 m_flWait [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    trigger_locomotion_stop: FIELD_BOOLEAN m_bTriggerLocomotionStop [FTYPEDESC_KEY]
+    smooth_arrival: FIELD_BOOLEAN m_bSmoothArrival [FTYPEDESC_KEY]
+    path_end_distance_from_goal: FIELD_FLOAT32 m_flPathEndDistanceFromGoal [FTYPEDESC_KEY]
+    waypoint_success_radius: FIELD_FLOAT32 m_flWaypointSuccessRadius [FTYPEDESC_KEY]
+    waypoint_success_radius_when_blocked: FIELD_FLOAT32 m_flWaypointSuccessRadiusWhenBlocked [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    exact_positioning: FIELD_BOOLEAN m_bExactPositioning [FTYPEDESC_KEY]
+
+CPathKeyFrame : CBaseEntity
+    NextKey: FIELD_STRING m_iNextKey [FTYPEDESC_KEY]
+    MoveSpeed: FIELD_FLOAT32 m_flMoveSpeed [FTYPEDESC_KEY]
+
+CPathMover : CPathWithDynamicNodes
+    path_mover_spawner_name: FIELD_STRING m_iszMoverSpawnerName [FTYPEDESC_KEY]
+    path_mover_router_name: FIELD_STRING m_iszMoverRouterName [FTYPEDESC_KEY]
+    sample_spacing: FIELD_FLOAT32 m_flSampleSpacing [FTYPEDESC_KEY]
+    ignore_parent_rotation: FIELD_BOOLEAN m_bIgnoreParentRotation [FTYPEDESC_KEY]
+
+CPathMoverEntitySpawner : CBaseEntity
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    template_selection_strategy: FIELD_INT32 m_eTemplateChoiceStrategy <CPathMoverEntitySpawner::TemplateChoiceStrategy_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    spawn_frequency_seconds: FIELD_FLOAT32 m_flSpawnFrequencySeconds [FTYPEDESC_KEY]
+    spawn_frequency_dist_to_nearest: FIELD_FLOAT32 m_flSpawnFrequencyDistToNearestMover [FTYPEDESC_KEY]
+    max_active: FIELD_INT32 m_nMaxActive [FTYPEDESC_KEY]
+    path_mover_name: FIELD_STRING m_iszPathMoverName [FTYPEDESC_KEY]
+    prepopulate_on_spawn: FIELD_BOOLEAN m_bPrepopulateOnSpawn [FTYPEDESC_KEY]
+    "entity_template%02d": FIELD_STRING m_szSpawnTemplates [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+    "param_template%02d": FIELD_INT32 m_szSpawnTemplateParams [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+    destroy_mover_at_end: FIELD_BOOLEAN m_bDestroyMoverOnArrivedAtEnd [FTYPEDESC_KEY]
+    path_node_start_name: FIELD_STRING m_iszPathNodeStartName [FTYPEDESC_KEY]
+
+CPathNode : CPointEntity
+    in_tangent_local: FIELD_VECTOR m_vInTangentLocal [FTYPEDESC_KEY]
+    out_tangent_local: FIELD_VECTOR m_vOutTangentLocal [FTYPEDESC_KEY]
+    path_uniqueid: FIELD_UTLSTRING m_strParentPathUniqueID [FTYPEDESC_KEY]
+    path_parameter_string: FIELD_UTLSTRING m_strPathNodeParameter [FTYPEDESC_KEY]
+
+CPathParticleRope : CBaseEntity
+    start_active: FIELD_BOOLEAN m_bStartActive [FTYPEDESC_KEY]
+    max_simulation_time: FIELD_FLOAT32 m_flMaxSimulationTime [FTYPEDESC_KEY]
+    effect_name: FIELD_STRING m_iszEffectName [FTYPEDESC_KEY]
+    particle_spacing: FIELD_FLOAT32 m_flParticleSpacing [FTYPEDESC_KEY]
+    slack: FIELD_FLOAT32 m_flSlack [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    color_tint: FIELD_COLOR32 m_ColorTint [FTYPEDESC_KEY]
+    pathNodes: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CPathSimple : CBaseEntity
+    closed_loop: FIELD_BOOLEAN m_bClosedLoop [FTYPEDESC_KEY]
+
+CPathTrack : CPointEntity
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    altpath: FIELD_STRING m_altName [FTYPEDESC_KEY]
+    orientationtype: FIELD_INT32 m_eOrientationType <TrackOrientationType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CPathWithDynamicNodes : CPathSimple
+    preferred_direction: FIELD_INT32 m_eDesiredDirection <DirectionAlongSimplePath_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CPhysBallSocket : CPhysConstraint
+    joint_friction: FIELD_FLOAT32 m_flJointFriction [FTYPEDESC_KEY]
+    enable_swing_limit: FIELD_BOOLEAN m_bEnableSwingLimit [FTYPEDESC_KEY]
+    swing_limit: FIELD_FLOAT32 m_flSwingLimit [FTYPEDESC_KEY]
+    enable_twist_limit: FIELD_BOOLEAN m_bEnableTwistLimit [FTYPEDESC_KEY]
+    min_twist_angle: FIELD_FLOAT32 m_flMinTwistAngle [FTYPEDESC_KEY]
+    max_twist_angle: FIELD_FLOAT32 m_flMaxTwistAngle [FTYPEDESC_KEY]
+
+CPhysBox : CBreakable
+    Damagetype: FIELD_INT32 m_damageType [FTYPEDESC_KEY]
+    damagetoenablemotion: FIELD_INT32 m_damageToEnableMotion [FTYPEDESC_KEY]
+    forcetoenablemotion: FIELD_FLOAT32 m_flForceToEnableMotion [FTYPEDESC_KEY]
+    hoverposeflags: FIELD_UINT8 m_nHoverPoseFlags <HoverPoseFlags_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    hoverposeposition: FIELD_VECTOR m_vHoverPosePosition [FTYPEDESC_KEY]
+    hoverposeangles: FIELD_QANGLE m_angHoverPoseAngles [FTYPEDESC_KEY]
+    preferredcarryangles: FIELD_QANGLE __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    notsolid: FIELD_BOOLEAN m_bNotSolidToWorld [FTYPEDESC_KEY]
+    touchoutputperentitydelay: FIELD_FLOAT32 m_flTouchOutputPerEntityDelay [FTYPEDESC_KEY]
+    enableuseoutput: FIELD_BOOLEAN m_bEnableUseOutput [FTYPEDESC_KEY]
+    collisionGroup: FIELD_STRING m_iszCollisionGroup [FTYPEDESC_KEY]
+    interactsAs: FIELD_STRING m_iszInteractsAs [FTYPEDESC_KEY]
+    interactsWith: FIELD_STRING m_iszInteractsWith [FTYPEDESC_KEY]
+    interactsExclude: FIELD_STRING m_iszInteractsExclude [FTYPEDESC_KEY]
+
+CPhysConstraint : CBaseEntity
+    attach1: FIELD_STRING m_nameAttach1 [FTYPEDESC_KEY]
+    attach2: FIELD_STRING m_nameAttach2 [FTYPEDESC_KEY]
+    attachedentity1: FIELD_EHANDLE m_hAttach1 [FTYPEDESC_KEY]
+    attachedentity2: FIELD_EHANDLE m_hAttach2 [FTYPEDESC_KEY]
+    attachment1: FIELD_STRING m_nameAttachment1 [FTYPEDESC_KEY]
+    attachment2: FIELD_STRING m_nameAttachment2 [FTYPEDESC_KEY]
+    breaksound: FIELD_SOUNDNAME m_breakSound [FTYPEDESC_KEY]
+    forcelimit: FIELD_FLOAT32 m_forceLimit [FTYPEDESC_KEY]
+    torquelimit: FIELD_FLOAT32 m_torqueLimit [FTYPEDESC_KEY]
+    teleportfollowdistance: FIELD_FLOAT32 m_minTeleportDistance [FTYPEDESC_KEY]
+    snapobjectpositions: FIELD_BOOLEAN m_bSnapObjectPositions [FTYPEDESC_KEY]
+    treat_entity1_as_infinite_mass: FIELD_BOOLEAN m_bTreatEntity1AsInfiniteMass [FTYPEDESC_KEY]
+
+CPhysExplosion : CPointEntity
+    magnitude: FIELD_FLOAT32 m_flMagnitude [FTYPEDESC_KEY]
+    damage: FIELD_FLOAT32 m_flDamage [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_radius [FTYPEDESC_KEY]
+    ignoreentityname: FIELD_STRING m_ignoreEntityName [FTYPEDESC_KEY]
+    targetentityname: FIELD_STRING m_targetEntityName [FTYPEDESC_KEY]
+    inner_radius: FIELD_FLOAT32 m_flInnerRadius [FTYPEDESC_KEY]
+    explodeonspawn: FIELD_BOOLEAN m_bExplodeOnSpawn [FTYPEDESC_KEY]
+    pushscale: FIELD_FLOAT32 m_flPushScale [FTYPEDESC_KEY]
+    ConvertToDebrisWhenPossible: FIELD_BOOLEAN m_bConvertToDebrisWhenPossible [FTYPEDESC_KEY]
+    AffectInvulnerableEnts: FIELD_BOOLEAN m_bAffectInvulnerableEnts [FTYPEDESC_KEY]
+    DisablePushClamp: FIELD_BOOLEAN m_bDisablePushClamp [FTYPEDESC_KEY]
+
+CPhysFixed : CPhysConstraint
+    linearfrequency: FIELD_FLOAT32 m_flLinearFrequency [FTYPEDESC_KEY]
+    lineardampingratio: FIELD_FLOAT32 m_flLinearDampingRatio [FTYPEDESC_KEY]
+    angularfrequency: FIELD_FLOAT32 m_flAngularFrequency [FTYPEDESC_KEY]
+    angulardampingratio: FIELD_FLOAT32 m_flAngularDampingRatio [FTYPEDESC_KEY]
+    enablelinearconstraint: FIELD_BOOLEAN m_bEnableLinearConstraint [FTYPEDESC_KEY]
+    enableangularconstraint: FIELD_BOOLEAN m_bEnableAngularConstraint [FTYPEDESC_KEY]
+    bonename1: FIELD_STRING m_sBoneName1 [FTYPEDESC_KEY]
+    bonename2: FIELD_STRING m_sBoneName2 [FTYPEDESC_KEY]
+
+CPhysForce : CPointEntity
+    attach1: FIELD_STRING m_nameAttach [FTYPEDESC_KEY]
+    force: FIELD_FLOAT32 m_force [FTYPEDESC_KEY]
+    forcetime: FIELD_FLOAT32 m_forceTime [FTYPEDESC_KEY]
+
+CPhysHinge : CPhysConstraint
+    "m_soundInfo:FIELD_EMBEDDED": FIELD_EMBEDDED m_soundInfo <ConstraintSoundInfo> [FTYPEDESC_NONE]
+    hingefriction: FIELD_FLOAT32 m_hingeFriction [FTYPEDESC_KEY]
+    min_rotation: FIELD_FLOAT32 m_flMinRotation [FTYPEDESC_KEY]
+    max_rotation: FIELD_FLOAT32 m_flMaxRotation [FTYPEDESC_KEY]
+    initial_rotation: FIELD_FLOAT32 m_flInitialRotation [FTYPEDESC_KEY]
+    systemloadscale: FIELD_FLOAT32 m_systemLoadScale [FTYPEDESC_KEY]
+    motorfrequency: FIELD_FLOAT32 m_flMotorFrequency [FTYPEDESC_KEY]
+    motordampingratio: FIELD_FLOAT32 m_flMotorDampingRatio [FTYPEDESC_KEY]
+    AngleSpeedThreshold: FIELD_FLOAT32 m_flAngleSpeedThreshold [FTYPEDESC_KEY]
+
+CPhysImpact : CPointEntity
+    magnitude: FIELD_FLOAT32 m_damage [FTYPEDESC_KEY]
+    distance: FIELD_FLOAT32 m_distance [FTYPEDESC_KEY]
+    directionentityname: FIELD_STRING m_directionEntityName [FTYPEDESC_KEY]
+
+CPhysLength : CPhysConstraint
+    addlength: FIELD_FLOAT32 m_addLength [FTYPEDESC_KEY]
+    minlength: FIELD_FLOAT32 m_minLength [FTYPEDESC_KEY]
+    attachpoint: FIELD_POSITION_VECTOR m_vecAttach [FTYPEDESC_KEY]
+
+CPhysMagnet : CBaseAnimGraph
+    massScale: FIELD_FLOAT32 m_massScale [FTYPEDESC_KEY]
+    maxobjects: FIELD_INT32 m_iMaxObjectsAttached [FTYPEDESC_KEY]
+    forcelimit: FIELD_FLOAT32 m_forceLimit [FTYPEDESC_KEY]
+    torquelimit: FIELD_FLOAT32 m_torqueLimit [FTYPEDESC_KEY]
+
+CPhysMotor : CBaseEntity
+    attach1: FIELD_STRING m_nameAttach [FTYPEDESC_KEY]
+    attach2: FIELD_STRING m_nameAnchor [FTYPEDESC_KEY]
+    spinup: FIELD_FLOAT32 m_spinUp [FTYPEDESC_KEY]
+    spindown: FIELD_FLOAT32 m_spinDown [FTYPEDESC_KEY]
+    friction: FIELD_FLOAT32 m_flMotorFriction [FTYPEDESC_KEY]
+    addangaccel: FIELD_FLOAT32 m_additionalAcceleration [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flTargetSpeed [FTYPEDESC_KEY]
+    "m_motor:FIELD_EMBEDDED": FIELD_EMBEDDED m_motor <CMotorController> [FTYPEDESC_NONE]
+
+CPhysPulley : CPhysConstraint
+    position2: FIELD_POSITION_VECTOR m_position2 [FTYPEDESC_KEY]
+    addlength: FIELD_FLOAT32 m_addLength [FTYPEDESC_KEY]
+    gearratio: FIELD_FLOAT32 m_gearRatio [FTYPEDESC_KEY]
+
+CPhysSlideConstraint : CPhysConstraint
+    slideaxis: FIELD_POSITION_VECTOR m_axisEnd [FTYPEDESC_KEY]
+    slidefriction: FIELD_FLOAT32 m_slideFriction [FTYPEDESC_KEY]
+    systemloadscale: FIELD_FLOAT32 m_systemLoadScale [FTYPEDESC_KEY]
+    initialoffset: FIELD_FLOAT32 m_initialOffset [FTYPEDESC_KEY]
+    enablelinearconstraint: FIELD_BOOLEAN m_bEnableLinearConstraint [FTYPEDESC_KEY]
+    enableangularconstraint: FIELD_BOOLEAN m_bEnableAngularConstraint [FTYPEDESC_KEY]
+    motorfrequency: FIELD_FLOAT32 m_flMotorFrequency [FTYPEDESC_KEY]
+    motordampingratio: FIELD_FLOAT32 m_flMotorDampingRatio [FTYPEDESC_KEY]
+    useEntityPivot: FIELD_BOOLEAN m_bUseEntityPivot [FTYPEDESC_KEY]
+    "m_soundInfo:FIELD_EMBEDDED": FIELD_EMBEDDED m_soundInfo <ConstraintSoundInfo> [FTYPEDESC_NONE]
+
+CPhysTorque : CPhysForce
+    axis: FIELD_POSITION_VECTOR m_axis [FTYPEDESC_KEY]
+
+CPhysWheelConstraint : CPhysConstraint
+    suspension_frequency: FIELD_FLOAT32 m_flSuspensionFrequency [FTYPEDESC_KEY]
+    suspension_damping_ratio: FIELD_FLOAT32 m_flSuspensionDampingRatio [FTYPEDESC_KEY]
+    suspension_height_offset: FIELD_FLOAT32 m_flSuspensionHeightOffset [FTYPEDESC_KEY]
+    enable_suspension_limit: FIELD_BOOLEAN m_bEnableSuspensionLimit [FTYPEDESC_KEY]
+    min_suspension_offset: FIELD_FLOAT32 m_flMinSuspensionOffset [FTYPEDESC_KEY]
+    max_suspension_offset: FIELD_FLOAT32 m_flMaxSuspensionOffset [FTYPEDESC_KEY]
+    enable_steering_limit: FIELD_BOOLEAN m_bEnableSteeringLimit [FTYPEDESC_KEY]
+    min_steering_angle: FIELD_FLOAT32 m_flMinSteeringAngle [FTYPEDESC_KEY]
+    max_steering_angle: FIELD_FLOAT32 m_flMaxSteeringAngle [FTYPEDESC_KEY]
+    steering_axis_friction: FIELD_FLOAT32 m_flSteeringAxisFriction [FTYPEDESC_KEY]
+    spin_axis_friction: FIELD_FLOAT32 m_flSpinAxisFriction [FTYPEDESC_KEY]
+
+CPhysicsEntitySolver : CBaseEntity
+    moving_entity: FIELD_EHANDLE m_hMovingEntity [FTYPEDESC_KEY]
+    blocker: FIELD_EHANDLE m_hPhysicsBlocker [FTYPEDESC_KEY]
+    duration: FIELD_FLOAT32 m_separationDuration [FTYPEDESC_KEY]
+
+CPhysicsProp : CBreakableProp
+    massscale: FIELD_FLOAT32 m_massScale [FTYPEDESC_KEY]
+    buoyancyscale: FIELD_FLOAT32 m_buoyancyScale [FTYPEDESC_KEY]
+    Damagetype: FIELD_INT32 m_damageType [FTYPEDESC_KEY]
+    acceptdamagefromheldobjects: FIELD_BOOLEAN m_bAcceptDamageFromHeldObjects [FTYPEDESC_KEY]
+    forcemotiondisabled: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    phys_start_asleep: FIELD_BOOLEAN __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    dynamiccontinuouscontactbehavior: FIELD_UINT8 m_nDynamicContinuousContactBehavior <DynamicContinuousContactBehavior_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    glowstate: FIELD_INT32 m_iInitialGlowState [FTYPEDESC_KEY]
+    glowrange: FIELD_INT32 m_nGlowRange [FTYPEDESC_KEY]
+    glowrangemin: FIELD_INT32 m_nGlowRangeMin [FTYPEDESC_KEY]
+    glowcolor: FIELD_COLOR32 m_glowColor [FTYPEDESC_KEY]
+    damagetoenablemotion: FIELD_INT32 m_damageToEnableMotion [FTYPEDESC_KEY]
+    forcetoenablemotion: FIELD_FLOAT32 m_flForceToEnableMotion [FTYPEDESC_KEY]
+    CrateType: FIELD_INT32 m_CrateType <CPhysicsProp::CrateType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    "ItemClass%d": FIELD_STRING m_strItemClass [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+    "ItemCount%d": FIELD_INT32 m_nItemCount [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+    ammobalancing_removable: FIELD_BOOLEAN m_bRemovableForAmmoBalancing [FTYPEDESC_KEY]
+    updatenavwhenmoving: FIELD_BOOLEAN m_bUpdateNavWhenMoving [FTYPEDESC_KEY]
+    forcenavcut: FIELD_BOOLEAN m_bForceNavObstacleCut [FTYPEDESC_KEY]
+    forcenavignore: FIELD_BOOLEAN m_bForceNavIgnore [FTYPEDESC_KEY]
+    nonavmeshblocker: FIELD_BOOLEAN m_bNoNavmeshBlocker [FTYPEDESC_KEY]
+    forcenpcexclude: FIELD_BOOLEAN m_bForceNpcExclude [FTYPEDESC_KEY]
+    auto_convert_back_from_debris: FIELD_BOOLEAN m_bShouldAutoConvertBackFromDebris [FTYPEDESC_KEY]
+    mute_impact_effects: FIELD_BOOLEAN m_bMuteImpactEffects [FTYPEDESC_KEY]
+    enableuseoutput: FIELD_BOOLEAN m_bEnableUseOutput [FTYPEDESC_KEY]
+    health: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CPhysicsPropRespawnable : CPhysicsProp
+    RespawnTime: FIELD_FLOAT32 m_flRespawnDuration [FTYPEDESC_KEY]
+
+CPhysicsSpring : CBaseEntity
+    frequency: FIELD_FLOAT32 m_flFrequency [FTYPEDESC_KEY]
+    damping: FIELD_FLOAT32 m_flDampingRatio [FTYPEDESC_KEY]
+    length: FIELD_FLOAT32 m_flRestLength [FTYPEDESC_KEY]
+    lengthscale: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    attach1: FIELD_STRING m_nameAttachStart [FTYPEDESC_KEY]
+    attach2: FIELD_STRING m_nameAttachEnd [FTYPEDESC_KEY]
+    springaxis: FIELD_POSITION_VECTOR m_end [FTYPEDESC_KEY]
+
+CPhysicsWire : CBaseEntity
+    Density: FIELD_INT32 m_nDensity [FTYPEDESC_KEY]
+
+CPlantedC4 : CBaseAnimGraph
+
+CPlayerPawnComponent
+
+CPlayerVisibility : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    playervisibilitystrength: FIELD_FLOAT32 m_flVisibilityStrength [FTYPEDESC_KEY]
+    playerfogdistancemultiplier: FIELD_FLOAT32 m_flFogDistanceMultiplier [FTYPEDESC_KEY]
+    playerfogmaxdensitymultiplier: FIELD_FLOAT32 m_flFogMaxDensityMultiplier [FTYPEDESC_KEY]
+    fadetime: FIELD_FLOAT32 m_flFadeTime [FTYPEDESC_KEY]
+
+CPlayer_CameraServices : CPlayerPawnComponent
+
+CPointAngleSensor : CPointEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    lookatname: FIELD_STRING m_nLookAtName [FTYPEDESC_KEY]
+    duration: FIELD_FLOAT32 m_flDuration [FTYPEDESC_KEY]
+    tolerance: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CPointAngularVelocitySensor : CPointEntity
+    threshold: FIELD_FLOAT32 m_flThreshold [FTYPEDESC_KEY]
+    fireinterval: FIELD_FLOAT32 m_flFireInterval [FTYPEDESC_KEY]
+    axis: FIELD_POSITION_VECTOR m_vecAxis [FTYPEDESC_KEY]
+    usehelper: FIELD_BOOLEAN m_bUseHelper [FTYPEDESC_KEY]
+
+CPointBroadcastClientCommand : CPointEntity
+
+CPointCamera : CBaseEntity
+    FOV: FIELD_FLOAT32 m_FOV [FTYPEDESC_KEY]
+    zNear: FIELD_FLOAT32 m_flZNear [FTYPEDESC_KEY]
+    zFar: FIELD_FLOAT32 m_flZFar [FTYPEDESC_KEY]
+    resolution: FIELD_FLOAT32 m_Resolution [FTYPEDESC_KEY]
+    fogEnable: FIELD_BOOLEAN m_bFogEnable [FTYPEDESC_KEY]
+    fogColor: FIELD_COLOR32 m_FogColor [FTYPEDESC_KEY]
+    fogStart: FIELD_FLOAT32 m_flFogStart [FTYPEDESC_KEY]
+    fogEnd: FIELD_FLOAT32 m_flFogEnd [FTYPEDESC_KEY]
+    fogMaxDensity: FIELD_FLOAT32 m_flFogMaxDensity [FTYPEDESC_KEY]
+    UseScreenAspectRatio: FIELD_BOOLEAN m_bUseScreenAspectRatio [FTYPEDESC_KEY]
+    aspectRatio: FIELD_FLOAT32 m_flAspectRatio [FTYPEDESC_KEY]
+    hltvUsable: FIELD_BOOLEAN m_bCanHLTVUse [FTYPEDESC_KEY]
+    align_with_parent: FIELD_BOOLEAN m_bAlignWithParent [FTYPEDESC_KEY]
+    dof_enabled: FIELD_BOOLEAN m_bDofEnabled [FTYPEDESC_KEY]
+    dof_near_blurry: FIELD_FLOAT32 m_flDofNearBlurry [FTYPEDESC_KEY]
+    dof_near_crisp: FIELD_FLOAT32 m_flDofNearCrisp [FTYPEDESC_KEY]
+    dac_dof_far_crisp: FIELD_FLOAT32 m_flDofFarCrisp [FTYPEDESC_KEY]
+    dac_dof_far_blurry: FIELD_FLOAT32 m_flDofFarBlurry [FTYPEDESC_KEY]
+    dac_dof_tilt_to_ground: FIELD_FLOAT32 m_flDofTiltToGround [FTYPEDESC_KEY]
+
+CPointCameraVFOV : CPointCamera
+    VerticalFOV: FIELD_FLOAT32 m_flVerticalFOV [FTYPEDESC_KEY]
+    dof_far_crisp: FIELD_FLOAT32 m_flDofFarCrisp [FTYPEDESC_ADDED_KEYFIELD | FTYPEDESC_KEY]
+    dof_far_blurry: FIELD_FLOAT32 m_flDofFarBlurry [FTYPEDESC_ADDED_KEYFIELD | FTYPEDESC_KEY]
+    dof_tilt_to_ground: FIELD_FLOAT32 m_flDofTiltToGround [FTYPEDESC_ADDED_KEYFIELD | FTYPEDESC_KEY]
+
+CPointChildModifier : CPointEntity
+    orphan_children_on_remove: FIELD_BOOLEAN m_bOrphanInsteadOfDeletingChildrenOnRemove [FTYPEDESC_KEY]
+
+CPointClientCommand : CPointEntity
+
+CPointClientUIDialog : CBaseClientUIEntity
+    StartEnabled: FIELD_BOOLEAN m_bStartEnabled [FTYPEDESC_KEY]
+
+CPointClientUIWorldPanel : CBaseClientUIEntity
+    ignore_input: FIELD_BOOLEAN m_bIgnoreInput [FTYPEDESC_KEY]
+    follow_player_across_teleport: FIELD_BOOLEAN m_bFollowPlayerAcrossTeleport [FTYPEDESC_KEY]
+    width: FIELD_FLOAT32 m_flWidth [FTYPEDESC_KEY]
+    height: FIELD_FLOAT32 m_flHeight [FTYPEDESC_KEY]
+    panel_dpi: FIELD_FLOAT32 m_flDPI [FTYPEDESC_KEY]
+    window_ui_scale: FIELD_FLOAT32 m_flWindowUIScale [FTYPEDESC_KEY]
+    interact_distance: FIELD_FLOAT32 m_flInteractDistance [FTYPEDESC_KEY]
+    depth_offset: FIELD_FLOAT32 m_flDepthOffset [FTYPEDESC_KEY]
+    owner_context: FIELD_UINT32 m_unOwnerContext [FTYPEDESC_KEY]
+    horizontal_align: FIELD_UINT32 m_unHorizontalAlign [FTYPEDESC_KEY]
+    vertical_align: FIELD_UINT32 m_unVerticalAlign [FTYPEDESC_KEY]
+    orientation: FIELD_UINT32 m_unOrientation [FTYPEDESC_KEY]
+    allow_interaction_from_all_scene_worlds: FIELD_BOOLEAN m_bAllowInteractionFromAllSceneWorlds [FTYPEDESC_KEY]
+    opaque: FIELD_BOOLEAN m_bOpaque [FTYPEDESC_KEY]
+    ignore_depth: FIELD_BOOLEAN m_bNoDepth [FTYPEDESC_KEY]
+    visible_when_parent_nodraw: FIELD_BOOLEAN m_bVisibleWhenParentNoDraw [FTYPEDESC_KEY]
+    render_backface: FIELD_BOOLEAN m_bRenderBackface [FTYPEDESC_KEY]
+    lit: FIELD_BOOLEAN m_bLit [FTYPEDESC_KEY]
+    enable_offscreen_indicator: FIELD_BOOLEAN m_bUseOffScreenIndicator [FTYPEDESC_KEY]
+    exclude_from_save_games: FIELD_BOOLEAN m_bExcludeFromSaveGames [FTYPEDESC_KEY]
+    grabbable: FIELD_BOOLEAN m_bGrabbable [FTYPEDESC_KEY]
+    only_render_to_texture: FIELD_BOOLEAN m_bOnlyRenderToTexture [FTYPEDESC_KEY]
+    disable_mip_gen: FIELD_BOOLEAN m_bDisableMipGen [FTYPEDESC_KEY]
+    explicit_image_layout: FIELD_INT32 m_nExplicitImageLayout [FTYPEDESC_KEY]
+    ignore_parent_orientation: FIELD_BOOLEAN m_bIgnoreParentOrientation [FTYPEDESC_KEY]
+    css_class: FIELD_STRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CPointClientUIWorldTextPanel : CPointClientUIWorldPanel
+    message: FIELD_CHARACTER m_messageText [FTYPEDESC_KEY]
+
+CPointCommentaryNode : CBaseAnimGraph
+    precommands: FIELD_STRING m_iszPreCommands [FTYPEDESC_KEY]
+    postcommands: FIELD_STRING m_iszPostCommands [FTYPEDESC_KEY]
+    commentaryfile: FIELD_STRING m_iszCommentaryFile [FTYPEDESC_KEY]
+    viewtarget: FIELD_STRING m_iszViewTarget [FTYPEDESC_KEY]
+    viewposition: FIELD_STRING m_iszViewPosition [FTYPEDESC_KEY]
+    prevent_movement: FIELD_BOOLEAN m_bPreventMovement [FTYPEDESC_KEY]
+    title: FIELD_STRING m_iszTitle [FTYPEDESC_KEY]
+    speakers: FIELD_STRING m_iszSpeakers [FTYPEDESC_KEY]
+    node_id: FIELD_INT32 m_iNodeNumber [FTYPEDESC_KEY]
+    start_disabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    teleport_origin: FIELD_POSITION_VECTOR m_vecTeleportOrigin [FTYPEDESC_KEY]
+
+CPointEntity : CBaseEntity
+
+CPointEntityFinder : CBaseEntity
+    method: FIELD_INT32 m_FindMethod <EntFinderMethod_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    filtername: FIELD_STRING m_iFilterName [FTYPEDESC_KEY]
+    referencename: FIELD_STRING m_iRefName [FTYPEDESC_KEY]
+
+CPointGamestatsCounter : CPointEntity
+    Name: FIELD_STRING m_strStatisticName [FTYPEDESC_KEY]
+
+CPointGiveAmmo : CPointEntity
+
+CPointHurt : CPointEntity
+    DamageRadius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    Damage: FIELD_INT32 m_nDamage [FTYPEDESC_KEY]
+    DamageDelay: FIELD_FLOAT32 m_flDelay [FTYPEDESC_KEY]
+    DamageType: FIELD_INT32 m_bitsDamageType <DamageTypes_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    DamageTarget: FIELD_STRING m_strTarget [FTYPEDESC_KEY]
+
+CPointOrient : CBaseEntity
+    orient_towards: FIELD_STRING m_iszSpawnTargetName [FTYPEDESC_KEY]
+    start_active: FIELD_BOOLEAN m_bActive [FTYPEDESC_KEY]
+    constraint_type: FIELD_INT32 m_nConstraint <PointOrientConstraint_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    goal_direction_type: FIELD_INT32 m_nGoalDirection <PointOrientGoalDirectionType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    max_turn_rate: FIELD_FLOAT32 m_flMaxTurnRate [FTYPEDESC_KEY]
+
+CPointPrefab : CBaseEntity
+    targetMapName: FIELD_STRING m_targetMapName [FTYPEDESC_KEY]
+    forceWorldGroupID: FIELD_STRING m_forceWorldGroupID [FTYPEDESC_KEY]
+    fixupNames: FIELD_BOOLEAN m_fixupNames [FTYPEDESC_KEY]
+    prefab_load_dynamic: FIELD_BOOLEAN m_bLoadDynamic [FTYPEDESC_KEY]
+    prefab_associated_relay: FIELD_STRING m_associatedRelayTargetName [FTYPEDESC_KEY]
+
+CPointProximitySensor : CPointEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CPointPush : CPointEntity
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    magnitude: FIELD_FLOAT32 m_flMagnitude [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    inner_radius: FIELD_FLOAT32 m_flInnerRadius [FTYPEDESC_KEY]
+    influence_cone: FIELD_FLOAT32 m_flConeOfInfluence [FTYPEDESC_KEY]
+    filtername: FIELD_STRING m_iszFilterName [FTYPEDESC_KEY]
+
+CPointServerCommand : CPointEntity
+
+CPointTeleport : CBaseEntity
+    teleport_parented_entities: FIELD_BOOLEAN m_bTeleportParentedEntities [FTYPEDESC_KEY]
+    teleport_use_current_angle: FIELD_BOOLEAN m_bTeleportUseCurrentAngle [FTYPEDESC_KEY]
+
+CPointTemplate : CBaseEntity
+    worldName: FIELD_STRING m_iszWorldName [FTYPEDESC_KEY]
+    entityLumpName: FIELD_STRING m_iszSource2EntityLumpName [FTYPEDESC_KEY]
+    entityFilterName: FIELD_STRING m_iszEntityFilterName [FTYPEDESC_KEY]
+    asynchronous: FIELD_BOOLEAN m_bAsynchronouslySpawnEntities [FTYPEDESC_KEY]
+    timeoutInterval: FIELD_FLOAT32 m_flTimeoutInterval [FTYPEDESC_KEY]
+    spawnGroupType: FIELD_INT32 m_ownerSpawnGroupType <PointTemplateOwnerSpawnGroupType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    createClientOnlyEntities: FIELD_INT32 m_clientOnlyEntityBehavior <PointTemplateClientOnlyEntityBehavior_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CPointValueRemapper : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    updateOnClient: FIELD_BOOLEAN m_bUpdateOnClient [FTYPEDESC_KEY]
+    inputType: FIELD_INT32 m_nInputType <ValueRemapperInputType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    remapLineStart: FIELD_STRING m_iszRemapLineStartName [FTYPEDESC_KEY]
+    remapLineEnd: FIELD_STRING m_iszRemapLineEndName [FTYPEDESC_KEY]
+    maximumChangePerSecond: FIELD_FLOAT32 m_flMaximumChangePerSecond [FTYPEDESC_KEY]
+    maximumDistanceFromLine: FIELD_FLOAT32 m_flDisengageDistance [FTYPEDESC_KEY]
+    engageDistance: FIELD_FLOAT32 m_flEngageDistance [FTYPEDESC_KEY]
+    requiresUseKey: FIELD_BOOLEAN m_bRequiresUseKey [FTYPEDESC_KEY]
+    outputType: FIELD_INT32 m_nOutputType <ValueRemapperOutputType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    outputEntity: FIELD_STRING m_iszOutputEntityName [FTYPEDESC_KEY]
+    outputEntity2: FIELD_STRING m_iszOutputEntity2Name [FTYPEDESC_KEY]
+    outputEntity3: FIELD_STRING m_iszOutputEntity3Name [FTYPEDESC_KEY]
+    outputEntity4: FIELD_STRING m_iszOutputEntity4Name [FTYPEDESC_KEY]
+    hapticsType: FIELD_INT32 m_nHapticsType <ValueRemapperHapticsType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    momentumType: FIELD_INT32 m_nMomentumType <ValueRemapperMomentumType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    momentumModifier: FIELD_FLOAT32 m_flMomentumModifier [FTYPEDESC_KEY]
+    snapValue: FIELD_FLOAT32 m_flSnapValue [FTYPEDESC_KEY]
+    ratchetType: FIELD_INT32 m_nRatchetType <ValueRemapperRatchetType_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    inputOffset: FIELD_FLOAT32 m_flInputOffset [FTYPEDESC_KEY]
+    customOutputValue: FIELD_FLOAT32 m_flCustomOutputValue [FTYPEDESC_KEY]
+    soundEngage: FIELD_STRING m_iszSoundEngage [FTYPEDESC_KEY]
+    soundDisengage: FIELD_STRING m_iszSoundDisengage [FTYPEDESC_KEY]
+    soundReachedValueZero: FIELD_STRING m_iszSoundReachedValueZero [FTYPEDESC_KEY]
+    soundReachedValueOne: FIELD_STRING m_iszSoundReachedValueOne [FTYPEDESC_KEY]
+    soundMovingLoop: FIELD_STRING m_iszSoundMovingLoop [FTYPEDESC_KEY]
+
+CPointVelocitySensor : CPointEntity
+    axis: FIELD_POSITION_VECTOR m_vecAxis [FTYPEDESC_KEY]
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    avginterval: FIELD_FLOAT32 m_flAvgInterval [FTYPEDESC_KEY]
+
+CPointWorldText : CBaseModelEntity
+    message: FIELD_CHARACTER m_messageText [FTYPEDESC_KEY]
+    font_name: FIELD_CHARACTER m_FontName [FTYPEDESC_KEY]
+    background_material_name: FIELD_CHARACTER m_BackgroundMaterialName [FTYPEDESC_KEY]
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+    fullbright: FIELD_BOOLEAN m_bFullbright [FTYPEDESC_KEY]
+    world_units_per_pixel: FIELD_FLOAT32 m_flWorldUnitsPerPx [FTYPEDESC_KEY]
+    font_size: FIELD_FLOAT32 m_flFontSize [FTYPEDESC_KEY]
+    depth_render_offset: FIELD_FLOAT32 m_flDepthOffset [FTYPEDESC_KEY]
+    color: FIELD_COLOR32 m_Color [FTYPEDESC_KEY]
+    draw_background: FIELD_BOOLEAN m_bDrawBackground [FTYPEDESC_KEY]
+    background_border_width: FIELD_FLOAT32 m_flBackgroundBorderWidth [FTYPEDESC_KEY]
+    background_border_height: FIELD_FLOAT32 m_flBackgroundBorderHeight [FTYPEDESC_KEY]
+    background_world_to_uv: FIELD_FLOAT32 m_flBackgroundWorldToUV [FTYPEDESC_KEY]
+    justify_horizontal: FIELD_INT32 m_nJustifyHorizontal <PointWorldTextJustifyHorizontal_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    justify_vertical: FIELD_INT32 m_nJustifyVertical <PointWorldTextJustifyVertical_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    reorient_mode: FIELD_INT32 m_nReorientMode <PointWorldTextReorientMode_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CPostProcessingVolume : CBaseTrigger
+    postprocessing: FIELD_HPOSTPROCESSING m_hPostSettings [FTYPEDESC_KEY]
+    fadetime: FIELD_FLOAT32 m_flFadeDuration [FTYPEDESC_KEY]
+    minlogexposure: FIELD_FLOAT32 m_flMinLogExposure [FTYPEDESC_KEY]
+    maxlogexposure: FIELD_FLOAT32 m_flMaxLogExposure [FTYPEDESC_KEY]
+    minexposure: FIELD_FLOAT32 m_flMinExposure [FTYPEDESC_KEY]
+    maxexposure: FIELD_FLOAT32 m_flMaxExposure [FTYPEDESC_KEY]
+    exposurecompensation: FIELD_FLOAT32 m_flExposureCompensation [FTYPEDESC_KEY]
+    exposurespeedup: FIELD_FLOAT32 m_flExposureFadeSpeedUp [FTYPEDESC_KEY]
+    exposurespeeddown: FIELD_FLOAT32 m_flExposureFadeSpeedDown [FTYPEDESC_KEY]
+    exposuresmoothingrange: FIELD_FLOAT32 m_flTonemapEVSmoothingRange [FTYPEDESC_KEY]
+    master: FIELD_BOOLEAN m_bMaster [FTYPEDESC_KEY]
+    enableexposure: FIELD_BOOLEAN m_bExposureControl [FTYPEDESC_KEY]
+
+CPrecipitation : CBaseTrigger
+
+CPropDoorRotating : CBasePropDoor
+    spawnpos: FIELD_INT32 m_eSpawnPosition <PropDoorRotatingSpawnPos_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    opendir: FIELD_INT32 m_eOpenDirection <PropDoorRotatingOpenDirection_e> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    distance: FIELD_FLOAT32 m_flDistance [FTYPEDESC_KEY]
+    ajarangles: FIELD_QANGLE m_angRotationAjarDeprecated [FTYPEDESC_KEY]
+    ajarangle: FIELD_FLOAT32 m_flAjarAngle [FTYPEDESC_KEY]
+    ajardoorshouldntalwaysopen: FIELD_BOOLEAN m_bAjarDoorShouldntAlwaysOpen [FTYPEDESC_KEY]
+
+CPropDoorRotatingBreakable : CPropDoorRotating
+
+CPulseGameBlackboard : CBaseEntity
+    graph_def: FIELD_UTLSTRING m_strGraphName [FTYPEDESC_KEY]
+
+CRagdollConstraint : CPhysConstraint
+    xmin: FIELD_FLOAT32 m_xmin [FTYPEDESC_KEY]
+    xmax: FIELD_FLOAT32 m_xmax [FTYPEDESC_KEY]
+    ymin: FIELD_FLOAT32 m_ymin [FTYPEDESC_KEY]
+    ymax: FIELD_FLOAT32 m_ymax [FTYPEDESC_KEY]
+    zmin: FIELD_FLOAT32 m_zmin [FTYPEDESC_KEY]
+    zmax: FIELD_FLOAT32 m_zmax [FTYPEDESC_KEY]
+    xfriction: FIELD_FLOAT32 m_xfriction [FTYPEDESC_KEY]
+    yfriction: FIELD_FLOAT32 m_yfriction [FTYPEDESC_KEY]
+    zfriction: FIELD_FLOAT32 m_zfriction [FTYPEDESC_KEY]
+
+CRagdollMagnet : CPointEntity
+    radius: FIELD_FLOAT32 m_radius [FTYPEDESC_KEY]
+    force: FIELD_FLOAT32 m_force [FTYPEDESC_KEY]
+    axis: FIELD_POSITION_VECTOR m_axis [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CRagdollManager : CBaseEntity
+    MaxRagdollCount: FIELD_INT32 m_iMaxRagdollCount [FTYPEDESC_KEY]
+    SaveImportant: FIELD_BOOLEAN m_bSaveImportant [FTYPEDESC_KEY]
+    CanTakeDamage: FIELD_BOOLEAN m_bCanTakeDamage [FTYPEDESC_KEY]
+
+CRagdollProp : CBaseAnimGraph
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    massScale: FIELD_FLOAT32 m_massScale [FTYPEDESC_KEY]
+    buoyancyScale: FIELD_FLOAT32 m_buoyancyScale [FTYPEDESC_KEY]
+
+CRectLight : CBarnLight
+    showlight: FIELD_BOOLEAN m_bShowLight [FTYPEDESC_KEY]
+
+CRevertSaved : CBaseModelEntity
+    loadtime: FIELD_FLOAT32 m_loadTime [FTYPEDESC_KEY]
+    duration: FIELD_FLOAT32 m_Duration [FTYPEDESC_KEY]
+    holdtime: FIELD_FLOAT32 m_HoldTime [FTYPEDESC_KEY]
+
+CRopeKeyframe : CBaseModelEntity
+    NextKey: FIELD_STRING m_iNextLinkName [FTYPEDESC_KEY]
+    Slack: FIELD_INT16 m_Slack [FTYPEDESC_KEY]
+    Width: FIELD_FLOAT32 m_Width [FTYPEDESC_KEY]
+    TextureScale: FIELD_FLOAT32 m_TextureScale [FTYPEDESC_KEY]
+    SegmentCount: FIELD_UINT8 m_nSegments [FTYPEDESC_KEY]
+    Subdiv: FIELD_UINT8 m_Subdiv [FTYPEDESC_KEY]
+    ScrollSpeed: FIELD_FLOAT32 m_flScrollSpeed [FTYPEDESC_KEY]
+    Breakable: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Collide: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Barbed: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    UseWind: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Dangling: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    Type: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    RopeShader: FIELD_INT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    RopeMaterial: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CRotDoor : CBaseDoor
+    solidbsp: FIELD_BOOLEAN m_bSolidBsp [FTYPEDESC_KEY]
+
+CRuleEntity : CBaseModelEntity
+    master: FIELD_STRING m_iszMaster [FTYPEDESC_KEY]
+
+CRulePointEntity : CRuleEntity
+    points: FIELD_INT32 m_Score [FTYPEDESC_KEY]
+
+CSceneEntity : CPointEntity
+    SceneFile: FIELD_STRING m_iszSceneFile [FTYPEDESC_KEY]
+    target1: FIELD_STRING m_iszTarget1 [FTYPEDESC_KEY]
+    target2: FIELD_STRING m_iszTarget2 [FTYPEDESC_KEY]
+    target3: FIELD_STRING m_iszTarget3 [FTYPEDESC_KEY]
+    target4: FIELD_STRING m_iszTarget4 [FTYPEDESC_KEY]
+    target5: FIELD_STRING m_iszTarget5 [FTYPEDESC_KEY]
+    target6: FIELD_STRING m_iszTarget6 [FTYPEDESC_KEY]
+    target7: FIELD_STRING m_iszTarget7 [FTYPEDESC_KEY]
+    target8: FIELD_STRING m_iszTarget8 [FTYPEDESC_KEY]
+    busyactor: FIELD_INT32 m_BusyActor [FTYPEDESC_KEY]
+    locator_origin_entity: FIELD_EHANDLE m_hLocatorOrigin [FTYPEDESC_KEY]
+    target_attachment: FIELD_STRING m_sTargetAttachment [FTYPEDESC_KEY]
+    sound_for_scene: FIELD_STRING m_iszSoundName [FTYPEDESC_KEY]
+    sequence_for_scene: FIELD_STRING m_iszSequenceName [FTYPEDESC_KEY]
+    onplayerdeath: FIELD_INT32 m_iPlayerDeathBehavior <SceneOnPlayerDeath_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+
+CSceneListManager : CBaseEntity
+    "scene%d": FIELD_STRING m_iszScenes [FTYPEDESC_GEN_ARRAY_KEYNAMES_0 | FTYPEDESC_KEY]
+
+CScriptNavBlocker : CFuncNavBlocker
+    extent: FIELD_VECTOR m_vExtent [FTYPEDESC_KEY]
+
+CScriptTriggerHurt : CTriggerHurt
+    extent: FIELD_VECTOR m_vExtent [FTYPEDESC_KEY]
+
+CScriptTriggerMultiple : CTriggerMultiple
+    extent: FIELD_VECTOR m_vExtent [FTYPEDESC_KEY]
+
+CScriptTriggerOnce : CTriggerMultiple
+    extent: FIELD_VECTOR m_vExtent [FTYPEDESC_KEY]
+
+CScriptTriggerPush : CTriggerPush
+    extent: FIELD_VECTOR m_vExtent [FTYPEDESC_KEY]
+
+CScriptedSequence : CBaseEntity
+    m_iszEntry: FIELD_STRING m_iszEntry [FTYPEDESC_KEY]
+    m_iszIdle: FIELD_STRING m_iszPreIdle [FTYPEDESC_KEY]
+    m_iszPlay: FIELD_STRING m_iszPlay [FTYPEDESC_KEY]
+    m_iszPostIdle: FIELD_STRING m_iszPostIdle [FTYPEDESC_KEY]
+    m_iszModifierToAddOnPlay: FIELD_STRING m_iszModifierToAddOnPlay [FTYPEDESC_KEY]
+    m_iszNextScript: FIELD_STRING m_iszNextScript [FTYPEDESC_KEY]
+    m_iszEntity: FIELD_STRING m_iszEntity [FTYPEDESC_KEY]
+    sync_group: FIELD_STRING m_iszSyncGroup [FTYPEDESC_KEY]
+    m_fMoveTo: FIELD_INT32 m_nMoveTo <ScriptedMoveTo_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    move_to_gait: FIELD_CHARACTER m_nMoveToGait <SharedMovementGait_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    held_weapon_behavior: FIELD_INT32 m_nHeldWeaponBehavior <ScriptedHeldWeaponBehavior_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    forced_crouch_state: FIELD_INT32 m_nForcedCrouchState <ForcedCrouchState_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    m_flRadius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+    m_flRepeat: FIELD_FLOAT32 m_flRepeat [FTYPEDESC_KEY]
+    m_flMoveInterpTime: FIELD_FLOAT32 m_flMoveInterpTime [FTYPEDESC_KEY]
+    m_flAngRate: FIELD_FLOAT32 m_flAngRate [FTYPEDESC_KEY]
+    m_flMoveSpeed: FIELD_FLOAT32 m_flMoveSpeed [FTYPEDESC_KEY]
+    m_bWaitUntilMoveCompletesToStartAnimation: FIELD_BOOLEAN m_bWaitUntilMoveCompletesToStartAnimation [FTYPEDESC_KEY]
+    m_flPlayAnimFadeInTime: FIELD_FLOAT32 m_flPlayAnimFadeInTime [FTYPEDESC_KEY]
+    m_bLoopPreIdleSequence: FIELD_BOOLEAN m_bLoopPreIdleSequence [FTYPEDESC_KEY]
+    m_bLoopActionSequence: FIELD_BOOLEAN m_bLoopActionSequence [FTYPEDESC_KEY]
+    m_bLoopPostIdleSequence: FIELD_BOOLEAN m_bLoopPostIdleSequence [FTYPEDESC_KEY]
+    m_bSynchPostIdles: FIELD_BOOLEAN m_bSynchPostIdles [FTYPEDESC_KEY]
+    m_bIgnoreGravity: FIELD_BOOLEAN m_bIgnoreGravity [FTYPEDESC_KEY]
+    m_bIgnoreLookAt: FIELD_BOOLEAN m_bIgnoreLookAt [FTYPEDESC_KEY]
+    m_bDisableNPCCollisions: FIELD_BOOLEAN m_bDisableNPCCollisions [FTYPEDESC_KEY]
+    m_bKeepAnimgraphLockedPost: FIELD_BOOLEAN m_bKeepAnimgraphLockedPost [FTYPEDESC_KEY]
+    m_bDontAddModifiers: FIELD_BOOLEAN m_bDontAddModifiers [FTYPEDESC_KEY]
+    disable_aim_while_moving: FIELD_BOOLEAN m_bDisableAimingWhileMoving [FTYPEDESC_KEY]
+    ignore_rotation: FIELD_BOOLEAN m_bIgnoreRotation [FTYPEDESC_KEY]
+    dont_rotate_other: FIELD_BOOLEAN m_bDontRotateOther [FTYPEDESC_KEY]
+    repeatable: FIELD_BOOLEAN m_bIsRepeatable [FTYPEDESC_KEY]
+    should_leave_corpse: FIELD_BOOLEAN m_bShouldLeaveCorpse [FTYPEDESC_KEY]
+    start_on_spawn: FIELD_BOOLEAN m_bStartOnSpawn [FTYPEDESC_KEY]
+    no_interrupts: FIELD_BOOLEAN m_bDisallowInterrupts [FTYPEDESC_KEY]
+    can_override_npc_state: FIELD_BOOLEAN m_bCanOverrideNPCState [FTYPEDESC_KEY]
+    no_teleport_at_end: FIELD_BOOLEAN m_bDontTeleportAtEnd [FTYPEDESC_KEY]
+    high_priority: FIELD_BOOLEAN m_bHighPriority [FTYPEDESC_KEY]
+    hide_debug_complaints: FIELD_BOOLEAN m_bHideDebugComplaints [FTYPEDESC_KEY]
+    continue_on_death: FIELD_BOOLEAN m_bContinueOnDeath [FTYPEDESC_KEY]
+    m_bPositionRelativeToOtherEntity: FIELD_BOOLEAN m_bPositionRelativeToOtherEntity [FTYPEDESC_KEY]
+    onnpcdeath: FIELD_INT32 m_onDeathBehavior <ScriptedOnDeath_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    m_bAllowCustomInterruptConditions: FIELD_BOOLEAN m_bAllowCustomInterruptConditions [FTYPEDESC_KEY]
+    conflict_response: FIELD_INT32 m_ConflictResponse <ScriptedConflictResponse_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    prevent_update_yaw_on_finish: FIELD_BOOLEAN m_bPreventUpdateYawOnFinish [FTYPEDESC_KEY]
+    ensure_on_navmesh_on_finish: FIELD_BOOLEAN m_bEnsureOnNavmeshOnFinish [FTYPEDESC_KEY]
+    onplayerdeath: FIELD_INT32 m_iPlayerDeathBehavior [FTYPEDESC_KEY]
+
+CSkeletonAnimationController
+
+CSkeletonInstance : CGameSceneNode
+    hitboxset: FIELD_UINT8 m_nHitboxSet [FTYPEDESC_KEY]
+    velocity: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    rotationAxis: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+    rotationSpeed: FIELD_FLOAT32 __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CSkyCamera : CBaseEntity
+    "m_skyboxData:FIELD_EMBEDDED": FIELD_EMBEDDED m_skyboxData <sky3dparams_t> [FTYPEDESC_NONE]
+    use_angles: FIELD_BOOLEAN m_bUseAngles [FTYPEDESC_KEY]
+
+CSkyCameraVolume : CBaseEntity
+    box_mins: FIELD_VECTOR m_vBoxMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vBoxMaxs [FTYPEDESC_KEY]
+    target: FIELD_STRING m_iszTargetName [FTYPEDESC_KEY]
+    priority: FIELD_INT32 m_nPriority [FTYPEDESC_KEY]
+    StartDisabled: FIELD_BOOLEAN m_bStartDisabled [FTYPEDESC_KEY]
+    SkyboxBlurEffect: FIELD_BOOLEAN m_bSkyboxBlurEffect [FTYPEDESC_KEY]
+    skybox_receives_world_csm: FIELD_BOOLEAN m_bSkyboxReceivesWorldCsm [FTYPEDESC_KEY]
+    world_receives_skybox_csm: FIELD_BOOLEAN m_bWorldReceivesSkyboxCsm [FTYPEDESC_KEY]
+    blur_origin: FIELD_VECTOR m_vBlurOrigin [FTYPEDESC_KEY]
+
+CSkyCameraVolumeTarget : CBaseEntity
+    scale: FIELD_INT16 m_nSkyboxScale [FTYPEDESC_KEY]
+    sky_material: FIELD_HMATERIAL m_hSkyMaterial [FTYPEDESC_KEY]
+
+CSkyboxReference : CBaseEntity
+    worldGroupID: FIELD_UTLSTRING __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+CSoundAreaEntityBase : CBaseEntity
+    StartDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+    soundAreaType: FIELD_STRING m_iszSoundAreaType [FTYPEDESC_KEY]
+
+CSoundAreaEntityOrientedBox : CSoundAreaEntityBase
+    areaMin: FIELD_POSITION_VECTOR m_vMin [FTYPEDESC_KEY]
+    areaMax: FIELD_POSITION_VECTOR m_vMax [FTYPEDESC_KEY]
+
+CSoundAreaEntitySphere : CSoundAreaEntityBase
+    areaRadius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+
+CSoundEventAABBEntity : CSoundEventEntity
+    box_mins: FIELD_VECTOR m_vMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vMaxs [FTYPEDESC_KEY]
+
+CSoundEventBoxEntity : CSoundEventMultiPointEntity
+    "boxEntity%02d": FIELD_STRING m_iszBoxEntities [FTYPEDESC_GEN_ARRAY_KEYNAMES_1 | FTYPEDESC_KEY]
+
+CSoundEventBoxHelper : CBaseEntity
+    box_mins: FIELD_VECTOR m_vMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vMaxs [FTYPEDESC_KEY]
+
+CSoundEventConeEntity : CSoundEventEntity
+    parameterName: FIELD_STRING m_iszParameterName [FTYPEDESC_KEY]
+    emitterAngle: FIELD_FLOAT32 m_flEmitterAngle [FTYPEDESC_KEY]
+    sweetSpotAngle: FIELD_FLOAT32 m_flSweetSpotAngle [FTYPEDESC_KEY]
+    attenMin: FIELD_FLOAT32 m_flAttenMin [FTYPEDESC_KEY]
+    attenMax: FIELD_FLOAT32 m_flAttenMax [FTYPEDESC_KEY]
+
+CSoundEventEntity : CBaseEntity
+    startOnSpawn: FIELD_BOOLEAN m_bStartOnSpawn [FTYPEDESC_KEY]
+    toLocalPlayer: FIELD_BOOLEAN m_bToLocalPlayer [FTYPEDESC_KEY]
+    stopOnNew: FIELD_BOOLEAN m_bStopOnNew [FTYPEDESC_KEY]
+    saveAndRestore: FIELD_BOOLEAN m_bSaveRestore [FTYPEDESC_KEY]
+    entityIndexSelection: FIELD_INT32 m_nEntityIndexSelection [FTYPEDESC_KEY]
+    soundName: FIELD_STRING m_iszSoundName [FTYPEDESC_KEY]
+    sourceEntityName: FIELD_STRING m_iszSourceEntityName [FTYPEDESC_KEY]
+    sourceEntityAttachment: FIELD_STRING m_iszAttachmentName [FTYPEDESC_KEY]
+    clientCullRadius: FIELD_FLOAT32 m_flClientCullRadius [FTYPEDESC_KEY]
+
+CSoundEventMultiPointEntity : CSoundEventEntity
+    soundeventCountMax: FIELD_INT32 m_iCountMax [FTYPEDESC_KEY]
+    distanceMax: FIELD_FLOAT32 m_flDistanceMax [FTYPEDESC_KEY]
+    dotProductMax: FIELD_FLOAT32 m_flDotProductMax [FTYPEDESC_KEY]
+
+CSoundEventOBBEntity : CSoundEventEntity
+    box_mins: FIELD_VECTOR m_vMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vMaxs [FTYPEDESC_KEY]
+
+CSoundEventParameter : CBaseEntity
+    parameterName: FIELD_STRING m_iszParamName [FTYPEDESC_KEY]
+    floatValue: FIELD_FLOAT32 m_flFloatValue [FTYPEDESC_KEY]
+
+CSoundEventPathCornerEntity : CSoundEventMultiPointEntity
+    pathCornerEntity: FIELD_STRING m_iszPathCorner [FTYPEDESC_KEY]
+
+CSoundEventSphereEntity : CSoundEventEntity
+    radius: FIELD_FLOAT32 m_flRadius [FTYPEDESC_KEY]
+
+CSoundOpvarSetAutoRoomEntity : CSoundOpvarSetPointEntity
+    size: FIELD_FLOAT32 m_flSize [FTYPEDESC_KEY]
+    height_tolerance: FIELD_FLOAT32 m_flHeightTolerance [FTYPEDESC_KEY]
+
+CSoundOpvarSetBoxEntity : CSoundOpvarSetPointEntity
+    box_inner_mins: FIELD_VECTOR m_vDistanceInnerMins [FTYPEDESC_KEY]
+    box_inner_maxs: FIELD_VECTOR m_vDistanceInnerMaxs [FTYPEDESC_KEY]
+    box_outer_mins: FIELD_VECTOR m_vDistanceOuterMins [FTYPEDESC_KEY]
+    box_outer_maxs: FIELD_VECTOR m_vDistanceOuterMaxs [FTYPEDESC_KEY]
+    AABBDirection: FIELD_INT32 m_nBoxDirection [FTYPEDESC_KEY]
+
+CSoundOpvarSetDomeEntity : CSoundOpvarSetPointEntity
+    size: FIELD_FLOAT32 m_flSize [FTYPEDESC_KEY]
+    totalDirections: FIELD_INT32 m_nTotalDirections [FTYPEDESC_KEY]
+    tracesPerFrame: FIELD_INT32 m_nTracesPerFrame [FTYPEDESC_KEY]
+    domeMode: FIELD_BOOLEAN m_bDomeMode [FTYPEDESC_KEY]
+    multiWall: FIELD_BOOLEAN m_bMultiWall [FTYPEDESC_KEY]
+    wallTransmission: FIELD_FLOAT32 m_flWallTransmission [FTYPEDESC_KEY]
+    clusterK: FIELD_INT32 m_nClusterK [FTYPEDESC_KEY]
+    clusterP: FIELD_FLOAT32 m_flClusterP [FTYPEDESC_KEY]
+    clusterBlend: FIELD_FLOAT32 m_flClusterBlend [FTYPEDESC_KEY]
+    opennessExponent: FIELD_FLOAT32 m_flOpennessExponent [FTYPEDESC_KEY]
+    shoulderExponent: FIELD_FLOAT32 m_flShoulderExponent [FTYPEDESC_KEY]
+    smoothHalfLife: FIELD_FLOAT32 m_flSmoothHalfLife [FTYPEDESC_KEY]
+
+CSoundOpvarSetEntity : CBaseEntity
+    stackName: FIELD_STRING m_iszStackName [FTYPEDESC_KEY]
+    operatorName: FIELD_STRING m_iszOperatorName [FTYPEDESC_KEY]
+    opvarName: FIELD_STRING m_iszOpvarName [FTYPEDESC_KEY]
+    opvarValue: FIELD_FLOAT32 m_flOpvarValue [FTYPEDESC_KEY]
+    opvarValueString: FIELD_STRING m_OpvarValueString [FTYPEDESC_KEY]
+    SetOnSpawn: FIELD_BOOLEAN m_bSetOnSpawn [FTYPEDESC_KEY]
+    opvarValueType: FIELD_INT32 m_nOpvarType [FTYPEDESC_KEY]
+    opvarIndex: FIELD_INT32 m_nOpvarIndex [FTYPEDESC_KEY]
+
+CSoundOpvarSetOBBWindEntity : CSoundOpvarSetPointBase
+    box_mins: FIELD_VECTOR m_vDistanceMins [FTYPEDESC_KEY]
+    box_maxs: FIELD_VECTOR m_vDistanceMaxs [FTYPEDESC_KEY]
+    wind_min: FIELD_FLOAT32 m_flWindMin [FTYPEDESC_KEY]
+    wind_max: FIELD_FLOAT32 m_flWindMax [FTYPEDESC_KEY]
+    wind_map_min: FIELD_FLOAT32 m_flWindMapMin [FTYPEDESC_KEY]
+    wind_map_max: FIELD_FLOAT32 m_flWindMapMax [FTYPEDESC_KEY]
+
+CSoundOpvarSetPathCornerEntity : CSoundOpvarSetPointEntity
+    pathCornerEntityName: FIELD_STRING m_iszPathCornerEntityName [FTYPEDESC_KEY]
+    useParentedPath: FIELD_BOOLEAN m_bUseParentedPath [FTYPEDESC_KEY]
+
+CSoundOpvarSetPointBase : CBaseEntity
+    stackName: FIELD_STRING m_iszStackName [FTYPEDESC_KEY]
+    operatorName: FIELD_STRING m_iszOperatorName [FTYPEDESC_KEY]
+    opvarName: FIELD_STRING m_iszOpvarName [FTYPEDESC_KEY]
+    opvarUseAutoCompare: FIELD_BOOLEAN m_bUseAutoCompare [FTYPEDESC_KEY]
+    opvarArrayIndex: FIELD_INT32 m_iOpvarIndex [FTYPEDESC_KEY]
+    entityUseFastRefreshRate: FIELD_BOOLEAN m_bFastRefresh [FTYPEDESC_KEY]
+    sourceEntityName: FIELD_STRING m_iszSourceEntityName [FTYPEDESC_KEY]
+    startDisabled: FIELD_BOOLEAN m_bDisabled [FTYPEDESC_KEY]
+
+CSoundOpvarSetPointEntity : CSoundOpvarSetPointBase
+    distanceMin: FIELD_FLOAT32 m_flDistanceMin [FTYPEDESC_KEY]
+    distanceMax: FIELD_FLOAT32 m_flDistanceMax [FTYPEDESC_KEY]
+    distanceMapMin: FIELD_FLOAT32 m_flDistanceMapMin [FTYPEDESC_KEY]
+    distanceMapMax: FIELD_FLOAT32 m_flDistanceMapMax [FTYPEDESC_KEY]
+    occlusionRadius: FIELD_FLOAT32 m_flOcclusionRadius [FTYPEDESC_KEY]
+    occlusionMin: FIELD_FLOAT32 m_flOcclusionMin [FTYPEDESC_KEY]
+    occlusionMax: FIELD_FLOAT32 m_flOcclusionMax [FTYPEDESC_KEY]
+    simulationMode: FIELD_INT32 m_nSimulationMode [FTYPEDESC_KEY]
+    visibilitySamples: FIELD_INT32 m_nVisibilitySamples [FTYPEDESC_KEY]
+    dynamicEntityName: FIELD_STRING m_iszDynamicEntityName [FTYPEDESC_KEY]
+    dynamicProxyPoint: FIELD_VECTOR m_vDynamicProxyPoint [FTYPEDESC_KEY]
+    dynamicMaximumOcclusion: FIELD_FLOAT32 m_flDynamicMaximumOcclusion [FTYPEDESC_KEY]
+    disabledValue: FIELD_FLOAT32 m_flValSetOnDisable [FTYPEDESC_KEY]
+    setToValueOnDisable: FIELD_BOOLEAN m_bSetValueOnDisable [FTYPEDESC_KEY]
+    autoDisable: FIELD_BOOLEAN m_bAutoDisable [FTYPEDESC_KEY]
+
+CSoundStackSave : CBaseEntity
+    stackToSave: FIELD_STRING m_iszStackName [FTYPEDESC_KEY]
+
+CSplineConstraint : CPhysConstraint
+    enablelateralconstraint: FIELD_BOOLEAN m_bEnableLateralConstraint [FTYPEDESC_KEY]
+    enableverticalconstraint: FIELD_BOOLEAN m_bEnableVerticalConstraint [FTYPEDESC_KEY]
+    enableangularconstraint: FIELD_BOOLEAN m_bEnableAngularConstraint [FTYPEDESC_KEY]
+    enablelimit: FIELD_BOOLEAN m_bEnableLimit [FTYPEDESC_KEY]
+    jointfriction: FIELD_FLOAT32 m_flJointFriction [FTYPEDESC_KEY]
+    linearfrequency: FIELD_FLOAT32 m_flLinearFrequency [FTYPEDESC_KEY]
+    lineardampingratio: FIELD_FLOAT32 m_flLinarDampingRatio [FTYPEDESC_KEY]
+    transitiontime: FIELD_FLOAT32 m_flTransitionTime [FTYPEDESC_KEY]
+    fireeventsonpath: FIELD_BOOLEAN m_bFireEventsOnPath [FTYPEDESC_KEY]
+
+CSprite : CBaseModelEntity
+    scale: FIELD_FLOAT32 m_flSpriteScale [FTYPEDESC_KEY]
+    framerate: FIELD_FLOAT32 m_flSpriteFramerate [FTYPEDESC_KEY]
+    frame: FIELD_FLOAT32 m_flFrame [FTYPEDESC_KEY]
+    HDRColorScale: FIELD_FLOAT32 m_flHDRColorScale [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+    GlowProxySize: FIELD_FLOAT32 m_flGlowProxySize [FTYPEDESC_KEY]
+
+CTankTargetChange : CPointEntity
+    newtarget: FIELD_STRING m_newTargetName [FTYPEDESC_KEY]
+
+CTankTrainAI : CPointEntity
+    startsound: FIELD_STRING m_startSoundName [FTYPEDESC_KEY]
+    enginesound: FIELD_STRING m_engineSoundName [FTYPEDESC_KEY]
+    movementsound: FIELD_STRING m_movementSoundName [FTYPEDESC_KEY]
+
+CTeam : CBaseEntity
+    teamname: FIELD_CHARACTER m_szTeamname [FTYPEDESC_KEY]
+
+CTestPulseIO : CBaseEntity
+    allow_empty_inputs: FIELD_BOOLEAN m_bAllowEmptyInputs [FTYPEDESC_KEY]
+
+CTextureBasedAnimatable : CBaseModelEntity
+    fps: FIELD_FLOAT32 m_flFPS [FTYPEDESC_KEY]
+    loop: FIELD_BOOLEAN m_bLoop [FTYPEDESC_KEY]
+    texture_based_animation_position_keys: FIELD_HRENDERTEXTURE m_hPositionKeys [FTYPEDESC_KEY]
+    texture_based_animation_rotation_keys: FIELD_HRENDERTEXTURE m_hRotationKeys [FTYPEDESC_KEY]
+    anim_bounds_min: FIELD_VECTOR m_vAnimationBoundsMin [FTYPEDESC_KEY]
+    anim_bounds_max: FIELD_VECTOR m_vAnimationBoundsMax [FTYPEDESC_KEY]
+
+CTimerEntity : CBaseEntity
+    StartDisabled: FIELD_INT32 m_iDisabled [FTYPEDESC_KEY]
+    InitialDelay: FIELD_FLOAT32 m_flInitialDelay [FTYPEDESC_KEY]
+    RefireTime: FIELD_FLOAT32 m_flRefireTime [FTYPEDESC_KEY]
+    UseRandomTime: FIELD_INT32 m_iUseRandomTime [FTYPEDESC_KEY]
+    PauseAfterFiring: FIELD_BOOLEAN m_bPauseAfterFiring [FTYPEDESC_KEY]
+    LowerRandomBound: FIELD_FLOAT32 m_flLowerRandomBound [FTYPEDESC_KEY]
+    UpperRandomBound: FIELD_FLOAT32 m_flUpperRandomBound [FTYPEDESC_KEY]
+
+CTonemapController2 : CBaseEntity
+    MinExposure: FIELD_FLOAT32 m_flAutoExposureMin [FTYPEDESC_KEY]
+    MaxExposure: FIELD_FLOAT32 m_flAutoExposureMax [FTYPEDESC_KEY]
+    rate: FIELD_FLOAT32 m_flExposureAdaptationSpeedUp [FTYPEDESC_KEY]
+
+CTonemapTrigger : CBaseTrigger
+    TonemapName: FIELD_STRING m_tonemapControllerName [FTYPEDESC_KEY]
+
+CTriggerActiveWeaponDetect : CBaseTrigger
+    weaponclassname: FIELD_STRING m_iszWeaponClassName [FTYPEDESC_KEY]
+
+CTriggerBrush : CBaseModelEntity
+    InputFilter: FIELD_INT32 m_iInputFilter [FTYPEDESC_KEY]
+    DontMessageParent: FIELD_INT32 m_iDontMessageParent [FTYPEDESC_KEY]
+
+CTriggerBuoyancy : CBaseTrigger
+    SetFluidDensity: FIELD_FLOAT32 m_flFluidDensity [FTYPEDESC_KEY]
+
+CTriggerDetectBulletFire : CBaseTrigger
+    player_fire_only: FIELD_BOOLEAN m_bPlayerFireOnly [FTYPEDESC_KEY]
+
+CTriggerDetectExplosion : CBaseTrigger
+
+CTriggerFan : CBaseTrigger
+    fan_push_away_from_info_fan: FIELD_BOOLEAN m_bPushAwayFromInfoTarget [FTYPEDESC_KEY]
+    fan_push_towards_info_fan: FIELD_BOOLEAN m_bPushTowardsInfoTarget [FTYPEDESC_KEY]
+    fan_force: FIELD_FLOAT32 m_flForce [FTYPEDESC_KEY]
+    fan_falloff: FIELD_BOOLEAN m_bFalloff [FTYPEDESC_KEY]
+    fan_origin: FIELD_VECTOR m_vFanOriginLS [FTYPEDESC_KEY]
+    fan_end: FIELD_VECTOR m_vFanEndLS [FTYPEDESC_KEY]
+    fan_info_fan: FIELD_STRING m_iszInfoFan [FTYPEDESC_KEY]
+    fan_noise_speed: FIELD_FLOAT32 m_fNoiseSpeed [FTYPEDESC_KEY]
+    fan_noise_direction_degrees: FIELD_FLOAT32 m_fNoiseDegrees [FTYPEDESC_KEY]
+    fan_rope_force_scale: FIELD_FLOAT32 m_flRopeForceScale [FTYPEDESC_KEY]
+    fan_particle_force_scale: FIELD_FLOAT32 m_flParticleForceScale [FTYPEDESC_KEY]
+    fan_player_force: FIELD_FLOAT32 m_flPlayerForce [FTYPEDESC_KEY]
+    fan_player_windblock: FIELD_BOOLEAN m_bPlayerWindblock [FTYPEDESC_KEY]
+    fan_npc_force: FIELD_FLOAT32 m_flNPCForce [FTYPEDESC_KEY]
+    fan_ramp_time: FIELD_FLOAT32 m_flRampTime [FTYPEDESC_KEY]
+    fan_push_player: FIELD_BOOLEAN m_bPushPlayer [FTYPEDESC_KEY]
+    fan_rampdown: FIELD_BOOLEAN m_bRampDown [FTYPEDESC_KEY]
+
+CTriggerGameEvent : CBaseTrigger
+    start_touch_event: FIELD_UTLSTRING m_strStartTouchEventName [FTYPEDESC_KEY]
+    end_touch_event: FIELD_UTLSTRING m_strEndTouchEventName [FTYPEDESC_KEY]
+    trigger_id: FIELD_UTLSTRING m_strTriggerID [FTYPEDESC_KEY]
+
+CTriggerHurt : CBaseTrigger
+    damage: FIELD_FLOAT32 m_flDamage [FTYPEDESC_KEY]
+    damagecap: FIELD_FLOAT32 m_flDamageCap [FTYPEDESC_KEY]
+    damagetype: FIELD_INT32 m_bitsDamageInflict <DamageTypes_t> [FTYPEDESC_ENUM | FTYPEDESC_KEY]
+    damagemodel: FIELD_INT32 m_damageModel [FTYPEDESC_KEY]
+    nodmgforce: FIELD_BOOLEAN m_bNoDmgForce [FTYPEDESC_KEY]
+    damageforce: FIELD_DIRECTION_VECTOR_WORLDSPACE m_vDamageForce [FTYPEDESC_KEY]
+    forgivedelay: FIELD_FLOAT32 m_flForgivenessDelay [FTYPEDESC_KEY]
+    thinkalways: FIELD_BOOLEAN m_thinkAlways [FTYPEDESC_KEY]
+
+CTriggerImpact : CTriggerMultiple
+    Magnitude: FIELD_FLOAT32 m_flMagnitude [FTYPEDESC_KEY]
+    Noise: FIELD_FLOAT32 m_flNoise [FTYPEDESC_KEY]
+    Viewkick: FIELD_FLOAT32 m_flViewkick [FTYPEDESC_KEY]
+
+CTriggerLerpObject : CBaseTrigger
+    lerp_target: FIELD_STRING m_iszLerpTarget [FTYPEDESC_KEY]
+    lerp_target_attachment: FIELD_STRING m_iszLerpTargetAttachment [FTYPEDESC_KEY]
+    lerp_duration: FIELD_FLOAT32 m_flLerpDuration [FTYPEDESC_KEY]
+    lerp_restore_movetype: FIELD_BOOLEAN m_bLerpRestoreMoveType [FTYPEDESC_KEY]
+    attach_touching_object: FIELD_BOOLEAN m_bAttachTouchingObject [FTYPEDESC_KEY]
+    lerp_effect: FIELD_STRING m_iszLerpEffect [FTYPEDESC_KEY]
+    lerp_sound: FIELD_STRING m_iszLerpSound [FTYPEDESC_KEY]
+
+CTriggerLook : CTriggerMultiple
+    timeout: FIELD_FLOAT32 m_flTimeoutDuration [FTYPEDESC_KEY]
+    FOV2D: FIELD_BOOLEAN m_b2DFOV [FTYPEDESC_KEY]
+    test_occlusion: FIELD_BOOLEAN m_bTestOcclusion [FTYPEDESC_KEY]
+    test_visible_occlusion: FIELD_BOOLEAN m_bTestAllVisibleOcclusion [FTYPEDESC_KEY]
+    FieldOfView: FIELD_FLOAT32 m_flFieldOfView [FTYPEDESC_KEY]
+    LookTime: FIELD_FLOAT32 m_flLookTime [FTYPEDESC_KEY]
+
+CTriggerMultiple : CBaseTrigger
+
+CTriggerPhysics : CBaseTrigger
+    SetGravityScale: FIELD_FLOAT32 m_gravityScale [FTYPEDESC_KEY]
+    SetVelocityLimit: FIELD_FLOAT32 m_linearLimit [FTYPEDESC_KEY]
+    SetVelocityDamping: FIELD_FLOAT32 m_linearDamping [FTYPEDESC_KEY]
+    SetAngVelocityLimit: FIELD_FLOAT32 m_angularLimit [FTYPEDESC_KEY]
+    SetAngVelocityDamping: FIELD_FLOAT32 m_angularDamping [FTYPEDESC_KEY]
+    SetLinearForce: FIELD_FLOAT32 m_linearForce [FTYPEDESC_KEY]
+    LinearForcePointAt: FIELD_VECTOR m_vecLinearForcePointAt [FTYPEDESC_KEY]
+    CollapseToForcePoint: FIELD_BOOLEAN m_bCollapseToForcePoint [FTYPEDESC_KEY]
+    SetFrequency: FIELD_FLOAT32 m_flFrequency [FTYPEDESC_KEY]
+    SetDampingRatio: FIELD_FLOAT32 m_flDampingRatio [FTYPEDESC_KEY]
+    ConvertToDebrisWhenPossible: FIELD_BOOLEAN m_bConvertToDebrisWhenPossible [FTYPEDESC_KEY]
+    ForceDirectionIsInLocalSpace: FIELD_BOOLEAN m_bForceDirectionIsInLocalSpace [FTYPEDESC_KEY]
+
+CTriggerProximity : CBaseTrigger
+    measuretarget: FIELD_STRING m_iszMeasureTarget [FTYPEDESC_KEY]
+    radius: FIELD_FLOAT32 m_fRadius [FTYPEDESC_KEY]
+
+CTriggerPush : CBaseTrigger
+    pushdir: FIELD_QANGLE m_angPushEntitySpace [FTYPEDESC_KEY]
+    triggeronstarttouch: FIELD_BOOLEAN m_bTriggerOnStartTouch [FTYPEDESC_KEY]
+    path_simple_push_dir: FIELD_STRING m_iszPathSimpleName [FTYPEDESC_KEY]
+    spline_push_type: FIELD_UINT32 m_splinePushType [FTYPEDESC_KEY]
+    speed: FIELD_FLOAT32 m_flSpeed [FTYPEDESC_KEY]
+
+CTriggerRemove : CBaseTrigger
+
+CTriggerSave : CBaseTrigger
+    NewLevelUnit: FIELD_BOOLEAN m_bForceNewLevelUnit [FTYPEDESC_KEY]
+    MinimumHitPoints: FIELD_INT32 m_minHitPoints [FTYPEDESC_KEY]
+    DangerousTimer: FIELD_FLOAT32 m_fDangerousTimer [FTYPEDESC_KEY]
+    RetriggerDelay: FIELD_FLOAT32 m_flRetriggerDelay [FTYPEDESC_KEY]
+
+CTriggerSndSosOpvar : CBaseTrigger
+    centersize: FIELD_FLOAT32 m_flCenterSize [FTYPEDESC_KEY]
+    minimum_value: FIELD_FLOAT32 m_flMinVal [FTYPEDESC_KEY]
+    maximum_value: FIELD_FLOAT32 m_flMaxVal [FTYPEDESC_KEY]
+    stackname: FIELD_STRING m_stackName [FTYPEDESC_KEY]
+    operatorname: FIELD_STRING m_operatorName [FTYPEDESC_KEY]
+    opvarname: FIELD_STRING m_opvarName [FTYPEDESC_KEY]
+    is2d: FIELD_BOOLEAN m_bVolIs2D [FTYPEDESC_KEY]
+
+CTriggerSoundscape : CBaseTrigger
+    soundscape: FIELD_STRING m_SoundscapeName [FTYPEDESC_KEY]
+
+CTriggerTeleport : CBaseTrigger
+    landmark: FIELD_STRING m_iLandmark [FTYPEDESC_KEY]
+    use_landmark_angles: FIELD_BOOLEAN m_bUseLandmarkAngles [FTYPEDESC_KEY]
+    mirror_player: FIELD_BOOLEAN m_bMirrorPlayer [FTYPEDESC_KEY]
+    check_if_dest_clear_for_player: FIELD_BOOLEAN m_bCheckDestIfClearForPlayer [FTYPEDESC_KEY]
+
+CTriggerVolume : CBaseModelEntity
+    filtername: FIELD_STRING m_iFilterName [FTYPEDESC_KEY]
+
+CWaterBullet : CBaseAnimGraph
+    bullet_direction: FIELD_VECTOR __PROCEDURAL [FTYPEDESC_PROCEDURAL_KEYFIELD]
+
+ConstraintSoundInfo
+    "m_soundProfile:FIELD_EMBEDDED": FIELD_EMBEDDED m_soundProfile <SimpleConstraintSoundProfile> [FTYPEDESC_NONE]
+    slidesoundfwd: FIELD_STRING m_iszTravelSoundFwd [FTYPEDESC_KEY]
+    slidesoundback: FIELD_STRING m_iszTravelSoundBack [FTYPEDESC_KEY]
+    reversalsoundSmall: FIELD_STRING m_iszReversalSoundSmall [FTYPEDESC_KEY]
+    reversalsoundMedium: FIELD_STRING m_iszReversalSoundMedium [FTYPEDESC_KEY]
+    reversalsoundLarge: FIELD_STRING m_iszReversalSoundLarge [FTYPEDESC_KEY]
+
+FilterDamageType : CBaseFilter
+    damagetype: FIELD_INT32 m_iDamageType [FTYPEDESC_KEY]
+
+FilterHealth : CBaseFilter
+    adrenalinepresence: FIELD_BOOLEAN m_bAdrenalineActive [FTYPEDESC_KEY]
+    healthmin: FIELD_INT32 m_iHealthMin [FTYPEDESC_KEY]
+    healthmax: FIELD_INT32 m_iHealthMax [FTYPEDESC_KEY]
+
+HullFlags_t
+    aihull_human: FIELD_BOOLEAN m_bHull_Human [FTYPEDESC_KEY]
+    aihull_small_centered: FIELD_BOOLEAN m_bHull_SmallCentered [FTYPEDESC_KEY]
+    aihull_wide_human: FIELD_BOOLEAN m_bHull_WideHuman [FTYPEDESC_KEY]
+    HullDesc_tiny: FIELD_BOOLEAN m_bHull_Tiny [FTYPEDESC_KEY]
+    aihull_medium: FIELD_BOOLEAN m_bHull_Medium [FTYPEDESC_KEY]
+    HullDesc_tiny_centered: FIELD_BOOLEAN m_bHull_TinyCentered [FTYPEDESC_KEY]
+    aihull_large: FIELD_BOOLEAN m_bHull_Large [FTYPEDESC_KEY]
+    aihull_large_centered: FIELD_BOOLEAN m_bHull_LargeCentered [FTYPEDESC_KEY]
+    aihull_medium_tall: FIELD_BOOLEAN m_bHull_MediumTall [FTYPEDESC_KEY]
+    aihull_small: FIELD_BOOLEAN m_bHull_Small [FTYPEDESC_KEY]
+
+SimpleConstraintSoundProfile
+    minSoundThreshold: FIELD_FLOAT32 m_flKeyPointMinSoundThreshold [FTYPEDESC_KEY]
+    maxSoundThreshold: FIELD_FLOAT32 m_flKeyPointMaxSoundThreshold [FTYPEDESC_KEY]
+    reversalsoundthresholdSmall: FIELD_FLOAT32 m_reversalSoundThresholdSmall [FTYPEDESC_KEY]
+    reversalsoundthresholdMedium: FIELD_FLOAT32 m_reversalSoundThresholdMedium [FTYPEDESC_KEY]
+    reversalsoundthresholdLarge: FIELD_FLOAT32 m_reversalSoundThresholdLarge [FTYPEDESC_KEY]
+
+SpawnPoint : CBaseEntity
+    priority: FIELD_INT32 m_iPriority [FTYPEDESC_KEY]
+    enabled: FIELD_BOOLEAN m_bEnabled [FTYPEDESC_KEY]
+
+dynpitchvol_base_t
+    preset: FIELD_INT32 preset [FTYPEDESC_KEY]
+    pitch: FIELD_INT32 pitchrun [FTYPEDESC_KEY]
+    pitchstart: FIELD_INT32 pitchstart [FTYPEDESC_KEY]
+    spinup: FIELD_INT32 spinup [FTYPEDESC_KEY]
+    spindown: FIELD_INT32 spindown [FTYPEDESC_KEY]
+    volstart: FIELD_INT32 volstart [FTYPEDESC_KEY]
+    lfotype: FIELD_INT32 lfotype [FTYPEDESC_KEY]
+    lfomodpitch: FIELD_INT32 lfomodpitch [FTYPEDESC_KEY]
+    lfomodvol: FIELD_INT32 lfomodvol [FTYPEDESC_KEY]
+    cspinup: FIELD_INT32 cspinup [FTYPEDESC_KEY]
+
+fogparams_t
+    fogdir: FIELD_DIRECTION_VECTOR_WORLDSPACE dirPrimary [FTYPEDESC_KEY]
+    fogcolor: FIELD_COLOR32 colorPrimary [FTYPEDESC_KEY]
+    fogcolor2: FIELD_COLOR32 colorSecondary [FTYPEDESC_KEY]
+    fogstart: FIELD_FLOAT32 start [FTYPEDESC_KEY]
+    fogend: FIELD_FLOAT32 end [FTYPEDESC_KEY]
+    farz: FIELD_FLOAT32 farz [FTYPEDESC_KEY]
+    fogmaxdensity: FIELD_FLOAT32 maxdensity [FTYPEDESC_KEY]
+    fogexponent: FIELD_FLOAT32 exponent [FTYPEDESC_KEY]
+    HDRColorScale: FIELD_FLOAT32 HDRColorScale [FTYPEDESC_KEY]
+    foglerptime: FIELD_FLOAT32 duration [FTYPEDESC_KEY]
+    fogenable: FIELD_BOOLEAN enable [FTYPEDESC_KEY]
+    fogblend: FIELD_BOOLEAN blend [FTYPEDESC_KEY]
+    blendtobackground: FIELD_FLOAT32 blendtobackground [FTYPEDESC_KEY]
+    scattering: FIELD_FLOAT32 scattering [FTYPEDESC_KEY]
+    locallightscale: FIELD_FLOAT32 locallightscale [FTYPEDESC_KEY]
+
+hudtextparms_t
+    channel: FIELD_UINT8 channel [FTYPEDESC_KEY]
+    effect: FIELD_UINT8 effect [FTYPEDESC_KEY]
+    x: FIELD_FLOAT32 x [FTYPEDESC_KEY]
+    y: FIELD_FLOAT32 y [FTYPEDESC_KEY]
+
+locksound_t
+    locked_sound: FIELD_SOUNDNAME sLockedSound [FTYPEDESC_KEY]
+    unlocked_sound: FIELD_SOUNDNAME sUnlockedSound [FTYPEDESC_KEY]
+
+sky3dparams_t
+    scale: FIELD_INT16 scale [FTYPEDESC_KEY]
+    clip_3D_skybox_near_to_world_far: FIELD_BOOLEAN bClip3DSkyBoxNearToWorldFar [FTYPEDESC_KEY]
+    clip_3D_skybox_near_to_world_far_offset: FIELD_FLOAT32 flClip3DSkyBoxNearToWorldFarOffset [FTYPEDESC_KEY]
+    "fog:FIELD_EMBEDDED": FIELD_EMBEDDED fog <fogparams_t> [FTYPEDESC_NONE]

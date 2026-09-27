@@ -5,14 +5,12 @@ CPulseCell_Outflow_PlayVOLine : CPulseCell_BaseYieldingInflow
     MPulseEditorHeaderHelper = "Helper_PlayVOLine"
     MVDataNodeType = 0
     MVDataOverlayType = 0
-    __populated_from_schema_modules = ["server.dll"]
     expect_default_outflow = true
+    fingerprint = "@lib:server.dll!CPulseCell_Outflow_PlayVOLine"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/sequence.png"
     hidden_in_tool = false
     is_state_cell = false
-    scope_to_dependency_name =
-        server.dll = "@lib:server.dll!CPulseCell_Outflow_PlayVOLine"
     selector_has_specificity = false
     standard_yielding_flow = true
     supported_domains = ServerEntity
@@ -21,7 +19,3 @@ CPulseCell_Outflow_PlayVOLine : CPulseCell_BaseYieldingInflow
     in strSoundEventName: PVAL_SNDEVT_NAME "Sound Event Name" metadata={ edit_context_override = { ToolEditContext_ID_AttributeEditorOptions = { value = "{ bFocusEvents=true }" } } } inflow=Run
     in pSpeaker: PVAL_EHANDLE:basemodelentity "Speaker" inflow=Run
     outflow m_OnFinished "On Finished" [default] backed_by_variable=true
-
-CPulseCell_Outflow_PlayVOLine::Cancel
-    m_nClassType = "vdata"
-    legacy_name_replacement = "CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately"

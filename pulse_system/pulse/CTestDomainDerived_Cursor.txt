@@ -2,10 +2,9 @@ CTestDomainDerived_Cursor::GetCursorValueA
     m_FriendlyName = "Get Cursor Value A"
     m_Description = "Get the 'ValueA' number off the cursor."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     supported_domains = TestDomain_Derived
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -13,10 +12,9 @@ CTestDomainDerived_Cursor::GetCursorValueB
     m_FriendlyName = "Get Cursor Value B"
     m_Description = "Get the 'ValueB' number off the cursor."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     generic_node_category = 4
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     supported_domains = TestDomain_Derived
     out retval: PVAL_INT "Result" outflow=OutDefault direct_return_for=self
 
@@ -24,10 +22,9 @@ CTestDomainDerived_Cursor::SetCursorValueA
     m_FriendlyName = "Set Cursor Value A"
     m_Description = "Set the 'ValueA' number on the cursor."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     supported_domains = TestDomain_Derived
     inflow InDefault "Default In" [default]
     in nValue: PVAL_INT "Value" inflow=InDefault
@@ -37,10 +34,9 @@ CTestDomainDerived_Cursor::SetCursorValueB
     m_FriendlyName = "Set Cursor Value B"
     m_Description = "Set the 'ValueB' number on the cursor."
     m_nClassType = "vdata"
+    fingerprint = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     generic_node_category = 5
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        pulse_system.dll = "@lib:pulse_system.dll!CTestDomainDerived_Cursor"
     supported_domains = TestDomain_Derived
     inflow InDefault "Default In" [default]
     in nValue: PVAL_INT "Value" inflow=InDefault

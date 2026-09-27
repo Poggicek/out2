@@ -1,0 +1,30 @@
+CTestPulseIOComponent_API::TestComponentFunc
+    m_FriendlyName = "Test Component Func"
+    m_nClassType = "vdata"
+    component_inclusion_types = ["PVAL_EHANDLE:test_io_combinations"]
+    fingerprint = "@lib:server.dll!CTestPulseIOComponent_API"
+    generic_node_category = 5
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE "Entity Handle" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in pString: PVAL_STRING "String" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+OUTPUT!CTestPulseIOComponent_API::OnComponentTestFunc
+    m_FriendlyName = "On Component Test Func"
+    m_nClassType = "vdata"
+    component_inclusion_types = ["PVAL_EHANDLE:test_io_combinations"]
+    fingerprint = "@lib:server.dll!CTestPulseIOComponent_API"
+    generic_node_category = 5
+    is_pulse_target_output = true
+    is_spontaneous = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    outflow OutDefault "Default Out" [default]
+    out _Target: PVAL_EHANDLE "Target" inflow=self
+    out param: PVAL_STRING "param" inflow=self

@@ -2,11 +2,10 @@ CPulseCursorFuncs::AnyOtherCursorsHaveTag
     m_FriendlyName = "Any Other Cursors Have Tag"
     m_Description = "Check if any yielded cursors on the graph already have the given tag."
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/cursor_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
@@ -20,11 +19,10 @@ CPulseCursorFuncs::CursorHasTag
     m_FriendlyName = "Cursor Has Tag"
     m_Description = "Check if the cursor already has the given tag."
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/cursor_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
@@ -38,11 +36,10 @@ CPulseCursorFuncs::KillAllOtherCursors
     m_FriendlyName = "Kill All Other Cursors"
     m_Description = "Find all the yielded cursors on this graph and cancel them."
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/cursor_kill.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in nKillPriority: PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t "Kill Priority" advanced_view=true default="HardCancel" inflow=InDefault
@@ -52,11 +49,10 @@ CPulseCursorFuncs::KillCursorsWithTag
     m_FriendlyName = "Kill Cursors With Tag"
     m_Description = "Find all the yielded cursors on this graph with the matching tag and cancel them."
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/kill_cursor_with_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
@@ -72,11 +68,10 @@ CPulseCursorFuncs::RemoveTagFromCursor
     m_nClassType = "vdata"
     editor_canvas_item_spec =
         className = "IsControlFlowNode"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/cursor_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
@@ -89,13 +84,13 @@ CPulseCursorFuncs::TagCursor
     m_FriendlyName = "Tag Cursor"
     m_Description = "Save a named value of any type on the cursor."
     m_nClassType = "vdata"
+    adds_cursor_tag = true
     editor_canvas_item_spec =
         className = "IsControlFlowNode"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/cursor_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault
@@ -110,11 +105,10 @@ CPulseCursorFuncs::WakeCursorsWithTag
     m_FriendlyName = "Wake Cursors With Tag"
     m_Description = "Find all the yielded cursors on this graph with the matching tag and wake them."
     m_nClassType = "vdata"
+    fingerprint = "@lib:client.dll!CPulseCursorFuncs"
     generic_node_category = 5
     header_icon = "tools/images/pulse_editor/kill_cursor_with_tag.png"
     is_pulse_library_method = true
-    scope_to_dependency_name =
-        client.dll = "@lib:client.dll!CPulseCursorFuncs"
     supported_domains = BaseDomain
     inflow InDefault "Default In" [default]
     in pTagName: PVAL_STRING "Tag Name" inflow=InDefault

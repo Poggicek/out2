@@ -1,0 +1,31 @@
+CGameGibManager_API::SetMaxPieces
+    m_FriendlyName = "Set Max Pieces"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameGibManager_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_gib_manager "game_gib_manager" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
+
+CGameGibManager_API::SetMaxPiecesDX8
+    m_FriendlyName = "Set Max Pieces D X8"
+    m_nClassType = "vdata"
+    fingerprint = "@lib:server.dll!CGameGibManager_API"
+    generic_node_category = 5
+    hidden_in_tool = true
+    is_pulse_target_method = true
+    pulse_feature_tag = 1
+    supported_domains = BaseDomain
+    target_arg_name = "_Target"
+    inflow InDefault "Default In" [default]
+    in _Target: PVAL_EHANDLE:game_gib_manager "game_gib_manager" inflow=InDefault
+        description = "The Target object. In code, this parameter is the API This() object for this Input."
+    in param: PVAL_INT "param" inflow=InDefault
+    outflow OutDefault "Default Out" [default] allow_direct_return=true
